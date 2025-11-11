@@ -9,6 +9,16 @@ from pathlib import Path
 from typing import Iterable
 
 from .models import CAREERS, PrerequisiteError, Character, get_career
+from .parsers import (
+    ParseError,
+    parse_advances_table,
+    parse_characteristic_advances_table,
+    parse_divination_table,
+    parse_psychic_powers,
+    parse_talent_prose,
+    parse_talent_table,
+)
+from .library import append_entries
 from .storage import character_from_dict, character_to_dict, load_character, save_character
 
 
@@ -84,6 +94,39 @@ def cmd_load(args: argparse.Namespace) -> None:
         print(character.to_summary())
 
 
+def _parse_import_category(category: str, text: str, page: int | None, source: str | None):
+    kwargs: dict[str, int | str] = {}
+    if page is not None:
+        kwargs["page"] = page
+    if source is not None:
+        kwargs["source"] = source
+
+    if category == "talents-table":
+        return parse_talent_table(text, **kwargs)
+    if category == "talents-prose":
+        return parse_talent_prose(text, **kwargs)
+    if category == "advances":
+        return parse_advances_table(text, **kwargs)
+    if category == "characteristic-advances":
+        return parse_characteristic_advances_table(text, **kwargs)
+    if category == "divination":
+        return parse_divination_table(text, **kwargs)
+    if category == "psychic-powers":
+        return parse_psychic_powers(text, **kwargs)
+    raise ValueError(f"Unknown import category: {category}")
+
+
+def cmd_import_text(args: argparse.Namespace) -> None:
+    text = Path(args.input).read_text()
+    try:
+        entries = _parse_import_category(args.category, text, args.page, args.source)
+    except ParseError as exc:
+        raise SystemExit(f"Could not parse input: {exc}") from exc
+    entry_payloads = [entry.to_dict() for entry in entries]
+    append_entries(entry_payloads, args.library)
+    print(f"Imported {len(entry_payloads)} entries into {args.library}.")
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Tools for managing TTRPG characters.")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -127,6 +170,43 @@ def build_parser() -> argparse.ArgumentParser:
         help="Emit the character as raw JSON instead of a summary",
     )
     load_parser.set_defaults(func=cmd_load)
+
+    import_parser = subparsers.add_parser(
+        "import-text", help="Parse structured text and append it to the JSON library"
+    )
+    import_parser.add_argument(
+        "--input",
+        required=True,
+        help="Path to the text file to parse",
+    )
+    import_parser.add_argument(
+        "--category",
+        required=True,
+        choices=[
+            "talents-table",
+            "talents-prose",
+            "advances",
+            "characteristic-advances",
+            "divination",
+            "psychic-powers",
+        ],
+        help="Type of content contained in the text file",
+    )
+    import_parser.add_argument(
+        "--library",
+        default="library.json",
+        help="Path to the JSON library that will be appended to",
+    )
+    import_parser.add_argument(
+        "--page",
+        type=int,
+        help="Rulebook page number to record on each entry",
+    )
+    import_parser.add_argument(
+        "--source",
+        help="Source identifier or book title to record on each entry",
+    )
+    import_parser.set_defaults(func=cmd_import_text)
 
     return parser
 
