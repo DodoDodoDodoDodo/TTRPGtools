@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 from typing import Any, Dict
 
-from .models import AdvancePurchase, Career, Character, get_career
+from .models import Career, Character, PrerequisiteError, get_career
 
 
 def character_to_dict(character: Character) -> Dict[str, Any]:
@@ -32,20 +32,10 @@ def character_from_dict(payload: Dict[str, Any]) -> Character:
     for purchase_data in payload.get("purchases", []):
         advance_name = purchase_data["name"]
         page = int(purchase_data.get("page"))
-        # Validate against career definition and prerequisites.
-        advance = career.get_advance(advance_name)
-        missing = advance.missing_prerequisites(p.name for p in character.purchases)
-        if missing:
-            raise ValueError(
-                f"Advance '{advance.name}' is missing prerequisites: {', '.join(missing)}"
-            )
-        character.purchases.append(
-            AdvancePurchase(name=advance.name, xp_cost=advance.xp_cost, page=page)
-        )
-    if character.xp_spent > character.xp_total:
-        raise ValueError(
-            f"Character spends {character.xp_spent} XP but only has {character.xp_total}."
-        )
+        try:
+            character.purchase_advance(advance_name, page_override=page)
+        except (PrerequisiteError, KeyError) as exc:
+            raise ValueError(f"Invalid advance '{advance_name}': {exc}") from exc
     return character
 
 

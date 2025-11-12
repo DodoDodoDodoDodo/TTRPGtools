@@ -18,6 +18,7 @@ class Advance:
     xp_cost: int
     page: int
     prerequisites: Sequence[str] = field(default_factory=tuple)
+    max_purchases: int | None = 1
 
     def missing_prerequisites(self, owned_advances: Iterable[str]) -> List[str]:
         """Return prerequisites that are not in ``owned_advances``."""
@@ -64,6 +65,9 @@ class Character:
     def has_advance(self, advance_name: str) -> bool:
         return any(purchase.name.lower() == advance_name.lower() for purchase in self.purchases)
 
+    def _purchase_count(self, advance: Advance) -> int:
+        return sum(1 for purchase in self.purchases if purchase.name.lower() == advance.name.lower())
+
     @property
     def xp_spent(self) -> int:
         return sum(purchase.xp_cost for purchase in self.purchases)
@@ -73,8 +77,11 @@ class Character:
         return self.xp_total - self.xp_spent
 
     def _validate_purchase(self, advance: Advance) -> None:
-        if self.has_advance(advance.name):
-            raise PrerequisiteError(f"Advance '{advance.name}' has already been purchased.")
+        purchase_count = self._purchase_count(advance)
+        if advance.max_purchases is not None and purchase_count >= advance.max_purchases:
+            raise PrerequisiteError(
+                f"Advance '{advance.name}' can only be purchased {advance.max_purchases} times."
+            )
 
         missing = advance.missing_prerequisites(purchase.name for purchase in self.purchases)
         if missing:
