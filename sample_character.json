@@ -1,0 +1,121 @@
+{
+  "name": "Sergeant Elara Voss",
+  "career": "Soldier",
+  "stats": {
+    "Weapon Skill": 45,
+    "Ballistic Skill": 52,
+    "Strength": 38,
+    "Toughness": 41,
+    "Agility": 42,
+    "Intelligence": 37,
+    "Perception": 43,
+    "Willpower": 46,
+    "Fellowship": 35
+  },
+  "xp": {
+    "total": 1250,
+    "spent": 900,
+    "available": 350
+  },
+  "skills": [
+    {
+      "name": "Awareness",
+      "status": "Trained"
+    },
+    {
+      "name": "Command",
+      "status": "+10"
+    },
+    {
+      "name": "Intimidate",
+      "status": "+5"
+    },
+    {
+      "name": "Medicae",
+      "status": "Trained"
+    },
+    {
+      "name": "Parry",
+      "status": "+10"
+    },
+    {
+      "name": "Scrutiny",
+      "status": "Untrained"
+    },
+    {
+      "name": "Dodge",
+      "status": "+10"
+    }
+  ],
+  "talents": [
+    "Air of Authority",
+    "Bolter Drill",
+    "Combat Sense",
+    "Iron Jaw",
+    "Nerves of Steel",
+    "Rapid Reload"
+  ],
+  "equipment": [
+    "Mk IX Pattern Carapace Armour",
+    "Accatran Pattern Assault Bolter",
+    "Melta Bomb",
+    "Micro-bead",
+    "Rebreather",
+    "Regimental Medkit"
+  ],
+  "armour": {
+    "head": {
+      "item": "Carapace Helmet",
+      "ap": 6
+    },
+    "body": {
+      "item": "Carapace Breastplate",
+      "ap": 6
+    },
+    "arms": {
+      "item": "Carapace Pauldrons",
+      "ap": 5
+    },
+    "legs": {
+      "item": "Carapace Greaves",
+      "ap": 5
+    }
+  },
+  "actions": [
+    {
+      "name": "Suppressing Fire",
+      "type": "Full Action",
+      "description": "Lay down a hail of shots with the Accatran assault bolter. Targets in the area must test Pinning.",
+      "keywords": [
+        "Ranged",
+        "Bolter"
+      ]
+    },
+    {
+      "name": "Coordinated Strike",
+      "type": "Half Action",
+      "description": "Issue battlefield orders granting +10 to allies' next Weapon Skill test against a designated enemy.",
+      "keywords": [
+        "Command",
+        "Support"
+      ]
+    },
+    {
+      "name": "Vicious Riposte",
+      "type": "Reaction",
+      "description": "After a successful Parry, immediately make a counterattack with the combat knife at +10 Weapon Skill.",
+      "keywords": [
+        "Melee",
+        "Counter"
+      ]
+    },
+    {
+      "name": "Hail Mary",
+      "type": "Full Action",
+      "description": "Throw a frag grenade with +20 to hit",
+      "keywords": [
+        "Explosive"
+      ]
+    }
+  ]
+}
