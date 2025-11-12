@@ -97,3 +97,23 @@ Characters are stored as human-editable JSON files with the following structure:
 The `purchases` array records each advance by name, the XP spent, and the rulebook page
 number. XP spent is automatically calculated from the canonical advance definition for
 that career, so you only need to adjust the page number when editing manually.
+
+## Sample character workflow
+
+Two helper scripts in the `scripts/` directory showcase a complete character sheet with
+stats, XP bookkeeping, skills, talents, equipment, armour, and a detailed list of
+actions:
+
+```bash
+# Create sample_character.json (overwrites the file if it already exists)
+python scripts/generate_sample_character.py
+
+# Tweak the sheet in-place: update XP, add skills, or change the actions list
+python scripts/modify_character.py sample_character.json \
+  --set-xp-total 1250 \
+  --set-skill "Dodge=+10" \
+  --add-action "Hail Mary|Full Action|Throw a frag grenade with +20 to hit|Explosive"
+```
+
+Running the generator prints the character's actions so they can be quickly copied into
+session prep notes, while the modifier recalculates available XP after each change.
