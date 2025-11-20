@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Iterable
 
 from .models import CAREERS, PrerequisiteError, Character, get_career
+from .book_import import auto_parse_book
 from .parsers import (
     ParseError,
     parse_advances_table,
@@ -127,6 +128,17 @@ def cmd_import_text(args: argparse.Namespace) -> None:
     print(f"Imported {len(entry_payloads)} entries into {args.library}.")
 
 
+def cmd_import_book(args: argparse.Namespace) -> None:
+    text = Path(args.input).read_text()
+    try:
+        entries = auto_parse_book(text, page=args.page, source=args.source)
+    except ParseError as exc:
+        raise SystemExit(f"Could not parse any sections: {exc}") from exc
+
+    append_entries([entry.to_dict() for entry in entries], args.library)
+    print(f"Imported {len(entries)} entries into {args.library}.")
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Tools for managing TTRPG characters.")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -207,6 +219,17 @@ def build_parser() -> argparse.ArgumentParser:
         help="Source identifier or book title to record on each entry",
     )
     import_parser.set_defaults(func=cmd_import_text)
+
+    book_parser = subparsers.add_parser(
+        "import-book", help="Parse an entire book text and append discovered entries to the library"
+    )
+    book_parser.add_argument("--input", required=True, help="Path to the full book text file")
+    book_parser.add_argument(
+        "--library", default="library.json", help="Path to the JSON library that will be appended to"
+    )
+    book_parser.add_argument("--page", type=int, help="Rulebook page number to record on each entry")
+    book_parser.add_argument("--source", help="Source identifier or book title to record on each entry")
+    book_parser.set_defaults(func=cmd_import_book)
 
     return parser
 
