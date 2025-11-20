@@ -1,6 +1,7 @@
 {
   "name": "Sergeant Elara Voss",
-  "career": "Soldier",
+  "career": "guard",
+  "rank": "guardrank",
   "stats": {
     "Weapon Skill": 45,
     "Ballistic Skill": 52,
@@ -13,9 +14,9 @@
     "Fellowship": 35
   },
   "xp": {
-    "total": 1250,
-    "spent": 900,
-    "available": 350
+    "total": 1150,
+    "spent": 850,
+    "available": 300
   },
   "skills": [
     {
@@ -40,17 +41,11 @@
     },
     {
       "name": "Scrutiny",
-      "status": "Untrained"
-    },
-    {
-      "name": "Dodge",
-      "status": "+10"
+      "status": "+15"
     }
   ],
   "talents": [
     "Air of Authority",
-    "Bolter Drill",
-    "Combat Sense",
     "Iron Jaw",
     "Nerves of Steel",
     "Rapid Reload"
@@ -86,6 +81,11 @@
       "name": "Suppressing Fire",
       "type": "Full Action",
       "description": "Lay down a hail of shots with the Accatran assault bolter. Targets in the area must test Pinning.",
+      "origin": [
+        "everyone",
+        "equipment"
+      ],
+      "page": 123,
       "keywords": [
         "Ranged",
         "Bolter"
@@ -95,26 +95,41 @@
       "name": "Coordinated Strike",
       "type": "Half Action",
       "description": "Issue battlefield orders granting +10 to allies' next Weapon Skill test against a designated enemy.",
+      "origin": [
+        "talent",
+        "classability"
+      ],
+      "page": 123,
       "keywords": [
         "Command",
         "Support"
       ]
     },
     {
-      "name": "Vicious Riposte",
+      "name": "Brace for Impact",
       "type": "Reaction",
-      "description": "After a successful Parry, immediately make a counterattack with the combat knife at +10 Weapon Skill.",
+      "description": "Spend a reaction to gain +10 to Agility tests to avoid blasts and reduce incoming damage by 2 until the start of the next turn.",
+      "origin": [
+        "talent",
+        "classability"
+      ],
+      "page": 123,
       "keywords": [
-        "Melee",
-        "Counter"
+        "Defensive"
       ]
     },
     {
-      "name": "Hail Mary",
-      "type": "Full Action",
-      "description": "Throw a frag grenade with +20 to hit",
+      "name": "Vicious Riposte",
+      "type": "Reaction",
+      "description": "After a successful Parry, immediately make a counterattack with the combat knife at +10 Weapon Skill.",
+      "origin": [
+        "talent",
+        "classability"
+      ],
+      "page": 123,
       "keywords": [
-        "Explosive"
+        "Melee",
+        "Counter"
       ]
     }
   ]

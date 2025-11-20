@@ -39,13 +39,11 @@ def _build_sample_character() -> Dict[str, Any]:
         {"name": "Intimidate", "status": "+5"},
         {"name": "Medicae", "status": "Trained"},
         {"name": "Parry", "status": "+10"},
-        {"name": "Scrutiny", "status": "Untrained"},
+        {"name": "Scrutiny", "status": "+15"},
     ]
 
     talents = [
         "Air of Authority",
-        "Bolter Drill",
-        "Combat Sense",
         "Iron Jaw",
         "Nerves of Steel",
         "Rapid Reload",
@@ -72,31 +70,40 @@ def _build_sample_character() -> Dict[str, Any]:
             "name": "Suppressing Fire",
             "type": "Full Action",
             "description": "Lay down a hail of shots with the Accatran assault bolter. Targets in the area must test Pinning.",
+            "origin": ["everyone", "equipment"],
+            "page": 123,
             "keywords": ["Ranged", "Bolter"],
         },
         {
             "name": "Coordinated Strike",
             "type": "Half Action",
             "description": "Issue battlefield orders granting +10 to allies' next Weapon Skill test against a designated enemy.",
+            "origin": ["talent", "classability"],
+            "page": 123,
             "keywords": ["Command", "Support"],
         },
         {
             "name": "Brace for Impact",
             "type": "Reaction",
             "description": "Spend a reaction to gain +10 to Agility tests to avoid blasts and reduce incoming damage by 2 until the start of the next turn.",
+            "origin": ["talent", "classability"],
+            "page": 123,
             "keywords": ["Defensive"],
         },
         {
             "name": "Vicious Riposte",
             "type": "Reaction",
             "description": "After a successful Parry, immediately make a counterattack with the combat knife at +10 Weapon Skill.",
+            "origin": ["talent", "classability"],
+            "page": 123,       
             "keywords": ["Melee", "Counter"],
         },
     ]
 
     return {
         "name": "Sergeant Elara Voss",
-        "career": "Soldier",
+        "career": "guard",
+        "rank": "guardrank",
         "stats": stats,
         "xp": {
             "total": xp_total,
