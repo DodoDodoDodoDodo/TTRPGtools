@@ -1,0 +1,54 @@
+diff --git a/database/armour.json b/database/armour.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..a15a19a717a2e30fce306912ac7fb5c2f973899b
+--- /dev/null
++++ b/database/armour.json
+@@ -0,0 +1,3 @@
++{
++  "_comment": "Stub for armour entries. Run the parsing scripts to replace with generated data."
++}
+diff --git a/database/items.json b/database/items.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..2bcb3212dc6bdff34a623f92806127630d860a5c
+--- /dev/null
++++ b/database/items.json
+@@ -0,0 +1,3 @@
++{
++  "_comment": "Stub for item definitions. Run the parsing scripts to replace with generated data."
++}
+diff --git a/database/skills.json b/database/skills.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..15b99a31594daf6c7fcbc076bf8d646d0ef4cc55
+--- /dev/null
++++ b/database/skills.json
+@@ -0,0 +1,3 @@
++{
++  "_comment": "Stub for skill definitions. Run the parsing scripts to replace with generated data."
++}
+diff --git a/database/talents.json b/database/talents.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..090519f03b1575b0e2aa92c3008722d127dc53fb
+--- /dev/null
++++ b/database/talents.json
+@@ -0,0 +1,3 @@
++{
++  "_comment": "Stub for talent definitions. Run the parsing scripts to replace with generated data."
++}
+diff --git a/database/weapons.json b/database/weapons.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..e21a422cf67b42d23c147ce480682a8731437a9a
+--- /dev/null
++++ b/database/weapons.json
+@@ -0,0 +1,3 @@
++{
++  "_comment": "Stub for weapon entries. Run the parsing scripts to replace with generated data."
++}
+diff --git a/stuff.md b/stuff.md
+index ad95242eb830f90b141b203bb290374959ff327c..81189f01f28caab126aad012fc751cb1738aba80 100644
+GIT binary patch
+delta 12
+TcmbPPGPi`qHMf*&gQOJzALs;E
+
+delta 8
+PcmbPRGP7hOi=-6*5i$cO
+
