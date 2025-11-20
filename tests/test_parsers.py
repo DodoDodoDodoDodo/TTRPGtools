@@ -41,6 +41,7 @@ def test_parse_talent_table_extracts_rows() -> None:
     assert entries[0].name == "Air Of Authority"
     assert entries[0].prerequisites == ["Fel 30"]
     assert "Affect more targets" in entries[0].description
+    assert "Air of Authority" in entries[0].raw_text
     assert entries[-1].name == "Cleanse And Purify"
 
 
@@ -53,6 +54,7 @@ def test_parse_talent_prose_supports_multiline_names() -> None:
     assert "Talent Groups" in basic_training.description
     catfall = next(entry for entry in entries if entry.name == "Catfall")
     assert catfall.prerequisites == ["Agility 30"]
+    assert "Prerequisites:" in catfall.raw_text
 
 
 def test_parse_divination_table_handles_ranges() -> None:
@@ -94,6 +96,7 @@ def test_parse_psychic_powers_extracts_metadata() -> None:
     telepathy = next(entry for entry in entries if entry.name == "Telepathy")
     assert telepathy.threshold == 11
     assert "send your thoughts" in telepathy.description.lower()
+    assert "THRESHOLD" in telepathy.raw_text.upper()
     terrify = next(entry for entry in entries if entry.name == "Terrify")
     assert terrify.sustain == "No"
 

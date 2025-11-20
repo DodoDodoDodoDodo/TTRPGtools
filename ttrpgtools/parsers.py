@@ -35,6 +35,7 @@ class TalentEntry:
     description: str
     page: int | None = None
     source: str | None = None
+    raw_text: str | None = None
 
     def to_dict(self) -> dict:
         payload = {
@@ -44,6 +45,7 @@ class TalentEntry:
             "description": self.description,
             "page": self.page,
             "source": self.source,
+            "raw_text": self.raw_text,
         }
         return {key: value for key, value in payload.items() if value is not None and value != []}
 
@@ -58,6 +60,7 @@ class AdvanceEntry:
     prerequisites: List[str]
     page: int | None = None
     source: str | None = None
+    raw_text: str | None = None
 
     def to_dict(self) -> dict:
         payload = {
@@ -68,6 +71,7 @@ class AdvanceEntry:
             "prerequisites": self.prerequisites,
             "page": self.page,
             "source": self.source,
+            "raw_text": self.raw_text,
         }
         return {key: value for key, value in payload.items() if value is not None and value != []}
 
@@ -81,6 +85,7 @@ class CharacteristicAdvanceEntry:
     cost: int
     page: int | None = None
     source: str | None = None
+    raw_text: str | None = None
 
     def to_dict(self) -> dict:
         payload = {
@@ -90,6 +95,7 @@ class CharacteristicAdvanceEntry:
             "cost": self.cost,
             "page": self.page,
             "source": self.source,
+            "raw_text": self.raw_text,
         }
         return {key: value for key, value in payload.items() if value is not None}
 
@@ -104,6 +110,7 @@ class DivinationResultEntry:
     effect: str
     page: int | None = None
     source: str | None = None
+    raw_text: str | None = None
 
     def to_dict(self) -> dict:
         payload = {
@@ -114,6 +121,7 @@ class DivinationResultEntry:
             "effect": self.effect,
             "page": self.page,
             "source": self.source,
+            "raw_text": self.raw_text,
         }
         return {key: value for key, value in payload.items() if value is not None}
 
@@ -154,6 +162,7 @@ class PsychicPowerEntry:
     description: str
     page: int | None = None
     source: str | None = None
+    raw_text: str | None = None
 
     def to_dict(self) -> dict:
         payload = {
@@ -166,6 +175,7 @@ class PsychicPowerEntry:
             "description": self.description,
             "page": self.page,
             "source": self.source,
+            "raw_text": self.raw_text,
         }
         return {key: value for key, value in payload.items() if value is not None}
 
@@ -362,6 +372,7 @@ def parse_talent_table(text: str, *, page: int | None = None, source: str | None
             description=benefit.strip(),
             page=page,
             source=source,
+            raw_text=candidate_row.strip(),
         )
         entries.append(entry)
 
@@ -387,6 +398,7 @@ def parse_talent_prose(text: str, *, page: int | None = None, source: str | None
             raise ParseError(f"Expected talent name in uppercase, found: {lines[idx]!r}")
 
         name_lines = [lines[idx].strip()]
+        entry_start = idx
         idx += 1
         while idx < len(lines):
             candidate = lines[idx].strip()
@@ -437,6 +449,7 @@ def parse_talent_prose(text: str, *, page: int | None = None, source: str | None
             idx += 1
 
         description = " ".join(description_lines).replace("  ", " ").strip()
+        raw_text = "\n".join(lines[entry_start:idx]).strip()
         entries.append(
             TalentEntry(
                 name=name,
@@ -444,6 +457,7 @@ def parse_talent_prose(text: str, *, page: int | None = None, source: str | None
                 description=description,
                 page=page,
                 source=source,
+                raw_text=raw_text,
             )
         )
 
@@ -479,6 +493,7 @@ def parse_advances_table(text: str, *, page: int | None = None, source: str | No
                 prerequisites=prerequisites,
                 page=page,
                 source=source,
+                raw_text=line.strip(),
             )
         )
 
@@ -519,6 +534,7 @@ def parse_characteristic_advances_table(
                     cost=cost,
                     page=page,
                     source=source,
+                    raw_text=line.strip(),
                 )
             )
 
@@ -565,7 +581,8 @@ def parse_divination_table(
         match = re.match(r"^(?P<range>\d{1,2}(?:[–-]\d{1,2})?)\s+(?P<text>.+)$", line)
         if match:
             if current_roll is not None:
-                entries.append(_build_divination_entry(current_roll, " ".join(current_text_parts), page, source))
+                combined = " ".join(current_text_parts)
+                entries.append(_build_divination_entry(current_roll, combined, page, source, combined))
             current_roll = _parse_roll_range(match.group("range"))
             current_text_parts = [match.group("text").strip()]
             continue
@@ -574,7 +591,8 @@ def parse_divination_table(
         current_text_parts.append(line)
 
     if current_roll is not None:
-        entries.append(_build_divination_entry(current_roll, " ".join(current_text_parts), page, source))
+        combined = " ".join(current_text_parts)
+        entries.append(_build_divination_entry(current_roll, combined, page, source, combined))
 
     if not entries:
         raise ParseError("No divination entries were parsed from the provided text.")
@@ -586,6 +604,7 @@ def _build_divination_entry(
     text: str,
     page: int | None,
     source: str | None,
+    raw_text: str | None,
 ) -> DivinationResultEntry:
     quote = text
     effect = ""
@@ -609,6 +628,7 @@ def _build_divination_entry(
         effect=effect.strip(),
         page=page,
         source=source,
+        raw_text=raw_text,
     )
 
 
@@ -628,6 +648,7 @@ def parse_psychic_powers(
         if not lines[idx].strip().isupper():
             raise ParseError(f"Expected psychic power name in uppercase, found: {lines[idx]!r}")
         name_lines = [lines[idx].strip()]
+        entry_start = idx
         idx += 1
         while idx < len(lines):
             candidate = lines[idx].strip()
@@ -670,6 +691,7 @@ def parse_psychic_powers(
         sustain = fields.get("sustain", "")
         range_ = fields.get("range", "")
         description = " ".join(description_lines).replace("  ", " ").strip()
+        raw_text = "\n".join(lines[entry_start:idx]).strip()
         entries.append(
             PsychicPowerEntry(
                 name=name,
@@ -680,6 +702,7 @@ def parse_psychic_powers(
                 description=description,
                 page=page,
                 source=source,
+                raw_text=raw_text,
             )
         )
 
