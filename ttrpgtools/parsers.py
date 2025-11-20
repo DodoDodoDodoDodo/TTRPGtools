@@ -119,6 +119,30 @@ class DivinationResultEntry:
 
 
 @dataclass
+class CharacterModfierEntry:
+    """Represents something that modifies a characters stats or another overriding attribute. 
+    Examples are missing limbs, bionic augments, permanent effects of dark pacts."""
+
+    modified_stat: str
+    quote: str
+    effect: str
+    value: int
+    page: int | None = None
+    source: str | None = None
+
+    def to_dict(self) -> dict:
+        payload = {
+            "type": "modifier_char",
+            "value": self.value,
+            "quote": self.quote,
+            "effect": self.effect,
+            "page": self.page,
+            "source": self.source,
+        }
+        return {key: value for key, value in payload.items() if value is not None}
+
+
+@dataclass
 class PsychicPowerEntry:
     """Represents a psychic power definition."""
 
