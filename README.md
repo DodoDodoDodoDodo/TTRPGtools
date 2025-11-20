@@ -89,9 +89,11 @@ Characters are stored as human-editable JSON files with the following structure:
   "career": "Soldier",
   "xp_total": 500,
   "purchases": [
-    {"name": "Basic Training", "xp_cost": 100, "page": 45}
+    {"name": "Basic Training", "xp_cost": 100, "page": 45} 
   ]
 }
+
+
 ```
 
 The `purchases` array records each advance by name, the XP spent, and the rulebook page
