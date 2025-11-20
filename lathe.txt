@@ -1,0 +1,968 @@
+TM
+TM
+THE LOST DATASLATE
+The Lost Dataslate
+L
+Lead Developer
+Tim Huckelbery
+CREDITS Credits
+E
+Executive Game Designer
+Corey Konieczka
+W
+Writing and Development
+Matthew Eustace and Craig Gallant
+E
+Executive Game Producer
+Michael Hurley
+E
+Editing and Proofreading
+P
+Publisher
+Andrew Kenrick and Matthew Harkrader
+Christian T. Petersen
+D
+Dark Heresy Design
+S
+Special Thanks
+Owen Barnes, Kate Flack, and Mike Mason
+Playtest Coordinator Ronald DeValk; “The Librarians” Pim Mauve
+with Gerlof Woudstra, Keesjan Kleef, Jan-Cees Voogd, Joris Voogd;
+G
+“No Guts No Glory!” Sean Connor with Stephen Pitson, Adam Lloyd,
+Graphic Design
+Ben Newman; “Veterans of a Psychic War” Benn Williams with
+Shaun Boyke
+Chris Lancaster, Aric Wieder, Rebecca Williams, and Eric Young;
+C
+Trevor Stamper with Brian Gilkison, John Olszewski, Caitlin Stamper,
+Cover Art
+Steve Harmon, Jake Harmon, Dave Boruch; Ryan Powell.
+Wayne England
+I W
+Interior Art
+John Blanche and Jan Doležálek
+G L
+Games Workshop
+Licensing Managers
+M
+John French, Andy Hall, & Owen Rees
+Managing Art Director
+Andrew Navaro
+H
+Head of Licensing
+A
+Jon Gillard
+Art Direction
+Mike Linnemann
+P
+H
+Head of Licensing, Legal,
+and Strategic Projects
+Production Management
+Andy Jones
+Eric Knight
+L
+Licensing & Development Coordinator
+Deb Beck
+H
+Head of Intellectual Property
+Alan Merrett
+FANTASY
+FLIGHT
+GAMES
+Fantasy Flight Games
+1975 West County Road B2
+Roseville, MN 55113
+USA
+Copyright © Games Workshop Limited 2012. All rights reserved. Games Workshop, Warhammer 40,000, the Warhammer 40,000 logo, Warhammer 40,000
+Roleplay, the Warhammer 40,000 Roleplay logo, Dark Heresy, The Lathe Worlds, Calixis Sector, and all associated marks, logos, places, names, creatures, races and
+race insignia/devices/logos/symbols, vehicles, locations, weapons, units and unit insignia, characters, products and illustrations from the Warhammer 40,000 universe
+and the Dark Heresy game setting are either ®, TM and/or © Games Workshop Ltd 2000–2012, variably registered in the UK and other countries around the
+world. This edition published under license to Fantasy Flight Publishing Inc. Fantasy Flight Games and the Fantasy Flight Games logo are trademarks or registered
+trademarks of Fantasy Flight Publishing, Inc. All rights reserved to their respective owners. No part of this publication may be reproduced, stored in a retrieval
+system, or transmitted in any form by any means, electronic, mechanical, photocopying, recording or otherwise, without the prior permission of the publishers.
+Product Code DHP01
+For more information about the Dark Heresy line, free downloads,
+answers to rule queries, or just to pass on greetings, visit us online at
+www.FantasyFlightGames.com
+2
+Honoured Madam Inquisitor Leta,
+It has been several long days since the last transmission from our agent. It pains me to say so, but we must assume the mission into the Lathes was unsuccessful, especially given the threatening and cryptic nature of the final transmission. This bodes ill for the Ordos, and our contingency plans should the Fulcrum Directive prove necessary.
+The Lost Dataslate
+All would not appear lost however. The Emperor was surely with His servant during the mission’s termination, for we were gifted with a battered data-slate that was delivered via an unknown courier. It was almost marked for disposal when one of my more perceptive Acolytes noticed a series of small, otherwise unremarkable etches along the side. These matched our missing agent’s vox encryption base code, and prompted intensive inquiry into the slate’s contents.
+It lasted many candles, but we have managed to peel away layers of dross consisting of endless harvest reports to reveal carefully buried data. While it is not complete, it would appear our agent managed to gather together portions as a measure against an unsuccessful return. The images and data included may still allow the Holy Ordos to better prepare our sector for the eventuality that the Cult of the Machine turns against us. Their forces grow in power with each year, and such power will not sit idle for long. Only preemptive measures can ensure the safety of the Calixis Sector and our own Holy Mission as directed by the Emperor Himself.
+In His Name and for His Glory, Karolious, Hereticus
+3
+The Lost Dataslate
+4
+The Lost
+Dataslate
+Hail all loyal Tech-Priests and other servants of the Machine
+Cult! Welcome to The Lost Dataslate, a compilation of
+additional material for The Lathe Worlds, the Dark
+Heresy supplement covering the Adeptus Mechanicus within the
+Calixis Sector. Here players and GMs can find new origins for
+their Mechanicum characters, a new NPC to guide them within
+the Lathes system, additional armoury weapons and gear, and
+revelations for one of the more mysterious of the Lathe Worlds.
+Fire the Forges with these new blessings of the Omnissiah!
+Forge World
+Origins
+“You’ve never been to Cyclopea, have you? I went there once. It was
+eerie. They say there are one hundred Servitors for every one man on
+those stations. The silence was like a tomb. I’d never go back.”
+–Delfin Zway, archeotech trader
+A forge world Homeworld Origin is a great starting
+point for any Acolyte who wishes to begin his career
+in the dank, cramped, and polluted worlds of the
+Lathes. Life within a forge world is exceptionally difficult, and
+only the hardy and strong survive. Those who show any signs
+of weakness are cast out, or worse, repurposed into mindless
+Servitors, forever destined to a menial existence of endless
+repetition. However, while many forge worlds tend to be similar
+in design and purpose—massive manufacturing capabilities,
+the ability to smelt untold quantities of raw materials, endless
+cogitator banks storing fragmented data, and so on—not all
+forge worlds are the same, and even the Calixis Sector has
+several that vary greatly. The rules below detail a number of the
+various forge worlds within the Calixis Sector and how players
+might use them to shape the origins of their characters.
+SELEcting a ForGE
+WorLD Origin
+Players select forge world Origins in the same manner as
+selecting any of the other Homeworld Origins from the
+Dark Heresy Core Rulebook. This is usually as simple as
+declaring the choice during character creation, but players
+should check with the GM to ensure the changes do not
+disrupt the upcoming campaign.
+A forge world Homeworld Origin can only be taken by
+Adepts, Assassins, Guardsmen, Scum and, of course, Tech-
+Priests. Arbitrators, Battle Sisters, Clerics and especially
+Imperial Psykers are forbidden from selecting a forge world as
+their Homeworld Origin unless their GM otherwise permits.
+Forge World Origin Rules
+The following rules apply to all characters who choose a
+forge world Homeworld Origin:
+Forge World Skills: Forge world characters treat
+Common Lore (Tech) and Common Lore (Machine Cult) as
+untrained Basic Skills.
+Fit for Purpose (Trait): Depending on the chosen Career
+the forge world character increases one Characteristic by
++3: Adept—Intelligence; Assassin—Agility; Guardsman—
+Ballistic Skill; Scum—Perception; Tech-Priest—Willpower.
+Stranger to the Aquila (Trait): Forge world characters suffer
+a –10 penalty on Tests involving knowledge of the Imperial
+Creed, and a –5 penalty on Fellowship Tests to interact with
+members of the Ecclesiarchy in formal settings.
+Starting Wounds: These characters start with 1d5+7 Wounds.
+Fate Points: Forge world characters roll 1d10 to determine
+starting Fate Points: 1–5 means 1 Fate Point; 6–9 gives 2 Fate
+Points; 10 grants 3 Fate Points..
+Forges of the Lathes
+In addition to the rules listed above, players must choose one
+of the forge worlds within the Calixis Sector as their specific
+Homeworld. As with selecting the forge world Origin,
+Players should be sure that their specific Homeworld choice
+is approved by the GM to avoid any potential conflicts.
+Origin: Lathe-Hadd
+A stifled world of endless procrastination, those who dwell within
+the bureaucratic and technological quagmire of Lathe-Hadd tend
+to either live a life of looking over their shoulder, or have simply
+given up hope of ever seeing any progress in their lifetimes.
+Characters originating from Lathe-Hadd start with either
+the Paranoia or Jaded Talent.
+Origin: Lathe-Hesh
+As the premier forge world of the Calixis Sector, Lathe-Hesh
+represents everything most Imperial citizens have come to
+expect from a forge world.
+Characters originating from Lathe-Hesh start with the
+Technical Knock Talent.
+Origin: Lathe-Het
+Having lost the majority of its manufacturing capacity years ago,
+Lathe-Het is now the data centre of the Lathe worlds, housing
+untold amounts of knowledge in ancient decaying datacrypts
+and cogitators that span the entire world. Those who originate
+from Lathe-Het are usually quite adept at accessing information
+quickly, and often have the means to do so.
+Characters originating from Lathe-Het start with the Talent
+Electro Graft Use and a Common-Quality Mind Impulse Unit.
+They do not benefit from the Fit for Purpose Trait.
+Origin: Belecane
+Considered to be one of the more conventional forge worlds
+within the Calixis Sector, those from Belecane have often have
+more contact with the ancient and scarcely understood technology
+of stasis weapons even most senior Tech-Priests elsewhere, as
+well as other technological marvels unique to Belecane.
+Characters originating from Belecane start with the Exotic
+Weapon Training (Stasis Grenades) Talent as well as one other
+Exotic Weapon Training Talent of their choice.
+Origin: Cyclopea
+Once a Tech-Priest known only as “The Fabricator” ruled in
+apostasy over this forge world, which is in truth a series of
+space stations known as the Cyclopean Network. Orbiting a
+blighted world of misery and pain, the Network was entirely
+staffed with Servitors during his eccentric reign, and it remains
+a place for silent research. Tech-Priests from all across the
+Calixis Sector come to learn what secrets its enigmatic ruler
+left behind when he fled to a distant sector.
+Characters originating from Cyclopea begin play with
+training in the Forbidden Lore (Archeotech) Skill and the
+Talent Binary Chatter.
+Origin: Explorator Fleet
+The Explorator fleets crisscross the galaxy in the never-ending
+Quest for Knowledge. Each crewmember of each ship, from the
+lowliest rating to the highest Magos, knows that it is his duty
+to travel the stars and reclaim mankind’s lost heritage. There
+are numerous Explorator fleets within the Calixis Sector, some
+acting act as permanent defence fleets while others simply stop
+by on their way to the Halo Stars and beyond. Those who
+leave their fleet to start on a new path are a hardy and capable
+people, ready for any challenge.
+Characters originating from an Explorator Fleet gain the
+Void Accustomed Trait listed on page 22 of the Dark Heresy
+Core Rulebook as well as training in one of the following
+Skills: Forbidden Lore (Archeotech), Inquiry, Navigation
+(Stellar), or Scholastic Lore (Astromancy).
+Origin: Idumea
+Idumea is a minor forge world at the edge of the Calixis Sector
+that has found itself caught in the tendrils of the Phaenonite
+Conspiracy. The most brazen and unholy types of tech-heresy
+bubble just beneath the surface of this choked and polluted
+world, waiting for the moment when its rulers will rise up to
+take their place as leaders of not just the Calixis Sector, but
+perhaps the Imperium itself.
+Those that hail from Idumea are unlikely to be part of the
+conspiracy, but it is difficult to spend a significant amount of
+time on the surface without at least coming into contact with
+the servants of the Phaenonites. Characters originating from
+Idumea start with either the Peer (Underworld) or Unremarkable
+Talent. Additionally they treat Common Lore (Underworld),
+Forbidden Lore (Cults) and Scholastic Lore (Occult) as
+untrained Basic Skills. Imperial Psykers may also select this
+forge world Homeworld as their Origin, but they must select
+the Unremarkable Talent rather than Peer (Underworld).
+Origin: Mechanicum Research Station
+The Sector contains an endless variety of interesting nebulae,
+oddly radiating stars, worlds with unusual fauna, and other
+anomalies of interest to the Mechanicum, and they strive to
+deploy research stations to study them all—an impossible
+task, even with their vast resources. Some of these installations
+are closely guarded secrets or havens for techno-recidivists,
+whereas some are celebrated centres of knowledge or simply
+forgotten altogether. Those that have spent their lives on such
+a station usually pick up a myriad of skills that can make them
+quite useful to many Calixian organisations.
+The Lost Dataslate
+5
+The Lost Dataslate
+6
+Characters originating from a Mechanicum Research
+Station begin play with training in one of the following Skills:
+Common Lore, Forbidden Lore, Scholastic Lore, or Trade. They
+also gain the Talented Talent for that specific Skill.
+Origin: Omnicron 71-DX
+Close to the Adrantis Nebula, Omnicron 71-DX has been used
+as a research station for hundreds of years, and those who herald
+from this small but important location are said to be more adept
+at stargazing than other Tech-Priests in the Calixis Sector.
+Characters originating from Omnicron 71-DX start
+with training in the Pilot (Space Craft) and Scholastic Lore
+(Astromancy) Skills.
+Origin: Opus Macharius
+Those from the homeworld of the Legio Venator are no
+strangers to the deafening, ground-shattering footfalls of
+Titans. Often stronger than those of other forge worlds, the
+denizens of Opus Macharius are calm under fire—even if
+they can be somewhat hard of hearing.
+Characters originating from Opus Macharius start with the
+Bulging Biceps and Nerves of Steel Talents, but reduce their
+starting Perception by 5.
+Origin: Perinetus
+Being from the largest and most important ship-building and
+repair facility in the Calixis Sector, the natives of Perinetus are
+adept at operating extremely heavy machinery and weathering
+the rigours of space travel.
+Characters originating from Perinetus gain the Void
+Accustomed Trait listed on page 22 of the Dark Heresy Core
+Rulebook, and treat Trade (Armourer), Trade (Technomat)
+and Trade (Wright) as untrained Basic Skills.
+Origin: Ryboth
+Only those that are truly blessed can flourish on the surface
+of Ryboth. Still languishing in the aftereffects of the radiation
+storm that brought the forge world to its knees two hundred
+years ago, the remaining population ekes out a meagre existence
+in the hope that one day their world might be restored.
+Characters from Ryboth reduce their starting Strength and
+Toughness by 3 and reduce their starting Wounds by 1, but
+gain the Hardy and Resistance (Radiation) Talents, as well as
+one additional Fate Point.
+Origin: Skorgulian
+A dark and desolate world dominated by Mechanicum mining
+operations, the people of Skorgulian must not only learn to
+live in the horrific conditions of the surface, but also how
+to navigate the Byzantine political structure of the world.
+Houses can rise and fall as quickly as the tides of its polluted
+oceans, and those who do not adapt are quickly swept aside.
+Characters originating from Skorgulian gain training in
+the Scholastic Lore (Bureaucracy) Skill, the Resistance (Cold)
+Talent, and treat Trade (Miner) and Trade (Prospector) as
+untrained Basic Skills.
+Origin: Synford
+Synford is responsible for more Imperial Guard vehicles than any
+other forge world in the Sector. From its production lines roll
+Leman Russ Battle Tanks, Chimeras and many other patterns,
+but the world is most famous for its dominating Baneblades. Still
+able to produce them in significant numbers, and retaining the
+technology to produce the Baneblade’s signature cannon shells,
+Synford is a forge world the Imperium cannot afford to lose.
+Characters from Synford gain training in the Common
+Lore (Imperial Guard) and Drive (Ground Vehicle) Skills,
+and treat Trade (Armourer), Trade (Technomat), and Trade
+(Wright) as untrained Basic Skills.
+Origin: Synford ii
+Despite the similar name, Synford II is both nothing like and
+nowhere near Synford. Sitting in the Malfian Sub-Sector, Synford
+II is a shadow of its former self and a casualty of the Malygrisian
+Tech-Heresy. Some form of seismic weapon was unleashed upon
+the surface during the Tech-Heresy, removing most of Synford II’s
+production capacity and destabilising the world’s surface so much
+that mining its abundant resources is now almost impossible.
+Those who hail from Synford II cling to the former glory
+of their world, spending more time reminiscing about the
+past than looking to the future. They gain training in the
+Performer (Storyteller) Skill, the Total Recall Talent, and treat
+Scholastic Lore (Archaic), Scholastic Lore (Heraldry), and
+Scholastic Lore (Legend) as untrained Basic Skills.
+More Forge World Information
+Further background information on life within a
+forge world, as well as additional weapons, equipment
+and cybernetics can be found in The InquisITor’s
+Handbook. These extra rules can add more depth to
+any Dark Heresy campaign and are an invaluable
+resource for GMs looking for further emphasise the
+role of the Adeptus Mechanicus in their games.
+Origin: Turanshush
+The Adeptus Ministorum already had a sizable presence
+on Turanshush when the world was ceded to the Adeptus
+Mechanicus, but rather than starting a conflict with the fiery
+priests of the Ecclesiarchy, the ruling Fabricator chose to leave
+them alone. Since then, relations between the forge world and
+the small enclave have always been strained, with the Mechanicus
+keeping the small group isolated from the rest of the world
+both figuratively and literally. The result has been a people of
+furious religious conviction, either in the guise of worship to the
+Machine God or worship to the God-Emperor of Mankind.
+Characters originating from Turanshush do not start with the
+Stranger to the Aquila Trait. In its place they gain the Insanely
+Faithful Talent, as well training in one of the following pairs
+of Skills: Common Lore (Machine Cult) and Common Lore
+(Tech), or Common Lore (Ecclesiarchy) and Common Lore
+(Imperial Creed). Characters who choose the Mechanicum-
+based Skills always suffer a –20 penalty when interacting with
+members of the Adeptus Ministorum, whilst characters that
+choose the Ecclesiarchy-based skills always suffer a –20 penalty
+when interacting with members of the Adeptus Mechanicus.
+A Cleric can use this option to select a the forge world
+Homeworld Origin, but if he does, he must choose Common
+Lore (Ecclesiarchy) and Common Lore (Imperial Creed) when
+selecting his trained Skills from this Origin above.
+Origin: Uziel/Heterodyne Station
+A feudal world where the Adeptus Mechanicus has successfully
+integrated the Machine Cult with day-to-day activities, Uziel is
+a world that mixes the primitive and the highly advanced. The
+serfs and petty nobles know nothing of the Ecclesiarchy, as the
+Magos of the Heterodyne Station have slowly but surely made
+the Omnissiah the object of the populace’s worship.
+Tech-Priests originating from Uziel/Heterodyne Station
+start with the either the Rite of Awe or Rite of Fear Talent.
+All other types of characters gain training in either the Trade
+(Agri) or Trade (Smith) Skill. Further, instead of treating
+Common Lore (Tech) as an untrained Basic Skill (as normal for
+a forge world Homeworld Origin), they treat Forbidden Lore
+(Adeptus Mechanicus) as an untrained Basic Skill instead.
+LATHE-piLOT (NPC)
+Specialist Lathesmasters with limited augmentation designed
+to assist them in navigating their native system, Lathe-pilots
+know every mote of dust floating within the Lathes, and
+share a special connection with the strange phenomena that
+plague its spaceways. The Excipio Stations and the enormous
+shipping vessels that transport the products of the Lathes
+around the Calixis Sector depend upon these natives to
+successfully guide Greatholds and other ships through the
+system and beyond. Highly prized for their ability to pilot
+large craft through crowded lanes of traffic, some Lathe-pilots
+have since been emigrated to various Lathe Worlds and other
+Adeptus Mechanicus holdings.
+Lathe-pilot
+WS BS S T Per WP Fel
+24 40 32 34 38 33 44 21 35
+AgInt Movement: 3/6/9/18 Wounds: 8
+Armour: None
+Skills: Dodge (Ag), Navigation (Interplanetary, System
+Specific) (Int) +20, Pilot (Spacecraft) (Ag) +20, Scholastic
+Lore (Astrography) (Int) +10, Scrutiny (Per), Tech Use (Int).
+Talents: Lightning Reflexes, Rapid Reaction, Total Recall.
+Traits: Dark Sight.
+Weapons: Laspistol (Pistol; 30m; S/–/–; 1d10+2 E; Pen 0;
+Clip 30; Reliable).
+Gear: Red Mechanicus robes (Good-Quality Clothing),
+Rudimentary MIU, void-suit with helmet.
+Rudimentary MIU: The Mind Impulse Units provided to
+Lathe-Pilots are only of the simplest, most basic design.
+They are only capable of interfacing with their designated
+vessel’s machine spirit.
+Native Guide: Lathe-pilots specialise in navigating through
+their home systems, or any system for which they have
+been prepared. They gain a +20 bonus to all Navigation
+(Space) Tests while guiding their vessel through familiar
+areas. Furthermore, the Lathe-pilot adds an additional two
+Degrees of Success to any successful Navigation (Space Test)
+and ignores the Hazards of Navigation special rule when
+navigating within the Lathes System.
+The Lost Dataslate
+7
+The Lost Dataslate
+Table 1-1: Techxorcism Weapons
+Name Class Range RoF Dam Pen Clip Rld Special Wt Cost Availability
+Techxorcism
+Rifle Basic 80m S/–/4 1d10+4 E 4 40 Full Haywire (1),
+Shocking 15kg 3500 Very Rare
+Blast (4),
+Techxorcism
+Cannon Heavy 120m S/–/– 2d10+6 E 6 20 2 Full
+Haywire (4),
+40kg 5800 Very Rare
+Shocking
+8
+Expanded
+Mechanicum
+Armoury
+There are those who would call the Mechanicum’s reliance
+on technology a weakness, and that the role the machine
+plays for them is a crutch that only lesser men would
+require. The Adeptus Mechanicus believes otherwise of course,
+holding that only through metallic union with the machine
+can man become more than mere flesh and become one with
+the Omnissiah. The technological might and arcane devices
+that the Cult of the Machine wields in combat perhaps are the
+ultimate proof that their beliefs are correct, and certainly few
+facing them in battle would argue otherwise as mole mortar
+torpedoes erupt from the ground and Cataclysmus Devices
+bathe wide areas in nuclear fury.
+TecHXOrciSM WEAPOns
+Utilising a unique form of energy specifically designed to
+destroy technology and drive out machine-spirits, Techxorcism
+weapons can render units of Servitors inoperable in a single
+blast, or leave a Tech-Priest on the ground desperately
+gasping for air as his implants all fail. Given the choice, the
+Lathes would ban such weapons, but unfortunately for the
+Mechanicus of Calixis there are other powerful organisations
+within the Sector that consider these weapons vital tools in
+the war against the enemies of Mankind. Legends say they
+are a forbidden result of the Malygrisian Tech-Heresy. No
+Calixian forge world makes these weapons, or if they do they
+are unwilling to admit it, but examples of the weapons seem
+to permeate the criminal underbelly of the entire Sector. There
+are numerous examples of Techxorcism weaponry, but the most
+common are a rapid fire rifle often used for suppressing fire
+and a highly destructive cannon that can render entire squads
+of enemy troops helpless in a single blast. The Agents of the
+Lords Dragon are quick to respond to rumoured Techxorcism
+weapon caches or heretical forges producing them, but even
+their keen eyes cannot look everywhere at once.
+To use a Techxorcism weapon, the character must have the
+Exotic Weapon Training (Techxorcism) Talent.
+Techxorcism Weapon Rules
+When a Techxorcism weapon strikes a living target, it deals the
+damage listed in its profile with the Shocking Quality. Living
+targets struck by a Techxorcism weapon suffer an additional –20
+penalty to Tests to resist the effects of its Shocking Quality.
+Techxorcism ammunition is Very Rare, and costs 80
+Thrones for every 10 shots. Both the Techxorcism Rifle and
+the Techxorcism Cannon can be linked to a backpack ammo
+supply; this doubles the weapon’s clip size and reload time.
+WEAPOn EMPLAcEMEnTS
+While most Mechanicum weaponry is man (or Servitor) portable,
+some armaments are designed more for stationary operation.
+Once firmly set into the ground, such weapon emplacements
+can rain devastating fire upon the foes of the Machine God.
+Hadd-Pattern Mole Mortar
+The Hadd-Pattern Mole Mortar launches specialist
+burrowing torpedoes that detonate under or just above
+the surface. The torpedoes can plough through almost
+any material, and the Tech-Priests of Aurora Novos have
+rediscovered a number of different munition types to
+enhance the tactical flexibility of this peculiar weapon.
+Hadd-Pattern Thudd Gun
+Spurred on by the reintroduction of the Het-Pattern Rapier,
+a small sect of Lathe-Hadd Tech-Priests calling themselves
+Aurora Novos began researching and manufacturing other
+ancient Crusade-era artillery emplacements in the hope that it
+would inspire the restoration of their falling forge world. The
+Hadd-Pattern Thudd Gun was the first of these designs, and was
+quite a strange one at that. Many siege regiments throughout
+the Imperium utilise the Thudd Gun, or Quad Launcher as
+it is more commonly called, but most use the Lucius-pattern:
+a basic breach-loading weapon that must be towed from
+battlefield to battlefield. More sophisticated and with its own
+remote-controlled motive system, the Hadd-pattern features
+four squat gravity-fed magazines, allowing the weapon to fire
+continuously for up to a minute before reloading. How long
+the Tech-Priests of Aurora Novos can continue making this
+weapon until their efforts are curtailed is unknown, but certain
+Guard Commanders, Rogue Traders, and even a few Inquisitors
+have taken an interest in the revival of this long-dead design.
+As this Thudd Gun consists of four linked mortars that fire as
+a salvo, the weapon is always fired using the Indirect Fire Action.
+Each individual clip for a Thudd Gun holds 5 shells.
+Table 1-2: Weapon Emplacements
+Name Class Range RoF Dam Pen Clip Rld Special Wt Cost Availability
+Mole Mortar Heavy 50-
+200m S/–/– † † 1 Full †, Indirect 60kg 8000 Very Rare
+Thudd Gun Heavy 50-
+500m –/–/4 1d10+8 X 4 20 2 Full Blast (3),
+Indirect 130kg 12000 Very Rare
+†The Mole Mortar torpedo type being used determines Range, Damage, Penetration, and additional Special Rules.
+GrenADES and TorPEDOES
+The mysteries of the Machine God are readily apparent in the
+wondrous devices his servants use for his glory. This is especially
+true for those rare creations that can shine dazzling light on those
+who would hide from his gaze, or even stop them in time so they
+can be dispatched before they are aware of their fate.
+Belecane-Pattern Stasis Grenade
+Produced in very small quantities on the Calixian forge world of
+Belecane, stasis grenades trap (or preserve) those caught in the
+blast within a bubble of slowed time. For those within the stasis
+field, everything around them appears to move at a blisteringly
+fast pace, and for those outside those within the field appear as
+if they are not moving at all, so slow are their movements. Stasis
+Grenades use up their power quite quickly, so the field collapses
+within moments, but they are excellent tools for capturing
+important prey or disrupting pursuers during a hasty retreat.
+Stasis Grenades have a radius of 2 metres, and anything
+within this radius is held in time, unable to take any Actions
+for 1d5 Rounds. Those outside cannot attack or interact with
+anyone within the stasis field’s radius. Stasis grenades are
+considered Exotic Weapons, and a character must have the
+appropriate Talent before he can use them effectively.
+Belecane-Pattern Stasis Mines
+An excellent defensive measure for those able to afford them,
+the Stasis Mines of forge world Belecane make fantastic alarm
+systems. Far larger than a Stasis Grenade, the power systems
+within the Stasis Mine can hold their victims for almost an
+hour, and can even be recharged and reused.
+Stasis Mines have a variable detection radius of up to 5
+metres and can be set to detect creatures of a specific size
+(e.g., it can be set to detect Size (Hulking) and above, but
+ignore smaller-sized creatures). Once they detect the preset
+target they activate automatically, interrupting the Actions of
+whatever character triggered the mine. The radius for a Stasis
+Mine is 6 metres, and anything within this radius is trapped
+and unable to take any Actions for 3d10 minutes. Those
+outside cannot attack or interact with anyone within the
+stasis field’s radius. Good-Craftsmanship Stasis Mines come
+with a remote detonator that allows the user to activate and
+deactivate the stasis field at will. Once used, a stasis field can
+be recharged with a Difficult (–10) Tech-Use Test. Three
+or more Degrees of Failure means that the field generator
+has burnt out and the mine is now useless. Stasis Mines are
+considered Exotic Weapons, and an Acolyte must have the
+appropriate Talent before he is able to use them effectively.
+Table 1-3: Grenades and Torpedoes
+Name Class Range RoF Dam Pen Special Wt Cost Availability
+Cataclysmus
+Device Thrown SBx3 S/–/– 4d10+20 X 12 Blast (12), † 1kg 1000 Near Unqiue
+Stasis
+Grenade Thrown SBx3 S/–/– † † Indirect, † 0.5kg 8000 Very Rare
+Stasis Mine — — — † † Blast (6), † 20kg 19000 Very Rare
+Airburst
+— — — 1d10+2 X 0 Blast (8), Tearing, † 3kg 200 Rare
+Torpedo
+EMP
+— — — — Haywire (6) 5kg 1150 Very Rare
+Torpedo
+Incendiary
+— — — 2d10 E 0 Blast (4), † 3kg 300 Very Rare
+Torpedo
+Standard
+— — — 1d10+12 I 4 Blast (2), † 3kg 150 Rare
+Torpedo
+†See item entry for special rules.
+The Lost Dataslate
+9
+The Lost Dataslate
+10
+Cataclysmus Device
+Cast from the surface of Lathe-Hadd for being “insufficiently
+respectful of the past”, a small sub-cult of the Mechanicus
+fled from the Lathe Worlds to continue their dangerous
+experiments elsewhere. Rumours that they ran to the dark
+world of Lacuna remain unconfirmed, but what is known is
+that they succeeded in reviving a piece of technology long
+dismissed by the Adeptus Mechanicus as too wasteful and
+inefficient, namely the ancient and widely-proscribed method
+of heavy material micro-fission. However unlike capital-class
+devices of similar design this sect sought to create a hand-
+held device that could be used in close-ranged fire fights.
+Anyone caught within the blast radius of a Cataclysmus
+Device must take a Very Hard (–30) Strength Test or be
+knocked prone. Any character that survives the blast from a
+Cataclysmus Device must make a Difficult (–10) Toughness
+Test, and suffer one point of permanent Toughness Damage
+for every Degree of Failure. Affected characters must repeat
+this Test every hour until they receive anti-radiation treatment.
+Cataclysmus Devices detonate too easily to be fired from
+grenade launchers, and can only be thrown.
+Mole Mortar Torpedoes
+Each Round, the Mole Mortar operator can change the type
+of torpedo. Due to the scarcity of both the launcher and its
+ammunition, each round is purchased individually. As they
+hit without warning from underground, Dodge Tests against
+torpedo hits are made with a –30 Penalty on top of any other
+modifiers.
+Standard Torpedo
+This high explosive charge detonates moments before reaching
+the surface, sending a concentrated blast directly upwards.
+Anyone hit by a standard torpedo must take a Difficult
+(–10) Strength Test or be knocked prone. The blast area is
+considered difficult ground from that point onwards.
+Airburst Torpedo
+Timed to explode a fraction of a second after vaulting from
+the earth, airburst torpedoes send razor-sharp shrapnel in all
+directions. Airburst torpedoes reduce any Armour Points the
+target is receiving from cover by half, rounding up.
+Incendiary Torpedo
+Like airburst torpedoes, incendiary torpedoes explode just
+after leaving the ground. However, rather than shrapnel,
+they instead unleash a splash of promethium in all directions.
+Anyone hit by an incendiary torpedo must make a Difficult
+(–10) Agility Test or be set on fire.
+EMP Torpedo
+Activating the moment they reach the surface, EMP torpedoes
+do not directly damage their targets but instead send wave
+upon wave of electromagnetic radiation in all directions until
+the torpedo’s small generator burns out.
+GEAr and CyBErnETics
+The most priceless devices are those relics from the Dark Age
+of Technology, days of legend which can never be regained.
+There are few higher honours a Tech-Priest can have than
+to be entrusted with one of these holy mechanisms.
+Cameleoline Grid
+The name Cameleoline Grid is actually a way of referring to
+a series of similar devices that have been located in ancient
+storage reliquaries and tech-vaults across the Calixis Sector.
+No two Cameleoline Grids are alike, and they vary in size
+from several metres to several hundred metres across. Their
+common features are flexible interlocking screens that are
+held up by strong tungsten rods. The rods are sometimes
+up to six metres high, and the screens themselves vary in
+colour from a deep green to pitch black, but this changes
+once an electrical current is run across their surface. Almost
+instantaneously, the screens change colour to match their
+surroundings, effectively hiding everything underneath
+them, much like cameleoline material. It is not understood
+how these screens achieve this effect, and repairing the
+individual screens has proven to be impossible, but those
+lucky enough to possess even a small Cameleoline Grid
+have a decisive advantage when it comes to spying or
+hiding objects from prying eyes.
+Cameleoline Grids vary in size, and it is up to the GM to
+determine how much of an area the grid covers. Cameleoline
+Grids do not require much expertise to use, and setting one
+up is similar to setting up a large tent or tarpaulin. Almost
+any power source can be used to activate a Cameleoline
+Grid—all the device requires is a steady electrical current.
+Those under a Cameleoline Grid are effectively invisible,
+granting a +50 bonus to any Concealment Tests made
+when hiding under the grid. The grid itself provides no
+cover, and each panel—usually no more than two metres
+across—cannot be repaired if damaged.
+Cranial Armour
+Inserted just beneath the skin, Cranial Armour adds an
+extra level of protection that could be the difference
+between life and death. Cranial Armour adds +1 to any
+armour on the head, stacking with other types of armour
+as well as Talents that provide Armour Points (such as
+The Flesh is Weak). Poor-Quality Cranial Armour is crude
+and obvious, permanently reducing the user’s Fellowship
+by 1d10. Good-Craftsmanship Cranial Armour adds an
+additional +1 (for a total of +2)Armour to the head.
+Dark Mask
+Throughout the Calixian underworld there is a rare
+substance commonly referred to as Dark Mask or Lacuna
+dust, although it is not known if Lacuna is its true world of
+origin. Said to be a darker than the void itself, the substance
+can be used to cover a surface, or even a person, rendering
+him all but invisible in low-light situations. Even active
+scanners have difficulty locating items coated in Dark Mask.
+Dark Mask can be applied to anything, including weapons,
+clothing, and bare skin. When hiding in shadow or during
+low-light situations, Dark Mask gives a +60 bonus to
+Concealment Tests. Characters using scanning equipment,
+such as auspexes, can only locate someone or something
+covered in Dark Mask if they pass a Very Hard (–30)
+Tech-Use Test when using the device. A single canister of
+Dark Mask contains enough dust to cover a single standard-
+sized human (plus clothing and basic equipment).
+Luma-Crete
+While most within the Mechanicus look to replace weak flesh
+with strong machinery, there are those that have found ways of
+chemically bolstering skin and muscle to make it as hard and
+resilient as any cybernetic implant. Known as Luma-Crete,
+the substance is injected into various points of the body, and
+for a short time, it bolsters exposed flesh, turning it a glowing
+dullish grey that resists the extremes of temperature and even
+hard vacuum. Once injected with Luma-Crete, a character
+gains The Flesh is Weak Trait equal to half of his Toughness
+Bonus (rounding up). He also gains the Resistance (Heat)
+Trait, and a +10 bonus to any Tests made to resist the effects
+of radiation. This effects last for 1d5 hours, and once it wears
+off the character gains 1d5 levels of Fatigue.
+Synthmuscle Graft
+This dense vat-grown muscle tissue is augmented with
+flakweave and once implanted into existing muscle tissue
+increases the user’s strength substantially. Users gain a +1
+to their Strength Bonus for a normal implantation. Good-
+Craftsmanship grafts grant the Unnatural Strength (x2) Trait,
+but also impose a –10 penalty to any Agility Tests the user
+attempts to make due to the misshapen nature of his body.
+Table 1-4: Gear and Cybernetics
+Name Weight Cost Availability
+Cameleoline
+Grid Varies † †
+Cranial
+Armour
+— 600 Rare
+Dark Mask — 450 Very Rare
+Luma-Crete — 600 Very Rare
+Synthmuscle
+Graft
+— 2000 Very Rare
+Voidbane
+Generator 20kg † †
+†Item uses Archeotech special rules for Cost and Availability.
+Voidbane Generator
+Officially listed as the Hades-Pattern Rotating Gravimetric
+Harmonic Disruption Device, a Voidbane Generator is
+a lethal weapon of sabotage and terror. Rediscovered
+during the dark days of the Malygrisian Heresy, Voidbane
+Generators use gravimetric and soundwave transmissions to
+disrupt and eventually overload a voidship’s Gellar Field,
+spilling the raw stuff of the Warp into the ship. Worse, each
+generator can shut down a Gellar Field from almost anywhere
+inside the craft, and the devices are easily hidden. Far too
+destructive to leave in the wrong hands, the generators were
+all but banned by the end of the Malygrisian Heresy. Now,
+only the Inquisition can authorise their use, but even they
+are unsure of just how many generators were created or how
+many have spread throughout the Calixis Sector.
+Voidbane Generators can be set to activate the moment
+a voidship enters the Warp and take around an hour to
+achieve full power once active. The larger the ship, the
+more likely they are to detect the disruptions to their Gellar
+Field before it is too late, but once active the generator
+must be destroyed before it completes its task and the
+ship becomes vulnerable to the fury of the Warp. Tracking
+down a Voidbane Generator is quite difficult, requiring
+an auspex and a Very Hard (–30) Tech-Use Test taken
+every five minutes as the generator constantly switches
+frequencies. Voidbane Generators make for excellent
+narrative devices, either as something the Acolytes must
+find and stop, or as a piece of assigned wargear to use
+against the enemies of more radical Inquisitors.
+The Lost Dataslate
+11
+The Lost Dataslate
+12
+ALTAr-TEMPLUM-
+cALixis-EST-3
+“That station? Just another cogboy den. Emperor knows that they
+do out here in Ruby’s Clouds; everyone knows the real action is
+on the other side of the Maw.”
+–Rogue Trader Karlotinna Gint
+Beyond the fringes of the Drusus Marches lies an
+unremarkable pair of stars, the larger of which,
+Rubycon II, hosts a small series of ordinary planets.
+Nothing within the system itself would make it stand out from
+the innumerable thousands of others across the Calixis Sector,
+except for its proximity to one of the most important natural
+phenomena in the region: the Koronus Passage, also known as
+the Maw. This unnaturally stable access way offers relatively safe
+travel through devastating Warp storms into a vast, uncharted
+region known as the Koronus Expanse. Because of this passage,
+the system has grown from a backwater monitoring post to
+a vital hub of commerce and combat. Organisations across
+the Sector struggle for dominance over Port Wander itself,
+knowing it is the key to controlling the Maw. The Mechanicum
+are amongst them, though its interests focus in other areas than
+mere trade. For while others concentrate on using the Passage
+to gain access to new territories and new profit sources, the
+Cult Mechanicus is more interested in secrets of the Maw itself
+and what it has wrought on neighbouring space. For this, it has
+stations throughout the system, the most important being on
+the frozen planet of Skiri orbiting far on the edges of Rubycon
+II’s dim red light. Here lies the Adeptus Mechanicus research
+station of Altar-Templum-Calixis-Est-3, quietly watching the
+Maw and everything that passes through it.
+The Mechanicum of Rubycon ii
+Unlike many of the other agencies within the Sector, the Machine
+Cult already had a foothold within the system when the Koronus
+Passage was revealed. Its presence on Port Wander allowed for a
+firm base of operations, as well as a solid foundation to weather
+the many conflicts over the Port’s authority and ownership. Few
+realised its interests predominantly lay on the extreme far edges
+of Rubycon, it only becoming clear when the other major powers
+within the system simultaneously and independently ceded any
+claims they had on an entire world to the Mechanicum. It had
+taken an entire cohort of Factors working for long months, each
+Factor targeting a different authority with tactical diplomacy, but
+all working together to multiply their gains until the prize was
+achieved: the planet on the farthest edge of Rubycon II, Skiri.
+Even though it raised some eyebrows, few still considered
+this much of a triumph. The world was little more than rock
+and ice, barely a mention in Rogue Trader Vivaldi Jontur’s
+original survey of the system. Like most objects within the
+system, it had no valuable ores or other wealth to exploit. Its
+orbit is so far removed from the Port and normal intra-system
+routes that most barely remember its existence. So, for the
+most part, the principalities of Port Wander ignored things
+as the Mechanicus developed the planet and its surroundings
+with a research station and network of auspex sensoria.
+The Lost Planet
+The Mechanicum targeted this world not for what it is, but
+for where it is. Early in their investigations into the Koronus
+Passage, they detected vast amounts of void-strewn flotsam
+and jetsam near the Maw. Most seemed to move towards
+Rubycon II, drawn towards the closest gravity well. Amidst
+the Imperial detritus were many fragments of xenos vessels,
+as well as many ships that were clearly of Mankind but not
+of the Imperium. These discoveries, as well as the mysterious
+nature of the Passage itself, were avenues of research much
+more likely to lead to knowledge than continued squabbling
+on the Port. The Mechanicus could carry on such research far
+out in the void, away from prying eyes. Skiri was ideal, and
+soon became the major hub for hidden operations within
+the system. The Machine Cult continued its presence within
+the Port, and indeed maintains this location as the major
+Explorator fleet nexus for travel into the Expanse. Shrouded
+in the outer darkness on Skiri and elsewhere in the cometary
+clouds, more secretive investigation takes place.
+Station Altar-Templum-Calixis-Est-3 dominates the world
+with many kilometres of augury arrays, enough to guide entire
+fleets across the void. Here, the Mechanicum watches the
+Passage, seeking any signs of instability or fluctuations which
+might aid or harm vessels travelling through it. They also scan
+for debris exiting the Maw, sending out tiny retrieval vessels to
+acquire anything of interest. A carefully hidden secret is that
+Skiri itself contains such relics, most buried under tonnes of
+frozen atmosphere. Ancient tunnelling machines, once used for
+war, burrow across the planet searching for such treasures.
+Port Wander and the
+Koronus Expanse
+Port Wander itself and the nearby Passage connecting
+the Calixis Sector to the lawless environs of the Koronus
+Expanse make for exciting settings for Dark Heresy
+adventures. For those GMs interested in delving deeper
+into these areas, the Rogue Trader Core Rulebook as
+well as its supplement Into the Storm are both ideal
+sources for more information on the infamous void
+station and the rest of the Rubycon II system.
+These xenos remains and archeotech treasures fill huge
+vaults underneath the frozen surface, and much more has
+made its way back to the Lathes for further study. Those
+items deemed of lesser value make their way to Port Wander,
+where a grey faction of Malateks are allowed to operate a
+Cold Trade establishment using these finds, all removed from
+any official Mechanicus involvement. That these apostates,
+trading in only the leftover scraps of the Maw’s offerings, are
+slowing becoming a major player in the Calixis Cold Trade,
+threatening the hegemony of the Quintet who control the
+trade, indicates the true wealth of these finds.
+Mysteries in the Clouds
+The station is just one of many in the area. Footfall, the
+dark reflection of Port Wander within the Expanse, hosts
+station Altar-Templum-Calixis-Est-17 to monitor the other
+side of the Koronus Passage. Their names suggest many
+more stations, but all attempts to gather more information
+have been met with silence. Most assume they are scattered
+elsewhere in the cometary cloud or even on the Port itself,
+hidden in its labyrinthian depths. Few know the truth:
+most have been destroyed through means unknown, and
+the Mechanicus grows concerned that one day Est-3 might
+meet a similar fate. Something else is out there in the dark
+reaches of Ruby’s Clouds, and it appears hungry.
+Cryon Tech-Priest
+Tech-Priests operating on Skiri and some of the outer comets
+have tuned and layered their augmentations to withstand the
+intense cold, becoming as one with their surroundings. These
+Cryon Tech-Priests are now so accustomed to these temperatures
+that few can exist outside of them, their cybernetics unable to
+function in anything but the bitterest of cold.
+Cryons stride the frozen wastelands of Skiri with ease,
+ignoring the unimaginable cold. Their systems do not require
+normal amounts of oxygen, so few carry large breathing tanks,
+preferring instead to simply scoop up the frozen gas and ladle
+it into consumption hoppers. The Lathes have adopted this
+augmentation-pattern for other regions, and it is now a not
+uncommon site to witness these outwardly unprotected Tech-
+Priests wading through frozen methane slurries or sliding
+across sheets of iced nitrogen. On Skiri, though, they serve
+to monitor the Passage, and it is likely that should anything
+threatening the Calixis Sector emerge, they will see it first.
+Cryon Tech-Priest
+WS BS S T AgInt Per WP Fel
+(8)
+24 31 36 46 31 48 42 44 25
+Movement: 3/6/9/18 Wounds: 15
+Skills: Awareness (Per) +20, Common Lore (Machine Cult,
+Tech) (Int) +10, Dodge (Ag), Forbidden Lore (Archeotech,
+Xenos Tech) (Int) +10, Intimidate (S), Literacy (Int), Logic
+(Int) +10, Search (Per) +10, Secret Tongue (Tech) (Int), Speak
+Language (Low Gothic) (Int), Tech-Use (Int) +10.
+Talents: At One with the Ice†, Binary Chatter, Chem Geld,
+Luminern Charge, Mechadendrite Use, Strong Minded, Technical
+Knock, The Flesh is Weak (3), Unnatural Toughness (x2).
+†At One with the Ice: Cryons are immune to any degree
+of cold, and benefit from the Resistance (Cold) Talent no
+matter the temperature. If in a warmer environment (such
+that an unprotected human would be comfortable), they
+must pass a Difficult (−10) Toughness Test every other
+Round or gains one level of Fatigue.
+Armour: Cybernetic Augmentations (3 All).
+Weapons: Harpoon Needler (Pistol; 30m; S/2/–; 1d10+2
+R; Pen 3; Clip 6; Reload Full; Reliable, Toxic), Skirian Ice-
+Axe (Melee; 2d5+8 E; Pen 8; Power Field, Unwieldy).
+Gear: Cerebral Plugs, Data-Slate, MIU, Personal Auspex,
+Lathes Mechadendrite Stabiliser, Utility Mechadendrite.
+Adventure Seeds
+•
+Acolytes already on Port Wander hear of a
+Mechanicus system ship that mysteriously exploded on
+its way into one of the nearby dockyard asteroids. The
+Machine Cult has not called for inquiry or reprisals
+for what appears to be sabotage or attack. Where
+was the ship coming from and what was it carrying?
+And why do the Port’s senior Tech-Priests seem to be
+more interested in quieting any investigations than
+determining the party responsible?
+•
+As the Acolytes make their way outside of the
+Rubycon II system and prepare to enter the Warp, a huge
+object strikes their ship and brings them to a halt. They
+investigate the impact, finding a shard of some other,
+inhuman vessel. Their studies though come to a halt as
+the Cult Mechanicus arrives, demanding the iridescent
+remains for their own. Their tone suggests they might
+not desire any other witnesses to the discovery .
+•
+The Acolytes are sent to track down a new source
+of illicit xenos tech, and trace its flow back to Port
+Wander. Here they find evidence that important power
+factions on the station are supporting this illegal trade,
+including some Mechanicum sects. Other notable
+persons seem to be offering cryptic hints that may help
+the Acolytes in their investigations, or might bring
+them too much attention for their continued health.
+The Lost Dataslate
+13
