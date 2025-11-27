@@ -58,6 +58,8 @@ class AdvanceEntry:
     prerequisites: List[str]
     page: int | None = None
     source: str | None = None
+    career: str | None = None
+    rank: str | None = None
 
     def to_dict(self) -> dict:
         payload = {
@@ -68,6 +70,8 @@ class AdvanceEntry:
             "prerequisites": self.prerequisites,
             "page": self.page,
             "source": self.source,
+            "career": self.career,
+            "rank": self.rank,
         }
         return {key: value for key, value in payload.items() if value is not None and value != []}
 
@@ -81,6 +85,7 @@ class CharacteristicAdvanceEntry:
     cost: int
     page: int | None = None
     source: str | None = None
+    career: str | None = None
 
     def to_dict(self) -> dict:
         payload = {
@@ -90,6 +95,7 @@ class CharacteristicAdvanceEntry:
             "cost": self.cost,
             "page": self.page,
             "source": self.source,
+            "career": self.career,
         }
         return {key: value for key, value in payload.items() if value is not None}
 
@@ -452,7 +458,14 @@ def parse_talent_prose(text: str, *, page: int | None = None, source: str | None
     return entries
 
 
-def parse_advances_table(text: str, *, page: int | None = None, source: str | None = None) -> List[AdvanceEntry]:
+def parse_advances_table(
+    text: str,
+    *,
+    page: int | None = None,
+    source: str | None = None,
+    career: str | None = None,
+    rank: str | None = None,
+) -> List[AdvanceEntry]:
     """Parse a table of career advances."""
 
     lines = [line.rstrip() for line in text.splitlines() if line.strip()]
@@ -479,6 +492,8 @@ def parse_advances_table(text: str, *, page: int | None = None, source: str | No
                 prerequisites=prerequisites,
                 page=page,
                 source=source,
+                career=career,
+                rank=rank,
             )
         )
 
@@ -488,7 +503,11 @@ def parse_advances_table(text: str, *, page: int | None = None, source: str | No
 
 
 def parse_characteristic_advances_table(
-    text: str, *, page: int | None = None, source: str | None = None
+    text: str,
+    *,
+    page: int | None = None,
+    source: str | None = None,
+    career: str | None = None,
 ) -> List[CharacteristicAdvanceEntry]:
     """Parse a table of characteristic advance costs."""
 
@@ -505,13 +524,25 @@ def parse_characteristic_advances_table(
         if tiers is None:
             raise ParseError("Characteristic tiers header not found before data rows.")
         tokens = line.split()
+
+        # Filter out standalone "xp" tokens (case insensitive)
+        tokens = [t for t in tokens if t.lower() != "xp"]
+
         if len(tokens) < len(tiers) + 1:
-            raise ParseError(f"Characteristic row is too short: {line!r}")
+            continue  # Skip lines that are too short (likely prose)
+
         costs_tokens = tokens[-len(tiers) :]
+        # Check if the last tokens look like costs (numbers with optional commas)
+        # Skip this line if they don't all look numeric
+        if not all(t.replace(",", "").isdigit() for t in costs_tokens):
+            continue
+
         name_tokens = tokens[: -len(tiers)]
         name = _normalise_name([" ".join(name_tokens)])
         for tier, cost_text in zip(tiers, costs_tokens):
-            cost = int(cost_text.replace(",", ""))
+            # Remove commas from cost text
+            cost_cleaned = cost_text.replace(",", "").strip()
+            cost = int(cost_cleaned)
             entries.append(
                 CharacteristicAdvanceEntry(
                     characteristic=name,
@@ -519,6 +550,7 @@ def parse_characteristic_advances_table(
                     cost=cost,
                     page=page,
                     source=source,
+                    career=career,
                 )
             )
 

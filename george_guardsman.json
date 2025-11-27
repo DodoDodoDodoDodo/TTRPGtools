@@ -1,0 +1,59 @@
+{
+  "name": "George",
+  "career": "Guardsman",
+  "rank": "Conscript",
+  "xp_total": 1000,
+  "purchases": [
+    {
+      "name": "Awareness",
+      "cost": 100,
+      "type": "S",
+      "career": "Guardsman",
+      "rank": "Conscript"
+    },
+    {
+      "name": "Basic Weapon Training (Las)",
+      "cost": 100,
+      "type": "T",
+      "career": "Guardsman",
+      "rank": "Conscript"
+    },
+    {
+      "name": "Basic Weapon Training (Primitive)",
+      "cost": 100,
+      "type": "T",
+      "career": "Guardsman",
+      "rank": "Conscript"
+    },
+    {
+      "name": "Pistol Training (Las)",
+      "cost": 100,
+      "type": "T",
+      "career": "Guardsman",
+      "rank": "Conscript"
+    },
+    {
+      "name": "Sound Constitution\u2021",
+      "cost": 100,
+      "type": "T",
+      "career": "Guardsman",
+      "rank": "Conscript"
+    },
+    {
+      "name": "Drive (Ground Vehicle)",
+      "cost": 100,
+      "type": "S",
+      "career": "Guardsman",
+      "rank": "Conscript"
+    },
+    {
+      "name": "Swim",
+      "cost": 100,
+      "type": "S",
+      "career": "Guardsman",
+      "rank": "Conscript"
+    }
+  ],
+  "xp_spent": 700,
+  "xp_available": 300
+}
