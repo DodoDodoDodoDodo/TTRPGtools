@@ -1,0 +1,102 @@
+{
+  "name": "George",
+  "career": "Guardsman",
+  "rank": "Conscript",
+  "homeworld": "Hive World",
+  "characteristics": {
+    "weapon_skill": 30,
+    "ballistic_skill": 35,
+    "strength": 30,
+    "toughness": 35,
+    "agility": 30,
+    "intelligence": 25,
+    "perception": 30,
+    "willpower": 30,
+    "fellowship": 25
+  },
+  "xp": {
+    "total": 1000,
+    "spent": 700,
+    "available": 300
+  },
+  "purchase_history": [
+    {
+      "order": 1,
+      "name": "Awareness",
+      "cost": 100,
+      "type": "Skill",
+      "advance_type": "S",
+      "career": "Guardsman",
+      "rank": "Conscript",
+      "prerequisites": [],
+      "prerequisites_met": true
+    },
+    {
+      "order": 2,
+      "name": "Basic Weapon Training (Las)",
+      "cost": 100,
+      "type": "Talent",
+      "advance_type": "T",
+      "career": "Guardsman",
+      "rank": "Conscript",
+      "prerequisites": [],
+      "prerequisites_met": true
+    },
+    {
+      "order": 3,
+      "name": "Basic Weapon Training (Primitive)",
+      "cost": 100,
+      "type": "Talent",
+      "advance_type": "T",
+      "career": "Guardsman",
+      "rank": "Conscript",
+      "prerequisites": [],
+      "prerequisites_met": true
+    },
+    {
+      "order": 4,
+      "name": "Pistol Training (Las)",
+      "cost": 100,
+      "type": "Talent",
+      "advance_type": "T",
+      "career": "Guardsman",
+      "rank": "Conscript",
+      "prerequisites": [],
+      "prerequisites_met": true
+    },
+    {
+      "order": 5,
+      "name": "Sound Constitution",
+      "cost": 100,
+      "type": "Talent",
+      "advance_type": "T",
+      "career": "Guardsman",
+      "rank": "Conscript",
+      "prerequisites": [],
+      "prerequisites_met": true,
+      "notes": "Can be taken up to 3 times at this rank"
+    },
+    {
+      "order": 6,
+      "name": "Drive (Ground Vehicle)",
+      "cost": 100,
+      "type": "Skill",
+      "advance_type": "S",
+      "career": "Guardsman",
+      "rank": "Conscript",
+      "prerequisites": [],
+      "prerequisites_met": true
+    },
+    {
+      "order": 7,
+      "name": "Swim",
+      "cost": 100,
+      "type": "Skill",
+      "advance_type": "S",
+      "career": "Guardsman",
+      "rank": "Conscript",
+      "prerequisites": [],
+      "prerequisites_met": true
+    }
+  ]
+}
