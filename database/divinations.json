@@ -1,1 +1,210 @@
-[]
+[
+  {
+    "effect": "Begin play with one Minor Mutation (see page 334).",
+    "quote": "Mutation without, corruption within.",
+    "roll_max": 1,
+    "roll_min": 1,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Begin play with 2 Insanity Points.",
+    "quote": "Only the insane have strength enough to prosper. Only those who prosper may judge what is sane.",
+    "roll_max": 3,
+    "roll_min": 2,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Begin play with 3 Corruption Points. \u201cInnocence is an illusion.\u201d Begin play with 1 Insanity Point and 1 Corruption Point.",
+    "quote": "Sins hidden in the heart turn all to decay.",
+    "roll_max": 7,
+    "roll_min": 4,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Begin play with 2 Corruption Points.",
+    "quote": "Dark dreams lie upon the heart.",
+    "roll_max": 11,
+    "roll_min": 9,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Toughness by +1.",
+    "quote": "The pain of the bullet is ecstasy compared to damnation.",
+    "roll_max": 15,
+    "roll_min": 12,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Agility by +2.",
+    "quote": "Kill the alien before it can speak its lies.",
+    "roll_max": 18,
+    "roll_min": 16,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Intelligence by +3. Begin play with 3 Corruption Points.",
+    "quote": "Truth is subjective.",
+    "roll_max": 21,
+    "roll_min": 19,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Perception by +2.",
+    "quote": "Know the mutant; kill the mutant.",
+    "roll_max": 26,
+    "roll_min": 22,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Strength by +2.",
+    "quote": "Even a man who has nothing can still offer his life.",
+    "roll_max": 30,
+    "roll_min": 27,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Gain the Frenzy talent.",
+    "quote": "If a job is worth doing it is worth dying for.",
+    "roll_max": 33,
+    "roll_min": 31,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Gain 1 Wound.",
+    "quote": "Only in death does duty end.",
+    "roll_max": 38,
+    "roll_min": 34,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Gain 1 Fate Point.",
+    "quote": "A mind without purpose will wander in dark places.",
+    "roll_max": 42,
+    "roll_min": 39,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Toughness by +2 and gain 1 Wound.",
+    "quote": "There are no civilians in the battle for survival.",
+    "roll_max": 46,
+    "roll_min": 43,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Weapon Skill by +3.",
+    "quote": "Violence solves everything.",
+    "roll_max": 50,
+    "roll_min": 47,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Agility by +3.",
+    "quote": "To war is human.",
+    "roll_max": 54,
+    "roll_min": 51,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Willpower by +3.",
+    "quote": "Die if you must, but not with your spirit broken.",
+    "roll_max": 58,
+    "roll_min": 55,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Ballistic Skill by +3.",
+    "quote": "The gun is mightier than the sword.",
+    "roll_max": 62,
+    "roll_min": 59,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Fellowship by +3.",
+    "quote": "Be a boon to your brothers and bane to your enemies.",
+    "roll_max": 66,
+    "roll_min": 63,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Toughness by +3.",
+    "quote": "Men must die so that Man endures.",
+    "roll_max": 70,
+    "roll_min": 67,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Willpower by +3.",
+    "quote": "In the darkness, follow the light of Terra.",
+    "roll_max": 74,
+    "roll_min": 71,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Gain 2 Wounds.",
+    "quote": "The only true fear is of dying with your duty not done.",
+    "roll_max": 79,
+    "roll_min": 75,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Strength by +3.",
+    "quote": "Thought begets Heresy; Heresy begets Retribution.",
+    "roll_max": 85,
+    "roll_min": 80,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Intelligence by +3.",
+    "quote": "The wise man learns from the deaths of others.",
+    "roll_max": 90,
+    "roll_min": 86,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Perception by +3.",
+    "quote": "A suspicious mind is a healthy mind.",
+    "roll_max": 94,
+    "roll_min": 91,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Agility by +2 and gain 1 Fate Point.",
+    "quote": "Trust in your fear.",
+    "roll_max": 97,
+    "roll_min": 95,
+    "source": "Additional Content",
+    "type": "divination"
+  },
+  {
+    "effect": "Increase Toughness and Willpower each by +2. \u201cDo not ask why you serve. Only ask how.\u201d Increase Weapon Skill and Ballistic Skill each by +2. --- characteristic advances:",
+    "quote": "There is no substitute for zeal.",
+    "roll_max": 99,
+    "roll_min": 98,
+    "source": "Additional Content",
+    "type": "divination"
+  }
+]

@@ -31,7 +31,16 @@ Use Python 3.11+ from the repository root. Install nothing; the tools run in-pla
 - Sample character generator and modifier scripts for quick end-to-end JSON workflows.
 
 ## Known gaps
+- No charactertistics (WS, BS, Strength, Toughness, etc) yet!! 
+- No history of advances yet. 
 - Only two sample careers are registered; broader career content is not yet encoded.
 - Library JSON files in `database/` ship empty; you must import book text to populate them.
 - Importers assume cleaned text exports with intact headings; malformed input will raise a parse error and exit.
 - No ticket/issue list is present in the repository; open tasks must be tracked elsewhere.
+
+TODO: 
+1. Please now adapt the character sheet json to also include the characteristics, and also the history of which advances had been taken in which order? (so we can confirm that they were all possible). 
+
+2. can you create a psyker please, with 5600 EXP as a sample char
+
+3. Add the remaining TODOs. 

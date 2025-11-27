@@ -1,1 +1,4286 @@
-[]
+[
+  {
+    "characteristic": "WS",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "WS",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "WS",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "WS",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "WS",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "WS",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "WS",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "WS",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 2500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 1000,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 100,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 250,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Dark Heresy Core Rulebook Tables",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 100,
+    "source": "Additional Content",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 250,
+    "source": "Additional Content",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 500,
+    "source": "Additional Content",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Weapon Skill",
+    "cost": 750,
+    "source": "Additional Content",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 100,
+    "source": "Additional Content",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 250,
+    "source": "Additional Content",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 500,
+    "source": "Additional Content",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Ballistic Skill",
+    "cost": 750,
+    "source": "Additional Content",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 100,
+    "source": "Additional Content",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 250,
+    "source": "Additional Content",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Additional Content",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Strength",
+    "cost": 500,
+    "source": "Additional Content",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 250,
+    "source": "Additional Content",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 500,
+    "source": "Additional Content",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 750,
+    "source": "Additional Content",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Toughness",
+    "cost": 1000,
+    "source": "Additional Content",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 250,
+    "source": "Additional Content",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 500,
+    "source": "Additional Content",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 750,
+    "source": "Additional Content",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Agility",
+    "cost": 1000,
+    "source": "Additional Content",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 500,
+    "source": "Additional Content",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 750,
+    "source": "Additional Content",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 1000,
+    "source": "Additional Content",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Intelligence",
+    "cost": 2500,
+    "source": "Additional Content",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 250,
+    "source": "Additional Content",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 500,
+    "source": "Additional Content",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 750,
+    "source": "Additional Content",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Perception",
+    "cost": 1000,
+    "source": "Additional Content",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 500,
+    "source": "Additional Content",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 750,
+    "source": "Additional Content",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 1000,
+    "source": "Additional Content",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Willpower",
+    "cost": 2500,
+    "source": "Additional Content",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 500,
+    "source": "Additional Content",
+    "tier": "Simple",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 750,
+    "source": "Additional Content",
+    "tier": "Intermediate",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 1000,
+    "source": "Additional Content",
+    "tier": "Trained",
+    "type": "characteristic_advance"
+  },
+  {
+    "characteristic": "Fellowship",
+    "cost": 2500,
+    "source": "Additional Content",
+    "tier": "Expert",
+    "type": "characteristic_advance"
+  }
+]
