@@ -1,0 +1,300 @@
+{
+  "name": "Mordecai the Sanctioned",
+  "career": "Imperial Psyker",
+  "rank": "Sanctionite",
+  "homeworld": "Void Born",
+  "characteristics": {
+    "weapon_skill": 25,
+    "ballistic_skill": 25,
+    "strength": 25,
+    "toughness": 30,
+    "agility": 30,
+    "intelligence": 40,
+    "perception": 40,
+    "willpower": 55,
+    "fellowship": 25
+  },
+  "psy_rating": 3,
+  "corruption_points": 0,
+  "insanity_points": 2,
+  "xp": {
+    "total": 5600,
+    "spent": 2600,
+    "available": 3000
+  },
+  "skills": [
+    "Awareness",
+    "Common Lore (Imperial Creed)",
+    "Common Lore (Imperium)",
+    "Drive (Ground Vehicle)",
+    "Forbidden Lore (Warp)",
+    "Scholastic Lore (Occult)",
+    "Swim",
+    "Trade (Soothsayer)"
+  ],
+  "talents": [
+    "Chem Geld",
+    "Flagellant",
+    "Hatred (Daemons)",
+    "Meditation",
+    "Minor Psychic Power",
+    "Pistol Training (Las)",
+    "Pistol Training (Primitive)"
+  ],
+  "psychic_powers": [
+    {
+      "name": "Call Creatures",
+      "threshold": 9,
+      "description": "Sustained: No You call a number of simple-minded creatures within range to travel to your location. ..."
+    },
+    {
+      "name": "Call Item",
+      "threshold": 5,
+      "description": "Sustained: No You summon a specially prepared item to instantly appear in your hand. To prepare the ..."
+    },
+    {
+      "name": "Chameleon",
+      "threshold": 7,
+      "description": "Sustained: Yes You cause reality to blur around you, distorting your image and allowing you to blend..."
+    },
+    {
+      "name": "D\u00c9J\u00c0 VU",
+      "threshold": 8,
+      "description": "Sustained: No You create a brief memory loop in the mind of the target, causing their thoughts to sl..."
+    },
+    {
+      "name": "Distort Vision",
+      "threshold": 8,
+      "description": "Sustained: No With this power, you disappear and your image reappears in another space no more than ..."
+    }
+  ],
+  "equipment": [
+    {
+      "type": "ranged_weapon",
+      "name": "Laspistol",
+      "class": "Pistol",
+      "range": "30m",
+      "rof": "S/\u2013/\u2013",
+      "damage": "1d10+2",
+      "penetration": "E",
+      "clip": "0",
+      "reload": "30",
+      "special": "Full Reliable",
+      "weight": "1.5kg",
+      "cost": "50",
+      "availability": "Common",
+      "page": 137,
+      "source": "Dark Heresy Core"
+    },
+    {
+      "type": "melee_weapon",
+      "name": "Staff\u2020",
+      "class": "Melee",
+      "range": "\u2014",
+      "damage": "1d10",
+      "penetration": "I",
+      "special": "0 Balanced, Primitive 3",
+      "weight": "kg",
+      "cost": "10",
+      "availability": "Plentiful",
+      "page": 138,
+      "source": "Dark Heresy Core"
+    },
+    {
+      "type": "armour",
+      "name": "Flak Vest",
+      "armour_type": "Flak Armour",
+      "locations": "Body",
+      "ap": "3",
+      "weight": "5",
+      "cost": "kg",
+      "availability": "50 Average",
+      "page": 144,
+      "source": "Dark Heresy Core"
+    }
+  ],
+  "purchase_history": [
+    {
+      "order": 1,
+      "name": "Willpower +5",
+      "cost": 250,
+      "type": "Characteristic Advance",
+      "career": "Imperial Psyker",
+      "tier": "Simple"
+    },
+    {
+      "order": 2,
+      "name": "Willpower +5",
+      "cost": 500,
+      "type": "Characteristic Advance",
+      "career": "Imperial Psyker",
+      "tier": "Intermediate"
+    },
+    {
+      "order": 3,
+      "name": "Intelligence +5",
+      "cost": 100,
+      "type": "Characteristic Advance",
+      "career": "Imperial Psyker",
+      "tier": "Simple"
+    },
+    {
+      "order": 4,
+      "name": "Perception +5",
+      "cost": 250,
+      "type": "Characteristic Advance",
+      "career": "Imperial Psyker",
+      "tier": "Simple"
+    },
+    {
+      "order": 5,
+      "name": "Awareness",
+      "cost": 100,
+      "type": "Skill",
+      "advance_type": "S",
+      "career": "Imperial Psyker",
+      "rank": "Sanctionite",
+      "prerequisites": []
+    },
+    {
+      "order": 6,
+      "name": "Common Lore (Imperial Creed)",
+      "cost": 100,
+      "type": "Skill",
+      "advance_type": "S",
+      "career": "Imperial Psyker",
+      "rank": "Sanctionite",
+      "prerequisites": []
+    },
+    {
+      "order": 7,
+      "name": "Common Lore (Imperium)",
+      "cost": 100,
+      "type": "Skill",
+      "advance_type": "S",
+      "career": "Imperial Psyker",
+      "rank": "Sanctionite",
+      "prerequisites": []
+    },
+    {
+      "order": 8,
+      "name": "Drive (Ground Vehicle)",
+      "cost": 100,
+      "type": "Skill",
+      "advance_type": "S",
+      "career": "Imperial Psyker",
+      "rank": "Sanctionite",
+      "prerequisites": []
+    },
+    {
+      "order": 9,
+      "name": "Forbidden Lore (Warp)",
+      "cost": 100,
+      "type": "Skill",
+      "advance_type": "S",
+      "career": "Imperial Psyker",
+      "rank": "Sanctionite",
+      "prerequisites": []
+    },
+    {
+      "order": 10,
+      "name": "Scholastic Lore (Occult)",
+      "cost": 100,
+      "type": "Skill",
+      "advance_type": "S",
+      "career": "Imperial Psyker",
+      "rank": "Sanctionite",
+      "prerequisites": []
+    },
+    {
+      "order": 11,
+      "name": "Swim",
+      "cost": 100,
+      "type": "Skill",
+      "advance_type": "S",
+      "career": "Imperial Psyker",
+      "rank": "Sanctionite",
+      "prerequisites": []
+    },
+    {
+      "order": 12,
+      "name": "Trade (Soothsayer)",
+      "cost": 100,
+      "type": "Skill",
+      "advance_type": "S",
+      "career": "Imperial Psyker",
+      "rank": "Sanctionite",
+      "prerequisites": []
+    },
+    {
+      "order": 13,
+      "name": "Chem Geld",
+      "cost": 100,
+      "type": "Talent",
+      "advance_type": "T",
+      "career": "Imperial Psyker",
+      "rank": "Sanctionite",
+      "prerequisites": []
+    },
+    {
+      "order": 14,
+      "name": "Flagellant",
+      "cost": 100,
+      "type": "Talent",
+      "advance_type": "T",
+      "career": "Imperial Psyker",
+      "rank": "Sanctionite",
+      "prerequisites": []
+    },
+    {
+      "order": 15,
+      "name": "Hatred (Daemons)",
+      "cost": 100,
+      "type": "Talent",
+      "advance_type": "T",
+      "career": "Imperial Psyker",
+      "rank": "Sanctionite",
+      "prerequisites": []
+    },
+    {
+      "order": 16,
+      "name": "Meditation",
+      "cost": 100,
+      "type": "Talent",
+      "advance_type": "T",
+      "career": "Imperial Psyker",
+      "rank": "Sanctionite",
+      "prerequisites": []
+    },
+    {
+      "order": 17,
+      "name": "Minor Psychic Power",
+      "cost": 100,
+      "type": "Talent",
+      "advance_type": "T",
+      "career": "Imperial Psyker",
+      "rank": "Sanctionite",
+      "prerequisites": []
+    },
+    {
+      "order": 18,
+      "name": "Pistol Training (Las)",
+      "cost": 100,
+      "type": "Talent",
+      "advance_type": "T",
+      "career": "Imperial Psyker",
+      "rank": "Sanctionite",
+      "prerequisites": []
+    },
+    {
+      "order": 19,
+      "name": "Pistol Training (Primitive)",
+      "cost": 100,
+      "type": "Talent",
+      "advance_type": "T",
+      "career": "Imperial Psyker",
+      "rank": "Sanctionite",
+      "prerequisites": []
+    }
+  ]
+}
