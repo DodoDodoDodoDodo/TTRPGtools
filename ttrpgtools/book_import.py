@@ -124,6 +124,39 @@ def _next_detector_index(lines: Sequence[str], start: int, *, ignore: _Detector 
     return None
 
 
+def _extract_career_from_table_header(lines: Sequence[str], start: int) -> str | None:
+    """Extract career name from table headers like 'Table 2-2: Adept Characteristic Advances'."""
+    for i in range(max(0, start - 5), start + 3):
+        if i >= len(lines):
+            break
+        line = lines[i].strip()
+        # Match pattern: "Table X-Y: [Career Name] Characteristic Advance"
+        match = re.match(r"table\s+[\d-]+:\s+([a-z\s-]+?)\s+characteristic\s+advance", line, re.IGNORECASE)
+        if match:
+            return match.group(1).strip().title()
+    return None
+
+
+def _extract_rank_from_context(lines: Sequence[str], start: int) -> str | None:
+    """Extract rank name from section headers like 'ARCHIVIST\\nADVANCES'."""
+    # Look backwards for a rank name (all caps line followed by ADVANCES)
+    for i in range(start - 1, max(0, start - 20), -1):
+        line = lines[i].strip()
+        if not line:
+            continue
+        # Check if this is an all-caps word (potential rank name)
+        if line.isupper() and len(line) > 2 and line.isalpha():
+            # Check if next non-empty line is "ADVANCES"
+            for j in range(i + 1, min(len(lines), i + 5)):
+                next_line = lines[j].strip()
+                if not next_line:
+                    continue
+                if next_line.upper() == "ADVANCES":
+                    return line.title()
+                break
+    return None
+
+
 def _try_parse_window(
     parser: ParseFunc,
     lines: Sequence[str],
@@ -141,6 +174,25 @@ def _try_parse_window(
         kwargs["page"] = page
     if source is not None:
         kwargs["source"] = source
+
+    # Extract career and rank context for advance tables
+    if parser == parse_characteristic_advances_table:
+        career = _extract_career_from_table_header(lines, start)
+        if career:
+            kwargs["career"] = career
+    elif parser == parse_advances_table:
+        rank = _extract_rank_from_context(lines, start)
+        if rank:
+            kwargs["rank"] = rank
+        # For advances, also try to find career from a characteristic table earlier
+        career = None
+        for i in range(start - 1, max(0, start - 100), -1):
+            candidate_career = _extract_career_from_table_header(lines, i)
+            if candidate_career:
+                career = candidate_career
+                break
+        if career:
+            kwargs["career"] = career
 
     last_success: tuple[int, List] | None = None
     upper_bound = min(len(lines), stop, start + max_lines)

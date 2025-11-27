@@ -1,1 +1,1132 @@
-[]
+[
+  {
+    "description": "Sustained: No You call a number of simple-minded creatures within range to travel to your location. Creatures called depend on the nature of the environment, though the sorts of creatures called may include rats, ash slugs and other kinds of vermin. If no such creatures are likely to be in the area, the power has no effect. Under most circumstances, 1d10 such creatures appear after 2d10 minutes have passed. The creatures are not compelled to serve the Psyker; they simply appear and behave as normal for their species. Overbleed: For every 5 points by which you exceed the Threshold, you extend the powers Range by 1km.",
+    "focus_time": "Full Action",
+    "name": "Call Creatures",
+    "range": "1 km radius",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 9,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You summon a specially prepared item to instantly appear in your hand. To prepare the object, you must spend one hour in deep meditation, infusing the object with your psychic imprint, and marking it with glyphs and runes. The object must be small and light enough to be carried in one hand. You may only have one prepared item at a time.",
+    "focus_time": "Half Action",
+    "name": "Call Item",
+    "range": "Unlimited",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 5,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes You cause reality to blur around you, distorting your image and allowing you to blend in with your surroundings. You gain a +30 bonus to Concealment Tests. In addition, all opponents using ranged weapons to attack you suffer a \u201320 penalty to their Ballistic Skill Tests. 165",
+    "focus_time": "Half Action",
+    "name": "Chameleon",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 7,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You create a brief memory loop in the mind of the target, causing their thoughts to slip back several seconds in time. You must be able to see the target and they must be within the range of the power to be affected. They are also permitted a Willpower Test to resist its effects. If they fail to resist, however, they must repeat the same Action that they took last Round in their next Turn, be it firing a gun at a target that is no longer there, continuing to run from slain enemy, or diving for cover from a grenade that has already gone off. Any action that would obviously be harmful to the target, such as running off a cliff, automatically allows them to resist the power.",
+    "focus_time": "Half Action",
+    "name": "D\u00c9J\u00c0 VU",
+    "range": "30m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 8,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No With this power, you disappear and your image reappears in another space no more than 10 metres away. Until the start of your next Turn, you are effectively invisible to all other creatures, defeating even sensory equipment. All attacks against you, should your position be discovered by means of a Psyniscience Test, are Very Hard (\u201330). Creatures and sensors that do not rely on sight are not affected by this power.",
+    "focus_time": "Free Action",
+    "name": "Distort Vision",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 8,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You can nullify the pain of any creature, including yourself, within Range. The target of this power reduces their levels of Fatigue by one step. Overbleed: For every 5 points by which you exceed the Threshold, you remove an additional level of Fatigue. 166",
+    "focus_time": "Half Action",
+    "name": "Dull Pain",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 8,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes You twist reality in such a way as to make you appear more sinister and dangerous. You become the source of dread for anyone who looks upon you. Whilst this power is active, you have a Fear Rating of 2. See Chapter VIII: The Game Master, page 232 for details on Fear Ratings. Overbleed: For every 10 points by which you exceed the Threshold, your Fear Rating increases by 1.",
+    "focus_time": "Full Action",
+    "name": "Fearful Aura",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 7,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You create a bright \u0000 ash of light and a deafening bang. Anyone within Range must succeed on a Routine (+20) Willpower Test or become Stunned for 1 Round. Overbleed: For every 10 points by which you exceed the Threshold, the Difficulty worsens by one step, from Routine (+20) to Ordinary (+10), from Ordinary (+10) to Challenging (+0), and so on.",
+    "focus_time": "Half Action",
+    "name": "Flash Bang",
+    "range": "20m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 6,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes You focus your concentration and slowly begin to lift off the ground. You can only move up and down while under the effects of this power, and you cannot rise higher than 5 metres. You can use this power to stop yourself from falling, but you must succeed on a Difficult (\u201310) Willpower Test in addition to beating the PT.",
+    "focus_time": "Half Action",
+    "name": "Float",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 8,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You become instantly forgettable to a single creature within range. They can\u2019t seem to recall having met you before this very instant and you effectively suppress all memories of your previous encounters. The target is entitled to an Ordinary (+10) Willpower Test to resist this power. Their memory returns after 1d10 minutes. Overbleed: For every 5 points by which you exceed the Threshold, you may do any of the following: extend the effects of this power to either one additional target, add an extra 1d10 minutes to the duration, or worsen the Difficulty of the Willpower Test by one step.",
+    "focus_time": "Half Action",
+    "name": "Forget ME",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 6,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You channel your power into a single target to knit \u0000 esh and mend bones. You may only use this power on a willing target, including yourself. The target of this power removes 1d5 points of Damage (removing Critical Damage first). Repeated uses of this power can be dangerous, however, not to mention painful, and the person\u2019s \u0000 esh rebels against the intrusion of warp energy. If a person (including the Psyker) is the subject of this power more than once in a 6 hour period, they must Test Toughness or take 1d5 points of Damage (with no reduction for Toughness Bonus or Armour), rather than being healed.",
+    "focus_time": "Full Action",
+    "name": "Healer",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 7,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes You cause a person to be wracked with agony, filling their minds with unspeakable pain. The target is entitled to a Willpower Test to resist the effects of this power. On a failed Test, the target suffers a \u201310 to all their Tests as",
+    "focus_time": "Half Action",
+    "name": "Inflict Pain",
+    "range": "100m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 8,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes You seem to glow with an inner light and all those around you are filled with confidence. While this power is active, all allies that can see you gain a +20 bonus to Tests made to resist Fear and Pinning. They may also feel compelled to say nice things about you. Which is nice.",
+    "focus_time": "Full Action",
+    "name": "Inspiring Aura",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 6,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You tap into your unconscious to awaken a deeper understanding of your capabilities. Until the end of your next Turn, you may gain a +10 bonus to any one non-combat Test. After this point, your enlightened mood fades.",
+    "focus_time": "Half Action",
+    "name": "Knack",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 7,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No It is said that luck acts strangely around Psykers, no doubt in part to powers like this one. When you manifest this power, any time before the end of your next Turn, you may re-roll any one roll of your dice (including Damage rolls).",
+    "focus_time": "Half Action",
+    "name": "Lucky",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 6,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes You get a fuzzy picture of what will occur a few moments into the future. As you draw nearer to the event, the picture becomes clearer. For as long as this power is active, you gain a +10 bonus to Dodge Tests and to Weapon Skill Tests made to Parry incoming blows.",
+    "focus_time": "Half Action",
+    "name": "Precognition",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 6,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No By momentarily handling an item you imbue it with an unnatural psychic smell. Anyone coming within five metres of the tainted item will smell it, regardless of barriers or other smells present. What a person smells when around an item affected by psychic stench depends on what they find most distasteful, so the aroma can vary greatly. As the smell only exists in a person\u2019s mind, it will also affect creatures that do not have a sense of smell or have had their sense of smell impaired. Psychic stench remains in effect for 1d10 days, after which time it dissipates.",
+    "focus_time": "Half Action",
+    "name": "Psychic Stench",
+    "range": "Touch",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 5,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You create mental wards to shield your mind from the malign denizens of the warp. Any time in the next hour you may re-roll any failed Test to resist being possessed by a Daemon.",
+    "focus_time": "Reaction",
+    "name": "Resist Possession",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 6,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes Reaching out with your mind, you get a vague inkling of other life forms within range. You automatically detect all living creatures in the area. Walls in excess of 1 metre thick block this power. Overbleed: For every 5 points by which you exceed the Threshold, you extend the Range by an additional 10 metres.",
+    "focus_time": "Half Action",
+    "name": "Sense Presence",
+    "range": "50m (see text)",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 7,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You cause a target\u2019s muscles to spasm. The target is entitled to a Willpower Test to resist this power. On a failure, the target twitches in an uncontrollable and possibly amusing way. If the target is carrying any ballistic weapon, the weapon goes off\u2014make a Ballistic Skill Test as normal to hit the closest creature. In addition, the target immediately falls to the ground and must use a Stand Action to regain their feet. Overbleed: For every 5 points by which you exceed the Threshold, you may either affect an additional target or worsen the Difficulty of the Willpower Test by one step.",
+    "focus_time": "Half Action",
+    "name": "Spasm",
+    "range": "50m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 7,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You create an invisible force that you can use to manipulate any object within 30 metres. The force has a Strength Characteristic equal to your Willpower. This power lasts until the end of your next Turn. You can use it to knock over objects, push buttons, pull levers or do any number of other things requiring force. You cannot perform any action that requires precision, such as typing on a data- slate, pulling the pin from another creature\u2019s grenade, pull a trigger, and so on. In addition, Spectral Hands has no effect on living targets.",
+    "focus_time": "Full Action",
+    "name": "Spectral Hands",
+    "range": "30m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 10,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You cause yourself or another creature within Range to halt Blood Loss. See Chapter VII: Playing the Game, page 211 for details on Blood Loss. Overbleed: For every 5 points by which you exceed the Threshold, you may affect another target. 167",
+    "focus_time": "Half Action",
+    "name": "Staunch Bleeding",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 8,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes By burning the very stuff of your thoughts, you create a ball of glowing psy-\u0000 ame. The light cast by Torch is equivalent to a glow-lamp. The \u0000 ame may issue from any point on your body. The \u0000 ame is roughly the size of your palm, and pulses slightly in time with your heartbeat. It may be coloured according to your whim. The light produces no heat. Overbleed: For every 10 points by which you exceed the Threshold you may double or half the size of the light or cause it to float up to one metre from your body in any direction.",
+    "focus_time": "Half Action",
+    "name": "Torch",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 5,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You reach into the mind of a target within Range and force them to believe something that just isn\u2019t true. The target is entitled to a Willpower Test to resist this power. On a failed Test, the target must roll 1d100 and consult Table 8-6 Mental Traumas on page 235. Overbleed: For every 10 points by which you exceed the Threshold, you affect an additional target.",
+    "focus_time": "Full Action",
+    "name": "Touch OF Madness",
+    "range": "100m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 11,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You draw upon the power of the warp to guide your aim. Before the end of your next Turn, any ranged attacks you make count as being made at Point Blank Range (+30 to hit).",
+    "focus_time": "Half Action",
+    "name": "Unnatural AIM",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 8,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes You bend gravity to your will. You negate all penalties incurred by low- or high-gravity worlds. In addition, you can walk on walls or ceilings for as long as this power is active. You move across such surfaces at half your normal rate. You must also Test Agility to go between a wall and ceiling and vice versa, unless you take a Full Action to ease yourself onto the new surface.",
+    "focus_time": "Half Action",
+    "name": "Wall Walk",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 8,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You send out a long, keening screech throughout the warp that tears through into reality in a cacophonous burst. This power drowns out all sound within Range for 1 Round. Overbleed: For every 5 points by which you exceed the Threshold, you extend the Range by 10 metres.",
+    "focus_time": "Full Action",
+    "name": "Warp Howl",
+    "range": "50m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 8,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes You weaken the fabric of space within 30 metres by drawing the immaterium closer. Anyone within Range that uses Psychic Powers gains a +2 bonus on Power Rolls. However, as the veil between worlds is weakened, Psychic Phenomena occur on the roll of an 8, 9 or 10. Overbleed: For every 5 points by which you exceed the Threshold, you extend the Range by an additional 10 metres.",
+    "focus_time": "Full Action",
+    "name": "Weaken Veil",
+    "range": "30m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 9,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You reach into nearby machines with your mind to scramble their circuitry. All mechanical devices within range cease to function for 1 Round. In addition, you may Test Willpower to force a single weapon within range to jam. The jammed weapon can be cleared as normal (see page 196). Note that the Adeptus Mechanicus are especially loathing of this kind of ability and tend to take a very dim view of Psykers that employ it. Overbleed: For every 5 points by which you exceed the Threshold, you extend the Range of this power by 10 metres, or you can affect an additional weapon.",
+    "focus_time": "Full Action",
+    "name": "Weapon Jinx",
+    "range": "50m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 8,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes You fill the warp with static, fouling psychic detection and making tech sensors less reliable. While active, any Tests made to detect your presence, as well as that of anyone within range of you, using either psychic or technological means, count as Hard (\u201320). If the means of detection would not normally require a Test, the user must make an Ordinary (+10) Willpower Test if using psychic means, or an Ordinary (+10) Intelligence Test if they are using technological means. Overbleed: For every 5 points by which you exceed the Threshold, you extend the Range of this power by 10 metres.",
+    "focus_time": "Full Action",
+    "name": "White Noise",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 8,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You cause a vile wave of invisible pestilence to emerge from your body, extending out to the Range of the power. The wave withers all normal plant life in the area in a matter of moments, leaving the area barren and utterly dead. Overbleed: For every 5 points by which you exceed the Threshold, you extend the Range of this power by 1d10 metres.",
+    "focus_time": "Full Action",
+    "name": "Wither",
+    "range": "3d10m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 6,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Biomancers specialise in manipulating bio-electrical energy with their minds. They are masters of the \u0000 esh, learning to shape and direct their bodies according to their wills. Biomancers are often considered venal souls. Most are viewed with no small amount of jealousy, as they freely feast and drink, yet maintain a healthy, toned physique.BIO-LIGHTNING unconscious. Each level of Fatigue beyond those that the target can take deals 5 Damage instead. Should Damage Sustained: No equal the target\u2019s Wounds, their heart and brain explodes, showering gore around. You channel your life force through Overbleed: For every 5 points by the meridians of your body, causing which you exceed the Threshold, you your form to crackle with living gain a +10 bonus on your Opposed energy. You may direct this energy Willpower Tests. against a single target within Range. The target takes 1d10 plus",
+    "focus_time": "Half Action",
+    "name": "Biomancy",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 14,
+    "type": "psychic_power"
+  },
+  {
+    "description": "your Willpower Bonus in Energy Damage. Overbleed: For every 5 points by which you exceed the Threshold, you Sustained: Yes extend the Range of this power by 10 metres. For every 10 points that you exceed the Threshold, you can launch another bolt of energy against the same or a different target.",
+    "focus_time": "Half Action",
+    "name": "Cellular Control",
+    "range": "",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 16,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes With a rhythmic crushing gesture, you tune into an enemy\u2019s body, \u0000 exing their heart muscles to accelerate their pulse. This continues until their blood pressure reaches lethal levels. As you continue to exert your will, blood vessels begin to rupture, causing haemorrhaging across the target\u2019s body. Each Round (including the Round in which the power manifests), you may spend a Half Action to make an Opposed Test, pitting your Willpower against your target\u2019s Toughness. If you win the Test, your opponent takes one level of Fatigue plus one level of Fatigue per degree of success, until he collapses 169 You learn various ways of transcending your body\u2019s natural limitations by balancing your humors, modifying cellular structure and meditating upon the meridians of your body. This power enables you to achieve any one of the following effects: \u2022 Gain immunity to all poisons. \u2022 Ignore the effects of extremes of temperature. Table 6\u20135: Biomancy Powers \u2022 Increase any Characteristic\u2014 Name Threshold Focus Sustain except Weapon Skill and Ballistic Time Skill\u2014by +10. Bio-lightning 14 Half Action No \u2022 Gain immunity to Fatigue. \u2022 Count as though wearing a void Blood Boil 19 Half Action Yes suit in a vacuum (though you still Cellular Control 16 Half Action Yes need to breathe). Constrict 13 Half Action No Each Round you sustain this power, Enhance Senses 10 Half Action Yes you must succeed on a Toughness Test. Hammerhand 15 Full Action Yes On a failed Test, you take 1d5 points Regenerate 23 Full Action Yes of Damage, ignoring your Toughness Seal Wounds 10 Half Action No Bonus and Armour as your body begins to break from the strain. Shape Flesh 19 Full Action Yes Unlike most powers, you can Toxic Siphon 11 Half Action No manifest this power multiple times. Each time, choose a different effect.",
+    "focus_time": "Half Action",
+    "name": "Blood Boil",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 19,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No With a word, thought or gesture, you can command the flesh of your target to sharply contract. The target\u2019s windpipe closes, choking them and cutting off their breath. They begin to Suffocate. (See Suffocation on page 210) Each Round, the target must spend a Full Action to Test Toughness. On a success, they regain control over their body and clear their windpipe. On a failure they continue to suffocate. The target is considered to be engaged in strenuous activity. Overbleed: For every 10 points by which you exceed the Threshold, the Difficulty of the Toughness Test worsens by one step.",
+    "focus_time": "Half Action",
+    "name": "Constrict",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 13,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes With a moment\u2019s thought, you force your senses into impossible feats of perception that can only be equalled among humans by the biomechanically augmented. When you manifest this power, choose one of your five senses. You gain a +30 bonus to all Tests made with this sense. The sense organ involved becomes strained as you push it past all normal human limits; the eyes weep and grow hugely dilated, skin \u0000 ushes red, the nose drips mucus and so on. Overbleed: For every 5 points by which you exceed the Threshold, you may enhance an additional sense.",
+    "focus_time": "Half Action",
+    "name": "Enhanced Senses",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 10,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes Biomancers who have learned to channel the fierce power of the warp into their limbs can eventually master the art of letting the energy of the immaterium flow unhindered 170 through their body, phenomenally increasing their fighting capabilities. Your body becomes a lethal engine, capable of shredding flesh and bone as if they were tissue paper. Such power comes at a cost though, for there is no subtlety to the Hammerhand. While this power is in effect, your Strength Bonus is multiplied by 4, and you gain the Natural Weapon trait (see page 330) However, you can wield no weapon save for your bare hands (not that you need any!).",
+    "focus_time": "Full Action",
+    "name": "Hammerhand",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 15,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes One of the pinnacles of a biomancer\u2019s abilities, this power allows you to knit your \u0000 esh back together at a phenomenal rate, letting you swiftly overcome any non-fatal injury. This is a hard ability to master, but the rewards are great\u2014Regenerate can eventually regrow lost limbs and organs. Each Round this power is active, you remove 1d5 points of Damage (removing Critical Damage first) and have all levels of Fatigue removed. Once all Damage is removed, you begin to regrow lost organs, limbs, and so on. Limbs and organs replaced by cybernetics do not regrow unless the bionic is first removed.",
+    "focus_time": "Full Action",
+    "name": "Regenerate",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 23,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You focus your power to repair your damaged flesh or that of any character within Range. Ragged wounds fuse and cuts vanish. Broken bone knits together, and burnt skin sloughs away as fresh tissue grows beneath. The target of this power",
+    "focus_time": "Half Action",
+    "name": "Seal Wounds",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 10,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes Shape Flesh is the point where your flesh and will become indistinguishable\u2014the goal of many a biomancer. Shape Flesh allows you to twist your physical frame in nearly any way you can imagine. Each manifestation of this power produces one of the following effects: \u2022 Gain any one of the following traits\u2014Burrower (1), Crawler, Dark Sight, Flier, Hoverer, Natural Armour (2), Natural Weapons or Quadruped. These traits are described in Chapter XII: Aliens, Heretics & Antagonists, page 329. \u2022 Assume the appearance of any one creature. You may make Disguise Tests as if you had the Disguise skill and at a +10 bonus. If you already have the Skill, you gain an additional +20 bonus. \u2022 Gain Natural Weapons (Bite, Claws, and so on) to deal 1d10+SB Damage. Unlike most powers, you can manifest this power multiple times. Each time, choose a different effect.",
+    "focus_time": "Full Action",
+    "name": "Shape Flesh",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 19,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You draw poisons from the flesh. This has the same effect as taking a dose of de-tox (see Chapter V: Armoury, page 148) with the exception that the target must lose a Full Action as the toxin expels itself from the body naturally. Overbleed: For every 5 points by which you exceed the Threshold, you may draw poison from an additional target, who must be touching you or another person being purged by you. iiti",
+    "focus_time": "Half Action",
+    "name": "Toxic Siphon",
+    "range": "Touch (You)",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 11,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No Using this power enables you to make near impossible ranged shots, allowing you to strike virtually any target you can perceive. You must concentrate on a single firearm or other missile weapon in your possession and the ammunition it carries before casting your psychic gaze into the warp to search down the near-infinite paths of potential future trajectories. When you find the one you seek, you shoot, and while the damage to the target may vary, the attack cannot be avoided in any way. In effect, you automatically hit any one target you can see regardless of Range. Only one shot automatically hits, even if you are using a semi-automatic or automatic weapon. All other shots require Tests as normal.",
+    "focus_time": "Free Action",
+    "name": "Divine Shot",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 15,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes By focusing his mind the diviner can single out an object or person somewhere in his immediate vicinity, pushing aside all other distractions until he can unerringly find it. First the Psyker must choose an item or person to be the subject of the power. This can be anything, but it must be a specific item. So for instance, the Psyker could say, \u201cI want to know where the key to this lock is\u201d but not \u201cI want to know where a key is\u201d. Likewise with a person, the Psyker must have either seen them before (possibly remotely or in a pict) or know their name. Simply trying to find the person",
+    "focus_time": "Full Action",
+    "name": "Dowsing",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 11,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes Some diviners are capable of opening their inner eye to perceive events that occur at places far away from them. Far Sight may be used to make you aware of a single space anywhere within Range of this power. You need not be aware of the destination; you merely need to identify how far away you need to cast your senses (for example: \u201cI look two kilometres to the west\u201d). Should the point you select be inside a solid object, such as a wall, tree, cliff face or the like, the power simply fails. You may use Far Sight to cast your view inside buildings, bodies of water, pockets of gas and so on without impediment. Once you have cast your sight to a particular place, you can see up to the normal range of your vision from a specific point of view. You may change your facing by 90-degrees by spending a Half Action. Once you choose your point, you may not select another. You must use the power again to select a new point. Far Sight does not grant any special forms of vision; if your clairvoyant point is within a darkened room and you cannot normally see in darkness, you perceive nothing but darkness. In addition, Far Sight does not pick up sound (though if you have the Lip Reading skill, you can use it to work out what speakers are saying). While under the effects of this power, you are disoriented and cannot spend more than a Half Action each Round. In addition, you take a \u201330 penalty to all Tests. Overbleed: For every 10 points by which you exceed the power\u2019s Threshold, you can double the Range of this power.",
+    "focus_time": "Full Action",
+    "name": "FAR Sight",
+    "range": "1km/Willpower Bonus",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 17,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You peer into the future, sensing the manifold web of different possible pathways and potential outcomes. Until the end of your next Turn, you gain a +30 bonus to any single Skill Test. 172",
+    "focus_time": "Half Action",
+    "name": "Glimpse",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 18,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No Like a spider on a web, you are able to sense disturbances to your immediate future. This ability to read possible outcomes lets you anticipate the movement of your opponents. Until the end of your next Turn, you gain a +20 bonus to all Weapon Skill and Ballistic Skill Tests.",
+    "focus_time": "Free Action",
+    "name": "Precognitive Strike",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 17,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You may manipulate probability to your own advantage. The threads of your immediate future appear clearly in your mind. You have the power to Dodge projectiles before they\u2019ve been fired. When you manifest this power, you can walk into combat with what appears to be astounding grace (or incredible luck), weaving your way through fields of gunfire without a scratch. Until the end of your next Turn, all Ballistic Skill Tests made to hit you with ranged weapons suffer a \u201330 penalty.",
+    "focus_time": "Free Action",
+    "name": "Precognitive Dodge",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 11,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes Casting your perception from the limited vessel of your bodily senses, you gain an unnatural awareness of the world around you. Your eyes roll white within their sockets and your senses roam about you, at once glancing above, behind, before and sideways. You also gain impressions of future events, granting you uncanny accuracy in anticipating them. You gain a +20 bonus on all Awareness Tests. In addition, you add your Willpower Bonus to your Initiative count. Overbleed: For every 10 points by which you exceed the power\u2019s Threshold, you may add your Willpower bonus to your Initiative again.",
+    "focus_time": "Half Action",
+    "name": "Preternatural Awareness",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 9,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes Intense displays of emotion leave a psychic \u201cresidue\u201d on objects and places exposed to them. Similarly, anything that has been actively carried or used by an individual for a long time will eventually pick up similar psychic impressions. With this power, you can read the psychic traces that others leave behind, giving you images directly connected to the place or object in question. These traces often take the form of sensory data. For example, a diviner may taste the hot blood-tang of murder, or smell the rank sweat-stench of desperation. You may use this power in one of two ways. First, you may use it to divine the impressions of an object, or, second, you may use it to divine psychic impressions in an area. In the case of the former, you must be handling the object. In the case of the latter, you may divine any pertinent details that occurred within a number of metres equal to your Willpower Bonus. The quality and nature of the information depends on how long you sustain the power. You derive a new piece of information for every ten Rounds you spend handling an object or concentrating on an area. Rounds Result 10 You sense the most recent strong emotion associated with the area\u2014love, hated, amusement, fear and so on. 20 You perceive the general features of the person who experienced the emotion. 30 You get a clear image of the features of the person who experienced the emotion. 40 You are able to identify the person\u2019s occupation (e.g. Career and Rank). 50 You are able to discern the name of the person. +10 You discover an additional fact about the person as determined by the GM. Overbleed: For every 10 points by which you exceed the power\u2019s Threshold, you cut the time required by half: if you exceed the PT by 10 points, you derive a new fact every 5 Rounds; if you exceed by 20 points, every 2 Rounds; and for 30 points, every Round.",
+    "focus_time": "Full Action",
+    "name": "Psychometry",
+    "range": "You (see text)",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 16,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No Personal Augury allows you to peer into the fate of a single, willing target. You may warn the querant of impending dangers, opportunities and even divine specific advice for your client. To begin the augury, you clasp the hands of your client, and ask them to specify a circumstance that they wish divined. This may be as detailed as, \u201cWhat terrors does the headquarters of the Barbed Chalice hold?\u201d or as vague as, \u201cHow can I please my Inquisitor?\u201d The more precise the question, the more specific the reading may be. Once the question is established, the diviner and client spend the next thirty minutes using his Psychic-foci. This may be reading the Imperial Tarot, casting runes, examining entrails, or any other such act. At the end of this time, you may make a Psyniscience Test to accurately sense the weave of the client\u2019s future. Each degree of success reveals more information. Degrees",
+    "focus_time": "Full Action",
+    "name": "Personal Augury",
+    "range": "Touch",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 14,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes Diviners are said to be able to read a person\u2019s shifting aura, the ghost self they unconsciously project into the warp. From observing the nature of this aura, they can learn many things about a person\u2019s emotions and feelings: from their current emotions, to habitual moods, to their levels of injury, and even any addictions or madness they may suffer from. When this power is manifested, the diviner may try to read the aura of any person they can see as a Full Action. This requires a successful Psyniscience Test with each degree of success granting him more information. The diviner must manifest this power each time he wishes to view an additional person\u2019s aura. Degrees of Success Result 0 Hue. You focus on the dominant colours in the target\u2019s aura. This allows you to detect the strongest three emotions they are currently experiencing. You are also able to detect their race, and if they have any Psychic Discipline Powers (though not what they are). From the brightness and consistency of the aura, you are also able to gain a rough idea of the target\u2019s physical and mental health. This does not tell you their exact Wounds or Insanity Points, but rather grants a loose impression (good, poor, slightly weak, and so on). Finally, you may tell whether the target is an Untouchable. 1 Flow. You gain all the impressions of the previous result, and also gain a greater understanding of their emotional state. You can read all of the target\u2019s current feelings. You also gain an insight into the target\u2019s nature and their habitual tides of sentiment (depressive, misanthrope, optimist etc). These perceptions grant you +10 to all Fellowship Tests made against the target whilst this power is active. In addition to this, you can see undercurrents of emotion caused by biological feedback, such as hunger, desire, fatigue, intoxication and pain. You may determine the target\u2019s current Wounds and Fatigue levels. Finally, if the target has any Psychic Discipline Powers, you may tell which Disciplines these powers originate from (though not which specific powers these are). 2 Shape. You gain all the impressions of the previous result, and gain a greater understanding of the target\u2019s longstanding emotions and emotional states. The aura\u2019s connection to the warp around it reveals if the target has any Corruption Points (though not how many). Ripples in the aura reveal the three major emotions experienced by the target over the past twelve hours. You may determine the target\u2019s Insanity Points and any madness or addictions they are currently suffering from. If the target has any Psychic Disciplines, you may infer their precise Psy Rating. 3 Pattern. You gain all the impressions of the previous result, and gain a full appreciation of the target\u2019s aura. You may determine the exact Corruption Points of the target. You may also detect if the target has any Minor Psychic Powers (though not what they are). Finally, you may tell if the projected aura is genuine, or has been produced by some unnatural means (Psychic Power, Daemonic ability, technological means etc). Note that you cannot divine what the target\u2019s genuine aura should be; only that it is artificial. 173 r",
+    "focus_time": "Full Action",
+    "name": "Soul Sight",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 23,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You focus blazing mental energy into a single point within your mind before releasing it all in a burst of searing bright light, blinding anyone who sees you and is within Range. Those with appropriate glare shielding and beings that don\u2019t have visual sensory organs are immune. All those affected must make an Agility Test or be blinded for a number of Rounds equal to 1d10 times the Psyker\u2019s Psy Rating. Blinded targets automatically fail vision-based Tests, move at half normal speed and take a \u201320 penalty on any Test that involves fighting, movement or reactions. Note that a Psyker may accidentally blind himself with this power (if he\u2019s very stupid). Overbleed: For every 10 points by which you exceed the power\u2019s Threshold, you extend the Range by 4 metres.",
+    "focus_time": "Half Action",
+    "name": "Blinding Flash",
+    "range": "12m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 11,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Focus Time Half Action Sustained: Yes With intense concentration, you wreathe your hands in waves of shimmering flame. Your unarmed attacks deal 1d10+SB Energy Damage. In addition, your unarmed strikes do not count as having the Primitive special quality. Table 6\u20137: Pyromancy Powers Name Threshold Focus Sustain Time Blinding Flash 11 Half Action No Burning Fist 10 Half Action Yes Call Flame 8 Half Action Yes Douse Flames 16 Half Action Yes Fire Bolt 11 Half Action No Fire Storm 16 Half Action No Holocaust 23 Full Action Yes Incinerate 19 Full Action Yes Sculpt Flame 13 Half Action Yes Wall of Fire 17 Full Action Yes",
+    "focus_time": "",
+    "name": "Burning Fist",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 10,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes One of the first powers commonly learned in this discipline is to summon fire with thought. This allows you to conjure a small \u0000 ame (about the size and intensity of a burning torch) into your palm. The primary purpose of this power is not to attack\u2014though it adds 2 points of Damage to your unarmed attacks and makes them Energy attacks\u2014but rather it is used to set things alight or as fuel for other Pyrokinetic powers, such as Sculpt Flame. While this power is in effect, you cannot use your hand for anything else besides holding the \u0000 ame.",
+    "focus_time": "Half Action",
+    "name": "Call Flame",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 8,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Focus Time Half Action Sustained: Yes It takes a potent mind to deny the natural tendency of \u0000 ames to run out of control. Douse Flames allows you to instantly extinguish all fires within range as well as interfere with fire-based weapons such as \u0000 amers, causing them not to function for as long as they are within Range of the power although their fuel may still spray forth, depending on the design of the weapon. Note that chemically \u0000 ammable substances, such as promethium, that burn continuously once exposed to the air, burst back into \u0000 ame the moment the power\u2019s effect ends or as soon as the chemical is brought outside of Range. Overbleed: For every 5 points by which you exceed the Threshold, you extend the Range by 5 metres. 174",
+    "focus_time": "",
+    "name": "Douse Flames",
+    "range": "5m \u00d7 Willpower Bonus",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 16,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No Fire Bolt allows you to create bolts of flame with your mind and hurl them at your foes. The appearance of these flames is up to you\u2014for example, searing white light or green-black spheres of obscenity- mouthing faces. You can direct the bolt at any target you can see within range. Make a Challenging (+0) Willpower Test to strike the target. On a hit, the bolt deals 1d10+5 Energy Damage. Overbleed: For every 5 points by which the Power Roll exceeds the Threshold, you generate an additional Fire Bolt, which can be directed at any targets within Range. Test Willpower for each separate target.",
+    "focus_time": "Half Action",
+    "name": "Fire Bolt",
+    "range": "100m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 11,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No Fire Storm instantly creates an intense conflagration about your target as the air itself ignites, burning all within to cinders. You can call a Fire Storm anywhere within range to a point you have line of sight to. The Fire Storm has a 6 metre radius from the point (or individual) targeted. The Fire Storm deals 1d10+5 Energy Damage to all creatures and objects in the area. Overbleed: For every 5 points by which you exceed the Threshold, you deal an additional 1d10 points of Damage.",
+    "focus_time": "Half Action",
+    "name": "Fire Storm",
+    "range": "50m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 16,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes A legendary ability that few pyrokinetics are strong enough to even wield, much less have the courage to use. Holocaust calls forth a raging white-hot firestorm ignited by the Psyker\u2019s own soul. The flames of a Holocaust burn across dimensions, affecting the entities of the immaterium as well as material beings, but the cost is high as the psyker risks losing his own spirit to the fury of the conflagration. The fires of a Holocaust always burn outward from you, dealing 1d10 Energy Damage per point of your Willpower Bonus to all creatures and objects in the area. This Damage bypasses Toughness Bonus and Armour. You take 1d10+1 Energy Damage (ignoring Toughness Bonus and armour) each Round that you sustain this power. There is no immunity to the fires of a Holocaust and Warp Entities, as well as other immaterial creatures, are burned as readily as the fleshbound. Those slain by Holocaust are killed forever.",
+    "focus_time": "Full Action",
+    "name": "Holocaust",
+    "range": "6m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 23,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes Incinerate allows you to generate intense heat as well as \u0000 ame. By psychically agitating the molecules in a tightly focused area, you create an effect even more devastating than a meltagun. However, Incinerate requires you to concentrate on a single point, making it difficult to use against non-stationary targets. Incinerate has a range of 10 metres and deals 1d10+1 Energy Damage. Each Round, beyond the first, that you use a Full Action concentrating on the target (it must remain in Range and in line of sight) this power deals the Damage of the previous Round plus 1. Damage caused by Incinerate",
+    "focus_time": "Full Action",
+    "name": "Incinerate",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 19,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes You control the shape of the fires burning around you. With this power, you can intensify any flames or shape them to assume any appearance you desire. A successful use of this power allows you to do any of the following effects with an existing fire: \u2022 Double a fire\u2019s area (assuming there are combustibles). \u2022 Diminish a fire\u2019s area by half. \u2022 Spread fire into a number of 1 metre squares in any direction equal to your Willpower Bonus. \u2022 Create crude shapes that resemble creatures, body parts, people or objects. \u2022 Cause a fire to burst, requiring all adjacent targets to Test Agility, catching fire should they fail the Test. \u2022 Cause a fire to spew smoke, filling three times the area of the fire (treat as fog). Each Round you can choose a new effect or apply the same effects to the same source of fire. Overbleed: For every 5 points by which you exceed the power\u2019s Threshold, you can manipulate fire more efficiently. If you exceed the PT by 5 points, you can create easily recognisable images. If you exceed by 10 points, you can create near life- like figures, as if carved from \u0000 ame. You can increase the distance of spreading fire: for every 5 points you exceed the PT, the distance is double your Willpower Bonus; for exceeding by 10 points the distance is four times your Willpower Bonus and so on.",
+    "focus_time": "Half Action",
+    "name": "Sculpt Flame",
+    "range": "5m\u00d7Willpower Bonus",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 13,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes A relatively blunt, but effective, ability in the pyrokinetic\u2019s arsenal, this power allows you to place an immobile barrier of flame that lingers for as long as you will it. The wall is three metres high and a metre thick and can be up to ten metres long for every point of your Willpower Bonus. You can place it anywhere within Range and even on top of foes, though they are allowed an Easy (+20) Agility Test to get out of the way. Foes crossing the wall or failing the Test take 1d10+5 Energy Damage (ignoring Armour) and must Test Agility again or catch on fire. 175 of your Willpower Bonus. You may fire each bolt when you manifest this power. Overbleed: For every 5 points by which you exceed the power\u2019s Threshold, you generate an additional bolt. eeietis",
+    "focus_time": "Full Action",
+    "name": "Wall OF Fire",
+    "range": "60m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 17,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You can use your telekinetic abilities to catch incoming projectiles. This power only works against solid projectiles and so energy attacks get through normally. Until the end of your next Turn, you automatically discount a number of hits from incoming missiles equal to your Willpower Bonus, causing them to immediately stop and hang in the air. When this power ends, they fall harmlessly to the ground.",
+    "focus_time": "Reaction",
+    "name": "Catch Projectiles",
+    "range": "1m\u00d7Willpower Bonus",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 16,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You can telekinetically lift an unattended object from the ground and \u0000 ing it at a target. You may lift up to 5 kilograms per point of your Willpower Bonus. You can throw the object a number of metres equal to your Willpower Bonus \u00d73. To hit a target, Test Willpower. On a success resolve the hit as if your Test was an attack. The object deals 1d10 Impact Damage plus 1 point per 5 kilograms of weight. Overbleed: For every 5 points by which you exceed the Threshold, you may lift an additional 5 kilograms per point of your Willpower Bonus.",
+    "focus_time": "Half Action",
+    "name": "Fling",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 14,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No This power functions as Force Bolt except you create one bolt per point Catch Table 6\u20138: Telekinetic Powers Name Threshold Focus Sustain Time 16 Reaction No Projectiles Fling 14 Half Action No Force Barrage 21 Full Action No Force Bolt 13 Half Action No Precision Telekinesis 23 Half Action Yes Psychic Blade 19 Half Action Yes Psychic Crush 17 Half Action No Push 13 Half Action No Telekinesis 11 Half Action Yes Telekinetic Shield 17 Half Action Yes",
+    "focus_time": "Full Action",
+    "name": "Force Barrage",
+    "range": "10m\u00d7Willpower Bonus",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 21,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No Use this power to hurl a burst of tangible mental force at your opponent. Test Willpower to hit the target. If you succeed, your attack deals 1d10 Impact Damage +1 Damage per point of your Willpower Bonus. Overbleed: For every 5 points by which you exceed the power\u2019s Threshold, you deal 1 additional point of Impact Damage.",
+    "focus_time": "Half Action",
+    "name": "Force Bolt",
+    "range": "10m\u00d7Willpower Bonus",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 13,
+    "type": "psychic_power"
+  },
+  {
+    "description": "If Telekinesis is a sledgehammer, then Precision Telekinesis is a scalpel. This ability allows you to achieve far more subtle effects with telekinetic force. At its most basic, this power can pull the pins on grenades, press buttons, jog triggers, undo latches and direct small projectiles to deadly effect. Essentially, with this power, you can manipulate objects as if you were physically handling them. In any situation where the task would call for a Characteristic Test you substitute your Willpower instead. 176",
+    "focus_time": "Half Action",
+    "name": "Precision Telekinesis",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "Yes",
+    "threshold": 23,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes A phenomenally complicated ability to master, this power allows you to project your will as a blade of psychic force. Because the blade is formed of psychic energy, it can be formed almost impossibly thin, as little as a molecule thick. A Psychic Blade can thus shear through almost any physical object with ease, and is capable of cutting through most forms of armour as if they were made of cloth. The Psychic Blade is a terribly dangerous weapon to use, though, for any stray thoughts can misdirect it with devastating effect. Once manifested, treat the Psychic Blade as a sword wielded by the Psyker (though it does not require a free hand) that requires no Melee Training to use, but cannot Parry. To strike with the Psychic Blade, the telekine uses their Willpower Characteristic rather than Weapon Skill. On a successful hit, the weapon deals 1d10 Rending Damage, plus 2 additional points of Damage per point of your Willpower Bonus. In addition, the weapon has Penetration equal to twice your Willpower Bonus.",
+    "focus_time": "Half Action",
+    "name": "Psychic Blade",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 19,
+    "type": "psychic_power"
+  },
+  {
+    "description": "You can direct your Telekinetic power directly against your opponents, wrapping them in bands of force that constrict and crush the life out of them. Once manifested, you may use this power against any target within Range. Make an Opposed Test, pitting your Willpower against your opponent\u2019s Toughness. If you beat your opponent, you deal 1d10 Impact Damage plus 1 per point of your Willpower Bonus. For each degree of success, you deal an additional 2 points of Damage. Overbleed: For every 5 points by which you exceed the power\u2019s Threshold, you may extend the Range by 10 metres.",
+    "focus_time": "Half Action",
+    "name": "Psychic Crush",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "No",
+    "threshold": 17,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You gather a ball of telekinetic energy and direct it against any single target within range. Make an Opposed Test, pitting your Willpower against your target\u2019s Strength. If you beat your opponent, you knock them to the ground. For each degree of success, you also deal one level of Fatigue. Overbleed: For every 5 points by which you exceed the power\u2019s Threshold, you may extend the Range by 10 metres or gain a +10 bonus to your Willpower Test.",
+    "focus_time": "Half Action",
+    "name": "Push",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 13,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Telekinesis is the ability to use the strength of one\u2019s will to move physical inanimate objects around. You may lift or move any object within Range, whose weight does not exceed 5 kilograms \u00d7 your Willpower Bonus. You may move the object slowly anywhere within Range of the power. This power cannot affect living creatures. You cannot make attacks with objects you manipulate. Once you cease concentrating on the object, it falls slowly to the ground.",
+    "focus_time": "Half Action",
+    "name": "Telekinesis",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "Yes",
+    "threshold": 11,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes You erect a field of telekinetic energy about you. This field functions as a force shield, granting 1 Armour Point on every location in addition to any other armour you are wearing. By spending a Full Action to activate this Psychic Power, you may opt to cause the Telekinetic Shield to vibrate at a colour frequency of your choosing (golden yellow, skull white, ice blue, and so on). Note that whatever its hue, the shield only produces a gentle shimmer in the air. It is not opaque and cannot block your opponent\u2019s line of sight. Overbleed: For every 10 points by which you exceed the power\u2019s Threshold, you increase the Armour Point by 1. 177 eet",
+    "focus_time": "Half Action",
+    "name": "Telekinetic Shield",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "",
+    "threshold": 17,
+    "type": "psychic_power"
+  },
+  {
+    "description": "You may stretch out your thoughts to animals, becoming able to perceive their emotions and establish a rudimentary form of communication. The relative simplicity of an animal\u2019s mind allows you to dominate them. Affected animals must follow your every command. When you manifest this power, select one animal within Range. Each Round you sustain the power, you may spend a Reaction to give the animal a command. The command must be simple, such as \u201ccome\u201d, \u201cguard\u201d, \u201cflee\u201d, \u201cheel\u201d, \u201cattack\u201d and so on. The animal follows the command to the best of its ability. If the animal feels threatened or is ordered to act in a way that is not suited to its nature, it may make a Willpower Test to break your control. How it acts if it succeeds depends on your treatment of it.",
+    "focus_time": "Half Action",
+    "name": "Beastmaster",
+    "range": "8m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "Yes",
+    "threshold": 13,
+    "type": "psychic_power"
+  },
+  {
+    "description": "One of the most direct of all \u201cpsyker mind tricks\u201d, Compel allows you to force others into brie\u0000 y acting against their own will. Compel is a highly versatile power, useful for both subtle and blatant effects. When you manifest this power, make an Opposed Test, pitting your Willpower against the Table 6\u20139: Telepathic Powers Name Threshold Focus Sustain Time Beastmaster 13 Half Action Yes Compel 17 Half Action No Dominate 24 Half Action Yes Inspire 9 Half Action Yes Mind Scan 23 Full Action No Projection 21 Full Action Yes Psychic Shriek 18 Half Action No See Me Not 14 Half Action Yes Telepathy 11 Free Action Yes Terrify 13 Half Action No target\u2019s. If you succeed, the target must follow your command. The nature of the command must be simple and must be able to be taken in a single Round. Good commands include \u201c\u0000 ee\u201d, \u201cattack that target\u201d, \u201cdance a jig\u201d, and so on. If the command would result in a suicidal act, the target gets a +20 bonus to its Willpower Test. Overbleed: For every 10 points by which you exceed the power\u2019s Threshold, you gain a +10 bonus on your Opposed Willpower Test.",
+    "focus_time": "Half Action",
+    "name": "Compel",
+    "range": "8m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "No",
+    "threshold": 17,
+    "type": "psychic_power"
+  },
+  {
+    "description": "One of the most infamous of all telepathic abilities, you reach out with your mind to seize control of another\u2019s body. Make an Opposed Test, pitting your Willpower against the target\u2019s. If you succeed, you control your target\u2019s body as if it were a puppet. For as long as the power remains active, you may divide up your Actions between yourself and your target. For example, on your Turn, you might spend a Half Action to fire your laspistol at an Ork and then for your other Half Action, order your puppet to fire his bolter at the Ork. The dominated target uses its own Characteristics, but takes a \u201310 penalty to all Tests because it is controlled. Any action that could be deemed as suicidal grants the target a new Willpower Test to try and break your hold. Overbleed: For every 10 points by which you exceed the power\u2019s Threshold, you gain a +10 bonus on your Opposed Willpower Test. 178",
+    "focus_time": "Half Action",
+    "name": "Dominate",
+    "range": "8m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "Yes",
+    "threshold": 24,
+    "type": "psychic_power"
+  },
+  {
+    "description": "You bolster your comrades by subtly implanting images of great courage, and masking various negative emotional stimuli, allowing them to swiftly shake off fears and doubts. A number of targets equal to your Willpower Bonus immediately overcome the effects of Pinning and Fear, and remain impervious to these effects for as long as they stay within Range and for as long as you sustain the power. Such psychic propaganda is frequently used amongst the Imperial Guard.",
+    "focus_time": "Half Action",
+    "name": "Inspire",
+    "range": "6m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "Yes",
+    "threshold": 9,
+    "type": "psychic_power"
+  },
+  {
+    "description": "With this power, you can read a target\u2019s mind, probing whatever secrets are hidden therein. You must touch the target for this power to work, which, unless clever methods are employed, means you must successfully Test Weapon Skill. If you manage to touch the target, you may enter a contest of wills in order to pierce your target\u2019s mental barriers and discover all sorts of information. Mind Scan is a lengthy process, extending over five Rounds. During each of these Rounds the Psyker and target make Opposed Willpower Tests. If the Psyker succeeds, he may delve deeper into the target\u2019s psyche. Should the target succeed, it indicates that he has managed to thrust the Psyker from his mind, and the Mind Scan power ends. Each Round that Mind Scan is successfully maintained, the following information is revealed: Round 1 (Contact) Information: The Psyker contacts the target\u2019s mind, learning basic information such as name, mood, Insanity Level, physical health, and so on. Round 2 (Surface Thoughts) Information: The Psyker investigates the thoughts which are uppermost in the target\u2019s mind, such as opinions on the Psyker, immediate fears, conscious lies, a single location, object, event or person which is significant to the target (such as a lover, personal hab block, treasured heirloom or cult initiation). It is not apparent why the significant thing is important\u2014only the emotions associated with it. The target\u2019s Corruption Level is also apparent to the Psyker. Round 3 (Short Term Memory) Information: The Psyker may ri\u0000 e through the target\u2019s memories over the previous twelve hours, and may uncover two further significant locations, objects, events or persons. Again, it is not apparent why the significant thing is important\u2014only the key emotions associated with it. The Psyker may also dredge up simple passwords and routine behaviours from the target\u2019s mind (e.g. hab block entry code, habitual paths to work, bank ident numerals or frequently used Skills, Talents and Characteristics). Round 4 (Subconscious) Information: The Psyker may gain detailed understanding of why significant locations, objects, events or persons hold importance to the target, and how they relate to each other. The target\u2019s beliefs, motivations and personal goals are apparent to the Psyker, as are the target\u2019s immediate network of contacts. Complicated ciphers may be extracted from the target\u2019s mind, and the Psyker is aware of pivotal moments in the target\u2019s life (earliest memory, adolescence, coming of age and so on). Round 5 (Soul Baring) Information: The Psyker may plunder the target\u2019s mind at will. Any information contained within the target\u2019s psyche is there for the Psyker to do with what he wishes. The Psyker may attempt to scan his target\u2019s mind covertly. In this case, the Psyker must make an Opposed Willpower Test at a -10 penalty. Should the Psyker succeed in a covert scan, the target gains a faint sense of unease, but is unaware that his mind is being probed. If the Psyker does not attempt a covert scan, the target is fully aware that his psyche is under attack. He may attempt to break physical contact with the Psyker or even strike out. 179",
+    "focus_time": "Extended Action",
+    "name": "Mind Scan",
+    "range": "Touch",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "No",
+    "threshold": 23,
+    "type": "psychic_power"
+  },
+  {
+    "description": "You can send out your disembodied mind and spirit, allowing you to touch other minds from a great distance away. You project a \u201cmental self \u201d, which you can shape to look like whatever you choose. The projection can travel at great speed, literally the speed of thought, but it can also be vary dangerous as creatures native to the immaterium and other Psykers may be able to directly attack your mind. Whilst using Projection, you are completely unaware of what is happening with your physical body. This power lets you communicate with any creature you know well (such as a companion or your Inquisitor), and is somewhere within the same solar system. Unwilling targets, or possibly those that do not look kindly at having people invade their thoughts, may make an Opposed Willpower Test with the Psyker to force them back into their bodies. Whilst using this power, your body functions as if it were unconscious.",
+    "focus_time": "Full Action",
+    "name": "Projection",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "Yes",
+    "threshold": 21,
+    "type": "psychic_power"
+  },
+  {
+    "description": "A voice\u2019s volume is limited to the realities of vocal capacity and a 180 listener\u2019s ability to hear. Minds have no such limitations. With this power, you gather your will and launch it as a blast of screaming mental energy designed to overload nervous systems and knock one or more targets unconscious. All creatures within Range that you specify must succeed on a Willpower Test or suffer a number of levels of Fatigue equal to your Willpower Bonus. Overbleed: For every 10 points by which you exceed the power\u2019s Threshold, you may extend the Range by 10 metres.",
+    "focus_time": "Half Action",
+    "name": "Psychic Shriek",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "No",
+    "threshold": 18,
+    "type": "psychic_power"
+  },
+  {
+    "description": "You erase your presence from the minds of others. This power is more than just \u201cinvisibility\u201d; targets that this power has been used successfully on literally cannot perceive you at all. While they may suspect that someone else is present, they can only react to the effects of what you do. For example, you could punch a guard while using See Me Not. The guard would know that he had been hit by \u201csomething\u201d and would certainly do his best to find the source of the attack, in hopes of stopping a second blow, but he would look \u201cright through you\u201d while he was searching. Upon manifesting this power, select a number of targets within Range equal to your Willpower Bonus. Each target must succeed on a Willpower Test or they can no longer perceive you for as long as you sustain the power. Lack of perception means they cannot directly attack you: they cannot see, hear, smell or perceive you in any way.",
+    "focus_time": "Half Action",
+    "name": "SEE ME NOT",
+    "range": "20m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "Yes",
+    "threshold": 14,
+    "type": "psychic_power"
+  },
+  {
+    "description": "You can send your thoughts into the minds of those around you. You can choose to send your message to one or more persons in a select group of individuals, which is known as a \u201cplaced sending\u201d, or can transmit your thoughts to anyone within Range, an art known as \u201cbroadcasting\u201d.",
+    "focus_time": "Free Action",
+    "name": "Telepathy",
+    "range": "1km/Willpower Bonus",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "Yes",
+    "threshold": 11,
+    "type": "psychic_power"
+  },
+  {
+    "description": "You dredge up a person\u2019s worst nightmare and project it directly into their mind, causing them to \u0000 ee screaming. You may affect a number of targets within Range up to your Willpower Bonus. Each target must pass a Willpower Test or roll on the Shock Table (see page 233). Overbleed: For every 5 points by which you exceed the power\u2019s Threshold, the target adds +10 to their roll on the Shock Table.",
+    "focus_time": "Half Action",
+    "name": "Terrify",
+    "range": "8m",
+    "source": "Dark Heresy Core Rulebook",
+    "sustain": "No",
+    "threshold": 13,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You call a number of simple-minded creatures within range to travel to your location. Creatures called depend on the nature of the environment, though the sorts of creatures called may include rats, ash slugs and other kinds of vermin. If no such creatures are likely to be in the area, the power has no effect. Under most circumstances, 1d10 such creatures appear after 2d10 minutes have passed. The creatures are not compelled to serve the Psyker; they simply appear and behave as normal for their species. Overbleed: For every 5 points by which you exceed the Threshold, you extend the powers Range by 1km.",
+    "focus_time": "Full Action",
+    "name": "Call Creatures",
+    "range": "1 km radius",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 9,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You summon a specially prepared item to instantly appear in your hand. To prepare the object, you must spend one hour in deep meditation, infusing the object with your psychic imprint, and marking it with glyphs and runes. The object must be small and light enough to be carried in one hand. You may only have one prepared item at a time.",
+    "focus_time": "Half Action",
+    "name": "Call Item",
+    "range": "Unlimited",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 5,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes You cause reality to blur around you, distorting your image and allowing you to blend in with your surroundings. You gain a +30 bonus to Concealment Tests. In addition, all opponents using ranged weapons to attack you suffer a \u201320 penalty to their Ballistic Skill Tests. 165",
+    "focus_time": "Half Action",
+    "name": "Chameleon",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 7,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You create a brief memory loop in the mind of the target, causing their thoughts to slip back several seconds in time. You must be able to see the target and they must be within the range of the power to be affected. They are also permitted a Willpower Test to resist its effects. If they fail to resist, however, they must repeat the same Action that they took last Round in their next Turn, be it firing a gun at a target that is no longer there, continuing to run from slain enemy, or diving for cover from a grenade that has already gone off. Any action that would obviously be harmful to the target, such as running off a cliff, automatically allows them to resist the power.",
+    "focus_time": "Half Action",
+    "name": "D\u00c9J\u00c0 VU",
+    "range": "30m",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 8,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No With this power, you disappear and your image reappears in another space no more than 10 metres away. Until the start of your next Turn, you are effectively invisible to all other creatures, defeating even sensory equipment. All attacks against you, should your position be discovered by means of a Psyniscience Test, are Very Hard (\u201330). Creatures and sensors that do not rely on sight are not affected by this power.",
+    "focus_time": "Free Action",
+    "name": "Distort Vision",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 8,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You can nullify the pain of any creature, including yourself, within Range. The target of this power reduces their levels of Fatigue by one step. Overbleed: For every 5 points by which you exceed the Threshold, you remove an additional level of Fatigue. 166",
+    "focus_time": "Half Action",
+    "name": "Dull Pain",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 8,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes You twist reality in such a way as to make -------------------------------------------------------------------------------- Table 6\u20135: Biomancy Powers \u2022 Increase any Characteristic\u2014 Name Threshold Focus Sustain except Weapon Skill and Ballistic Time Skill\u2014by +10. Bio-lightning 14 Half Action No \u2022 Gain immunity to Fatigue. \u2022 Count as though wearing a void Blood Boil 19 Half Action Yes suit in a vacuum (though you still Cellular Control 16 Half Action Yes need to breathe). Constrict 13 Half Action No Each Round you sustain this power, Enhance Senses 10 Half Action Yes you must succeed on a Toughness Test. Hammerhand 15 Full Action Yes On a failed Test, you take 1d5 points Regenerate 23 Full Action Yes of Damage, ignoring your Toughness Seal Wounds 10 Half Action No Bonus and Armour as your body begins to break from the strain. Shape Flesh 19 Full Action Yes Unlike most powers, you can Toxic Siphon 11 Half Action No manifest this power multiple times. Each time, choose a different effect.",
+    "focus_time": "Full Action",
+    "name": "Fearful Aura",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 7,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No With a word, thought or gesture, you can command the flesh of your target to sharply contract. The target\u2019s windpipe closes, choking them and cutting off their breath. They begin to Suffocate. (See Suffocation on page 210) Each Round, the target must spend a Full Action to Test Toughness. On a success, they regain control over their body and clear their windpipe. On a failure they continue to suffocate. The target is considered to be engaged in strenuous activity. Overbleed: For every 10 points by which you exceed the Threshold, the Difficulty of the Toughness Test worsens by one step.",
+    "focus_time": "Half Action",
+    "name": "Constrict",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 13,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes With a moment\u2019s thought, you force your senses into impossible feats of perception that can only be equalled among humans by the biomechanically augmented. When you manifest this power, choose one of your five senses. You gain a +30 bonus to all Tests made with this sense. The sense organ involved becomes strained as you push it past all normal human limits; the eyes weep and grow hugely dilated, skin \u0000 ushes red, the nose drips mucus and so on. Overbleed: For every 5 points by which you exceed the Threshold, you may enhance an additional sense.",
+    "focus_time": "Half Action",
+    "name": "Enhanced Senses",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 10,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes Biomancers who have learned to channel the fierce power of the warp into their limbs can eventually master the art of letting the energy of the immaterium flow unhindered 170 through their body, phenomenally increasing their fighting capabilities.",
+    "focus_time": "Full Action",
+    "name": "Hammerhand",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 15,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes One of the pinnacles of a biomancer\u2019s abilities, this power allows you to knit your \u0000 esh back together at a phenomenal rate, letting you swiftly overcome any non-fatal injury. This is a hard ability to master, but the rewards are great\u2014Regenerate can eventually regrow lost limbs and organs. Each Round this power is active, you remove 1d5 points of Damage (removing Critical Damage first) and have all levels of Fatigue removed. Once all Damage is removed, you begin to regrow lost organs, limbs, and so on. Limbs and organs replaced by cybernetics do not regrow unless the bionic is first removed.",
+    "focus_time": "Full Action",
+    "name": "Regenerate",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 23,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You focus your power to repair your damaged flesh or that of any character within Range. Ragged wounds fuse and cuts vanish. Broken bone knits together, and burnt skin sloughs away as fresh tissue grows beneath. The target of this power removes 1d10 points of Damage plus an amount of Damage equal to your Willpower Bonus. This power can remove Critical Damage as well as normal Damage. Overbleed: For every 5 points by which you exceed the Threshold, you may achieve any of the following: extend the Range by 10 metres, target an additional character within Range, or remove an additional 1d10+WB Damage from the target.",
+    "focus_time": "Half Action",
+    "name": "Seal Wounds",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 10,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes Shape Flesh is the point where your flesh and will become indistinguishable\u2014the goal of many a biomancer. Shape Flesh allows you to twist your physical frame in nearly any way you can imagine. Each manifestation of this power produces one of the following effects: \u2022 Gain any one of the following traits\u2014Burrower (1), Crawler, Dark Sight, Flier, Hoverer, Natural Armour (2), Natural Weapons or Quadruped. These traits are described in Chapter XII: Aliens, Heretics & Antagonists, page 329. \u2022 Assume the appearance of any one creature. You may make Disguise Tests as if you had the Disguise skill and at a +10 bonus. If you already have the Skill, you gain an additional +20 bonus. \u2022 Gain Natural Weapons (Bite, Claws, and so on) to deal 1d10+SB Damage. Unlike most powers, you can manifest this power multiple times. Each time, choose a different effect.",
+    "focus_time": "Full Action",
+    "name": "Shape Flesh",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 19,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No You draw poisons from the flesh. This has the same effect as taking a dose of de-tox (see Chapter V: Armoury, page 148) with the exception that the target must lose a Full Action as the toxin expels itself from the body naturally. Overbleed: For every 5 points by which you exceed the Threshold, you may draw poison from an additional target, who must be touching you or another person being purged by you. iiti",
+    "focus_time": "Half Action",
+    "name": "Toxic Siphon",
+    "range": "Touch (You)",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 11,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No Using this power enables you to make near impossible ranged shots, allowing you to strike virtually any target you can perceive. You must concentrate on a single firearm or other missile weapon in your possession and the ammunition it carries before casting your psychic gaze into the warp to search down the near-infinite paths of potential future trajectories. When you find the one you seek, you shoot, and while the damage to the target may vary, the attack cannot be avoided in any way. In effect, you automatically hit any one target you can see regardless of Range. Only one shot automatically hits, even if you are using a semi-automatic or automatic weapon. All other shots require Tests as normal.",
+    "focus_time": "Free Action",
+    "name": "Divine Shot",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 15,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes By focusing his mind the diviner can single out an object or person somewhere in his immediate vicinity, pushing aside all other distractions until he can unerringly find it. First the Psyker must choose an item or person to be the subject of the power. This can be anything, but it must be a specific item. So for instance, the Psyker could say, \u201cI want to know where the key to this lock is\u201d but not \u201cI want to know where a key is\u201d. Likewise with a person, the Psyker must have either seen them before (possibly remotely or in a pict) or know their name. Simply trying to find the person --------------------------------------------------------------------------------",
+    "focus_time": "Full Action",
+    "name": "Dowsing",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 11,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes One of the first powers commonly learned in this discipline is to summon fire with thought. This allows you to conjure a small \u0000 ame (about the size and intensity of a burning torch) into your palm. The primary purpose of this power is not to attack\u2014though it adds 2 points of Damage to your unarmed attacks and makes them Energy attacks\u2014but rather it is used to set things alight or as fuel for other Pyrokinetic powers, such as Sculpt Flame. While this power is in effect, you cannot use your hand for anything else besides holding the \u0000 ame.",
+    "focus_time": "Half Action",
+    "name": "Call Flame",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 8,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Focus Time Half Action Sustained: Yes It takes a potent mind to deny the natural tendency of \u0000 ames to run out of control. Douse Flames allows you to instantly extinguish all fires within range as well as interfere with fire-based weapons such as \u0000 amers, causing them not to function for as long as they are within Range of the power although their fuel may still spray forth, depending on the design of the weapon. Note that chemically \u0000 ammable substances, such as promethium, that burn continuously once exposed to the air, burst back into \u0000 ame the moment the power\u2019s effect ends or as soon as the chemical is brought outside of Range. Overbleed: For every 5 points by which you exceed the Threshold, you extend the Range by 5 metres. 174",
+    "focus_time": "",
+    "name": "Douse Flames",
+    "range": "5m \u00d7 Willpower Bonus",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 16,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No Fire Bolt allows you to create bolts of flame with your mind and hurl them at your foes. The appearance of these flames is up to you\u2014for example, searing white light or green-black spheres of obscenity- mouthing faces. You can direct the bolt at any target you can see within range. Make a Challenging (+0) Willpower Test to strike the target. On a hit, the bolt deals 1d10+5 Energy Damage. Overbleed: For every 5 points by which the Power Roll exceeds the Threshold, you generate an additional Fire Bolt, which can be directed at any targets within Range. Test Willpower for each separate target.",
+    "focus_time": "Half Action",
+    "name": "Fire Bolt",
+    "range": "100m",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 11,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No Fire Storm instantly creates an intense conflagration about your target as the air itself ignites, burning all within to cinders. You can call a Fire Storm anywhere within range to a point you have line of sight to. The Fire Storm has a 6 metre radius from the point (or individual) targeted. The Fire Storm deals 1d10+5 Energy Damage to all creatures and objects in the area. Overbleed: For every 5 points by which you exceed the Threshold, you deal an additional 1d10 points of Damage.",
+    "focus_time": "Half Action",
+    "name": "Fire Storm",
+    "range": "50m",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 16,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes A legendary ability that few pyrokinetics are strong enough to even wield, much less have the courage to use. Holocaust calls forth a raging white-hot firestorm ignited by the Psyker\u2019s own soul. The flames of a Holocaust burn across dimensions, affecting the entities of the immaterium as well as material beings, but the cost is high as the psyker risks losing his own spirit to the fury of the conflagration. The fires of a Holocaust always burn outward from you, dealing 1d10 Energy Damage per point of your Willpower Bonus to all creatures and objects in the area. This Damage bypasses Toughness Bonus and Armour. You take 1d10+1 Energy Damage (ignoring Toughness Bonus and armour) each Round that you sustain this power. There is no immunity to the fires of a Holocaust and Warp Entities, as well as other immaterial creatures, are burned as readily as the fleshbound. Those slain by Holocaust are killed forever.",
+    "focus_time": "Full Action",
+    "name": "Holocaust",
+    "range": "6m",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 23,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes Incinerate allows you to generate intense heat as well as \u0000 ame. By psychically agitating the molecules in a tightly focused area, you create an effect even more devastating than a meltagun. However, Incinerate requires you to concentrate on a single point, making it difficult to use against non-stationary targets. Incinerate has a range of 10 metres and deals 1d10+1 Energy Damage. Each Round, beyond the first, that you use a Full Action concentrating on the target (it must remain in Range and in line of sight) this power deals the Damage of the previous Round plus 1. Damage caused by Incinerate ignores both Armour and Toughness.",
+    "focus_time": "Full Action",
+    "name": "Incinerate",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 19,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes You control the shape of the fires burning around you. With this power, you can intensify any flames or shape them to assume any appearance you desire. A successful use of this power allows you to do any of the following effects with an existing fire: \u2022 Double a fire\u2019s area (assuming there are combustibles). \u2022 Diminish a fire\u2019s area by half. \u2022 Spread fire into a number of 1 metre squares in any direction equal to your Willpower Bonus. \u2022 Create crude shapes that resemble creatures, body parts, people or objects. \u2022 Cause a fire to burst, requiring all adjacent targets to Test Agility, catching fire should they fail the Test. \u2022 Cause a fire to spew smoke, filling three times the area of the fire (treat as fog). Each Round you can choose a new effect or apply the same effects to the same source of fire. Overbleed: For every 5 points by which you exceed the power\u2019s Threshold, you can manipulate fire more efficiently. If you exceed the PT by 5 points, you can create easily recognisable images. If you exceed by 10 points, you can create near life- like figures, as if carved from \u0000 ame. You can increase the distance of spreading fire: for every 5 points you exceed the PT, the distance is double your Willpower Bonus; for exceeding by 10 points the distance is four times your Willpower Bonus and so on.",
+    "focus_time": "Half Action",
+    "name": "Sculpt Flame",
+    "range": "5m\u00d7Willpower Bonus",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 13,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: Yes A relatively blunt, but effective, ability in the pyrokinetic\u2019s arsenal, this power allows you to place an immobile barrier of flame that",
+    "focus_time": "Full Action",
+    "name": "Wall OF Fire",
+    "range": "60m",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 17,
+    "type": "psychic_power"
+  },
+  {
+    "description": "Sustained: No Use this power to hurl a burst -------------------------------------------------------------------------------- Table 6\u20139: Telepathic Powers Name Threshold Focus Sustain Time Beastmaster 13 Half Action Yes Compel 17 Half Action No Dominate 24 Half Action Yes Inspire 9 Half Action Yes Mind Scan 23 Full Action No Projection 21 Full Action Yes Psychic Shriek 18 Half Action No See Me Not 14 Half Action Yes Telepathy 11 Free Action Yes Terrify 13 Half Action No target\u2019s. If you succeed, the target must follow your command. The nature of the command must be simple and must be able to be taken in a single Round. Good commands include \u201c\u0000 ee\u201d, \u201cattack that target\u201d, \u201cdance a jig\u201d, and so on. If the command would result in a suicidal act, the target gets a +20 bonus to its Willpower Test. Overbleed: For every 10 points by which you exceed the power\u2019s Threshold, you gain a +10 bonus on your Opposed Willpower Test.",
+    "focus_time": "Half Action",
+    "name": "Force Bolt",
+    "range": "10m\u00d7Willpower Bonus",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "",
+    "threshold": 13,
+    "type": "psychic_power"
+  },
+  {
+    "description": "One of the most infamous of all telepathic abilities, you reach out with your mind to seize control of another\u2019s body. Make an Opposed Test, pitting your Willpower against the target\u2019s. If you succeed, you control your target\u2019s body as if it were a puppet. For as long as the power remains active, you may divide up your Actions between yourself and your target. For example, on your Turn, you might spend a Half Action to fire your laspistol at an Ork and then for your other Half Action, order your puppet to fire his bolter at the Ork. The dominated target uses its own Characteristics, but takes a \u201310 penalty to all Tests because it is controlled. Any action that could be deemed as suicidal grants the target a new Willpower Test to try and break your hold. Overbleed: For every 10 points by which you exceed the power\u2019s Threshold, you gain a +10 bonus on your Opposed Willpower Test. 178",
+    "focus_time": "Half Action",
+    "name": "Dominate",
+    "range": "8m",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "Yes",
+    "threshold": 24,
+    "type": "psychic_power"
+  },
+  {
+    "description": "You bolster your comrades by subtly implanting images of great courage, and masking various negative emotional stimuli, allowing them to swiftly shake off fears and doubts. A number of targets equal to your Willpower Bonus immediately overcome the effects of Pinning and Fear, and remain impervious to these effects for as long as they stay within Range and for as long as you sustain the power. Such psychic propaganda is frequently used amongst the Imperial Guard.",
+    "focus_time": "Half Action",
+    "name": "Inspire",
+    "range": "6m",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "Yes",
+    "threshold": 9,
+    "type": "psychic_power"
+  },
+  {
+    "description": "With this power, you can read a target\u2019s mind, probing whatever secrets are hidden therein. You must touch the target for this power to work, which, unless clever methods are employed, means you must successfully Test Weapon Skill. If you manage to touch the target, you may enter a contest of wills in order to pierce your target\u2019s mental barriers and discover all sorts of information. Mind Scan is a lengthy process, extending over five Rounds. During each of these Rounds the Psyker and target make Opposed Willpower Tests. If the Psyker succeeds, he may delve deeper into the target\u2019s psyche. Should the target succeed, it indicates that he has managed to thrust the Psyker from his mind, and the Mind Scan power ends. Each Round that Mind Scan is successfully maintained, the following information is revealed: Round 1 (Contact) Information: The Psyker contacts the target\u2019s mind, learning basic information such as name, mood, Insanity Level, physical health, and so on. Round 2 (Surface Thoughts) Information: The Psyker investigates the thoughts which are uppermost in the target\u2019s mind, such as opinions on the Psyker, immediate fears, conscious lies, a single location, object, event or person which is significant to the target (such as a lover, personal hab block, treasured heirloom or cult initiation). It is not apparent why the significant thing is important\u2014only the emotions associated with it. The target\u2019s Corruption Level is also apparent to the Psyker. Round 3 (Short Term Memory) Information: The Psyker may ri\u0000 e through the target\u2019s memories over the previous twelve hours, and may uncover two further significant locations, objects, events or persons. Again, it is not apparent why the significant thing is important\u2014only the key emotions associated with it. The Psyker may also dredge up simple passwords and routine behaviours from the target\u2019s mind (e.g. hab block entry code, habitual paths to work, bank ident numerals or frequently used Skills, Talents and Characteristics). Round 4 (Subconscious) Information: The Psyker may gain detailed understanding of why significant locations, objects, events or persons hold importance to the target, and how they relate to each other. The target\u2019s beliefs, motivations and personal goals are apparent to the Psyker, as are the target\u2019s immediate network of contacts. Complicated ciphers may be extracted from the target\u2019s mind, and the Psyker is aware of pivotal moments in the target\u2019s life (earliest memory, adolescence, coming of age and so on). Round 5 (Soul Baring) Information: The Psyker may plunder the target\u2019s mind at will. Any information contained within the target\u2019s psyche is there for the Psyker to do with what he wishes. The Psyker may attempt to scan his target\u2019s mind covertly. In this case, the Psyker must make an Opposed Willpower Test at a -10 penalty. Should the Psyker succeed in a covert scan, the target gains a faint sense of unease, but is unaware that his mind is being probed. If the Psyker does not attempt a covert scan, the target is fully aware that his psyche is under attack. He may attempt to break physical contact with the Psyker or even strike out. 179",
+    "focus_time": "Extended Action",
+    "name": "Mind Scan",
+    "range": "Touch",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "No",
+    "threshold": 23,
+    "type": "psychic_power"
+  },
+  {
+    "description": "You can send out your disembodied mind and spirit, allowing you to touch other minds from a great distance away. You project a \u201cmental self \u201d, which you can shape to look like whatever you choose. The projection can travel at great speed, literally the speed of thought, but it can also be vary dangerous as creatures native to the immaterium and other Psykers may be able to directly attack your mind. Whilst using Projection, you are completely unaware of what is happening with your physical body. This power lets you communicate with any creature you know well (such as a companion or your Inquisitor), and is somewhere within the same solar system. Unwilling targets, or possibly those that do not look kindly at having people invade their thoughts, may make an Opposed Willpower Test with the Psyker to force them back into their bodies. Whilst using this power, your body functions as if it were unconscious.",
+    "focus_time": "Full Action",
+    "name": "Projection",
+    "range": "You",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "Yes",
+    "threshold": 21,
+    "type": "psychic_power"
+  },
+  {
+    "description": "A voice\u2019s volume is limited to the realities of vocal capacity and a 180 listener\u2019s ability to hear. Minds have no such limitations. With this power, you gather your will and launch it as a blast of screaming mental energy designed to overload nervous systems and knock one or more -------------------------------------------------------------------------------- Table 7-1: Characteristics Tests Characteristic Example Tests Weapon Skill Make an attack with a melee weapon. Ballistic Skill Make an attack with a ranged weapon. Strength Bend bars, break down a door, push Toughness Agility over a Grox. Resist poison or disease, tolerate temperature extremes, stave off hunger, resist mutation. Determine Initiative, maintain balance on a Intelligence Perception narrow surface, navigate treacherous terrain. Recall an important detail, identify a familiar face, solve a puzzle. Notice a hidden enemy, locate a secret door, Willpower Fellowship gauge another person\u2019s attitude. Resist a Psychic Power, torture or Fear. Make a good impression, seduce a target, get someone to do you a favour.",
+    "focus_time": "Half Action",
+    "name": "Psychic Shriek",
+    "range": "10m",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "sustain": "No",
+    "threshold": 18,
+    "type": "psychic_power"
+  },
+  {
+    "description": "You can send your thoughts into the minds of those around you. You can choose to send your message to one or more persons in a select group of individuals, which is known as a \u201cplaced sending\u201d, or can transmit your thoughts to anyone within Range, an art known as \u201cbroadcasting\u201d.",
+    "focus_time": "Free Action",
+    "name": "Telepathy",
+    "range": "1km/Willpower Bonus",
+    "source": "Additional Content",
+    "sustain": "Yes",
+    "threshold": 11,
+    "type": "psychic_power"
+  },
+  {
+    "description": "You dredge up a person\u2019s worst nightmare and project it directly into their mind, causing them to \u0000 ee screaming. You may affect a number of targets within Range up to your Willpower Bonus. Each target must pass a Willpower Test or roll on the Shock Table (see page 233). Overbleed: For every 5 points by which you exceed the power\u2019s Threshold, the target adds +10 to their roll on the Shock Table. --- Equipment example Table 5-12: Armour Armour Type Location(s) Covered AP Wt Cost Availability Primitive Armour Gang Leathers Arms, Body, Legs 1 5 kg 25 Average Heavy Leathers Arms, Body, Legs 2 7 kg 100 Common Quilted Vest Body 2 2 kg 10 Common Beast Furs Body 2 10 kg 5 Average Grox Hides Body 3 14 kg 60 Common Chain Coat Arms, Body, Legs 3 18 kg 50 Average Feudal Plate All 5 30 kg 120 Scarce Xeno Hides Body 6 22 kg 5,000 Very Rare Flak Armour Flak Helmet Head 2 2 kg 25 Average Flak Gauntlets Arms 2 1 kg 50 Average Light Flak Coat Arms, Body, Legs 2 4 kg 80 Scarce Flak Vest Body 3 5 kg 50 Average Flak Jacket Arms, Body, Legs 3 6 kg 100 Average Flak Cloak Body 3 8 kg 80 Scarce Guard Flak Armour All 4 11 kg 300 Scarce Mesh Armour Mesh Cowl Head 3 0.5 kg 100 Rare Mesh Gloves Arms 3 0.5 kg 120 Rare Xeno Mesh Arms, Body, Legs 4 2 kg 375 Rare Mesh Vest Body 4 1 kg 150 Rare Mesh Combat Cloak Arms, Body 4 1.5 kg 350 Very Rare Carapace Armour Carapace Helm Head 4 2 kg 250 Rare Carapace Vambraces Arms 5 2 kg 300 Rare Carapace Greaves Legs 5 3 kg 375 Rare Enforcer Light Carapace Arms, Body, Legs 5 15 kg 575 Rare Carapace Chest Plate Body 6 7 kg 600 Rare Storm Trooper Carapace All 6 17 kg 3,750 Very Rare Power Armour Light Power Armour All 7 40 kg 8,500 Very Rare Power Armour All 8 65 kg 15,000 Very Rare esrr MESH ARMOUR Of alien design, and sometimes manufacture, mesh is formed from thousands of thermoplas cells linked together to create a fabric-like material. It is lightweight and can withstand most impacts or heat energy by becoming momentarily rigid, spreading and dissipating the attack. errr",
+    "focus_time": "Half Action",
+    "name": "Terrify",
+    "range": "8m",
+    "source": "Additional Content",
+    "sustain": "No",
+    "threshold": 13,
+    "type": "psychic_power"
+  }
+]

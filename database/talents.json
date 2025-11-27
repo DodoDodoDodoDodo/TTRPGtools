@@ -1,1 +1,3216 @@
-[]
+[
+  {
+    "description": "Affect more targets with Test.",
+    "name": "Air Of Authority",
+    "prerequisites": [
+      "Fel 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Use either hand equally well.",
+    "name": "Ambidextrous",
+    "prerequisites": [
+      "Ag 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are resilient to Corruption.",
+    "name": "Armour Of Contempt",
+    "prerequisites": [
+      "WP 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Use non-proficient weapons at \u201310 penalty.",
+    "name": "Arms Master BS",
+    "prerequisites": [
+      "30",
+      "Basic Weapon Training (any two)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "On a successful Acrobatics Test after making a",
+    "name": "Assassin Strike Ag",
+    "prerequisites": [
+      "40",
+      "Acrobatic"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Heal 2 Damage/day, always Lightly Wounded.",
+    "name": "Melee Attack, You May Move As A Free Action. Autosanguine",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Use weapon group without penalty.",
+    "name": "Basic Weapon Training\u2020",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "when Charging.",
+    "name": "Battle Rage Frenzy Parry",
+    "prerequisites": [
+      "while Frenzied. Berserk Charge \u2014 Gain +20 bonus"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "+10 bonus to control servitors.",
+    "name": "Binary Chatter",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Re-roll a missed attack, once per Round.",
+    "name": "Blademaster WS",
+    "prerequisites": [
+      "30",
+      "Melee Weapon Training (any)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Suffer half the usual penalties when vision is obscured.",
+    "name": "Blind Fighting",
+    "prerequisites": [
+      "Per 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Remove bracing requirement for certain weapons.",
+    "name": "Bulging Biceps",
+    "prerequisites": [
+      "S 45"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Reduce falling Damage.",
+    "name": "Catfall",
+    "prerequisites": [
+      "Ag 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Immune to seduction, resistant to charm.",
+    "name": "Chem Geld",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Penalty to avoid being hit by your flamer attacks.",
+    "name": "Cleanse And Purify",
+    "prerequisites": [
+      "Basic Weapon Training (Flame)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "group.",
+    "name": "\u2020Denotes",
+    "prerequisites": [
+      "Talent"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Opponents get no bonus for outnumbering you.",
+    "name": "110 Combat Master Concealed",
+    "prerequisites": [
+      "Cavity Corpus Conversion Counter-attack Crack Shot Crippling Strike Crushing Blow Dark Soul Deadeye Shot Decadence Deflect Shot Die Hard Discipline Focus\u2020 Disturbing Voice Double Team Dual Shot Dual Strike Electrical Succour Electro Graft Use Energy Cache Exotic Weapon Training\u2020 Favoured by the Warp WS 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Take Damage to improve Power Roll.",
+    "name": "\u2014 You Have A",
+    "prerequisites": [
+      "secret compartment on you. Psy Rating 2"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "free attack with a successful Parry.",
+    "name": "WS",
+    "prerequisites": [
+      "40 Gain"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "+2 Critical Damage with a ranged weapon.",
+    "name": "BS",
+    "prerequisites": [
+      "40 Deal"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "+1d5\u20131 Critical Damage with a melee weapon.",
+    "name": "WS",
+    "prerequisites": [
+      "50 Deal"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "+2 Damage with a melee weapon.",
+    "name": "S",
+    "prerequisites": [
+      "40 Deal"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Called Shots are at \u201310 penalty.",
+    "name": "\u2014 Take Half The",
+    "prerequisites": [
+      "penalty on Malignancy Tests. BS 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "uncanny resistance to drugs and alcohol.",
+    "name": "T",
+    "prerequisites": [
+      "30 Gain"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Parry Primitive ranged attacks.",
+    "name": "Ag",
+    "prerequisites": [
+      "50 You can"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "death chance incurred by Blood Loss.",
+    "name": "WP",
+    "prerequisites": [
+      "40 Re-roll"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "opponent to drop his weapon.",
+    "name": "Disarm Ag",
+    "prerequisites": [
+      "30 Force"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain +2 on Power Rolls to manifest discipline powers.",
+    "name": "Psy",
+    "prerequisites": [
+      "Rating 3"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "penalty to Fel.",
+    "name": "\u2014 +10 Bonus To",
+    "prerequisites": [
+      "Intimidate and Interrogation",
+      "\u201310"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "for ganging up.",
+    "name": "\u2014 Gain Additional",
+    "prerequisites": [
+      "+10 bonus"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Wielder One Ballistic Skill Test hits target twice.",
+    "name": "Ag",
+    "prerequisites": [
+      "40",
+      "Two-Weapon"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Wielder One Weapon Skill Test hits target twice.",
+    "name": "Ag",
+    "prerequisites": [
+      "40",
+      "Two-Weapon"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "remove Fatigue.",
+    "name": "Tech-Priest",
+    "prerequisites": [
+      "+10 bonus to Toughness Tests to"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "to Inquiry, Tech Use, Common Knowledge.",
+    "name": "\u2014",
+    "prerequisites": [
+      "+10 bonus"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Use an exotic weapon without penalty.",
+    "name": "Tech-Priest Luminen Blast, Charge And Shock Are Fatigue Free.",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "twice for Psychic Phenomena (see page 162)",
+    "name": "WP",
+    "prerequisites": [
+      "35 Roll"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Immune to Fear and Pinning.",
+    "name": "And Take The Better Result. Fearless",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "or lose Half Action.",
+    "name": "Feedback Screech",
+    "prerequisites": [
+      "Tech-Priest 30m radius",
+      "Test Willpower"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Bonus of metal objects.",
+    "name": "Ferric Lure",
+    "prerequisites": [
+      "Tech-Priest WP Test to call 1kg/WP"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Bonus of metal objects.",
+    "name": "Ferric Summons",
+    "prerequisites": [
+      "Tech-Priest",
+      "Ferric Lure WP Test to call 2kg/WP"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Injure self to gain mental fortitude.",
+    "name": "Flagellant",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "gain +10 bonus on next Test.",
+    "name": "Foresight",
+    "prerequisites": [
+      "Int 30 Contemplate to"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Enter psychotic rage to gain combat bonuses.",
+    "name": "Frenzy",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "gain a free second attack.",
+    "name": "Furious Assault WS",
+    "prerequisites": [
+      "35 On a successful WS Test"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have a good reputation amongst a certain group.",
+    "name": "Good Reputation\u2020",
+    "prerequisites": [
+      "Fel 50",
+      "Peer"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "radius.",
+    "name": "Gun Blessing",
+    "prerequisites": [
+      "Tech-Priest Unjam a number of guns equal to Int bonus in a 10m"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Wielder Fighting with two pistols incurs only a \u201310 penalty.",
+    "name": "Gunslinger BS",
+    "prerequisites": [
+      "40",
+      "Two-Weapon"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "when you Charge or Run.",
+    "name": "Hard Target Ag",
+    "prerequisites": [
+      "40 Opponents take \u201320 to BS Tests"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "heal as if Lightly Wounded.",
+    "name": "Hardy T",
+    "prerequisites": [
+      "40 You always"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain +10 bonus to attack hated creatures.",
+    "name": "Hatred\u2020",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain proficiency with a heavy weapon group.",
+    "name": "Heavy Weapon Training\u2020",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain +10 bonus to a particular sense.",
+    "name": "Heightened Senses\u2020",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain a free attack when you make a Full Move.",
+    "name": "Hip Shooting",
+    "prerequisites": [
+      "BS 40",
+      "Ag 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "targets further than 10m apart.",
+    "name": "Independent Targeting",
+    "prerequisites": [
+      "BS 40 Fire at two or more"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Re-roll the effects of Shock.",
+    "name": "Insanely Faithful",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "re-roll Fear and Pinning Tests.",
+    "name": "Into The Jaws Of",
+    "prerequisites": [
+      "Hell Iron Discipline Minions gain immunity to Pinning and Fear whilst in your presence. Iron Discipline Jaded Leap Up Light Sleeper Lightning Attack Litany of Hate Logis Implant Luminen Blast Luminen Charge \u2020Denotes Talent group. WP 30",
+      "Command Minions can"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Test to overcome Stunning.",
+    "name": "Iron Jaw T",
+    "prerequisites": [
+      "40 Toughness"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "from ordinary horrors.",
+    "name": "WP",
+    "prerequisites": [
+      "30 Never gain Insanity Points"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "up as a Free Action.",
+    "name": "Ag",
+    "prerequisites": [
+      "30 Stand"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "when asleep.",
+    "name": "Per",
+    "prerequisites": [
+      "30 Count as awake",
+      "even"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Add twice AB to Initiative rolls.",
+    "name": "Swift Attack Attack Three Times With A Full Action. Lightning Reflexes",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "on WS and BS on successful Tech-Use Test.",
+    "name": "Hatred Extend Benefits Of",
+    "prerequisites": [
+      "hatred to allies. \u2014 +10 bonus"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Energy Damage Bolt. Causes Fatigue.",
+    "name": "Tech-Priest",
+    "prerequisites": [
+      "1d10+WP Bonus"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "1d10+3 Energy Damage Shock. Causes Fatigue.",
+    "name": "Tech-Priest Toughness Test To",
+    "prerequisites": [
+      "power/charge tech. Causes Fatigue. 111 Luminen Shock Tech-Priest"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "day.",
+    "name": "Maglev Grace",
+    "prerequisites": [
+      "Tech-Priest Hover 1d10+TB minutes once per"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "day.",
+    "name": "Maglev Transcendence",
+    "prerequisites": [
+      "Tech-Priest",
+      "Maglev Grace Hover 2d10+TB minutes twice per"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "No penalties for firing at Long or Extreme range.",
+    "name": "Marksman",
+    "prerequisites": [
+      "BS 35"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "advanced medical procedures.",
+    "name": "Master Chirurgeon Medicae",
+    "prerequisites": [
+      "+10 Perform"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Affect 10 times the normal numbers with a",
+    "name": "Master Orator",
+    "prerequisites": [
+      "Fel 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You may enter a trance to remove Fatigue.",
+    "name": "Fellowship Test. Mechadendrite Use\u2020 Tech-Priest You Can Use A Type Of Mechadendrite. Meditation",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain proficiency with a group of melee weapons.",
+    "name": "Melee Weapon Training\u2020",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain protection against psychic attacks.",
+    "name": "Mental Fortress",
+    "prerequisites": [
+      "WP 50",
+      "Strong-Minded"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Deal +2 Damage with ranged attacks.",
+    "name": "Mental Rage Frenzy You",
+    "prerequisites": [
+      "may use Psychic Powers while in the throes of Frenzy. Mighty Shot BS 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You can copy voices.",
+    "name": "Mimic",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Re-roll failed Tests to avoid Pinning.",
+    "name": "Minor Psychic Power\u2020 You Gain A Minor Psychic Power. Nerves Of Steel",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "+20 bonus to resist mind control or interrogation.",
+    "name": "Orthoproxy",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are alert for danger.",
+    "name": "Paranoia",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain +10 bonus on Fel Tests to interact with",
+    "name": "Peer\u2020",
+    "prerequisites": [
+      "Fel 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain proficiency with a group of pistol weapons.",
+    "name": "Organisation. Pistol Training\u2020",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "to Power Rolls.",
+    "name": "Power Well Psy Rating",
+    "prerequisites": [
+      "2 Gain bonus"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Sure Strike No penalty for attacks against specific Hit Locations.",
+    "name": "Precise Blow",
+    "prerequisites": [
+      "WS 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Heal 1d5 Damage once per day.",
+    "name": "Prosanguine",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain powers, roll 1d10+WP bonus for Power Rolls.",
+    "name": "Psy Rating",
+    "prerequisites": [
+      "1 \u2014"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain powers, roll 2d10+WP bonus for Power Rolls.",
+    "name": "Psy Rating",
+    "prerequisites": [
+      "2 Psy Rating 1"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain powers, roll 3d10+WP bonus for Power Rolls.",
+    "name": "Psy Rating",
+    "prerequisites": [
+      "3 Psy Rating 2"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain powers, roll 4d10+WP bonus for Power Rolls.",
+    "name": "Psy Rating",
+    "prerequisites": [
+      "4 Psy Rating 3"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain powers, roll 5d10+WP bonus for Power Rolls.",
+    "name": "Psy Rating",
+    "prerequisites": [
+      "5 Psy Rating 4"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain powers, roll 6d10+WP bonus for Power Rolls.",
+    "name": "Psy Rating",
+    "prerequisites": [
+      "6 Psy Rating 5"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain an extra Psychic Power.",
+    "name": "Psychic Power\u2020",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Ready as a Free Action.",
+    "name": "Quick Draw",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Ag to negate Surprise.",
+    "name": "Rapid Reaction Ag",
+    "prerequisites": [
+      "40 Test"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Reduce reload time.",
+    "name": "Rapid Reload",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain +10 bonus to Resistance Tests.",
+    "name": "Resistance\u2020",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "radius, \u201310 to all Tests due to Fear.",
+    "name": "Rite Of Awe",
+    "prerequisites": [
+      "Tech-Priest 50m"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "for two minutes. 50m radius.",
+    "name": "Rite Of Fear",
+    "prerequisites": [
+      "Tech-Priest Fear rating 1"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Deadeye Shot No penalties for Called Shots.",
+    "name": "Rite Of Pure Thought",
+    "prerequisites": [
+      "Tech-Priest You are immune to emotion. Sharpshooter BS 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain an additional Wound.",
+    "name": "Sound Constitution",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Move more quickly in combat.",
+    "name": "Sprint",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain extra Dodge in a Round.",
+    "name": "Step Aside Ag",
+    "prerequisites": [
+      "40",
+      "Dodge"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Deal +2 Critical Damage with knives or unarmed attacks.",
+    "name": "Street Fighting",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Tests made to resist Psychic Powers.",
+    "name": "Strong Minded WP",
+    "prerequisites": [
+      "30",
+      "Resistance (Psychic Powers) Re-roll failed WP"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "on a successful attack.",
+    "name": "Sure Strike",
+    "prerequisites": [
+      "WS 30 Choose Hit Location"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Attack twice with a Full Action.",
+    "name": "Swift Attack",
+    "prerequisites": [
+      "WS 35"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Make a special attack to Stun your opponent.",
+    "name": "Takedown",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain +10 bonus to corresponding Skill Test.",
+    "name": "Talented\u2020",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Unjam a gun as a Half Action.",
+    "name": "Technical Knock",
+    "prerequisites": [
+      "Int 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Gain proficiency with a group of thrown weapons.",
+    "name": "Thrown Weapon Training\u2020",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Remember trivial facts and minor details.",
+    "name": "Total Recall",
+    "prerequisites": [
+      "Int 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "you take.",
+    "name": "True Grit T",
+    "prerequisites": [
+      "40 Reduce Critical Damage"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "when wielding two weapons.",
+    "name": "Two-Weapon Wielder\u2020 WS",
+    "prerequisites": [
+      "35 or BS35",
+      "Ag 35 Attack twice"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are easily forgettable.",
+    "name": "Unremarkable",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You may re-roll failed Fear Tests.",
+    "name": "Unshakeable Faith",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Parry each Round.",
+    "name": "Wall Of Steel Ag",
+    "prerequisites": [
+      "35 Gain an extra"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "group.",
+    "name": "\u2020Denotes",
+    "prerequisites": [
+      "Talent"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You exude a natural aura of command, instilling subservience in all around you. On a successful Command Test, you may affect a number of targets equal to 1d10 plus your Fellowship Bonus. Such is the authority in your voice that even those who are not in your service jump to attention when you speak. You may attempt to get non-servants to follow your commands by making a Command Test with a \u201310 penalty.",
+    "name": "AIR OF Authority",
+    "prerequisites": [
+      "Fellowship 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You can use either hand equally well. You do not take the normal \u201320 penalty for making attacks with your secondary hand. Special: If you have the Two-Weapon Wielder talent, the penalty for making attacks with both weapons in the same Turn drops to \u201310.",
+    "name": "Ambidextrous",
+    "prerequisites": [
+      "Agility 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You drape yourself in the armour of scorn and hatred. Whenever you would gain Corruption Points, reduce the amount you would earn by 1. In addition, you may Test Willpower as a Free Action to ignore the effects of your accumulated Corruption for one Round.",
+    "name": "Armour OF Contempt",
+    "prerequisites": [
+      "Willpower 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Such is your skill with a gun that you are able to pick up an unfamiliar weapon and use it as though you had trained with it for years. You can use ranged weapons you do not have training in at \u201310 rather than \u201320.",
+    "name": "Arms Master",
+    "prerequisites": [
+      "Ballistic Skill 30",
+      "Basic Weapon Training in at least two groups of weapons"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are like a serene dancer when engaged in combat, leaping and spiralling between dismembered corpses like some butcher ballerina. Whenever you engage an opponent and make a melee attack, you may make an Acrobatics Test to move at your Half Move rate as a Free Action. Your opponent may not take the customary free attack.",
+    "name": "Assassin Strike",
+    "prerequisites": [
+      "Agility 40",
+      "Acrobatics"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Ancient and blessed technology filters your blood. Handed down from generations past, your implants repair minor injuries. For the purposes of healing, you are always considered to be Lightly Wounded. In addition, you naturally heal at an increased rate, removing 2 points of Damage each day. Your autosanguinators also sooth the minor pains and sores caused by the blessed metal of your implants pressing upon your weak \u0000 esh. This has no game effect, but does make you slightly less irritable than before.",
+    "name": "Autosanguine",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: Bolt, Flame, Las, Launcher, Melta, Plasma, Primitive, SP. You have received Basic Weapon Training in a group of weapons, and can use them without penalty.",
+    "name": "Basic Weapon Training",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Despite your frenzied nature, you remain in control when engaging in melee. You can spend reactions to Parry while Frenzied.",
+    "name": "Battle Rage",
+    "prerequisites": [
+      "Frenzy talent"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You hurl yourself at your enemies with reckless abandon, using the force of your Charge to add force to your strikes. When you make a Charge manoeuvre you gain a +20 bonus to Weapon Skill instead of the usual +10.",
+    "name": "Berserk Charge",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are adept at controlling servitors. Gain a +10 bonus to any attempt to instruct, program or question servitors.",
+    "name": "Binary Chatter",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Your mastery of sword and knife is unsurpassed and your blade always strikes true. When attacking with a sword or a knife of any type, including chainswords and power swords, you may re-roll a missed attack once per Round.",
+    "name": "Blademaster",
+    "prerequisites": [
+      "Weapon Skill 30",
+      "Melee Weapon Training"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Through years of practice and heightening your senses, you no longer need to be able to see your opponents to be able to hit them. You take half the usual penalties when fighting in environments that obscure your vision, such as fog, smoke and darkness.",
+    "name": "Blind Fighting",
+    "prerequisites": [
+      "Perception 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Whereas a weaker man would be sent \u0000 ying when using powerful weapons, your strong physique allows you to remain standing. You can fire a heavy weapon on semi- or autofire modes without first bracing.",
+    "name": "Bulging Biceps",
+    "prerequisites": [
+      "Strength 45"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are nimble and balanced, like a cat, and are able to fall much greater distances unharmed than others might. Whenever you fall, you may Test Agility as a Free Action. On a success, and for every degree of success, reduce the distance fallen by a number of metres equal to your Agility Bonus for the purposes of determining the Damage dealt by the fall.",
+    "name": "Catfall",
+    "prerequisites": [
+      "Agility 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "A variety of chemical and surgical treatments have rendered you immune to the temptations of the \u0000 esh. Seduction attempts against you automatically fail, and the Difficulty of all Charm Tests made against you increase by one step (a Challenging (+0) Test becomes Difficult (\u201310) and so on). When you take this Talent you gain one Insanity Point.",
+    "name": "Chem Geld",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Burn! Burn! Burn! None shall escape your fiery wrath! Targets exposed to your \u0000 amer attacks take a \u201320 penalty to avoid being hit. 113",
+    "name": "Cleanse AND Purify",
+    "prerequisites": [
+      "Basic Weapon Training (Flame) talent"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Through a combination of re\u0000 ex and perception you are able to keep many more opponents at bay in melee than a lesser skilled Acolyte might. Opponents fighting you in hand-to-hand gain no bonuses for outnumbering you.",
+    "name": "Combat Master",
+    "prerequisites": [
+      "Weapon Skill 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have a small compartment hidden upon your person. This might be a pouch within your \u0000 esh, or a chamber fitted into one of your cybernetic implants. You may conceal one small item, no bigger than the palm of your hand, within this cavity. The compartment may be discovered on a Difficult (\u201310) Search Test. If the searcher employs additional technology, such as a medicae scanner or chem-sniffer, this difficulty is reduced to Ordinary (+10).",
+    "name": "Concealed Cavity",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You can siphon the health of your physical body to fuel your powers. For every 2 points of Damage you voluntarily take, you may add your Willpower Bonus to your Power Roll. Using this Talent is a Free Action.",
+    "name": "Corpus Conversion",
+    "prerequisites": [
+      "Psy Rating 2"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are skilled at switching from defence to attack in the blink of an eye. When you successfully Parry an opponent\u2019s attack, you may immediately make an attack against that opponent using the weapon with which you Parried. This attack takes a \u201320 penalty to the Test.",
+    "name": "Counter-ATTACK",
+    "prerequisites": [
+      "Weapon Skill 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are able to target your shots at the places where they will in\u0000 ict more harm. When your ranged attack deals Critical Damage, you deal an extra 2 points.",
+    "name": "Crack Shot",
+    "prerequisites": [
+      "Ballistic Skill 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are able to land your blows in the spot where they will in\u0000 ict the most harm. 114 Whenever you deal Critical Damage to an opponent using a melee weapon, you may deal an additional 1d5\u20131 points.",
+    "name": "Crippling Strike",
+    "prerequisites": [
+      "Weapon Skill 50"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "",
+    "name": "Crushing Blow",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You always hit an opponent right between the eyes\u2026 or wherever else you intended to hit him. When making a Called Shot, you take only a \u201310 penalty instead of the normal \u201320.",
+    "name": "Deadeye Shot",
+    "prerequisites": [
+      "Ballistic Skill 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Either through mental and physical conditioning or long years of abuse, your body has built up a tolerance to chemicals. When drinking alcohol or similar beverages, you do not pass out until you have failed a number of Toughness Tests equal to twice your Toughness Bonus. You also gain a +10 bonus to tests made to continue using drugs within 24 hours.",
+    "name": "Decadence",
+    "prerequisites": [
+      "Toughness 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are able to knock aside Thrown weapons and shots fired from Primitive weapons. You may spend a Reaction to Parry an incoming ranged attack so long as the attack is from a Primitive or Thrown weapon.",
+    "name": "Deflect Shot",
+    "prerequisites": [
+      "Agility 50"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "It takes more than most to finish you off. When you suffer from Blood Loss, you may roll twice to avoid death.",
+    "name": "DIE Hard",
+    "prerequisites": [
+      "Willpower 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are able to knock your opponent\u2019s weapons from their hands. When engaged with an opponent wielding a melee weapon, you may use a Full Action to disarm your foe by making an Opposed Weapon Skill Test. If you beat your opponent, he drops his weapon to his feet. Should you get three or more degrees of success, you not only disarm him but also take his weapon from him!",
+    "name": "Disarm",
+    "prerequisites": [
+      "Agility 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: Biomancy, Divination, Pyromancy, Telekinetics, Telepathy. Prerequisites: Psy Rating 3 You devote a great deal of time and effort into mastering your Discipline. Choose one of your Disciplines. You gain a +2 to Power Rolls made to manifest any powers of this Discipline.",
+    "name": "Discipline Focus",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have a sinister and upsetting voice. This may be due to infrasonic cadences produced by a vox synthesiser, interrogation training or just an inborn air of malice. You gain +10 bonus to all Intimidate or Interrogation Tests when you use your voice. You take a \u201310 penalty to Fellowship Tests when dealing with persons who are likely to be off put by your manner (psykers, small children, nervous Grox and so on).",
+    "name": "Disturbing Voice",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You fight best shoulder to shoulder with a loyal ally. When ganging up on an opponent with an ally, you gain an additional +10 bonus to Weapon Skill Tests. If you both have this Talent you both gain an additional +10 bonus, for a total of +20. This bonus is in addition to the normal bonuses gained from outnumbering an opponent.",
+    "name": "Double Team",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are able to focus the firepower of two guns to maximise the impact. When armed with two pistols, you can fire both simultaneously as a Full Action. Make a single Ballistic Skill Test. On a success, you hit the target with both shots.",
+    "name": "Dual Shot",
+    "prerequisites": [
+      "Agility 40",
+      "Two- Weapon Wielder"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are able to focus your melee attacks to maximise the impact. When armed with two melee weapons, you can attack with both simultaneously as a Full Action. Make a single Weapon Skill Test. On a success, you hit the target with both weapons.",
+    "name": "Dual Strike",
+    "prerequisites": [
+      "Agility 40",
+      "Two- Weapon Wielder"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You call upon the sacred \u0000 ow of energy to replenish your weak \u0000 esh. Whilst in contact with a functioning, powered machine, or fully charged battery, you may make an Ordinary (+10) Toughness Test. If you succeed, remove one level of Fatigue plus one additional level of Fatigue for each degree of success. This takes one minute of meditation and ritual incantation to activate.",
+    "name": "Electrical Succour",
+    "prerequisites": [
+      "Tech-Priest (Electoo inductor/Potentia coil)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have the ability to use an electro graft to access data points and commune with machine spirits. This grants you a +10 bonus to Common Lore, Inquiry or Tech-Use Tests whilst connected to a data point.",
+    "name": "Electro Graft USE",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have learnt how to focus some of the power stored within your potentia coil. You no longer gain Fatigue from using Luminen Charge, Luminen Shock and Luminen Blast.",
+    "name": "Energy Cache",
+    "prerequisites": [
+      "Tech-Priest (Potentia coil)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: All Exotic Weapons. You have received Exotic Weapon Training in a single exotic weapon, and can use it without penalty.",
+    "name": "Exotic Weapon Training",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Prerequisite: Willpower 35. Whenever a Power Roll triggers Psychic Phenomena, you may roll two dice on that table and take the more favourable result.",
+    "name": "Favoured BY THE Warp",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Whether through fervent loyalty or a derangement of the mind, you are impossible to frighten or unnerve. You are immune to the effects of Fear and Pinning, but to disengage from combat or back down from a fight you must first succeed on a Willpower Test.",
+    "name": "Fearless",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "By muttering illogical formulae under your breath, you are able to foment rebellion within your vox synthesisers. Your audio circuits protest in a screeching blast of noise, shocking and distracting others in equal measure. All creatures, except Daemonic and machine-based, within a 30 metre radius must make a Willpower Test or lose a Half Action on their next Turn as they shudder, swear, cover their ears or otherwise react to the horrid noise. This is a Full Action and may not be used again for 1d5 Rounds while your audio circuits reset. 115",
+    "name": "Feedback Screech",
+    "prerequisites": [
+      "Tech-Priest (Respirator Unit)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You can call an unsecured metal object that you can see to your hand. You may summon objects of up to 1 kilogram per point of your Willpower Bonus. The object must be within a 20 metre radius. To use this Talent, you must succeed on a Willpower Test as a Full Action.",
+    "name": "Ferric Lure",
+    "prerequisites": [
+      "Tech-Priest (Electoo inductor/Potentia coil)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You can call an unsecured metal object that you can see to your hand. You may summon objects of up to 2 kilograms per point of your Willpower Bonus. The object must be within a 40 metre radius. You must make a Willpower Test and spend a Full Action to enact this rite.",
+    "name": "Ferric Summons",
+    "prerequisites": [
+      "Tech-Priest (Electoo inductor/Potentia coil)",
+      "Ferric Lure"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have dedicated your pain to the service of the Emperor. Each day, you must spend twenty minutes praying and in\u0000 icting 1 point of Damage upon yourself. You may not treat this Damage or allow it to be healed. Once you have castigated your \u0000 esh, you gain a +10 bonus to Willpower Tests made to resist mind control or Malignancy. Additionally, if you have the Frenzy talent, you may enter a frenzied state as a Free Action. Should you fail to \u0000 agellate yourself on any given day, you take a \u20135 penalty to all Tests due to shame and guilt.",
+    "name": "Flagellant",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "",
+    "name": "Foresight",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Your blows follow one another in quick succession, raining down on your opponents like fiery bolts. Whenever you hit an opponent whilst using the All- 116 Out Attack Manoeuvre, you may spend your Reaction to make an extra attack (this extra attack retains any bonuses or penalties of the original attack).",
+    "name": "Furious Assault",
+    "prerequisites": [
+      "Weapon Skill 35"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: Administratum, Ecclesiarchy, Imperial Guard, Imperial Navy, Inquisition, Underworld You are well respected within your social group or organisation. You gain an additional +10 bonus to Fellowship Tests when dealing with this group. This Talent is cumulative with the Peer talent, for a total of a +20 bonus.",
+    "name": "Good Reputation",
+    "prerequisites": [
+      "Fellowship 50",
+      "Peer"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "With a wave you can unjam a number of guns equal to your Intelligence Bonus. You may bless any weapon in a 10 metre radius. To do so, make an Intelligence Test. A success indicates that you have rallied the spirits of the weapons. This blessing is a Full Action.",
+    "name": "GUN Blessing",
+    "prerequisites": [
+      "Tech-Priest (Electoo inductor/Potentia coil)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are ready for anything when you have a pistol in each hand. When so armed, you reduce the penalty for fighting with two weapons by \u201310. If you have the Ambidextrous talent, you take no penalty when firing both weapons.",
+    "name": "Gunslinger",
+    "prerequisites": [
+      "Ballistic Skill 40",
+      "Two- Weapon Wielder"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "The best way to stay alive is to keep on moving, no matter what might come your way. Whenever you Charge or Run, all opponents take a \u201320 penalty to Ballistic Skill Tests made to hit you with a ranged weapon. This penalty lasts until the start of your next Turn.",
+    "name": "Hard Target",
+    "prerequisites": [
+      "Agility 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "For the purposes of removing Damage, you are always considered to be Lightly Wounded.",
+    "name": "Hardy",
+    "prerequisites": [
+      "Toughness 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: Criminals, Cult (specific), Daemons, Xeno (specific), Psykers, Heretics, Mutants. You have reason to hate one particular race or organisation, and your malice hones your melee attacks. Choose one race or group from those listed above. When fighting opponents that qualify as members of that group, you gain a +10 bonus to all Weapon Skill Tests made to attack them.",
+    "name": "Hatred",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: Bolt, Flame, Las, Launcher, Melta, Plasma, Primitive, SP. You know how to use one particular type of heavy weapon, and can use weapons of that type without penalty.",
+    "name": "Heavy Weapon Training",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: Sight, Sound, Smell, Taste, Touch. One of your senses is better than average. When you gain this Talent, select one of the five senses. You gain a +10 bonus to any Tests involving this sense.",
+    "name": "Heightened Senses",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are able to shoot whilst on the move. As a Full Action, you may simultaneously move up to your Full Move rate and make a single attack with a pistol.",
+    "name": "HIP Shooting",
+    "prerequisites": [
+      "Ballistic Skill 40",
+      "Agility 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are skilled enough with firearms that you can fire in two directions at once. When firing two weapons at once, you may attack targets that are more than 10 metres apart.",
+    "name": "Independent Targeting",
+    "prerequisites": [
+      "Ballistic Skill 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You take refuge in your madness. When rolling to determine the effects of Shock, you may roll twice and take the better result.",
+    "name": "Insanely Faithful",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Such is the fervour and loyalty you inspire in your followers that they would follow you wherever you lead, even in search of the dread Tyrant Star. Whilst you are visible to them, your minions are immune to Fear and Pinning.",
+    "name": "Into THE Jaws OF Hell",
+    "prerequisites": [
+      "Iron Discipline"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Not through mercy and kindness but through a stern demeanour and a sense of justice do you inspire loyalty in your followers. So long as you are visible to them, your minions may re- roll failed Willpower Tests made to resist Fear and Pinning.",
+    "name": "Iron Discipline",
+    "prerequisites": [
+      "Willpower 30",
+      "Command"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are made of sturdy stuff and can weather minor blows. When you become Stunned you may make a Toughness Test to shrug off its effects.",
+    "name": "Iron JAW",
+    "prerequisites": [
+      "Toughness 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have seen the worst the galaxy has to throw at you to the point that you are acclimatised to the worst horrors. You never gain Insanity Points from the sight of blood, death or violence, or indeed any mundane horror. Supernatural terrors still affect you as normal, however.",
+    "name": "Jaded",
+    "prerequisites": [
+      "Willpower 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are hard to keep down. You may stand up as a Free Action.",
+    "name": "Leap UP",
+    "prerequisites": [
+      "Agility 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are a light sleeper and remain alert when most would be fast asleep. You are always assumed to be awake, even if you are asleep, for the purposes of making Awareness Tests, being Surprised or getting up in a hurry. The downside is that you often feel tired during the day and as a result are grumpy or distracted.",
+    "name": "Light Sleeper",
+    "prerequisites": [
+      "Perception 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "As a Full Action, you may make three melee attacks on your Turn. This Talent replaces Swift Attack. You may not use the Dual Strike talent during a Lightning Attack Full Action.",
+    "name": "Lightning Attack",
+    "prerequisites": [
+      "Swift Attack"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You react like a \u0000 ash of lightning. When rolling for Initiative, you add twice your Agility Bonus to the roll of 1d10.",
+    "name": "Lightning Reflexes",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are so impassioned in your hatred that you can rouse others to similar heights of emotion. As a Full Action, you may make a Charm Test to extend the effects of your Hatred talent to those around you. A successful Test grants a +10 bonus to Weapon Skill Tests to one target per point of your Fellowship Bonus when fighting your hated foes. The effects last for the duration of the encounter.",
+    "name": "Litany OF Hate",
+    "prerequisites": [
+      "Hatred (any)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You may utilise analytical circuits to calculate trajectory and reactions to a preternatural extent. Your ability to read possible outcomes lets you anticipate the movement of your opponents. As a Reaction you may make a Tech-Use Test to activate your Logis Implant. Note that this uses up your Reaction for the Round. Until the end of your next Turn, you gain a +10 bonus to all Weapon Skill and Ballistic Skill Tests. Each successful use of this Talent causes one level of Fatigue.",
+    "name": "Logis Implant",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "With the proper prayer and projection of will, you are able to strike at the enemies of the Omnissiah. Using your electoo inductors, you may create a crackling ball of bio-electrical energy",
+    "name": "Luminen Blast",
+    "prerequisites": [
+      "Tech-Priest (Electoo inductor/Potentia coil)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have learnt how to lend your life force to technology. On a successful Toughness Test you may use your bio-electrical field to recharge or power machinery. This takes one minute of meditation and ritual incantation to activate. The Difficulty of the Toughness Test varies depending on the nature of the technology, as follows: Difficulty Example Ordinary (+10) Chemical battery, glow globe. Challenging (+0) Las gun charge pack, data-slate, personal heater. Difficult (\u201310) Overcharge pack, air conditioning unit, servo- skull. Hard (\u201320) Land speeder engine, lascannon charge pack, servitor. Very Hard (\u201330) Industrial press, cogita- tor engine, xenos tech. Note that at the GM\u2019s discretion, some technology is simply too arcane, broken or power-hungry for you to be able to activate. Each time you use this Talent, you gain a level of Fatigue.",
+    "name": "Luminen Charge",
+    "prerequisites": [
+      "Tech-Priest (Electoo inductor/Potentia coil)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "By focusing your bio-electrical energy through electoo inductors, you are able to damage your opponents. You must touch your enemy for this ability to work. In combat, you must either make a successful Weapon Skill Test or be Grappling to deliver the blast. Each Luminen Shock deals 1d10+3 points of Energy Damage. Each time you use this Talent, you gain a level of Fatigue. 118",
+    "name": "Luminen Shock",
+    "prerequisites": [
+      "Tech-Priest (Electoo inductor/Potentia coil)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "By long hours of rote learning, you have mastered one of the miracles of the Omnissiah. By spending a Half Action, you may hover 20\u201330 centimetres off the ground for a number of minutes equal to 1d10 plus your Toughness Bonus. You may move at your normal walking pace and must employ a Half Action each round to concentrate on maintaining the rite. You may activate this rite whilst falling to slow your rate of descent. Treat all falling Damage as 1d10+3 Impact Damage. Each Maglev Grace exhausts the power stored in your potentia coil, and thus you may only use this rite once in every twelve hour period.",
+    "name": "Maglev Grace",
+    "prerequisites": [
+      "Tech-Priest (Potentia coil)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Devotion to the Machine God has granted you greater knowledge of miracles. As a Half Action, you may hover 20\u201330 centimetres off the ground for a number of minutes equal to 2d10 plus your Toughness Bonus. You may move at your normal running speed and must employ a Half Action each Round to concentrate on maintaining your rite. You may activate this rite whilst falling to produce a controlled descent. Provided that this rite is active when you reach the ground, then you take no Damage from falling. You may enact this rite twice in every twelve hour period.",
+    "name": "Maglev Transcendence",
+    "prerequisites": [
+      "Tech-Priest (Potentia coil)",
+      "Maglev Grace"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Distance is no object with a gun in your hand, and you are just as adept at picking off far away targets as those nearby. You suffer no penalties for shooting at Long or Extended range.",
+    "name": "Marksman",
+    "prerequisites": [
+      "Ballistic Skill 35"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are trained in the most advanced medical techniques known to man. You gain a +10 bonus on all Medicae Tests. If you are treating a Heavily or Critically Wounded patient, a successful Test heals 2 Wounds instead of the normal 1. If this character is in danger of losing a limb from a Critical Hit (see Chapter VII: Playing the Game), you also provide the patient with a +20 bonus to the Toughness Test to resist limb loss.",
+    "name": "Master Chirurgeon",
+    "prerequisites": [
+      "Medicae +10"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are skilled at speaking to large audiences. Your Fellowship Tests and Fellowship-based Skill Tests can affect 10 times the normal number of people.",
+    "name": "Master Orator",
+    "prerequisites": [
+      "Fellowship 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: Gun, Manipulator, Medicae, Optical, Utility. You have been given the appropriate training, initiation and hypnodoctrination to use a particular type of mechadendrite.",
+    "name": "Mechadendrite USE",
+    "prerequisites": [
+      "Tech-Priest (Cyber Mantle/Cranial Circuitry)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "By putting your mind at rest and entering a trance you can repair the hurts of your body. You must succeed on a Willpower Test. If so, for every ten minutes you remain in a trance, you remove one level of Fatigue.",
+    "name": "Meditation",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: Primitive, Chain, Shock, Power. You have received basic training in a group of hand-to-hand weaponry, and can use them without penalty.",
+    "name": "Melee Weapon Training",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are trained to aggressively resist psychic attacks. Whenever you are the target of a psychic attack, you force the psyker to make a Willpower Test. On a failure, the psyker takes 1d10 points of Damage plus 1 Damage per point of your Willpower Bonus. This Damage is considered Impact Damage, directed at the head (more specifically, the face). The psyker can reduce this Damage by an amount equal to his Willpower Bonus. This Damage bypasses armour and any Toughness Bonus.",
+    "name": "Mental Fortress",
+    "prerequisites": [
+      "Willpower 50",
+      "Strong Minded"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You channel your madness and hate into your Psychic Powers. You may use your Psychic Powers whilst in a Frenzied state,.",
+    "name": "Mental Rage",
+    "prerequisites": [
+      "Frenzy"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You know how to blast away with a gun to cause the most damage to a target. You add +2 to Damage you in\u0000 ict with a ranged weapon.",
+    "name": "Mighty Shot",
+    "prerequisites": [
+      "Ballistic Skill 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have an extraordinary ability to copy another person\u2019s voice patterns. This may be due to implanted vox synthesisers, training or natural Talent. You must have listened to your target for at least one hour in order to study their voice properly. You must also understand their language and be of the same race (a human, for example, cannot convincingly copy an Ork). Listeners must succeed on a Difficult (\u201310) Scrutiny Test to realise that you are not the person you are mimicking. If you have based your voice patterns on anything other than \u201clive\u201d conversations where you are in the same room as your target (for example vox recordings, or comm- link conversations), the Difficulty of this Scrutiny Test is reduced to Challenging (+0). Note this does not make you look like your target; you merely sound like them. If a listener can clearly see you are not the person you are copying, your deception automatically fails.",
+    "name": "Mimic",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: All Minor Psychic Powers. You have acquired an additional psychic ability. You gain one Minor Psychic Power.",
+    "name": "Minor Psychic Power",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: Academics, Adeptus Arbites, Adeptus Mechanicus, Admin- istratum, Astropaths, Ecclesiarchy, Feral Worlders, Government, Hivers, Inquisi- tion, Middle Classes, Military, Nobility, The Insane, Underworld, Void Born, Workers. You know how to deal with a particular social group or organisation. You gain a +10 bonus to all Fellowship Tests when interacting with your chosen group.",
+    "name": "Peer",
+    "prerequisites": [
+      "Fellowship 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: Bolt, Flame, Las, Launcher, Melta, Plasma, Primitive, SP. You have received training in a group of pistols and can use them without penalty.",
+    "name": "Pistol Training",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Power suffuses your being, allowing you to manifest powers more easily. When manifesting powers, you gain a +1 bonus to your Manifesting rolls. You may select this Talent multiple times. Its effects are cumulative.",
+    "name": "Power Well",
+    "prerequisites": [
+      "Psy Rating 2"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are skilled at making difficult strikes. When making a Called Shot with a melee weapon, you do not incur the normal \u201320 penalty.",
+    "name": "Precise Blow",
+    "prerequisites": [
+      "Weapon Skill 40",
+      "Sure Strike"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "By an act of will, you speed the workings of your autosanguinators. Once every twelve hours you may make a Tech- Use Test. On a success, you remove 1d5 points of Damage. If you roll a 96-100 however, in addition to failing, you overstrain your implants. They cease to function for one week. For that time you are unable to use this Talent, and gain none of the benefits of the Autosanguine talent. Once the week is over, both Talents are restored. Prosanguination takes ten minutes of meditation and ritual incantation to activate. 120",
+    "name": "Prosanguine",
+    "prerequisites": [
+      "Autosanguine"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have unlocked your Psychic Powers. Select a number of Minor Psychic Powers equal to one-half your Willpower Bonus (round up) from those described in Chapter VI: Psychic Powers. You gain a Psy Rating of 1 and roll one dice and add your Willpower Bonus when manifesting Psychic Powers. Special: If your Willpower Bonus later increases, you do not retroactively gain additional powers.",
+    "name": "PSY Rating 1",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have advanced knowledge of Psychic Power. Select a number of Minor Psychic Powers equal to half your Willpower Bonus (round up). You now have a Psy Rating of 2 and may roll up to two dice and add your Willpower bonus when manifesting Psychic Powers. Special: If your Willpower Bonus later increases, you do not retroactively gain additional powers.",
+    "name": "PSY Rating 2",
+    "prerequisites": [
+      "Psy Rating 1"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Your psychic abilities grow in power and proficiency. Select one Discipline. Gain one power from this Discipline. You also gain a number of Minor Psychic Powers equal to one-half your Willpower Bonus (round up). You now have a Psy Rating of 3 and may roll up to three dice and add your Willpower bonus when manifesting Psychic Powers. Special: If your Willpower Bonus later increases, you do not retroactively gain additional powers.",
+    "name": "PSY Rating 3",
+    "prerequisites": [
+      "Psy Rating 2"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have distinguished yourself by your skill with psychic energy and the breadth of your knowledge of Psychic Powers. Gain a number of Discipline Powers in any Discipline that you know equal to one-half your Willpower Bonus and the same number of Minor Psychic Powers (round up). Alternatively, instead select one new Discipline and gain one power from this Discipline. You now have a Psy Rating of 4 and may roll up to four dice and add your Willpower bonus when manifesting Psychic Powers. Special: If your Willpower Bonus later increases, you do not retroactively gain additional powers.",
+    "name": "PSY Rating 4",
+    "prerequisites": [
+      "Psy Rating 3"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are among the most powerful psykers in the Imperium. Gain a number of Discipline powers in any Discipline that you know equal to one-half your Willpower Bonus (round up). Alternatively, instead select one new Discipline and gain one power from this Discipline.You now have a Psy Rating of 5 and may roll up to five dice and add your Willpower bonus when manifesting Psychic Powers. Special: If your Willpower Bonus later increases, you do not retroactively gain additional powers.",
+    "name": "PSY Rating 5",
+    "prerequisites": [
+      "Psy Rating 4"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have reached perhaps the greatest human potential with psychic powers and few can compare with your mastery. Gain a number of Discipline Powers in any Discipline that you know equal to one-half your Willpower Bonus and the same number of Minor Psychic Powers (round up). Alternatively, instead select one new Discipline and gain one power from this Discipline. You now have a Psy Rating of 6 and may roll up to six dice and add your Willpower bonus when manifesting Psychic Powers. Special: If your Willpower Bonus later increases, you do not retroactively gain additional powers.",
+    "name": "PSY Rating 6",
+    "prerequisites": [
+      "Psy Rating 5"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: All Psychic Powers. You have acquired an additional Psychic Power. You gain one power of any Discipline you know.",
+    "name": "Psychic Power",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are quick to the draw, able to have a weapon in your hand and ready for combat in the blink of an eye. You can Ready as a Free Action.",
+    "name": "Quick Draw",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have a hair trigger and react to a change in any situation in an instant. When Surprised or ambushed, you may make an Agility Test to act normally.",
+    "name": "Rapid Reaction",
+    "prerequisites": [
+      "Agility 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have spent so long practising weapons drills that you can reload a gun in an instant. All reload times are reduced by half (round down)\u2014so a Half Action reload become a Free Action, a Full Action reload becomes a Half Action and so on.",
+    "name": "Rapid Reload",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: Cold, Fear, Heat, Poisons, Psychic Powers. Whether through past exposure, gruelling physical training or luck of genetics, you are highly resistant to a particular thing. When you pick this Talent select a group to be resistant to. You gain a +10 bonus when making a test to resist or avoid the object of your resistance.",
+    "name": "Resistance",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You may recite an infrasonic liturgy that causes awe and fear. All humans within a 50 metre radius regardless of their ability to hear, feel a sense of dread and religious guilt. Alongside these emotional effects, all humans take a \u201310 penalty to their next Skill Test. Characters may make a Willpower Test to shake off these effects. Whilst incanting the rite, you may not talk on any additional frequency. The rite is two minutes long, and it is considered very bad form to break off incantations at any point within the liturgy. Note that humans without auditory implants cannot hear infrasonic sound, and thus will assume you are not speaking.",
+    "name": "Rite OF AWE",
+    "prerequisites": [
+      "Tech-Priest (Respirator Unit)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "",
+    "name": "Rite OF Fear",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have replaced the creative right half of your brain with a cogitator. You no longer feel emotion, and are instead filled with the cold purity of logic. You are now immune to Fear, Pinning and any effects that cause emotional disturbance. Others now find you disturbing to say the least. Your GM will remove any Mental Disorders that are no longer relevant, and grant you new ones of equal severity.",
+    "name": "Rite OF Pure Thought",
+    "prerequisites": [
+      "Tech-Priest (Cranial Circuitry)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are skilled at making difficult shots. When making a Called Shot you do not incur the normal \u201320 penalty. This Talent replaces Deadeye Shot.",
+    "name": "Sharpshooter",
+    "prerequisites": [
+      "Ballistic Skill 40",
+      "Deadeye Shot"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are able to absorb more damage before you die. You gain an additional Wound. If your advance scheme allows it, you may purchase this Talent multiple times.",
+    "name": "Sound Constitution",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are able to put on a burst of speed to get out of\u2014or into\u2014trouble fast. When taking the Full Move action, you may move an extra number of metres equal to your Agility Bonus. When taking the Run action, you may double your Movement for one Round. If you use this Talent two turns in a row, you gain one level of Fatigue. 121",
+    "name": "Sprint",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are quick at getting out of the way of attacks. You may make an additional Dodge once per Round. In effect this gives a character a second Reaction that may only be used to Dodge, thus allowing them to make two Dodges in a Turn. Note they may still only attempt a single Dodge against any one attack.",
+    "name": "Step Aside",
+    "prerequisites": [
+      "Agility 40",
+      "Dodge"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are a master of dirty tricks such as the low punch and the knife in the gut. When dealing Critical Damage with an unarmed attack or knife, you deal +2 points of Damage.",
+    "name": "Street Fighting",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Your mind is like a fortress guarded against psychic attack. You may re- roll failed Willpower Tests to resist any Psychic Powers that affect your mind. Psychic Powers that have a physical effect, such as Telekinesis, are unaffected by this Talent.",
+    "name": "Strong Minded",
+    "prerequisites": [
+      "Willpower 30",
+      "Resistance (Psychic Powers)"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You strike with precision, landing your blows wherever you intend them to hit. When determining where you hit an opponent with a melee attack, you may use the dice as you rolled them or reverse them, choosing the location you prefer. For example, Beam rolls a 37 to hit an Ork. Ordinarily, Beam would strike location 73\u2014the right leg\u2014 but because he has the Sure Strike talent, he could choose to hit the alien in location 37\u2014the body.",
+    "name": "Sure Strike",
+    "prerequisites": [
+      "Weapon Skill 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "As a Full Action, you may make two melee attacks on your Turn.",
+    "name": "Swift Attack",
+    "prerequisites": [
+      "Weapon Skill 35"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are skilled at taking an opponent alive. As a Half Action you may declare that you are attempting to Takedown 122 an opponent before Testing Weapon Skill. If you hit and do at least 1 point of Damage, this damage is ignored and your opponent must make a Toughness Test or be Stunned for one Round.",
+    "name": "Takedown",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: All Skills. Choose any one of your Skills. You gain a +10 bonus to Tests when using this Skill.",
+    "name": "Talented",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "With a honeyed whisper and ritual motion, you can awaken sleeping gun-spirits into furious action once more. You may unjam any gun as a Half Action. You must touch the gun in question to enact this rite. You may only perform this rite on one weapon per Round\u2014any more would be disrespectful.",
+    "name": "Technical Knock",
+    "prerequisites": [
+      "Intelligence 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: Primitive, Chain, Shock, Power. You have received basic training in a group of thrown weaponry, and can use such weapons without penalty.",
+    "name": "Thrown Weapon Training",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Through long years of mental conditioning and practice, your mind is like an archive, able to record and recall great amounts of information. You can automatically remember any trivial fact or piece of information that you might feasibly have picked up in the past. When trying to recall more detailed or obscure facts, such as the precise layout of a crime scene or a page you read in an ancient grimoire five years ago, the GM may require you to make an Intelligence Test.",
+    "name": "Total Recall",
+    "prerequisites": [
+      "Intelligence 30"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You are able to shrug off wounds that would fell lesser men. Whenever you suffer Critical Damage, halve the result (rounding up).",
+    "name": "True Grit",
+    "prerequisites": [
+      "Toughness 40"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Drake has the True Grit talent and is shot for 12 points of Damage. He has a TB of 3, 2 points of armour and 3 Wounds remaining. This means that after reduction for TB, armour and Wounds, the Critical Damage he takes (i.e. damage suffered once a character reaches 0 Wounds) is 4 (12-3+2+3=4). Because he has the True Grit talent this Damage is then halved. Drake therefore only takes 2 points of Critical Damage. .",
+    "name": "Example",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: Ballistic, Melee. Prerequisites: Ballistic Skill 35 or Weapon Skill 35, Agility 35. When armed with two weapons of a particular type, you may spend a Full Action to attack with both on your turn. Each Test made to attack with the weapons takes a \u201320 penalty (see Chapter VII: Playing the Game, page 197 for more details). You must take Two-Weapon Wielder (Melee) and Two-Weapon Wielder (Ballistic) if you wish to use a gun and hand weapon at the same time.",
+    "name": "Two-WEAPON Wielder",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "You have a forgettable face and are able to blend in with a crowd. Attempts to notice you when amongst other people or anyone attempting to describe you or recall details about you incurs a \u201320 penalty.",
+    "name": "Unremarkable",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Your faith that the Emperor will preserve you is so strong that you are unafraid of stepping into danger. You may re-roll any failed Willpower Tests to avoid the effects of Fear.",
+    "name": "Unshakeable Faith",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Your blades are so quick that they form a wall of impenetrable steel. You may make an additional Parry once per Round. In effect, this gives a character a second Reaction that may only be used to Parry, thus allowing them to make two Parries in a Turn. Note they may still only attempt a single Parry against any one attack.",
+    "name": "Wall OF Steel",
+    "prerequisites": [
+      "Agility 35"
+    ],
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "\u2022",
+    "name": "Money",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "\u2022",
+    "name": "Availability",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "\u2022",
+    "name": "Craftsmanship",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "\u2022",
+    "name": "Weapons",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "\u2022",
+    "name": "Armour",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "\u2022",
+    "name": "Gear",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "",
+    "name": "Cybernetics",
+    "source": "Dark Heresy Core Rulebook",
+    "type": "talent"
+  },
+  {
+    "description": "Affect more targets with Test.",
+    "name": "Air Of Authority",
+    "prerequisites": [
+      "Fel 30"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Use either hand equally well.",
+    "name": "Ambidextrous",
+    "prerequisites": [
+      "Ag 30"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "You are resilient to Corruption.",
+    "name": "Armour Of Contempt",
+    "prerequisites": [
+      "WP 40"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Use non-proficient weapons at \u201310 penalty.",
+    "name": "Arms Master BS",
+    "prerequisites": [
+      "30",
+      "Basic Weapon Training (any two)"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "On a successful Acrobatics Test after making a",
+    "name": "Assassin Strike Ag",
+    "prerequisites": [
+      "40",
+      "Acrobatic"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Heal 2 Damage/day, always Lightly Wounded.",
+    "name": "Melee Attack, You May Move As A Free Action. Autosanguine",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Use weapon group without penalty.",
+    "name": "Basic Weapon Training\u2020",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "when Charging.",
+    "name": "Battle Rage Frenzy Parry",
+    "prerequisites": [
+      "while Frenzied. Berserk Charge \u2014 Gain +20 bonus"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "+10 bonus to control servitors.",
+    "name": "Binary Chatter",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Re-roll a missed attack, once per Round.",
+    "name": "Blademaster WS",
+    "prerequisites": [
+      "30",
+      "Melee Weapon Training (any)"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Suffer half the usual penalties when vision is obscured.",
+    "name": "Blind Fighting",
+    "prerequisites": [
+      "Per 30"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Remove bracing requirement for certain weapons.",
+    "name": "Bulging Biceps",
+    "prerequisites": [
+      "S 45"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Reduce falling Damage.",
+    "name": "Catfall",
+    "prerequisites": [
+      "Ag 30"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Immune to seduction, resistant to charm.",
+    "name": "Chem Geld",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Penalty to avoid being hit by your flamer attacks.",
+    "name": "Cleanse And Purify",
+    "prerequisites": [
+      "Basic Weapon Training (Flame)"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "group.",
+    "name": "\u2020Denotes",
+    "prerequisites": [
+      "Talent"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Opponents get no bonus for outnumbering you.",
+    "name": "110 Combat Master Concealed",
+    "prerequisites": [
+      "Cavity Corpus Conversion Counter-attack Crack Shot Crippling Strike Crushing Blow Dark Soul Deadeye Shot Decadence Deflect Shot Die Hard Discipline Focus\u2020 Disturbing Voice Double Team Dual Shot Dual Strike Electrical Succour Electro Graft Use Energy Cache Exotic Weapon Training\u2020 Favoured by the Warp WS 30"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Take Damage to improve Power Roll.",
+    "name": "\u2014 You Have A",
+    "prerequisites": [
+      "secret compartment on you. Psy Rating 2"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "free attack with a successful Parry.",
+    "name": "WS",
+    "prerequisites": [
+      "40 Gain"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "+2 Critical Damage with a ranged weapon.",
+    "name": "BS",
+    "prerequisites": [
+      "40 Deal"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "+1d5\u20131 Critical Damage with a melee weapon.",
+    "name": "WS",
+    "prerequisites": [
+      "50 Deal"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "+2 Damage with a melee weapon.",
+    "name": "S",
+    "prerequisites": [
+      "40 Deal"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Called Shots are at \u201310 penalty.",
+    "name": "\u2014 Take Half The",
+    "prerequisites": [
+      "penalty on Malignancy Tests. BS 30"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "uncanny resistance to drugs and alcohol.",
+    "name": "T",
+    "prerequisites": [
+      "30 Gain"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Parry Primitive ranged attacks.",
+    "name": "Ag",
+    "prerequisites": [
+      "50 You can"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "death chance incurred by Blood Loss.",
+    "name": "WP",
+    "prerequisites": [
+      "40 Re-roll"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "opponent to drop his weapon.",
+    "name": "Disarm Ag",
+    "prerequisites": [
+      "30 Force"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain +2 on Power Rolls to manifest discipline powers.",
+    "name": "Psy",
+    "prerequisites": [
+      "Rating 3"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "penalty to Fel.",
+    "name": "\u2014 +10 Bonus To",
+    "prerequisites": [
+      "Intimidate and Interrogation",
+      "\u201310"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "for ganging up.",
+    "name": "\u2014 Gain Additional",
+    "prerequisites": [
+      "+10 bonus"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Wielder One Ballistic Skill Test hits target twice.",
+    "name": "Ag",
+    "prerequisites": [
+      "40",
+      "Two-Weapon"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Wielder One Weapon Skill Test hits target twice.",
+    "name": "Ag",
+    "prerequisites": [
+      "40",
+      "Two-Weapon"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "remove Fatigue.",
+    "name": "Tech-Priest",
+    "prerequisites": [
+      "+10 bonus to Toughness Tests to"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "to Inquiry, Tech Use, Common Knowledge.",
+    "name": "\u2014",
+    "prerequisites": [
+      "+10 bonus"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Use an exotic weapon without penalty.",
+    "name": "Tech-Priest Luminen Blast, Charge And Shock Are Fatigue Free.",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "twice for Psychic Phenomena (see page 162)",
+    "name": "WP",
+    "prerequisites": [
+      "35 Roll"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Immune to Fear and Pinning.",
+    "name": "And Take The Better Result. Fearless",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "or lose Half Action.",
+    "name": "Feedback Screech",
+    "prerequisites": [
+      "Tech-Priest 30m radius",
+      "Test Willpower"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Bonus of metal objects.",
+    "name": "Ferric Lure",
+    "prerequisites": [
+      "Tech-Priest WP Test to call 1kg/WP"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Bonus of metal objects.",
+    "name": "Ferric Summons",
+    "prerequisites": [
+      "Tech-Priest",
+      "Ferric Lure WP Test to call 2kg/WP"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Injure self to gain mental fortitude.",
+    "name": "Flagellant",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "gain +10 bonus on next Test.",
+    "name": "Foresight",
+    "prerequisites": [
+      "Int 30 Contemplate to"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Enter psychotic rage to gain combat bonuses.",
+    "name": "Frenzy",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "gain a free second attack.",
+    "name": "Furious Assault WS",
+    "prerequisites": [
+      "35 On a successful WS Test"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "You have a good reputation amongst a certain group.",
+    "name": "Good Reputation\u2020",
+    "prerequisites": [
+      "Fel 50",
+      "Peer"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "radius.",
+    "name": "Gun Blessing",
+    "prerequisites": [
+      "Tech-Priest Unjam a number of guns equal to Int bonus in a 10m"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Wielder Fighting with two pistols incurs only a \u201310 penalty.",
+    "name": "Gunslinger BS",
+    "prerequisites": [
+      "40",
+      "Two-Weapon"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "when you Charge or Run.",
+    "name": "Hard Target Ag",
+    "prerequisites": [
+      "40 Opponents take \u201320 to BS Tests"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "heal as if Lightly Wounded.",
+    "name": "Hardy T",
+    "prerequisites": [
+      "40 You always"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain +10 bonus to attack hated creatures.",
+    "name": "Hatred\u2020",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain proficiency with a heavy weapon group.",
+    "name": "Heavy Weapon Training\u2020",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain +10 bonus to a particular sense.",
+    "name": "Heightened Senses\u2020",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain a free attack when you make a Full Move.",
+    "name": "Hip Shooting",
+    "prerequisites": [
+      "BS 40",
+      "Ag 40"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "targets further than 10m apart.",
+    "name": "Independent Targeting",
+    "prerequisites": [
+      "BS 40 Fire at two or more"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Re-roll the effects of Shock.",
+    "name": "Insanely Faithful",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "re-roll Fear and Pinning Tests.",
+    "name": "Into The Jaws Of",
+    "prerequisites": [
+      "Hell Iron Discipline Minions gain immunity to Pinning and Fear whilst in your presence. Iron Discipline Jaded Leap Up Light Sleeper Lightning Attack Litany of Hate Logis Implant Luminen Blast Luminen Charge \u2020Denotes Talent group. WP 30",
+      "Command Minions can"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Test to overcome Stunning.",
+    "name": "Iron Jaw T",
+    "prerequisites": [
+      "40 Toughness"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "from ordinary horrors.",
+    "name": "WP",
+    "prerequisites": [
+      "30 Never gain Insanity Points"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "up as a Free Action.",
+    "name": "Ag",
+    "prerequisites": [
+      "30 Stand"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "when asleep.",
+    "name": "Per",
+    "prerequisites": [
+      "30 Count as awake",
+      "even"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Add twice AB to Initiative rolls.",
+    "name": "Swift Attack Attack Three Times With A Full Action. Lightning Reflexes",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "on WS and BS on successful Tech-Use Test.",
+    "name": "Hatred Extend Benefits Of",
+    "prerequisites": [
+      "hatred to allies. \u2014 +10 bonus"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Energy Damage Bolt. Causes Fatigue.",
+    "name": "Tech-Priest",
+    "prerequisites": [
+      "1d10+WP Bonus"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "1d10+3 Energy Damage Shock. Causes Fatigue.",
+    "name": "Tech-Priest Toughness Test To",
+    "prerequisites": [
+      "power/charge tech. Causes Fatigue. 111 Luminen Shock Tech-Priest"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "day.",
+    "name": "Maglev Grace",
+    "prerequisites": [
+      "Tech-Priest Hover 1d10+TB minutes once per"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "day.",
+    "name": "Maglev Transcendence",
+    "prerequisites": [
+      "Tech-Priest",
+      "Maglev Grace Hover 2d10+TB minutes twice per"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "No penalties for firing at Long or Extreme range.",
+    "name": "Marksman",
+    "prerequisites": [
+      "BS 35"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "advanced medical procedures.",
+    "name": "Master Chirurgeon Medicae",
+    "prerequisites": [
+      "+10 Perform"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Affect 10 times the normal numbers with a",
+    "name": "Master Orator",
+    "prerequisites": [
+      "Fel 30"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "You may enter a trance to remove Fatigue.",
+    "name": "Fellowship Test. Mechadendrite Use\u2020 Tech-Priest You Can Use A Type Of Mechadendrite. Meditation",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain proficiency with a group of melee weapons.",
+    "name": "Melee Weapon Training\u2020",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain protection against psychic attacks.",
+    "name": "Mental Fortress",
+    "prerequisites": [
+      "WP 50",
+      "Strong-Minded"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Deal +2 Damage with ranged attacks.",
+    "name": "Mental Rage Frenzy You",
+    "prerequisites": [
+      "may use Psychic Powers while in the throes of Frenzy. Mighty Shot BS 40"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "You can copy voices.",
+    "name": "Mimic",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Re-roll failed Tests to avoid Pinning.",
+    "name": "Minor Psychic Power\u2020 You Gain A Minor Psychic Power. Nerves Of Steel",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "+20 bonus to resist mind control or interrogation.",
+    "name": "Orthoproxy",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "You are alert for danger.",
+    "name": "Paranoia",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain +10 bonus on Fel Tests to interact with",
+    "name": "Peer\u2020",
+    "prerequisites": [
+      "Fel 30"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain proficiency with a group of pistol weapons.",
+    "name": "Organisation. Pistol Training\u2020",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "to Power Rolls.",
+    "name": "Power Well Psy Rating",
+    "prerequisites": [
+      "2 Gain bonus"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Sure Strike No penalty for attacks against specific Hit Locations.",
+    "name": "Precise Blow",
+    "prerequisites": [
+      "WS 40"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Heal 1d5 Damage once per day.",
+    "name": "Prosanguine",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain powers, roll 1d10+WP bonus for Power Rolls.",
+    "name": "Psy Rating",
+    "prerequisites": [
+      "1 \u2014"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain powers, roll 2d10+WP bonus for Power Rolls.",
+    "name": "Psy Rating",
+    "prerequisites": [
+      "2 Psy Rating 1"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain powers, roll 3d10+WP bonus for Power Rolls.",
+    "name": "Psy Rating",
+    "prerequisites": [
+      "3 Psy Rating 2"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain powers, roll 4d10+WP bonus for Power Rolls.",
+    "name": "Psy Rating",
+    "prerequisites": [
+      "4 Psy Rating 3"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain powers, roll 5d10+WP bonus for Power Rolls.",
+    "name": "Psy Rating",
+    "prerequisites": [
+      "5 Psy Rating 4"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain powers, roll 6d10+WP bonus for Power Rolls.",
+    "name": "Psy Rating",
+    "prerequisites": [
+      "6 Psy Rating 5"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain an extra Psychic Power.",
+    "name": "Psychic Power\u2020",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Ready as a Free Action.",
+    "name": "Quick Draw",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Ag to negate Surprise.",
+    "name": "Rapid Reaction Ag",
+    "prerequisites": [
+      "40 Test"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Reduce reload time.",
+    "name": "Rapid Reload",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain +10 bonus to Resistance Tests.",
+    "name": "Resistance\u2020",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "radius, \u201310 to all Tests due to Fear.",
+    "name": "Rite Of Awe",
+    "prerequisites": [
+      "Tech-Priest 50m"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "for two minutes. 50m radius.",
+    "name": "Rite Of Fear",
+    "prerequisites": [
+      "Tech-Priest Fear rating 1"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Deadeye Shot No penalties for Called Shots.",
+    "name": "Rite Of Pure Thought",
+    "prerequisites": [
+      "Tech-Priest You are immune to emotion. Sharpshooter BS 40"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain an additional Wound.",
+    "name": "Sound Constitution",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Move more quickly in combat.",
+    "name": "Sprint",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain extra Dodge in a Round.",
+    "name": "Step Aside Ag",
+    "prerequisites": [
+      "40",
+      "Dodge"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Deal +2 Critical Damage with knives or unarmed attacks.",
+    "name": "Street Fighting",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Tests made to resist Psychic Powers.",
+    "name": "Strong Minded WP",
+    "prerequisites": [
+      "30",
+      "Resistance (Psychic Powers) Re-roll failed WP"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "on a successful attack.",
+    "name": "Sure Strike",
+    "prerequisites": [
+      "WS 30 Choose Hit Location"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Attack twice with a Full Action.",
+    "name": "Swift Attack",
+    "prerequisites": [
+      "WS 35"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Make a special attack to Stun your opponent.",
+    "name": "Takedown",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain +10 bonus to corresponding Skill Test.",
+    "name": "Talented\u2020",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Unjam a gun as a Half Action.",
+    "name": "Technical Knock",
+    "prerequisites": [
+      "Int 30"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Gain proficiency with a group of thrown weapons.",
+    "name": "Thrown Weapon Training\u2020",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Remember trivial facts and minor details.",
+    "name": "Total Recall",
+    "prerequisites": [
+      "Int 30"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "you take.",
+    "name": "True Grit T",
+    "prerequisites": [
+      "40 Reduce Critical Damage"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "when wielding two weapons.",
+    "name": "Two-Weapon Wielder\u2020 WS",
+    "prerequisites": [
+      "35 or BS35",
+      "Ag 35 Attack twice"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "You are easily forgettable.",
+    "name": "Unremarkable",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "You may re-roll failed Fear Tests.",
+    "name": "Unshakeable Faith",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Parry each Round.",
+    "name": "Wall Of Steel Ag",
+    "prerequisites": [
+      "35 Gain an extra"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "group.",
+    "name": "\u2020Denotes",
+    "prerequisites": [
+      "Talent"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "You exude a natural aura of command, instilling subservience in all around you. On a successful Command Test, you may affect a number of targets equal -------------------------------------------------------------------------------- Table 5-1: Income and Social Class \u2020see Table 5-2: Scum Income. \u2014 Mistress Katrina Zaat, Rogue Trader. As Acolytes quickly discover, money is an essential part of what makes the Imperium tick. From the simple street hawkers of a grubby feral world up to the most powerful Rogue Traders, the \u0000 ow of cash is a vital part of life.",
+    "name": "AIR OF Authority",
+    "prerequisites": [
+      "Fellowship 30"
+    ],
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Wealth and money takes many forms throughout the Calixis Sector. On some worlds Acolytes may find people trading with precious shell tokens or coins of rare metals, while on others they may encounter cloth trade scrits and currency tracked only in the circuits of cogitators. In DARK HERESY all of these kinds of currency are referred to as Throne Gelt or Thrones. A Throne is a measure of currency throughout the Calixis Sector, secured against the massive amounts of wealth generated by Imperial planetary tithes. In its most literal form, Throne Gelt refers to what is essentially the Emperor\u2019s money. You can use Thrones to gauge the price of items from world to world as well as the Acolyte\u2019s own personal wealth, even though they may carry a myriad of different forms of currency.",
+    "name": "Throne Gelt",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "All Acolytes gain a monthly income while in the employ of an within a weapon is always wise and only those who Inquisitor. This represents money they generate in their spare time want their gun to fail in the midst of battle would doing other (sometimes shady) jobs, investments or trusts they ignore such observances. might have or even a stipend from their illustrious employer. In game terms, however, a character always receives their income without having to specifically do anything. GMs of course are free Social Class Thrones/Month Rank Increase Description Outcasts (Scum) 20\u2020 Special\u2020 Those that have no rightful place within the structure of Imperial society, living below even the lowest classes. Drudging Classes 30 3 Those that work in the fields, factoriums and hives of the Imperium, by far making up the bulk of mankind. Military Class (Guardsmen) 50 5 Those that fight. Supine Class (Arbitors, Psykers) 70 7 Those that serve classes better than themselves, benefiting from the wealth of their masters. Learned Class (Adepts) 100 10 Those that make their way with knowledge. Trading Classes (Assassins) 120 12 Those that buy and sell or have specialist trades with which to make their living. Mechanicus (Tech-Priests) 150 15 Those that follow the Machine God are a class unto themselves. Ministorum (Clerics) 200 20 Those of the Cult of the Emperor and benefit greatly from the uncounted wealth of His domain. Nobility 500 50 Those born to wealth and power by right of blood. Unbound Classes <Expunged> Those with the freedom to travel the Imperium as they wish, such as Inquisitors of the dreaded Ordos or elusive Rogue Traders. 124 to increase, decrease or halt an Acolyte\u2019s income should he decide the plot calls for it, or if they are not pleasing their master! All income is based on social class. An Acolyte\u2019s starting Career Path determines his social class and consequently his starting wealth\u2014see Table 1-9: Starting Wealth on page 29. All of this does not, of course, preclude a character from engaging in other moneymaking schemes during play. Every time a character gains a new Rank in their Career Path their monthly income may increase, subject to the GMs agreement, by the amount indicated in the Rank Increase column of Table 5-1: Rank and Social Class. For example, a Guardsman has a basic monthly income of 50 Thrones. This will increase to 55 Thrones after he achieves his second Rank in his Career Path. GMs should feel free to change this Rank-based increase depending on such achievements as titles and honours which would not otherwise have any game effect. Players with characters on the Scum Career Path should roll 1d10 and refer to Table 5-2: Scum Income in order to calculate the Thrones they \u201cearn\u201d each month. -------------------------------------------------------------------------------- Table 5-2: Scum Income D10 Result Earnings 1\u20133 Scrounge 10+1d10 4\u20135 Scam 15+FB d10 6\u20137 Steal 15+AB d10 8\u20139 Scheme 15+ IB d10 10 Luck 50+ FP d10 FB=Fel Bonus, AB=Ag Bonus, IB=Int Bonus, FP=Fate Points",
+    "name": "Income",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Pincher Smyth, underhiver Scum, calculates his income by rolling 1d10 and consulting the table. Pincher rolls a 6, so his income mainly comes from stealing. Now Pincher works out -------------------------------------------------------------------------------- Table 5\u20133: Consequences of Availability Availability Difficulty Modifier Abundant Easy +30 Crtsi",
+    "name": "Example",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Plentiful Routine +20 Common Ordinary +10 Average Challenging +0 Scarce Difficult \u201310 Rare Hard \u201320 \u201cYou will treasure this weapon, you will use it wisely in battle and you will honour its sacred spirit with prayer, for after you are long gone this weapon\u2019s service to the Emperor will go on.\u201d \u2014 Ergar Keer, Enginseer. Very Rare Very Hard \u201330 ie of the Imperium, and beyond, the craftsmanship of",
+    "name": "Craftsmanship",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Not all goods are of the same quality. In the vastness items can vary widely from crudely made, mass- produced materials to handcrafted masterpieces. Just because a large community actually has the item a character Normally, Craftsmanship has little effect on game play for seeks does not necessarily mean that it is easy to locate. The larger regular goods and services. As a general rule items of Poor the community, the more time it takes to track the item down. A Craftmanship are more prone to failure and breaking while community\u2019s size determines the base time it takes to find the item. Good and Best Craftsmanship are more durable, though it is Each degree of success reduces this time by a certain amount (minutes, up to the GM how and when these effects might enter play. hours, days, weeks, or months, depending on the base time). See In the case of weaponry and armour, there are effects on the -------------------------------------------------------------------------------- Table 5-5: Availability and Time. The GM should make the roll item\u2019s performance or weight (as detailed later), but in cases of in secret for particularly dangerous or costly items, to emphasise the general goods and services, differences of quality are merely struggle and possible risks entailed by such searching. descriptive. The GM may reduce the Difficulty of certain tests, -------------------------------------------------------------------------------- Table 5\u20134: Availability by Population Difficulty by Population Availability Below 1,000 Below 10,000 Below 100,000 100,000 or more Abundant Routine Easy Automatic Automatic Plentiful Ordinary Routine Easy Automatic Common Challenging Ordinary Routine Easy Average Difficult Challenging Ordinary Routine Scarce Hard Difficult Challenging Ordinary Rare Very Hard Hard Difficult Challenging Very Rare GM\u2019s discretion Very Hard Hard Difficult -------------------------------------------------------------------------------- Table 5\u20135: Availability and Time Difficulty by Population (Base Time by Availability) Population Very Rare Rare Scarce Average Common Plentiful Abundant Below 1,000 1d10 hours 1 hour 30 minutes 15 minutes 10 minutes 5 minutes 1 minute Below 10,000 1d10 days 1d10 hours 1 hour 30 minutes 15 minutes 10 minutes 5 minutes Below 100,000 1d10 weeks 1d10 days 1d10 hours 1 hour 30 minutes 15 minutes 10 minutes 100,000 or more 1d5 months 1d10 weeks 1d10 days 1d10 hours 1 hour 30 minutes 15 minutes 126 but it is entirely at his discretion. Unless specifically stated, the Craftsmanship of any object is considered Common. Craftsmanship Cost Multiplier Availability Best \u00d710 Drop 2 steps Good \u00d73 Drop 1 step Common \u00d71 \u2014 Poor \u00d71/2 Increase 1 step",
+    "name": "Time",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Drake realises he cannot afford a brand new lasgun, so he decides to settle for a Poor quality one. The cost for such a weapon is halved, and there are plenty of them, increasing the availability from Common to Plentiful. alone and covers knives, axes, spears and such like. Unless they are also classed as melee, thrown weapons cannot be used in close combat (or if they do, they count as improvised weapons). When using a thrown weapon you add your SB to the damage you in\u0000 ict (with the exception of explosives such as grenades). \u2022 Pistol weapons are fired one-handed and can be used in close combat. However, when a pistol is used in close combat, the firer gains no bonuses or penalties to hit for range or targeting equipment. \u2022 Basic weapons normally require two hands but can be used one-handed with a \u201320 penalty to hit. \u2022 Heavy weapons always require two hands and must be braced in some way, usually either on a bipod or tripod but equally it could be a windowsill or sandbag (or the firer\u2019s shoulder in the case of RPG launchers), to be fired without penalties. Firing a heavy weapon without bracing incurs a \u201330 penalty to hit and prohibits Semi-Auto and Full Auto fire.",
+    "name": "Example",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "es",
+    "name": "Weapons",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Bracing a weapon takes a Half Action and once braced the firer cannot move without losing the benefits of being braced. They can however traverse their weapon \u201cThere is no arguing with the barrel of a gun.\u201d",
+    "name": "Bracing",
+    "source": "Dark Heresy Core Rulebook Tables",
+    "type": "talent"
+  },
+  {
+    "description": "Affect more targets with Test.",
+    "name": "Air Of Authority",
+    "prerequisites": [
+      "Fel 30"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Use either hand equally well.",
+    "name": "Ambidextrous",
+    "prerequisites": [
+      "Ag 30"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "You are resilient to Corruption.",
+    "name": "Armour Of Contempt",
+    "prerequisites": [
+      "WP 40"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Use non-proficient weapons at \u201310 penalty.",
+    "name": "Arms Master BS",
+    "prerequisites": [
+      "30",
+      "Basic Weapon Training (any two)"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "On a successful Acrobatics Test after making a",
+    "name": "Assassin Strike Ag",
+    "prerequisites": [
+      "40",
+      "Acrobatic"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Heal 2 Damage/day, always Lightly Wounded.",
+    "name": "Melee Attack, You May Move As A Free Action. Autosanguine",
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Use weapon group without penalty.",
+    "name": "Basic Weapon Training\u2020",
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "when Charging.",
+    "name": "Battle Rage Frenzy Parry",
+    "prerequisites": [
+      "while Frenzied. Berserk Charge \u2014 Gain +20 bonus"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "+10 bonus to control servitors.",
+    "name": "Binary Chatter",
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Re-roll a missed attack, once per Round.",
+    "name": "Blademaster WS",
+    "prerequisites": [
+      "30",
+      "Melee Weapon Training (any)"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Suffer half the usual penalties when vision is obscured.",
+    "name": "Blind Fighting",
+    "prerequisites": [
+      "Per 30"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Remove bracing requirement for certain weapons.",
+    "name": "Bulging Biceps",
+    "prerequisites": [
+      "S 45"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Reduce falling Damage.",
+    "name": "Catfall",
+    "prerequisites": [
+      "Ag 30"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Immune to seduction, resistant to charm.",
+    "name": "Chem Geld",
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Penalty to avoid being hit by your flamer attacks.",
+    "name": "Cleanse And Purify",
+    "prerequisites": [
+      "Basic Weapon Training (Flame)"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "You exude a natural aura of command, instilling subservience in all around you. On a successful Command Test, you may affect a number of targets equal to 1d10 plus your Fellowship Bonus. Such is the authority in your voice that even those who are not in your service jump to attention when you speak. You may attempt to get non-servants to follow your commands by making a Command Test with a \u201310 penalty.",
+    "name": "AIR OF Authority",
+    "prerequisites": [
+      "Fellowship 30"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "You can use either hand equally well. You do not take the normal \u201320 penalty for making attacks with your secondary hand. Special: If you have the Two-Weapon Wielder talent, the penalty for making attacks with both weapons in the same Turn drops to \u201310.",
+    "name": "Ambidextrous",
+    "prerequisites": [
+      "Agility 30"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "You drape yourself in the armour of scorn and hatred. Whenever you would gain Corruption Points, reduce the amount you would earn by 1. In addition, you may Test Willpower as a Free Action to ignore the effects of your accumulated Corruption for one Round.",
+    "name": "Armour OF Contempt",
+    "prerequisites": [
+      "Willpower 40"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Such is your skill with a gun that you are able to pick up an unfamiliar weapon and use it as though you had trained with it for years. You can use ranged weapons you do not have training in at \u201310 rather than \u201320.",
+    "name": "Arms Master",
+    "prerequisites": [
+      "Ballistic Skill 30",
+      "Basic Weapon Training in at least two groups of weapons"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "You are like a serene dancer when engaged in combat, leaping and spiralling between dismembered corpses like some butcher ballerina. Whenever you engage an opponent and make a melee attack, you may make an Acrobatics Test to move at your Half Move rate as a Free Action. Your opponent may not take the customary free attack.",
+    "name": "Assassin Strike",
+    "prerequisites": [
+      "Agility 40",
+      "Acrobatics"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Ancient and blessed technology filters your blood. Handed down from generations past, your implants repair minor injuries. For the purposes of healing, you are always considered to be Lightly Wounded. In addition, you naturally heal at an increased rate, removing 2 points of Damage each day. Your autosanguinators also sooth the minor pains and sores caused by the blessed metal of your implants pressing upon your weak \u0000 esh. This has no game effect, but does make you slightly less irritable than before.",
+    "name": "Autosanguine",
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Talent Groups: Bolt, Flame, Las, Launcher, Melta, Plasma, Primitive, SP. You have received Basic Weapon Training in a group of weapons, and can use them without penalty.",
+    "name": "Basic Weapon Training",
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Despite your frenzied nature, you remain in control when engaging in melee. You can spend reactions to Parry while Frenzied.",
+    "name": "Battle Rage",
+    "prerequisites": [
+      "Frenzy talent"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "You hurl yourself at your enemies with reckless abandon, using the force of your Charge to add force to your strikes. When you make a Charge manoeuvre you gain a +20 bonus to Weapon Skill instead of the usual +10.",
+    "name": "Berserk Charge",
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "You are adept at controlling servitors. Gain a +10 bonus to any attempt to instruct, program or question servitors.",
+    "name": "Binary Chatter",
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Your mastery of sword and knife is unsurpassed and your blade always strikes true. When attacking with a sword or a knife of any type, including chainswords and power swords, you may re-roll a missed attack once per Round.",
+    "name": "Blademaster",
+    "prerequisites": [
+      "Weapon Skill 30",
+      "Melee Weapon Training"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Through years of practice and heightening your senses, you no longer need to be able to see your opponents to be able to hit them. You take half the usual penalties when fighting in environments that obscure your vision, such as fog, smoke and darkness.",
+    "name": "Blind Fighting",
+    "prerequisites": [
+      "Perception 30"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Whereas a weaker man would be sent \u0000 ying when using powerful weapons, your strong physique allows you to remain standing. You can fire a heavy weapon on semi- or autofire modes without first bracing.",
+    "name": "Bulging Biceps",
+    "prerequisites": [
+      "Strength 45"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "You are nimble and balanced, like a cat, and are able to fall much greater distances unharmed than others might. Whenever you fall, you may Test Agility as a Free Action. On a success, and for every degree of success, reduce the distance fallen by a number of metres equal to your Agility Bonus for the purposes of determining the Damage dealt by the fall.",
+    "name": "Catfall",
+    "prerequisites": [
+      "Agility 30"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "A variety of chemical and surgical treatments have rendered you immune to the temptations of the \u0000 esh. Seduction attempts against you automatically fail, and the Difficulty of all Charm Tests made against you increase by one step (a Challenging (+0) Test becomes Difficult (\u201310) and so on). When you take this Talent you gain one Insanity Point.",
+    "name": "Chem Geld",
+    "source": "Additional Content",
+    "type": "talent"
+  },
+  {
+    "description": "Burn! Burn! Burn! None shall escape your fiery wrath! Targets exposed to your \u0000 amer attacks take a \u201320 penalty to avoid being hit. --- table with mechanics advances:",
+    "name": "Cleanse AND Purify",
+    "prerequisites": [
+      "Basic Weapon Training (Flame) talent"
+    ],
+    "source": "Additional Content",
+    "type": "talent"
+  }
+]
