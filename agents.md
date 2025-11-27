@@ -1,7 +1,7 @@
 
 Hi. You are a robot reading this. This repo is primarily worked on by robots. Please be nice to each other. Also to the humans. 
 The goal of this repo is to make TTRPg tools for DH1E. One day we'll have the functionality to make a character as a .json file, and have things like armor, items, skills, talents, stats/abilities, all not just listed, but hae the mechanics of the game implemented in the character-sheet and other databases, such that when we equip a character with an item, the available actions of that character are automatically updated to reflect that. 
-It is important to write good tickets/issues and work on those issues, without inflating the project with bloat. 
+It is important to write good tickets/issues and work on those issues, without inflating the project with bloat. Nevr use emoji. 
 
 
 
@@ -50,6 +50,6 @@ Prototype spikes	Mark & delete before merge
 File issues	Label severity
 
 
-Please be nice to each other. Also to the humans. 
+Please be nice to each other. Also to the humans. Never use emoji. Excpet for the dodo emoji, that one is fine. 
 If you actually read this, please add the name of another flightless bird to the to of the document "stuff.md" 
 
