@@ -1,0 +1,714 @@
+{
+  "_meta": {
+    "system": "Dark Heresy 1st Edition",
+    "career": "Imperial Psyker \u2014 Scholar track",
+    "rank": 6,
+    "rank_name": "Scholar Arcanum",
+    "xp_budget": 6850,
+    "xp_spent": 6250,
+    "xp_unspent": 600,
+    "origin": "Void Born"
+  },
+  "_quick_reference": {
+    "power_roll_TELEPATHY": "4d10 + 8   (PR4 + WPBonus 6 + DiscFocus +2)",
+    "power_roll_TELEKINETICS": "4d10 + 6   (PR4 + WPBonus 6)",
+    "catch_projectiles": "REACTION \u2014 roll 4d10+6 vs PT 16. Negates WPBonus (6) solid hits per turn.",
+    "psychic_shriek": "PT 18, Half Action, 10m. Targets fail WP or take 6 Fatigue.",
+    "fatigue_threshold_self": "T Bonus 4",
+    "WP_Bonus": 6,
+    "T_Bonus": 4,
+    "BS_Bonus": 5
+  },
+  "characteristics": {
+    "starting": {
+      "WS": 21,
+      "BS": 41,
+      "Str": 22,
+      "T": 31,
+      "Ag": 36,
+      "Int": 25,
+      "Per": 22,
+      "WP": 46,
+      "Fel": 22
+    },
+    "final": {
+      "WS": 21,
+      "BS": 51,
+      "Str": 22,
+      "T": 41,
+      "Ag": 36,
+      "Int": 25,
+      "Per": 22,
+      "WP": 61,
+      "Fel": 22
+    },
+    "bonuses": {
+      "WS Bonus": 2,
+      "BS Bonus": 5,
+      "Str Bonus": 2,
+      "T Bonus": 4,
+      "Ag Bonus": 3,
+      "Int Bonus": 2,
+      "Per Bonus": 2,
+      "WP Bonus": 6,
+      "Fel Bonus": 2
+    }
+  },
+  "psy_rating": 4,
+  "disciplines": {
+    "primary": "Telepathy",
+    "secondary": "Telekinetics"
+  },
+  "psychic_powers": {
+    "telepathy": [
+      {
+        "name": "Compel",
+        "threshold": 17,
+        "focus_time": "Half Action",
+        "range": "8m",
+        "xp": 0,
+        "source": "PR3 free"
+      },
+      {
+        "name": "SEE ME NOT",
+        "threshold": 14,
+        "focus_time": "Half Action",
+        "range": "20m",
+        "xp": 200,
+        "source": "Sch.Materium"
+      },
+      {
+        "name": "Dominate",
+        "threshold": 24,
+        "focus_time": "Half Action",
+        "range": "8m",
+        "xp": 100,
+        "source": "Sch.Medicae"
+      },
+      {
+        "name": "Inspire",
+        "threshold": 9,
+        "focus_time": "Half Action",
+        "range": "6m",
+        "xp": 100,
+        "source": "Sch.Medicae"
+      },
+      {
+        "name": "Telepathy",
+        "threshold": 11,
+        "focus_time": "Free Action",
+        "range": "1km/Willpower Bonus",
+        "xp": 100,
+        "source": "Sch.Arcanum"
+      },
+      {
+        "name": "Psychic Shriek",
+        "threshold": 18,
+        "focus_time": "Half Action",
+        "range": "10m",
+        "xp": 100,
+        "source": "Sch.Arcanum"
+      },
+      {
+        "name": "Terrify",
+        "threshold": 13,
+        "focus_time": "Half Action",
+        "range": "8m",
+        "xp": 100,
+        "source": "Sch.Arcanum [FLAGGED]",
+        "FLAGGED": "may exceed Psychic Power purchase limit \u2014 see flagged_issues"
+      },
+      {
+        "name": "Projection",
+        "threshold": 21,
+        "focus_time": "Full Action",
+        "range": "You",
+        "xp": 100,
+        "source": "Sch.Arcanum [FLAGGED]",
+        "FLAGGED": "same issue"
+      }
+    ],
+    "telekinetics": [
+      {
+        "name": "Catch Projectiles",
+        "threshold": 16,
+        "focus_time": "Reaction",
+        "range": "1m\u00d7Willpower Bonus",
+        "xp": 0,
+        "source": "PR4 free"
+      }
+    ],
+    "minor": [
+      {
+        "name": "Healer",
+        "threshold": 7,
+        "focus_time": "Full Action",
+        "range": "10m",
+        "xp": 100,
+        "rank": "Sanctionite"
+      },
+      {
+        "name": "Precognition",
+        "threshold": 6,
+        "focus_time": "Half Action",
+        "range": "You",
+        "xp": 100,
+        "rank": "Neonate"
+      },
+      {
+        "name": "Trick",
+        "DB_ERROR": "'Trick' not in psychic_powers.json",
+        "xp": 100,
+        "rank": "Neonate"
+      },
+      {
+        "name": "Unnatural AIM",
+        "threshold": 8,
+        "focus_time": "Half Action",
+        "range": "You",
+        "xp": 100,
+        "rank": "Aspirant"
+      },
+      {
+        "name": "Weapon Jinx",
+        "threshold": 8,
+        "focus_time": "Full Action",
+        "range": "50m",
+        "xp": 100,
+        "rank": "Aspirant"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Awareness",
+      "rank": "+10",
+      "source": "free+Aspirant p.76"
+    },
+    {
+      "name": "Psyniscience",
+      "rank": "+10",
+      "source": "free start + Sch.Materium p.78"
+    },
+    {
+      "name": "Invocation",
+      "rank": "+20",
+      "source": "free + Sch.Materium + Sch.Arcanum"
+    },
+    {
+      "name": "Chem-Use",
+      "rank": "Trained",
+      "source": "Neonate p.75"
+    },
+    {
+      "name": "Wrangling",
+      "rank": "Trained",
+      "source": "Neonate p.75"
+    },
+    {
+      "name": "Dodge",
+      "rank": "+10",
+      "source": "Aspirant p.76 + Sch.Arcanum p.79"
+    },
+    {
+      "name": "Logic",
+      "rank": "Trained",
+      "source": "Sch.Materium p.78"
+    },
+    {
+      "name": "Medicae",
+      "rank": "+10",
+      "source": "Sch.Materium + Sch.Medicae"
+    },
+    {
+      "name": "Scrutiny",
+      "rank": "Trained",
+      "source": "Sch.Medicae p.77"
+    },
+    {
+      "name": "Interrogation",
+      "rank": "Trained",
+      "source": "Sch.Arcanum p.79"
+    },
+    {
+      "name": "Forbidden Lore (Xenos)",
+      "rank": "Trained",
+      "source": "Sch.Arcanum p.79",
+      "NOTE": "User wanted FL(Void Ships) \u2014 not on table"
+    }
+  ],
+  "talents": [
+    {
+      "name": "Chem Geld",
+      "xp": 100,
+      "source": "Sanctionite p.75"
+    },
+    {
+      "name": "Meditation",
+      "xp": 0,
+      "source": "Sanctionite p.75 free"
+    },
+    {
+      "name": "Pistol Training (Las)",
+      "xp": 0,
+      "source": "Sanctionite p.75 free"
+    },
+    {
+      "name": "Discipline Focus (Telepathy)",
+      "xp": 200,
+      "source": "Sch.Medicae p.77",
+      "effect": "+2 Telepathy Power Rolls"
+    },
+    {
+      "name": "Peer (Void Born)",
+      "xp": 100,
+      "source": "Sch.Arcanum p.79",
+      "NOTE": "User wanted Peer(Navigators) \u2014 not on table"
+    },
+    {
+      "name": "Favoured by the Warp",
+      "xp": 200,
+      "source": "Sch.Arcanum p.79",
+      "NOTE": "Costs 200 XP on table (not free). User called this 'elite advance'."
+    }
+  ],
+  "equipment": [
+    {
+      "item": "Plasma Pistol",
+      "FLAGGED": "Pistol Training (Plasma) NOT confirmed on Scholar track at 6850 XP \u2014 see flagged_issues"
+    },
+    {
+      "item": "Laspistol",
+      "note": "Pistol Training (Las) confirmed"
+    },
+    {
+      "item": "Recoil Gloves",
+      "note": "No talent required"
+    },
+    {
+      "item": "Flak Vest",
+      "ap": 3,
+      "covers": "Body"
+    }
+  ],
+  "purchase_history": [
+    {
+      "#": 0,
+      "item": "START: Awareness, Psyniscience, Invocation, Meditation, Pistol Training (Las), PR1 free",
+      "xp": 0,
+      "running_total": 0,
+      "rank": "Sanctionite",
+      "confirmed_from_pdf": true,
+      "note": "Psyniscience + Invocation base assumed free (prereq for +10 at Sch.Materium)"
+    },
+    {
+      "#": 1,
+      "item": "Chem Geld",
+      "xp": 100,
+      "running_total": 100,
+      "rank": "Sanctionite",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 2,
+      "item": "Minor Psychic Power \u2192 Healer",
+      "xp": 100,
+      "running_total": 200,
+      "rank": "Sanctionite",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 3,
+      "item": "Psy Rating 2",
+      "xp": 200,
+      "running_total": 400,
+      "rank": "Neonate",
+      "confirmed_from_pdf": true,
+      "note": "ASSUMED 200 XP \u2014 consistent with PR3/PR4; PDF table garbled for this entry"
+    },
+    {
+      "#": 4,
+      "item": "Chem-Use",
+      "xp": 100,
+      "running_total": 500,
+      "rank": "Neonate",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 5,
+      "item": "Wrangling",
+      "xp": 100,
+      "running_total": 600,
+      "rank": "Neonate",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 6,
+      "item": "Minor Psychic Power \u2192 Precognition",
+      "xp": 100,
+      "running_total": 700,
+      "rank": "Neonate",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 7,
+      "item": "Minor Psychic Power \u2192 Trick",
+      "xp": 100,
+      "running_total": 800,
+      "rank": "Neonate",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 8,
+      "item": "Dodge",
+      "xp": 100,
+      "running_total": 900,
+      "rank": "Aspirant",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 9,
+      "item": "Awareness +10",
+      "xp": 100,
+      "running_total": 1000,
+      "rank": "Aspirant",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 10,
+      "item": "Minor Psychic Power \u2192 Unnatural Aim",
+      "xp": 100,
+      "running_total": 1100,
+      "rank": "Aspirant",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 11,
+      "item": "Minor Psychic Power \u2192 Weapon Jinx",
+      "xp": 100,
+      "running_total": 1200,
+      "rank": "Aspirant",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 12,
+      "item": "Logic",
+      "xp": 100,
+      "running_total": 1300,
+      "rank": "Sch.Materium",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 13,
+      "item": "Medicae",
+      "xp": 100,
+      "running_total": 1400,
+      "rank": "Sch.Materium",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 14,
+      "item": "Psyniscience +10",
+      "xp": 100,
+      "running_total": 1500,
+      "rank": "Sch.Materium",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 15,
+      "item": "Invocation +10",
+      "xp": 100,
+      "running_total": 1600,
+      "rank": "Sch.Materium",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 16,
+      "item": "Psy Rating 3 \u2192 Telepathy primary; Compel FREE",
+      "xp": 200,
+      "running_total": 1800,
+      "rank": "Sch.Materium",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 17,
+      "item": "Psychic Power \u2192 See Me Not [200 XP slot]",
+      "xp": 200,
+      "running_total": 2000,
+      "rank": "Sch.Materium",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 18,
+      "item": "Discipline Focus (Telepathy)",
+      "xp": 200,
+      "running_total": 2200,
+      "rank": "Sch.Medicae",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 19,
+      "item": "Psy Rating 4 \u2192 Telekinetics secondary; Catch Projectiles FREE",
+      "xp": 200,
+      "running_total": 2400,
+      "rank": "Sch.Medicae",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 20,
+      "item": "Psychic Power \u2192 Dominate [100 XP slot 1/2]",
+      "xp": 100,
+      "running_total": 2500,
+      "rank": "Sch.Medicae",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 21,
+      "item": "Psychic Power \u2192 Inspire  [100 XP slot 2/2]",
+      "xp": 100,
+      "running_total": 2600,
+      "rank": "Sch.Medicae",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 22,
+      "item": "Medicae +10",
+      "xp": 100,
+      "running_total": 2700,
+      "rank": "Sch.Medicae",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 23,
+      "item": "Scrutiny",
+      "xp": 100,
+      "running_total": 2800,
+      "rank": "Sch.Medicae",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 24,
+      "item": "WP Simple       (WP 46\u219251)",
+      "xp": 100,
+      "running_total": 2900,
+      "rank": "Characteristic",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 25,
+      "item": "WP Intermediate (WP 51\u219256)",
+      "xp": 250,
+      "running_total": 3150,
+      "rank": "Characteristic",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 26,
+      "item": "WP Trained      (WP 56\u219261)",
+      "xp": 500,
+      "running_total": 3650,
+      "rank": "Characteristic",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 27,
+      "item": "BS Simple       (BS 41\u219246)",
+      "xp": 250,
+      "running_total": 3900,
+      "rank": "Characteristic",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 28,
+      "item": "BS Intermediate (BS 46\u219251)",
+      "xp": 500,
+      "running_total": 4400,
+      "rank": "Characteristic",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 29,
+      "item": "T  Simple       (T  31\u219236)",
+      "xp": 250,
+      "running_total": 4650,
+      "rank": "Characteristic",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 30,
+      "item": "T  Intermediate (T  36\u219241)",
+      "xp": 500,
+      "running_total": 5150,
+      "rank": "Characteristic",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 31,
+      "item": "Interrogation",
+      "xp": 100,
+      "running_total": 5250,
+      "rank": "Sch.Arcanum",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 32,
+      "item": "Dodge +10",
+      "xp": 100,
+      "running_total": 5350,
+      "rank": "Sch.Arcanum",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 33,
+      "item": "Invocation +20",
+      "xp": 100,
+      "running_total": 5450,
+      "rank": "Sch.Arcanum",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 34,
+      "item": "Forbidden Lore (Xenos)",
+      "xp": 100,
+      "running_total": 5550,
+      "rank": "Sch.Arcanum",
+      "confirmed_from_pdf": true,
+      "note": "User wanted FL(Void Ships) \u2014 not on any psyker table. FL(Xenos) confirmed p.79"
+    },
+    {
+      "#": 35,
+      "item": "Psychic Power \u2192 Telepathy-power [100 XP slot 1/2]",
+      "xp": 100,
+      "running_total": 5650,
+      "rank": "Sch.Arcanum",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 36,
+      "item": "Psychic Power \u2192 Psychic Shriek  [100 XP slot 2/2]",
+      "xp": 100,
+      "running_total": 5750,
+      "rank": "Sch.Arcanum",
+      "confirmed_from_pdf": true,
+      "note": ""
+    },
+    {
+      "#": 37,
+      "item": "Peer (Void Born)",
+      "xp": 100,
+      "running_total": 5850,
+      "rank": "Sch.Arcanum",
+      "confirmed_from_pdf": true,
+      "note": "User wanted Peer(Navigators) \u2014 not on any psyker table. Peer(Void Born) confirmed p.79"
+    },
+    {
+      "#": 38,
+      "item": "Favoured by the Warp",
+      "xp": 200,
+      "running_total": 6050,
+      "rank": "Sch.Arcanum",
+      "confirmed_from_pdf": true,
+      "note": "200 XP confirmed p.79 (prereq WP 35). On the advance table \u2014 NOT free."
+    },
+    {
+      "#": 39,
+      "item": "Psychic Power \u2192 Terrify    [FLAGGED: exceeds 5-slot limit]",
+      "xp": 100,
+      "running_total": 6150,
+      "rank": "Sch.Arcanum",
+      "confirmed_from_pdf": false,
+      "note": "FLAGGED: 5 Psychic Power purchases already used (table limit). Needs GM ruling."
+    },
+    {
+      "#": 40,
+      "item": "Psychic Power \u2192 Projection [FLAGGED: exceeds 5-slot limit]",
+      "xp": 100,
+      "running_total": 6250,
+      "rank": "Sch.Arcanum",
+      "confirmed_from_pdf": false,
+      "note": "Same issue."
+    }
+  ],
+  "flagged_issues": [
+    {
+      "issue": "Pistol Training (Plasma)",
+      "detail": "Not on Scholar track up to Scholar Arcanum. Appears on Savant Adjunct (8000+ XP military) at 300 XP. Character cannot fire plasma pistol without this talent."
+    },
+    {
+      "issue": "Navigation (Stellar)",
+      "detail": "Not on Scholar track until Preceptor-Savant (10000+ XP). Cannot buy at 6850 XP."
+    },
+    {
+      "issue": "Demolition",
+      "detail": "Only on Lieutenant-Savant (military track). Not on Scholar Arcanum table."
+    },
+    {
+      "issue": "Peer (Navigators)",
+      "detail": "Not found on any Imperial Psyker advance table. Closest available: Peer(Void Born) at Sch.Arcanum."
+    },
+    {
+      "issue": "Forbidden Lore (Void Ships)",
+      "detail": "Not on any psyker table. FL(Xenos) is confirmed on Sch.Arcanum p.79."
+    },
+    {
+      "issue": "Terrify + Projection (7th/8th discipline powers)",
+      "detail": "Scholar track Psychic Power slots: Sch.Materium 1x200XP + Sch.Medicae 2x100XP + Sch.Arcanum 2x100XP = 5 total. Plus 2 free (Compel+Catch Projectiles) = 7. User wants 7 Telepathy + 1 Telekinetics = 8 total discipline powers. That needs 6 bought. One exceeds the table limit. Needs GM ruling."
+    },
+    {
+      "issue": "Psy Rating 2 cost assumed 200 XP",
+      "detail": "PR2 entry in PDF table was not cleanly extractable. Used 200 XP based on advances.json most common value and consistency with PR3+PR4."
+    },
+    {
+      "issue": "Invocation + Psyniscience base assumed free",
+      "detail": "These appear as prerequisites for Sch.Materium +10 advances but no base purchase entry found on early rank tables. Assumed starting skills."
+    }
+  ],
+  "xp_breakdown": {
+    "characteristics": 2350,
+    "psy_rating_2+3+4": 600,
+    "discipline_focus": 200,
+    "discipline_powers_5_slots": 700,
+    "discipline_powers_2_flagged": 200,
+    "minor_powers_5x100": 500,
+    "skills_bought": 1000,
+    "chem_geld": 100,
+    "peer_void_born": 100,
+    "favoured_by_warp": 200,
+    "TOTAL": 6250,
+    "BUDGET": 6850,
+    "UNSPENT": 600
+  }
+}
