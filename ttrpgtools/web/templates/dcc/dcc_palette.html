@@ -1,0 +1,45 @@
+{% extends "dcc/dcc_base.html" %}
+{% block title %}Palette{% endblock %}
+{% block head %}
+<style>
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .8rem; margin: .7rem 0 1.2rem; }
+  .swatch { border: 1.5px solid var(--m-ink); border-radius: 3px; background: #fffef6; box-shadow: 2px 2px 0 var(--m-ink); }
+  .swatch i { display: block; height: 64px; border-bottom: 1.5px solid var(--m-ink); }
+  .swatch b { display: block; font: 600 .7rem var(--caps); text-transform: uppercase; letter-spacing: .1em; padding: .45rem .5rem 0; }
+  .swatch code { display: block; padding: 0 .5rem .4rem; font-size: .8rem; color: var(--ink-soft); }
+  .lands { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+  .land { background: var(--field); border: 1.5px solid var(--m-ink); border-radius: 3px; padding: 1rem; }
+  .land .sample { background: var(--m-paper); border: 1.5px solid var(--m-ink); padding: .7rem .9rem; box-shadow: 4px 4px 0 rgba(77, 77, 77, .32); }
+  .land .word { font: 700 1.5rem var(--caps); text-transform: uppercase; letter-spacing: .24em; color: var(--word); border-bottom: 4px solid var(--rule); }
+  .land .small { font: 700 .95rem var(--caps); text-transform: uppercase; letter-spacing: .16em; color: var(--word-ink); margin-top: .5rem; }
+</style>
+{% endblock %}
+{% block content %}
+<div class="panel">
+  <div class="panel-header"><h1>Palette</h1></div>
+  <p>Sampled from the twelve basic-land cards. Every color is a variable in <code>static/dcc/dcc.css</code>; use <code>var(--m-sage)</code> and so on.
+    <a href="{{ asset('dcc_palette_swatch.png') }}">The whole palette as one image</a>, with hex and rgb values, the six lands, and the few colors that are not from the cards.</p>
+  {% for title, names in [
+      ("Fields: the card frames", ["sage", "aqua", "clay", "citron", "lilac", "ash"]),
+      ("Words and rules: the lettering", ["orange", "teal", "indigo", "sky", "plum", "magenta", "royal", "orchid", "pink"]),
+      ("From the pictures", ["vermilion", "oxblood", "lagoon", "sand", "peach", "night"]),
+      ("Neutrals", ["paper", "paper-shade", "ink", "ink-deep"])] %}
+  <h2>{{ title }}</h2>
+  <div class="swatches">
+    {% for n in names %}<div class="swatch"><i style="background: var(--m-{{ n }})"></i><b>{{ n }}</b><code data-var="--m-{{ n }}"></code></div>{% endfor %}
+  </div>
+  {% endfor %}
+  <h2>The six lands</h2>
+  <p>A page takes one land through <code>&lt;html data-land="..."&gt;</code>: field color, word color, rule color. Class pages pick theirs by class.</p>
+  <div class="lands">
+    {% for l in ["forest", "island", "mountain", "plains", "swamp", "wastes"] %}
+    <div class="land" data-land="{{ l }}"><div class="sample"><div class="word">{{ l }}</div><div class="small">Heading on paper</div>
+      <p>Body text sits on cream paper inside a charcoal line.</p></div></div>
+    {% endfor %}
+  </div>
+</div>
+<script>
+  for (const code of document.querySelectorAll("code[data-var]"))
+    code.textContent = code.dataset.var + " " + getComputedStyle(document.documentElement).getPropertyValue(code.dataset.var).trim();
+</script>
+{% endblock %}

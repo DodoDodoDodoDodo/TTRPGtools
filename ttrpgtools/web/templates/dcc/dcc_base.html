@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" data-land="{{ land | default('forest') }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Characters{% endblock %} :: Dungeon Crawl Classics</title>
+  <link rel="stylesheet" href="{{ asset('dcc.css') }}">
+  <script src="{{ asset('dcc_assist.js') }}" defer></script>
+  {% block head %}{% endblock %}
+</head>
+<body data-root="{{ url_for('dcc.index') }}">
+  <header class="masthead">
+    <a class="masthead-title" href="{{ url_for('dcc.index') }}" data-explain="Dungeon Crawl Classics role playing game">Dungeon Crawl Classics <span>character workshop</span></a>
+    <nav class="masthead-nav">
+      <a href="{{ url_for('dcc.index') }}">Characters</a>
+      <a href="{{ url_for('dcc.town_page') }}" id="nav-town">Town</a>
+      <a href="{{ url_for('dcc.people_page') }}">Villagers</a>
+      <a class="other" href="{{ url_for('hub') }}">&larr; Back to /TTRPG</a>
+    </nav>
+    <div class="assist-bar no-print">
+      <button type="button" id="assist-guide" title="Walk through this page step by step">Guide</button>
+      <button type="button" id="assist-explain" aria-pressed="false" title="Click this, then anything on the page">What is this?</button>
+      <button type="button" id="assist-music" aria-pressed="false" title="Background music">Music</button>
+    </div>
+  </header>
+  <main>{% block content %}{% endblock %}</main>
+</body>
+</html>

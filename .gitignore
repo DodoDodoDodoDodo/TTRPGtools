@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+content/*/private/
+data/
+content/dcc/music/
+rulebooks/*/*.txt
+!rulebooks/*/PUT_RULEBOOK_TEXT_HERE.txt
+.DS_Store
+characters/dcc/*.json

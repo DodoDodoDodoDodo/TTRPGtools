@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Character Records{% endblock %} :: Adeptus Administratum</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <header class="masthead">
+    {% block brand %}<a class="masthead-title" href="{{ url_for('dh1e.character_list') }}">ADEPTUS ADMINISTRATUM <span>&mdash; Dossier Register</span></a>{% endblock %}
+    <nav class="masthead-nav">
+      <a href="{{ url_for('hub') }}">&larr; Back to /TTRPG</a>
+    </nav>
+  </header>
+  <main class="{% block main_class %}{% endblock %}">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

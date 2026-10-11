@@ -1,0 +1,40 @@
+{% extends "dnd5e/dnd5e_base.html" %}
+{% block title %}Fight{% endblock %}
+{% block page_script %}
+<script>
+  document.documentElement.dataset.combat = {{ combat_id|tojson }};
+  window.CONDITIONS = {{ conditions|tojson }};
+</script>
+<script src="{{ url_for('static', filename='dnd5e/dnd5e_combat.js') }}" defer></script>
+{% endblock %}
+{% block page %}
+<div class="turnbar">
+  <div class="row spread">
+    <div class="row">
+      <span class="round" id="round" aria-live="polite">Not started</span>
+      <button class="button" type="button" id="start">Start</button>
+      <button class="mini-button" type="button" id="prev">Previous</button>
+      <button class="button" type="button" id="next">Next turn</button>
+      <button class="mini-button" type="button" id="undo">Undo</button>
+    </div>
+    <div class="row">
+      <button class="mini-button" type="button" id="area">Area damage</button>
+      <button class="mini-button" type="button" id="add-monster">Add monster</button>
+      <button class="mini-button" type="button" id="add-custom">Add other</button>
+      <button class="mini-button" type="button" id="more">More</button>
+    </div>
+  </div>
+  <div id="reminders" aria-live="polite"></div>
+</div>
+<div class="columns tracker">
+  <div>
+    <div id="combatants"></div>
+    <p class="keys"><kbd>N</kbd> next turn · <kbd>J</kbd> <kbd>K</kbd> move · <kbd>D</kbd> damage or heal · <kbd>X</kbd> mark for area damage · <kbd>A</kbd> add monster · <kbd>U</kbd> undo. In the HP box: <kbd>12</kbd> damage, <kbd>+12</kbd> heal, <kbd>t12</kbd> temporary HP.</p>
+    <section class="panel">
+      <div class="panel-header"><h2>Log</h2></div>
+      <ol class="log" id="log"></ol>
+    </section>
+  </div>
+  <section class="panel detail-panel" id="detail"><p class="empty-state">Select a combatant.</p></section>
+</div>
+{% endblock %}

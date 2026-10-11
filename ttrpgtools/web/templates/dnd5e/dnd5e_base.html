@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block main_class %}wide{% endblock %}
+{% block brand %}<a class="masthead-title" href="{{ url_for('dnd5e.index') }}">D&amp;D 5E <span>&mdash; Encounters</span></a>{% endblock %}
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='dnd5e/dnd5e.css') }}">
+  <script>document.documentElement.dataset.api = {{ (url_for('dnd5e.index') ~ 'api')|tojson }};</script>
+  <script src="{{ url_for('static', filename='dnd5e/dnd5e.js') }}" defer></script>
+  {% block page_script %}{% endblock %}
+{% endblock %}
+{% block content %}
+<nav class="dnd-nav" aria-label="D&amp;D 5e">
+  <a href="{{ url_for('dnd5e.index') }}">Encounters and party</a>
+  <a href="{{ url_for('dnd5e.monsters_page') }}">Monsters and import</a>
+</nav>
+{% block page %}{% endblock %}
+{% endblock %}

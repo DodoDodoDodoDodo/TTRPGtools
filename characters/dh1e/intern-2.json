@@ -1,0 +1,365 @@
+{
+  "name": "Intern",
+  "career": "Assassin",
+  "characteristics": {
+    "Agility": 38,
+    "Ballistic Skill": 35,
+    "Fellowship": 37,
+    "Intelligence": 31,
+    "Perception": 35,
+    "Strength": 29,
+    "Toughness": 25,
+    "Weapon Skill": 35,
+    "Willpower": 27
+  },
+  "xp_total": 7700,
+  "insanity_points": 0,
+  "corruption_points": 0,
+  "equipment": [],
+  "armour": {
+    "head": {
+      "item": "",
+      "ap": 4
+    },
+    "body": {
+      "item": "",
+      "ap": 4
+    },
+    "left_arm": {
+      "item": "",
+      "ap": 4
+    },
+    "right_arm": {
+      "item": "",
+      "ap": 4
+    }
+  },
+  "career_path": [
+    "Sell-Steel",
+    "Shadesman",
+    "Nighthawk",
+    "Secluse",
+    "Assassin",
+    "Death Adept"
+  ],
+  "known_disciplines": [],
+  "advance_history": [
+    {
+      "name": "Agility Simple",
+      "xp_cost": 100,
+      "type": "characteristic",
+      "order": 1,
+      "direct": false
+    },
+    {
+      "name": "Agility Intermediate",
+      "xp_cost": 250,
+      "type": "characteristic",
+      "order": 2,
+      "direct": false
+    },
+    {
+      "name": "Ballistic Skill Simple",
+      "xp_cost": 100,
+      "type": "characteristic",
+      "order": 3,
+      "direct": false
+    },
+    {
+      "name": "Ballistic Skill Intermediate",
+      "xp_cost": 250,
+      "type": "characteristic",
+      "order": 4,
+      "direct": false
+    },
+    {
+      "name": "Ballistic Skill Trained",
+      "xp_cost": 500,
+      "type": "characteristic",
+      "order": 5,
+      "direct": false
+    },
+    {
+      "name": "Basic Weapon Training (Las)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 6,
+      "direct": false
+    },
+    {
+      "name": "Catfall",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 7,
+      "direct": false
+    },
+    {
+      "name": "Climb",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 8,
+      "direct": false
+    },
+    {
+      "name": "Inquiry",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 9,
+      "direct": false
+    },
+    {
+      "name": "Sound Constitution",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 10,
+      "direct": false
+    },
+    {
+      "name": "Silent Move",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 11,
+      "direct": false
+    },
+    {
+      "name": "Pistol Training (Sp)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 12,
+      "direct": false
+    },
+    {
+      "name": "Pistol Training (Las)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 13,
+      "direct": false
+    },
+    {
+      "name": "Basic Weapon Training (Sp)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 14,
+      "direct": false
+    },
+    {
+      "name": "Acrobatics",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 15,
+      "direct": false
+    },
+    {
+      "name": "Sure Strike",
+      "xp_cost": 200,
+      "type": "talent",
+      "order": 16,
+      "direct": false
+    },
+    {
+      "name": "Acrobatics +10",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 17,
+      "direct": false
+    },
+    {
+      "name": "Deadeye Shot",
+      "xp_cost": 200,
+      "type": "talent",
+      "order": 18,
+      "direct": false
+    },
+    {
+      "name": "Silent Move +10",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 19,
+      "direct": false
+    },
+    {
+      "name": "Survival",
+      "xp_cost": 200,
+      "type": "advance",
+      "order": 20,
+      "direct": false
+    },
+    {
+      "name": "Crack Shot",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 21,
+      "direct": false
+    },
+    {
+      "name": "Concealment",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 22,
+      "direct": false
+    },
+    {
+      "name": "Lightning Reflexes",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 23,
+      "direct": false
+    },
+    {
+      "name": "Quick Draw",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 24,
+      "direct": false
+    },
+    {
+      "name": "Sleight Of Hand",
+      "xp_cost": 200,
+      "type": "advance",
+      "order": 25,
+      "direct": false
+    },
+    {
+      "name": "Mighty Shot",
+      "xp_cost": 200,
+      "type": "talent",
+      "order": 26,
+      "direct": false
+    },
+    {
+      "name": "Scrutiny",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 27,
+      "direct": false
+    },
+    {
+      "name": "Search",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 28,
+      "direct": false
+    },
+    {
+      "name": "Rapid Reload",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 29,
+      "direct": false
+    },
+    {
+      "name": "Two-Weapon Wielder (Ballistic)",
+      "xp_cost": 200,
+      "type": "talent",
+      "order": 30,
+      "direct": false
+    },
+    {
+      "name": "Dual Shot",
+      "xp_cost": 200,
+      "type": "talent",
+      "order": 31,
+      "direct": false
+    },
+    {
+      "name": "Ballistic Skill Expert",
+      "xp_cost": 750,
+      "type": "characteristic",
+      "order": 32,
+      "direct": false
+    },
+    {
+      "name": "Climb +10",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 33,
+      "direct": false
+    },
+    {
+      "name": "Common Lore (Underworld)",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 34,
+      "direct": false
+    },
+    {
+      "name": "Tracking",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 35,
+      "direct": false
+    },
+    {
+      "name": "Sprint",
+      "xp_cost": 200,
+      "type": "talent",
+      "order": 36,
+      "direct": false
+    },
+    {
+      "name": "Agility Trained",
+      "xp_cost": 500,
+      "type": "characteristic",
+      "order": 37,
+      "direct": false
+    },
+    {
+      "name": "Agility Expert",
+      "xp_cost": 500,
+      "type": "characteristic",
+      "order": 38,
+      "direct": false
+    },
+    {
+      "name": "Shadowing",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 39,
+      "direct": false
+    },
+    {
+      "name": "Security",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 40,
+      "direct": false
+    },
+    {
+      "name": "Swim",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 41,
+      "direct": false
+    },
+    {
+      "name": "Chem-Use",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 42,
+      "direct": false
+    },
+    {
+      "name": "Inquiry +10",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 43,
+      "direct": false
+    },
+    {
+      "name": "Sharpshooter",
+      "xp_cost": 200,
+      "type": "talent",
+      "order": 44,
+      "direct": false
+    }
+  ],
+  "wounds": {
+    "current": 5,
+    "max": 12
+  },
+  "fate_points": {
+    "current": 0,
+    "max": 3
+  },
+  "homeworld": "Hive World"
+}

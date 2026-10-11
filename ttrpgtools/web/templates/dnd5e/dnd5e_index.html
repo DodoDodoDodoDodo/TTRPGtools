@@ -1,0 +1,36 @@
+{% extends "dnd5e/dnd5e_base.html" %}
+{% block title %}D&amp;D 5e Encounters{% endblock %}
+{% block page_script %}<script src="{{ url_for('static', filename='dnd5e/dnd5e_index.js') }}" defer></script>{% endblock %}
+{% block page %}
+<div class="columns">
+  <div>
+    <section class="panel">
+      <div class="panel-header">
+        <h1>Encounters</h1>
+        <div class="button-row">
+          <button class="mini-button" type="button" id="new-encounter">New encounter</button>
+          <button class="mini-button" type="button" id="quick-fight">Quick fight</button>
+        </div>
+      </div>
+      <p class="hint">An encounter is a plan with a difficulty rating. A quick fight starts the tracker with the party and nothing else; add monsters as they appear.</p>
+      <div id="encounters"></div>
+    </section>
+    <section class="panel">
+      <div class="panel-header"><h2>Fights</h2></div>
+      <div id="combats"></div>
+    </section>
+  </div>
+  <section class="panel">
+    <div class="panel-header">
+      <h2>Party</h2>
+      <button class="mini-button" type="button" id="new-pc">Add by hand</button>
+    </div>
+    <form id="ddb-form" class="row">
+      <input class="grow" type="text" id="ddb-ref" placeholder="D&amp;D Beyond character URL or number" aria-label="D&amp;D Beyond character URL or number">
+      <button class="mini-button" type="submit">Import</button>
+    </form>
+    <p class="hint">The character must be set to Public on D&amp;D Beyond (Edit, Home, Character Privacy). Importing again refreshes HP and counters; values you entered here are kept.</p>
+    <div id="pcs"></div>
+  </section>
+</div>
+{% endblock %}

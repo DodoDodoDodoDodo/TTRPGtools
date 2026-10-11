@@ -1,0 +1,100 @@
+{% extends "dcc/dcc_base.html" %}
+{% block title %}Characters{% endblock %}
+{% block content %}
+  <div class="panel">
+    <div class="panel-header">
+      <h1>Characters</h1>
+      <div class="button-row">
+        <a class="button" id="create" href="{{ url_for('dcc.people_page') }}">Choose a villager to play</a>
+      </div>
+    </div>
+    <div class="debt-counter" data-explain="debt to the tax office">
+      <span class="label">The town owes the tax office</span>
+      <span class="value">{{ total_debt }}</span>
+      <span class="label">{{ town.villagers + town.characters }} living souls share it &middot; the {{ town.characters }} adventurer{{ "" if town.characters == 1 else "s" }} owe {{ party_debt }} of it</span>
+    </div>
+    {% if not content_ok %}
+      <div class="error-banner">DCC rules content is missing. Run <code>python scripts/dcc_extract.py &lt;Ref_Book.pdf&gt; &lt;core_rulebook.pdf&gt;</code> on the server.</div>
+    {% endif %}
+    {% if characters %}
+      <table class="dossier-table" id="characters">
+        <thead><tr><th>Name</th><th>Level</th><th>Occupation</th><th>HP</th><th>XP</th><th>Purse</th><th>Owes</th><th>Sleeps at</th><th>Moon</th><th>Player</th><th></th></tr></thead>
+        <tbody>
+          {% for c in characters %}
+          <tr onclick="window.location='{{ url_for('dcc.sheet', character_id=c.id) }}'">
+            <td class="dossier-name">{{ c.name }}</td>
+            <td>{{ c.level }} {{ c.class or "" }}{% if c.can_level %} <span class="level-badge" title="Enough XP for the next level">level up</span>{% endif %}</td>
+            <td>{{ c.occupation or "" }}</td>
+            <td>{{ c.hp }}</td>
+            <td class="num">{{ c.xp }}</td>
+            <td class="num">{{ c.purse }}</td>
+            <td class="num">{{ c.debt }}</td>
+            <td>{{ c.lodging }}</td>
+            <td>{{ c.moon }}</td>
+            <td>{{ c.owner or "" }}</td>
+            <td onclick="event.stopPropagation()"><div class="button-row">
+              <a class="mini-button" href="{{ url_for('dcc.build', character_id=c.id) }}">Equip and level</a>
+              {% if judge or c.owner == user %}<button class="mini-button danger" type="button" data-died="{{ c.id }}" data-name="{{ c.name }}">Record death</button>{% endif %}
+            </div></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p class="empty-state">No characters yet. Every character begins as one of the villagers: choose one to play.</p>
+    {% endif %}
+  </div>
+  {% if graveyard or fallen %}
+  <div class="panel graveyard">
+    <div class="panel-header"><h2>Graveyard</h2><span class="hint">{{ graveyard | length }} characters, {{ fallen | length }} villagers at rest</span></div>
+    {% if graveyard %}<table>
+      <thead><tr><th>Name</th><th>Was</th><th>Died</th><th>How</th></tr></thead>
+      <tbody>
+        {% for c in graveyard %}
+        <tr><td class="dossier-name"><a href="{{ url_for('dcc.sheet', character_id=c.id) }}">{{ c.name }}</a></td>
+          <td>level {{ c.level }} {{ c.class or c.occupation or "" }}</td><td>{{ c.date }}</td>
+          <td>{{ c.cause }}{% if c.epitaph %} <i>"{{ c.epitaph }}"</i>{% endif %}
+            {% if judge %}<button class="mini-button" type="button" data-revive="{{ c.id }}" data-name="{{ c.name }}">Undo</button>{% endif %}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>{% endif %}
+    {% if fallen %}
+    <h3>Villagers (the last {{ fallen | length }})</h3>
+    <table>
+      <thead><tr><th>Name</th><th>Was</th><th>Died</th><th>How</th></tr></thead>
+      <tbody>
+        {% for v in fallen %}
+        <tr><td class="dossier-name">{{ v.name }}</td><td>{{ v.race or "" }} {{ v.job }}{% if v.age is not none %}, aged {{ v.age }}{% endif %}</td>
+          <td>{% if v.year is not none %}year {{ v.year }}{% endif %}</td><td>{{ v.cause }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+  </div>
+  {% endif %}
+  <script>
+    addEventListener("DOMContentLoaded", () => {
+      // A death goes into the graveyard with its cause and an epitaph; the character leaves play.
+      for (const button of document.querySelectorAll("[data-died]")) button.addEventListener("click", async () => {
+        const cause = prompt(`How did ${button.dataset.name} die?`);
+        if (!cause) return;
+        const epitaph = prompt("An epitaph for the stone (may stay empty):") || "";
+        try { await DCC.api("POST", `character/${button.dataset.died}/op`, { op: "die", cause, epitaph }); location.reload(); }
+        catch (err) { alert(err.message); }
+      });
+      for (const button of document.querySelectorAll("[data-revive]")) button.addEventListener("click", async () => {
+        if (!confirm(`Bring ${button.dataset.name} back among the living?`)) return;
+        try { await DCC.api("POST", `character/${button.dataset.revive}/op`, { op: "revive" }); location.reload(); }
+        catch (err) { alert(err.message); }
+      });
+      DCC.guide = () => ({ id: "list", steps: [
+        { target: "#create", text: "Start here. Every character begins as one of the ninety villagers; you pick one and take them over." },
+        { target: ".debt-counter", text: "What the whole town owes the tax office. When someone dies, their debt is shared out among the living, and it grows by itself." },
+        { target: "#characters", text: "A row opens the character sheet. Equip and level opens the shop, languages and level-up. Record death moves a character to the graveyard." },
+        { target: "#assist-explain", text: "Click this, then anything on a page, and the rulebook is searched and explained for that exact thing." },
+        { target: "#assist-music", text: "Background music, on or off. The setting is remembered." },
+        { target: "#assist-guide", text: "This button starts the guide for whatever page you are on." }] });
+      DCC.tour.auto("list", DCC.guide().steps);
+    });
+  </script>
+{% endblock %}

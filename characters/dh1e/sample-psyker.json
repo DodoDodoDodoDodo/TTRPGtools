@@ -1,0 +1,371 @@
+{
+  "name": "Sample Psyker",
+  "career": "Imperial Psyker",
+  "characteristics": {
+    "Weapon Skill": 21,
+    "Ballistic Skill": 36,
+    "Strength": 22,
+    "Toughness": 36,
+    "Agility": 36,
+    "Intelligence": 26,
+    "Perception": 22,
+    "Willpower": 41,
+    "Fellowship": 22
+  },
+  "xp_total": 7750,
+  "insanity_points": 0,
+  "corruption_points": 0,
+  "equipment": [
+    "Plasma Pistol",
+    "Plasma Pistol",
+    "Bolter"
+  ],
+  "armour": {},
+  "career_path": [
+    "Sanctionite",
+    "Neonate",
+    "Aspirant",
+    "Scholar Materium",
+    "Scholar Medicae",
+    "Scholar Arcanum"
+  ],
+  "known_disciplines": [
+    "Telepathy"
+  ],
+  "advance_history": [
+    {
+      "name": "Ballistic Skill Simple",
+      "xp_cost": 250,
+      "type": "characteristic",
+      "order": 1,
+      "direct": false
+    },
+    {
+      "name": "Ballistic Skill Intermediate",
+      "xp_cost": 500,
+      "type": "characteristic",
+      "order": 2,
+      "direct": false
+    },
+    {
+      "name": "Ballistic Skill Trained",
+      "xp_cost": 750,
+      "type": "characteristic",
+      "order": 3,
+      "direct": false
+    },
+    {
+      "name": "Toughness Simple",
+      "xp_cost": 250,
+      "type": "characteristic",
+      "order": 4,
+      "direct": false
+    },
+    {
+      "name": "Willpower Simple",
+      "xp_cost": 100,
+      "type": "characteristic",
+      "order": 5,
+      "direct": false
+    },
+    {
+      "name": "Willpower Intermediate",
+      "xp_cost": 250,
+      "type": "characteristic",
+      "order": 6,
+      "direct": false
+    },
+    {
+      "name": "Willpower Trained",
+      "xp_cost": 500,
+      "type": "characteristic",
+      "order": 7,
+      "direct": false
+    },
+    {
+      "name": "Willpower Expert",
+      "xp_cost": 750,
+      "type": "characteristic",
+      "order": 8,
+      "direct": false
+    },
+    {
+      "name": "Psy Rating 1",
+      "xp_cost": 0,
+      "type": "talent",
+      "order": 9,
+      "direct": true
+    },
+    {
+      "name": "Minor Psychic Power (Healer)",
+      "xp_cost": 0,
+      "type": "talent",
+      "order": 10,
+      "direct": true
+    },
+    {
+      "name": "Minor Psychic Power (Precognition)",
+      "xp_cost": 0,
+      "type": "talent",
+      "order": 11,
+      "direct": true
+    },
+    {
+      "name": "Psy Rating 2",
+      "xp_cost": 200,
+      "type": "talent",
+      "order": 12,
+      "direct": false
+    },
+    {
+      "name": "Psy Rating 3",
+      "xp_cost": 200,
+      "type": "talent",
+      "order": 13,
+      "direct": false
+    },
+    {
+      "name": "Psychic Power (Terrify)",
+      "xp_cost": 0,
+      "type": "talent",
+      "order": 14,
+      "direct": true
+    },
+    {
+      "name": "Psy Rating 4",
+      "xp_cost": 200,
+      "type": "talent",
+      "order": 15,
+      "direct": false
+    },
+    {
+      "name": "Psychic Power (See Me Not)",
+      "xp_cost": 0,
+      "type": "talent",
+      "order": 16,
+      "direct": true
+    },
+    {
+      "name": "Psychic Power (Inspire)",
+      "xp_cost": 0,
+      "type": "talent",
+      "order": 17,
+      "direct": true
+    },
+    {
+      "name": "Psychic Power (Dominate)",
+      "xp_cost": 0,
+      "type": "talent",
+      "order": 18,
+      "direct": true
+    },
+    {
+      "name": "Psychic Power (Psychic Shriek)",
+      "xp_cost": 200,
+      "type": "talent",
+      "order": 19,
+      "direct": false
+    },
+    {
+      "name": "Psychic Power (Telepathy)",
+      "xp_cost": 200,
+      "type": "talent",
+      "order": 20,
+      "direct": false
+    },
+    {
+      "name": "Deceive",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 21,
+      "direct": false
+    },
+    {
+      "name": "Forbidden Lore (Psykers)",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 22,
+      "direct": false
+    },
+    {
+      "name": "Wrangling",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 23,
+      "direct": false
+    },
+    {
+      "name": "Literacy +10",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 24,
+      "direct": false
+    },
+    {
+      "name": "Invocation",
+      "xp_cost": 0,
+      "type": "advance",
+      "order": 25,
+      "direct": true
+    },
+    {
+      "name": "Psyniscience",
+      "xp_cost": 0,
+      "type": "advance",
+      "order": 26,
+      "direct": true
+    },
+    {
+      "name": "Invocation +10",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 27,
+      "direct": false
+    },
+    {
+      "name": "Psyniscience +10",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 28,
+      "direct": false
+    },
+    {
+      "name": "Logic",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 29,
+      "direct": false
+    },
+    {
+      "name": "Dodge +10%",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 30,
+      "direct": true
+    },
+    {
+      "name": "Search",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 31,
+      "direct": true
+    },
+    {
+      "name": "Ciphers (unspecified variant)",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 32,
+      "direct": true
+    },
+    {
+      "name": "Common Lore (unspecified topic)",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 33,
+      "direct": true
+    },
+    {
+      "name": "Demolition",
+      "xp_cost": 200,
+      "type": "advance",
+      "order": 34,
+      "direct": true
+    },
+    {
+      "name": "Command",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 35,
+      "direct": true
+    },
+    {
+      "name": "Power Well",
+      "xp_cost": 200,
+      "type": "talent",
+      "order": 36,
+      "direct": false
+    },
+    {
+      "name": "Ambidextrous",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 37,
+      "direct": false
+    },
+    {
+      "name": "Forbidden Lore (Warp)",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 38,
+      "direct": false
+    },
+    {
+      "name": "Hatred (Daemons)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 39,
+      "direct": false
+    },
+    {
+      "name": "Awareness",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 40,
+      "direct": false
+    },
+    {
+      "name": "Pistol Training (Sp)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 41,
+      "direct": false
+    },
+    {
+      "name": "Awareness +10",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 42,
+      "direct": false
+    },
+    {
+      "name": "Dodge",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 43,
+      "direct": false
+    },
+    {
+      "name": "Sprint",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 44,
+      "direct": false
+    },
+    {
+      "name": "Unremarkable",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 45,
+      "direct": false
+    },
+    {
+      "name": "Discipline Focus",
+      "xp_cost": 200,
+      "type": "talent",
+      "order": 46,
+      "direct": false
+    },
+    {
+      "name": "Corpus Conversion",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 47,
+      "direct": false
+    }
+  ],
+  "wounds": {
+    "current": 7,
+    "max": 7
+  },
+  "homeworld": "Void Born"
+}

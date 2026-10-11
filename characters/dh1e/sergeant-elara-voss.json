@@ -1,0 +1,66 @@
+{
+  "name": "Sergeant Elara Voss",
+  "career": "Guardsman",
+  "characteristics": {
+    "Weapon Skill": 45,
+    "Ballistic Skill": 52,
+    "Strength": 38,
+    "Toughness": 41,
+    "Agility": 42,
+    "Intelligence": 37,
+    "Perception": 43,
+    "Willpower": 46,
+    "Fellowship": 35
+  },
+  "xp_total": 6200,
+  "insanity_points": 0,
+  "corruption_points": 0,
+  "equipment": [],
+  "armour": {},
+  "career_path": [
+    "Conscript",
+    "Guard",
+    "Armsman",
+    "Sergeant",
+    "Veteran"
+  ],
+  "advance_history": [
+    {
+      "name": "Awareness",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 1
+    },
+    {
+      "name": "Basic Weapon Training (Bolt)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 2
+    },
+    {
+      "name": "Basic Weapon Training (Flame)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 3
+    },
+    {
+      "name": "Basic Weapon Training (Las)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 4
+    },
+    {
+      "name": "Basic Weapon Training (Launcher)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 5
+    },
+    {
+      "name": "Basic Weapon Training (Primitive)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 6
+    }
+  ],
+  "homeworld": "Imperial World"
+}

@@ -1,0 +1,10 @@
+.git
+__pycache__
+*.pyc
+.pytest_cache
+.DS_Store
+characters/
+data/
+content/
+rulebooks/
+docs/

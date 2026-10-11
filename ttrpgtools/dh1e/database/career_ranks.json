@@ -1,0 +1,1225 @@
+{
+  "guardsman": {
+    "display_name": "Guardsman",
+    "ranks": {
+      "conscript": {
+        "name": "Conscript",
+        "previous": [],
+        "next": [
+          "guard"
+        ],
+        "xp_range": [
+          0,
+          499
+        ]
+      },
+      "guard": {
+        "name": "Guard",
+        "previous": [
+          "conscript"
+        ],
+        "next": [
+          "armsman"
+        ],
+        "xp_range": [
+          500,
+          999
+        ]
+      },
+      "armsman": {
+        "name": "Armsman",
+        "previous": [
+          "guard"
+        ],
+        "next": [
+          "sergeant"
+        ],
+        "xp_range": [
+          1000,
+          1999
+        ]
+      },
+      "sergeant": {
+        "name": "Sergeant",
+        "previous": [
+          "armsman"
+        ],
+        "next": [
+          "veteran"
+        ],
+        "xp_range": [
+          2000,
+          2999
+        ]
+      },
+      "veteran": {
+        "name": "Veteran",
+        "previous": [
+          "sergeant"
+        ],
+        "next": [
+          "assault_veteran",
+          "lieutenant",
+          "scout"
+        ],
+        "xp_range": [
+          3000,
+          5999
+        ]
+      },
+      "assault_veteran": {
+        "name": "Assault Veteran",
+        "previous": [
+          "veteran"
+        ],
+        "next": [
+          "shock_trooper"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "lieutenant": {
+        "name": "Lieutenant",
+        "previous": [
+          "veteran"
+        ],
+        "next": [
+          "captain"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "scout": {
+        "name": "Scout",
+        "previous": [
+          "veteran"
+        ],
+        "next": [
+          "marksman"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "shock_trooper": {
+        "name": "Shock Trooper",
+        "previous": [
+          "assault_veteran"
+        ],
+        "next": [
+          "storm_trooper"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "captain": {
+        "name": "Captain",
+        "previous": [
+          "lieutenant"
+        ],
+        "next": [
+          "commander"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "marksman": {
+        "name": "Marksman",
+        "previous": [
+          "scout"
+        ],
+        "next": [
+          "sniper"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "storm_trooper": {
+        "name": "Storm Trooper",
+        "previous": [
+          "shock_trooper"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      },
+      "commander": {
+        "name": "Commander",
+        "previous": [
+          "captain"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      },
+      "sniper": {
+        "name": "Sniper",
+        "previous": [
+          "marksman"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      }
+    }
+  },
+  "adept": {
+    "display_name": "Adept",
+    "ranks": {
+      "archivist": {
+        "name": "Archivist",
+        "previous": [],
+        "next": [
+          "scrivener"
+        ],
+        "xp_range": [
+          0,
+          499
+        ]
+      },
+      "scrivener": {
+        "name": "Scrivener",
+        "previous": [
+          "archivist"
+        ],
+        "next": [
+          "scribe"
+        ],
+        "xp_range": [
+          500,
+          999
+        ]
+      },
+      "scribe": {
+        "name": "Scribe",
+        "previous": [
+          "scrivener"
+        ],
+        "next": [
+          "inditor",
+          "chirurgeon"
+        ],
+        "xp_range": [
+          1000,
+          1999
+        ]
+      },
+      "inditor": {
+        "name": "Inditor",
+        "previous": [
+          "scribe"
+        ],
+        "next": [
+          "scholar"
+        ],
+        "xp_range": [
+          2000,
+          2999
+        ]
+      },
+      "chirurgeon": {
+        "name": "Chirurgeon",
+        "previous": [
+          "scribe"
+        ],
+        "next": [
+          "scholar"
+        ],
+        "xp_range": [
+          2000,
+          2999
+        ]
+      },
+      "scholar": {
+        "name": "Scholar",
+        "previous": [
+          "inditor",
+          "chirurgeon"
+        ],
+        "next": [
+          "lexographer",
+          "comptroller"
+        ],
+        "xp_range": [
+          3000,
+          5999
+        ]
+      },
+      "lexographer": {
+        "name": "Lexographer",
+        "previous": [
+          "scholar"
+        ],
+        "next": [
+          "loremaster_lexographer"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "comptroller": {
+        "name": "Comptroller",
+        "previous": [
+          "scholar"
+        ],
+        "next": [
+          "logister_comptroller"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "loremaster_lexographer": {
+        "name": "Loremaster Lexographer",
+        "previous": [
+          "lexographer"
+        ],
+        "next": [
+          "loremaster_magister"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "logister_comptroller": {
+        "name": "Logister Comptroller",
+        "previous": [
+          "comptroller"
+        ],
+        "next": [
+          "sage_logister"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "loremaster_magister": {
+        "name": "Loremaster Magister",
+        "previous": [
+          "loremaster_lexographer"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      },
+      "sage_logister": {
+        "name": "Sage Logister",
+        "previous": [
+          "logister_comptroller"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      }
+    }
+  },
+  "arbitrator": {
+    "display_name": "Arbitrator",
+    "ranks": {
+      "trooper": {
+        "name": "Trooper",
+        "previous": [],
+        "next": [
+          "enforcer"
+        ],
+        "xp_range": [
+          0,
+          499
+        ]
+      },
+      "enforcer": {
+        "name": "Enforcer",
+        "previous": [
+          "trooper"
+        ],
+        "next": [
+          "regulator"
+        ],
+        "xp_range": [
+          500,
+          999
+        ]
+      },
+      "regulator": {
+        "name": "Regulator",
+        "previous": [
+          "enforcer"
+        ],
+        "next": [
+          "investigator"
+        ],
+        "xp_range": [
+          1000,
+          1999
+        ]
+      },
+      "investigator": {
+        "name": "Investigator",
+        "previous": [
+          "regulator"
+        ],
+        "next": [
+          "arbitrator"
+        ],
+        "xp_range": [
+          2000,
+          2999
+        ]
+      },
+      "arbitrator": {
+        "name": "Arbitrator",
+        "previous": [
+          "investigator"
+        ],
+        "next": [
+          "proctor",
+          "intelligencer"
+        ],
+        "xp_range": [
+          3000,
+          5999
+        ]
+      },
+      "proctor": {
+        "name": "Proctor",
+        "previous": [
+          "arbitrator"
+        ],
+        "next": [
+          "marshal"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "intelligencer": {
+        "name": "Intelligencer",
+        "previous": [
+          "arbitrator"
+        ],
+        "next": [
+          "magistrate"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "marshal": {
+        "name": "Marshal",
+        "previous": [
+          "proctor"
+        ],
+        "next": [
+          "lord_marshal"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "magistrate": {
+        "name": "Magistrate",
+        "previous": [
+          "intelligencer"
+        ],
+        "next": [
+          "justicar"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "lord_marshal": {
+        "name": "Lord Marshal",
+        "previous": [
+          "marshal"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      },
+      "justicar": {
+        "name": "Justicar",
+        "previous": [
+          "magistrate"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      }
+    }
+  },
+  "assassin": {
+    "display_name": "Assassin",
+    "ranks": {
+      "sell_steel": {
+        "name": "Sell-Steel",
+        "previous": [],
+        "next": [
+          "shadesman"
+        ],
+        "xp_range": [
+          0,
+          499
+        ]
+      },
+      "shadesman": {
+        "name": "Shadesman",
+        "previous": [
+          "sell_steel"
+        ],
+        "next": [
+          "nighthawk"
+        ],
+        "xp_range": [
+          500,
+          999
+        ]
+      },
+      "nighthawk": {
+        "name": "Nighthawk",
+        "previous": [
+          "shadesman"
+        ],
+        "next": [
+          "secluse"
+        ],
+        "xp_range": [
+          1000,
+          1999
+        ]
+      },
+      "secluse": {
+        "name": "Secluse",
+        "previous": [
+          "nighthawk"
+        ],
+        "next": [
+          "assassin"
+        ],
+        "xp_range": [
+          2000,
+          2999
+        ]
+      },
+      "assassin": {
+        "name": "Assassin",
+        "previous": [
+          "secluse"
+        ],
+        "next": [
+          "death_adept",
+          "freeblade"
+        ],
+        "xp_range": [
+          3000,
+          5999
+        ]
+      },
+      "death_adept": {
+        "name": "Death Adept",
+        "previous": [
+          "assassin"
+        ],
+        "next": [
+          "nihilator"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "freeblade": {
+        "name": "Freeblade",
+        "previous": [
+          "assassin"
+        ],
+        "next": [
+          "assassin_at_marque"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "nihilator": {
+        "name": "Nihilator",
+        "previous": [
+          "death_adept"
+        ],
+        "next": [
+          "imperator_mortis"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "assassin_at_marque": {
+        "name": "Assassin at Marque",
+        "previous": [
+          "freeblade"
+        ],
+        "next": [
+          "assassin_palatine"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "imperator_mortis": {
+        "name": "Imperator-Mortis",
+        "previous": [
+          "nihilator"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      },
+      "assassin_palatine": {
+        "name": "Assassin Palatine",
+        "previous": [
+          "assassin_at_marque"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      }
+    }
+  },
+  "cleric": {
+    "display_name": "Cleric",
+    "ranks": {
+      "novice": {
+        "name": "Novice",
+        "previous": [],
+        "next": [
+          "initiate"
+        ],
+        "xp_range": [
+          0,
+          499
+        ]
+      },
+      "initiate": {
+        "name": "Initiate",
+        "previous": [
+          "novice"
+        ],
+        "next": [
+          "priest"
+        ],
+        "xp_range": [
+          500,
+          999
+        ]
+      },
+      "priest": {
+        "name": "Priest",
+        "previous": [
+          "initiate"
+        ],
+        "next": [
+          "preacher"
+        ],
+        "xp_range": [
+          1000,
+          1999
+        ]
+      },
+      "preacher": {
+        "name": "Preacher",
+        "previous": [
+          "priest"
+        ],
+        "next": [
+          "cleric"
+        ],
+        "xp_range": [
+          2000,
+          2999
+        ]
+      },
+      "cleric": {
+        "name": "Cleric",
+        "previous": [
+          "preacher"
+        ],
+        "next": [
+          "confessor",
+          "exorcist"
+        ],
+        "xp_range": [
+          3000,
+          5999
+        ]
+      },
+      "confessor": {
+        "name": "Confessor",
+        "previous": [
+          "cleric"
+        ],
+        "next": [
+          "bishop"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "exorcist": {
+        "name": "Exorcist",
+        "previous": [
+          "cleric"
+        ],
+        "next": [
+          "zealot"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "bishop": {
+        "name": "Bishop",
+        "previous": [
+          "confessor"
+        ],
+        "next": [
+          "hierophant"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "zealot": {
+        "name": "Zealot",
+        "previous": [
+          "exorcist"
+        ],
+        "next": [
+          "redemptionist"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "hierophant": {
+        "name": "Hierophant",
+        "previous": [
+          "bishop"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      },
+      "redemptionist": {
+        "name": "Redemptionist",
+        "previous": [
+          "zealot"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      }
+    }
+  },
+  "imperial_psyker": {
+    "display_name": "Imperial Psyker",
+    "ranks": {
+      "sanctionite": {
+        "name": "Sanctionite",
+        "previous": [],
+        "next": [
+          "neonate"
+        ],
+        "xp_range": [
+          0,
+          499
+        ]
+      },
+      "neonate": {
+        "name": "Neonate",
+        "previous": [
+          "sanctionite"
+        ],
+        "next": [
+          "aspirant"
+        ],
+        "xp_range": [
+          500,
+          999
+        ]
+      },
+      "aspirant": {
+        "name": "Aspirant",
+        "previous": [
+          "neonate"
+        ],
+        "next": [
+          "savant_militant",
+          "scholar_materium"
+        ],
+        "xp_range": [
+          1000,
+          1999
+        ]
+      },
+      "savant_militant": {
+        "name": "Savant Militant",
+        "previous": [
+          "aspirant"
+        ],
+        "next": [
+          "savant_warrant"
+        ],
+        "xp_range": [
+          2000,
+          2999
+        ]
+      },
+      "scholar_materium": {
+        "name": "Scholar Materium",
+        "previous": [
+          "aspirant"
+        ],
+        "next": [
+          "scholar_medicae"
+        ],
+        "xp_range": [
+          2000,
+          2999
+        ]
+      },
+      "savant_warrant": {
+        "name": "Savant Warrant",
+        "previous": [
+          "savant_militant"
+        ],
+        "next": [
+          "lieutenant_savant"
+        ],
+        "xp_range": [
+          3000,
+          5999
+        ]
+      },
+      "scholar_medicae": {
+        "name": "Scholar Medicae",
+        "previous": [
+          "scholar_materium"
+        ],
+        "next": [
+          "scholar_arcanum"
+        ],
+        "xp_range": [
+          3000,
+          5999
+        ]
+      },
+      "lieutenant_savant": {
+        "name": "Lieutenant-Savant",
+        "previous": [
+          "savant_warrant"
+        ],
+        "next": [
+          "savant_adjunct"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "scholar_arcanum": {
+        "name": "Scholar Arcanum",
+        "previous": [
+          "scholar_medicae"
+        ],
+        "next": [
+          "scholar_obscurus"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "savant_adjunct": {
+        "name": "Savant Adjunct",
+        "previous": [
+          "lieutenant_savant"
+        ],
+        "next": [
+          "preceptor_savant"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "scholar_obscurus": {
+        "name": "Scholar Obscurus",
+        "previous": [
+          "scholar_arcanum"
+        ],
+        "next": [
+          "scholar_empyrean"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "preceptor_savant": {
+        "name": "Preceptor-Savant",
+        "previous": [
+          "savant_adjunct"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      },
+      "scholar_empyrean": {
+        "name": "Scholar Empyrean",
+        "previous": [
+          "scholar_obscurus"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      }
+    }
+  },
+  "scum": {
+    "display_name": "Scum",
+    "ranks": {
+      "dreg": {
+        "name": "Dreg",
+        "previous": [],
+        "next": [
+          "outcast"
+        ],
+        "xp_range": [
+          0,
+          499
+        ]
+      },
+      "outcast": {
+        "name": "Outcast",
+        "previous": [
+          "dreg"
+        ],
+        "next": [
+          "outlaw"
+        ],
+        "xp_range": [
+          500,
+          999
+        ]
+      },
+      "outlaw": {
+        "name": "Outlaw",
+        "previous": [
+          "outcast"
+        ],
+        "next": [
+          "renegade"
+        ],
+        "xp_range": [
+          1000,
+          1999
+        ]
+      },
+      "renegade": {
+        "name": "Renegade",
+        "previous": [
+          "outlaw"
+        ],
+        "next": [
+          "rogue"
+        ],
+        "xp_range": [
+          2000,
+          2999
+        ]
+      },
+      "rogue": {
+        "name": "Rogue",
+        "previous": [
+          "renegade"
+        ],
+        "next": [
+          "cutter",
+          "fixer"
+        ],
+        "xp_range": [
+          3000,
+          5999
+        ]
+      },
+      "cutter": {
+        "name": "Cutter",
+        "previous": [
+          "rogue"
+        ],
+        "next": [
+          "stubjack"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "fixer": {
+        "name": "Fixer",
+        "previous": [
+          "rogue"
+        ],
+        "next": [
+          "shark"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "stubjack": {
+        "name": "Stubjack",
+        "previous": [
+          "cutter"
+        ],
+        "next": [
+          "gang_lord"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "shark": {
+        "name": "Shark",
+        "previous": [
+          "fixer"
+        ],
+        "next": [
+          "charlatan"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "gang_lord": {
+        "name": "Gang Lord",
+        "previous": [
+          "stubjack"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      },
+      "charlatan": {
+        "name": "Charlatan",
+        "previous": [
+          "shark"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      }
+    }
+  },
+  "tech_priest": {
+    "display_name": "Tech-Priest",
+    "ranks": {
+      "technographer": {
+        "name": "Technographer",
+        "previous": [],
+        "next": [
+          "mech_wright"
+        ],
+        "xp_range": [
+          0,
+          499
+        ]
+      },
+      "mech_wright": {
+        "name": "Mech-Wright",
+        "previous": [
+          "technographer"
+        ],
+        "next": [
+          "electro_priest"
+        ],
+        "xp_range": [
+          500,
+          999
+        ]
+      },
+      "electro_priest": {
+        "name": "Electro-Priest",
+        "previous": [
+          "mech_wright"
+        ],
+        "next": [
+          "engineer"
+        ],
+        "xp_range": [
+          1000,
+          1999
+        ]
+      },
+      "engineer": {
+        "name": "Engineer",
+        "previous": [
+          "electro_priest"
+        ],
+        "next": [
+          "tech_priest"
+        ],
+        "xp_range": [
+          2000,
+          2999
+        ]
+      },
+      "tech_priest": {
+        "name": "Tech-Priest",
+        "previous": [
+          "engineer"
+        ],
+        "next": [
+          "technomancer",
+          "mech_deacon"
+        ],
+        "xp_range": [
+          3000,
+          5999
+        ]
+      },
+      "technomancer": {
+        "name": "Technomancer",
+        "previous": [
+          "tech_priest"
+        ],
+        "next": [
+          "cyber_seer"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "mech_deacon": {
+        "name": "Mech-Deacon",
+        "previous": [
+          "tech_priest"
+        ],
+        "next": [
+          "omniprophet"
+        ],
+        "xp_range": [
+          6000,
+          7999
+        ]
+      },
+      "cyber_seer": {
+        "name": "Cyber-Seer",
+        "previous": [
+          "technomancer"
+        ],
+        "next": [
+          "magos"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "omniprophet": {
+        "name": "Omniprophet",
+        "previous": [
+          "mech_deacon"
+        ],
+        "next": [
+          "magos_errant"
+        ],
+        "xp_range": [
+          8000,
+          9999
+        ]
+      },
+      "magos": {
+        "name": "Magos",
+        "previous": [
+          "cyber_seer"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      },
+      "magos_errant": {
+        "name": "Magos Errant",
+        "previous": [
+          "omniprophet"
+        ],
+        "next": [],
+        "xp_range": [
+          10000,
+          14999
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{% extends "dnd5e/dnd5e_base.html" %}
+{% block title %}Encounter{% endblock %}
+{% block page_script %}
+<script>document.documentElement.dataset.encounter = {{ encounter_id|tojson }};</script>
+<script src="{{ url_for('static', filename='dnd5e/dnd5e_encounter.js') }}" defer></script>
+{% endblock %}
+{% block page %}
+<section class="panel">
+  <div class="row spread">
+    <input class="grow" type="text" id="name" maxlength="80" aria-label="Encounter name">
+    <label class="hint">Party state
+      <select id="resources">
+        <option value="fresh">Fresh</option>
+        <option value="normal">Normal</option>
+        <option value="depleted">Depleted</option>
+      </select>
+    </label>
+    <button class="button" type="button" id="run">Run this encounter</button>
+  </div>
+</section>
+<div class="columns">
+  <div>
+    <section class="panel">
+      <div class="panel-header"><h2>Difficulty</h2></div>
+      <div id="rating"><p class="empty-state">Add characters and monsters.</p></div>
+    </section>
+    <section class="panel">
+      <div class="panel-header"><h2>Monsters in this encounter</h2></div>
+      <div id="plan"></div>
+    </section>
+    <section class="panel">
+      <div class="panel-header"><h2>Party</h2></div>
+      <div id="party"></div>
+    </section>
+    <section class="panel">
+      <div class="panel-header"><h2>Notes</h2></div>
+      <textarea id="notes" rows="4" style="width:100%" aria-label="Notes"></textarea>
+    </section>
+  </div>
+  <section class="panel">
+    <div class="panel-header"><h2>Add monsters</h2></div>
+    <div id="picker"></div>
+  </section>
+</div>
+{% endblock %}

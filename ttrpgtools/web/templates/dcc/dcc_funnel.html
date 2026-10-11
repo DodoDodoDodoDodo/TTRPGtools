@@ -1,0 +1,51 @@
+{% extends "dcc/dcc_base.html" %}
+{% block title %}DCC Funnel{% endblock %}
+{% block content %}
+  <div class="panel">
+    <div class="panel-header"><h1>0-Level Party</h1></div>
+    <p class="hint">Each character: 3d6 in order, d100 occupation with weapon and trade goods, d30 birth augur, 1d4 hp, 5d12 cp, one d24 item. Nothing is saved until you tick the survivors and keep them.</p>
+    <form method="post" action="{{ url_for('dcc.funnel') }}" class="form-grid">
+      <label>How many <input type="number" name="count" min="1" max="20" value="{{ request.form.get('count', 4) }}"></label>
+      <label>Name prefix <input type="text" name="prefix" value="{{ request.form.get('prefix', '') }}" placeholder="Peasant"></label>
+      <label>Alignment
+        <select name="alignment">{% for a in alignments %}<option value="{{ a }}" {% if request.form.get('alignment') == a %}selected{% endif %}>{{ a }}</option>{% endfor %}</select>
+      </label>
+      <label>Seed <span class="hint">optional, same seed gives the same party</span><input type="text" name="seed" value="{{ request.form.get('seed', '') }}"></label>
+      <button type="submit" class="button">Roll</button>
+    </form>
+  </div>
+
+  {% if party %}
+  <form method="post" action="{{ url_for('dcc.funnel_keep') }}">
+    <div class="panel">
+      <div class="panel-header"><h2>Rolled</h2><button type="submit" class="button">Keep ticked characters</button></div>
+      <div class="funnel-grid">
+        {% for p in party %}
+        {% set c = p.character %}{% set v = p.view %}
+        <div class="funnel-card">
+          <label class="keep"><input type="checkbox" name="keep" value='{{ p.json }}' checked> keep</label>
+          <input type="text" name="name_{{ c.name }}" value="{{ c.name }}" class="choice-input-wide">
+          <div class="stat-grid small">
+            {% for a in ['strength','agility','stamina','personality','intelligence','luck'] %}
+            <div class="stat-box"><span class="label">{{ a[:3] }}</span><span class="value">{{ c.abilities[a] }}</span><span class="mod">{{ v.mods_text[a] }}</span></div>
+            {% endfor %}
+          </div>
+          <dl class="kv">
+            <dt>Occupation</dt><dd>{{ c.occupation.detail or c.occupation.occupation }} <span class="hint">({{ c.occupation.rolled }})</span></dd>
+            <dt>Weapon</dt><dd>{{ c.occupation.weapon }}{% if v.weapons %} <span class="hint">{{ v.weapons[0].damage }}</span>{% endif %}</dd>
+            <dt>Trade goods</dt><dd>{{ c.occupation.trade_goods or "—" }}</dd>
+            <dt>Carries</dt><dd>{{ c.equipment | join(", ") }}{% if c.armor %}, wearing {{ c.armor | lower }}{% endif %}{% if c.shield %}, shield{% endif %}</dd>
+            <dt>Augur</dt><dd>{{ v.augur_effect }}</dd>
+            <dt>HP</dt><dd>{{ c.hp_max }}</dd>
+            <dt>AC</dt><dd>{{ v.ac }}</dd>
+            <dt>Saves</dt><dd>Ref {{ v.saves_text.reflex }} / Fort {{ v.saves_text.fortitude }} / Will {{ v.saves_text.willpower }}</dd>
+            <dt>Coins</dt><dd>{% if c.coins.gp %}{{ c.coins.gp }} gp, {% endif %}{% if c.coins.sp %}{{ c.coins.sp }} sp, {% endif %}{{ c.coins.cp }} cp</dd>
+            <dt>Speed</dt><dd>{{ v.speed }}'{% if v.race %} ({{ v.race }}){% endif %}</dd>
+          </dl>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </form>
+  {% endif %}
+{% endblock %}

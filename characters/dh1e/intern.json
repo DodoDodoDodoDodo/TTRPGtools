@@ -1,0 +1,25 @@
+{
+  "name": "Intern",
+  "career": "Adept",
+  "characteristics": {
+    "Agility": 0,
+    "Ballistic Skill": 0,
+    "Fellowship": 0,
+    "Intelligence": 0,
+    "Perception": 0,
+    "Strength": 0,
+    "Toughness": 0,
+    "Weapon Skill": 0,
+    "Willpower": 0
+  },
+  "xp_total": 7500,
+  "insanity_points": 0,
+  "corruption_points": 0,
+  "equipment": [],
+  "armour": {},
+  "career_path": [
+    "Archivist"
+  ],
+  "known_disciplines": [],
+  "advance_history": []
+}

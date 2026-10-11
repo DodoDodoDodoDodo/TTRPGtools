@@ -1,0 +1,65 @@
+{
+  "name": "Brother Ansel",
+  "career": "Adept",
+  "characteristics": {
+    "Weapon Skill": 25,
+    "Ballistic Skill": 27,
+    "Strength": 24,
+    "Toughness": 30,
+    "Agility": 28,
+    "Intelligence": 44,
+    "Perception": 39,
+    "Willpower": 38,
+    "Fellowship": 32
+  },
+  "xp_total": 2500,
+  "insanity_points": 0,
+  "corruption_points": 0,
+  "equipment": [],
+  "armour": {},
+  "career_path": [
+    "Archivist",
+    "Scrivener",
+    "Scribe",
+    "Chirurgeon"
+  ],
+  "advance_history": [
+    {
+      "name": "Awareness",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 1
+    },
+    {
+      "name": "Basic Weapon Training (Primitive)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 2
+    },
+    {
+      "name": "Common Lore (Administratum)",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 3
+    },
+    {
+      "name": "Drive (Ground Vehicle)",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 4
+    },
+    {
+      "name": "Drive (Ground Vehicle) +10",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 5
+    },
+    {
+      "name": "Drive (Hover Vehicle)",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 6
+    }
+  ],
+  "homeworld": "Imperial World"
+}

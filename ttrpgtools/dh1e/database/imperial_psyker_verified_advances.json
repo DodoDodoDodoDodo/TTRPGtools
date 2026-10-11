@@ -1,0 +1,2957 @@
+[
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Blather +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Blather"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Ciphers (Occult) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Ciphers (Occult)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Dodge +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Dodge"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Forbidden Lore (Psykers) +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Forbidden Lore (Psykers) +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Forbidden Lore (Warp) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Forbidden Lore (Warp)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Forbidden Lore (Xenos)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Interrogation",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Invocation +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Invocation +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Scholastic Lore (Astromancy) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Scholastic Lore (Astromancy)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Scholastic Lore (Cryptology)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Scholastic Lore (Imperial Creed) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Scholastic Lore (Imperial Creed)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Scholastic Lore (Legend) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Scholastic Lore (Legend)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Secret Tongue (Acolyte) +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Secret Tongue (Acolyte) +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Speak Language (High Gothic) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Speak Language (High Gothic)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Tech-Use +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Tech-Use +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Trade (Cartographer)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Trade (Copyist) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Trade (Copyist)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Crack Shot",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "BS 40"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Foresight",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Int 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Hard Target",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Ag 40"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Mimic",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Minor Psychic Power",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": true
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Peer (Void Born)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Fel 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Power Well",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Psy Rating 2"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Psychic Power",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": true
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Resistance (Psychic Powers)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Strong Minded",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "WP 30",
+      "Resistance (Psychic Powers)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Discipline Focus (Choose One)",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Psy Rating 3"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Favoured By The Warp",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "WP 35"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Arcanum",
+    "name": "Forbidden Lore (Heresy)",
+    "cost": 300,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Awareness +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Awareness +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Common Lore (Adeptes Arbites)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Common Lore (Ecclesiarchy)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Common Lore (Imperial Guard) +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Common Lore (Imperial Guard) +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Common Lore (Tech) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Common Lore (Tech)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Concealment",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Dodge +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Dodge +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Evaluate",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Intimidate",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Logic +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Logic"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Medicae",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Scholastic Lore (Judgement)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Scholastic Lore (Legend) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Scholastic Lore (Legend)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Scholastic Lore (Tactica Imperialis) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Scholastic Lore (Tactica Imperialis)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Secret Tongue (Military) +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Secret Tongue (Military) +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Speak Language (High Gothic)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Trade (Valet)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Charm +10",
+    "cost": 200,
+    "type": "advance",
+    "prerequisites": [
+      "Charm"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Forbidden Lore (Psykers) +10",
+    "cost": 200,
+    "type": "advance",
+    "prerequisites": [
+      "Forbidden Lore (Psykers)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Invocation +10",
+    "cost": 200,
+    "type": "advance",
+    "prerequisites": [
+      "Invocation"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Sound Constitution",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Command +10",
+    "cost": 300,
+    "type": "advance",
+    "prerequisites": [
+      "Command"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Literacy +10",
+    "cost": 300,
+    "type": "advance",
+    "prerequisites": [
+      "Literacy"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Scrutiny +10",
+    "cost": 300,
+    "type": "advance",
+    "prerequisites": [
+      "Scrutiny"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Pistol Training (Plasma)",
+    "cost": 300,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Adjunct",
+    "name": "Power Well",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Psy Rating 2"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Ciphers (Occult) +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Ciphers (Occult) +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Common Lore (Tech) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Common Lore (Tech)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Forbidden Lore (Mutants) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Forbidden Lore (Mutants)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Inquiry +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Inquiry +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Lip Reading",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Psyniscience +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Psyniscience +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Scholastic Lore (Archaic) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Scholastic Lore (Archaic)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Scholastic Lore (Heraldry) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Scholastic Lore (Heraldry)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Scholastic Lore (Legend) +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Scholastic Lore (Legend) +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Scholastic Lore (Philosophy)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Scrutiny +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Scrutiny"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Trade (Soothsayer) +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Trade (Soothsayer) +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Mental Fortress",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "WP 50",
+      "Strong Minded"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Minor Psychic Power",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": true
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Psychic Power",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": true
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Resistance (Fear)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Forbidden Lore (Cults)",
+    "cost": 200,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Forbidden Lore (Inquisition)",
+    "cost": 200,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Dark Soul",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Discipline Focus (Choose One)",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Psy Rating 3"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Melee Weapon Training (Chain)",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Melee Weapon Training (Power)",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Peer (Inquisition)",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Fel 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Psy Rating 5",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Psy Rating 4"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Sound Constitution",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Forbidden Lore (Daemonology)",
+    "cost": 300,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Obscurus",
+    "name": "Forbidden Lore (Heresy) +10",
+    "cost": 300,
+    "type": "advance",
+    "prerequisites": [
+      "Forbidden Lore (Heresy)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Barter +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Barter"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Blather +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Blather"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Charm",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Chem-Use +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Chem-Use +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Ciphers (War Cant)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Command",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Common Lore (Administratum)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Common Lore (Imperial Guard) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Common Lore (Imperial Guard)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Common Lore (War) +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Common Lore (War) +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Deceive +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Deceive"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Demolition +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Demolition"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Logic",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Navigation (Surface) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Navigation (Surface)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Pilot (Military Craft) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Pilot (Military Craft)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Scholastic Lore (Tactica Imperialis)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Scrutiny",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Secret Tongue (Military) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Secret Tongue (Military)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Berserk Charge",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Blademaster",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "WS 30",
+      "Melee Weapon Training (any)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Disarm",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Ag 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Furious Assault",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "WS 35"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Jaded",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "WP 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Melee Weapon Training (Power)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Minor Psychic Power",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": true
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Precise Blow",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "WS 30",
+      "Sure Strike"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Resistance (Fear)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Sure Strike",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "WS 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "True Grit",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "T 40"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Interrogation",
+    "cost": 200,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Discipline Focus (Choose One)",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Psy Rating 3"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Exotic Weapon Training (Needle Pistol)",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Peer (Military)",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Fel 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Psy Rating 4",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Psy Rating 3"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Lieutenant-Savant",
+    "name": "Sound Constitution",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Chem-Use +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Chem-Use"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Ciphers (Occult)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Common Lore (Tech)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Evaluate",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Forbidden Lore (Psykers) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Forbidden Lore (Psykers)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Invocation +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Invocation"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Logic",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Medicae",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Psyniscience +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Psyniscience"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Scholastic Lore (Astromancy)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Scholastic Lore (Chymistry)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Secret Tongue (Acolyte) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Secret Tongue (Acolyte)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Speak Language (High Gothic)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Tech-Use +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Tech-Use"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Trade (Prospector)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Trade (Wright)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Binary Chatter",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Catfall",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Ag 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Deadeye Shot",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "BS 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Iron Jaw",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "T 40"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Minor Psychic Power",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": true
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Peer (Astropaths)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Fel 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Sprint",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Technical Knock",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Int 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Common Lore (Machine Cult)",
+    "cost": 200,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Power Well",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Psy Rating 2"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Psy Rating 3",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Psy Rating 2"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Materium",
+    "name": "Psychic Power",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Awareness +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Awareness +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Barter",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Carouse",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Chem-Use +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Chem-Use +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Deceive",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Forbidden Lore (Mutants)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Inquiry +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Inquiry"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Literacy +20",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Literacy +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Medicae +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Medicae"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Scholastic Lore (Archaic)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Scholastic Lore (Chymistry) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Scholastic Lore (Chymistry)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Scholastic Lore (Imperial Creed)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Scrutiny",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Trade (Agri)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Trade (Apothecary)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Trade (Embalmer)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Crippling Strike",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "WS 50"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Crushing Blow",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "S 40"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Decadence",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "T 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Jaded",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "WP 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Master Chirurgeon",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Medicae +10"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Minor Psychic Power",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": true
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Psychic Power",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": true
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Street Fighting",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Two-Weapon Wielder (Ballistic)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Two-Weapon Wielder (Melee)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Corpus Conversion",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Psy Rating 2"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Discipline Focus",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Psy Rating 3"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Melee Weapon Training (Shock)",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Psy Rating 4",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Psy Rating 3"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Scholar Medicae",
+    "name": "Sound Constitution",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Barter",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Carouse",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Chem-Use +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Chem-Use"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Climb",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Common Lore (War)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Dodge +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Dodge"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Drive (Ground Vehicle) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Drive (Ground Vehicle)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Drive (Hover Vehicle)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Drive (Walker)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Logic",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Navigation (Surface)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Survival",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Trade (Cook)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Basic Weapon Training (Flame)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Cleanse And Purify",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Basic Weapon Training (Flame)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Corpus Conversion",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Psy Rating 2"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Crippling Strike",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "WS 50"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Crushing Blow",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "S 40"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Frenzy",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Hard Target",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Ag 40"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Iron Jaw",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "T 40"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Minor Psychic Power",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": true
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Resistance (Cold)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Resistance (Heat)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Street Fighting",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Power Well",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Psy Rating 2"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Psy Rating 3",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Psy Rating 2"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Psychic Power",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Militant",
+    "name": "Sound Constitution",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Carouse +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Carouse"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Ciphers (War Cant)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Common Lore (Imperial Guard)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Common Lore (Tech)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Common Lore (War) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Common Lore (War)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Drive (Hover Vehicle) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Drive (Hover Vehicle)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Drive (Walker) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Drive (Walker)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Gamble",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Inquiry +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Inquiry"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Pilot (Military Craft)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Search",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Secret Tongue (Military)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Tech-Use +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Tech-Use"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Trade (Cook) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Trade (Cook)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Trade (Technomat)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Basic Weapon Training (Bolt)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Battle Rage",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Frenzy"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Crack Shot",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "BS 40"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Deadeye Shot",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "BS 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Hip Shooter",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "BS 40",
+      "Ag 40"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Melee Weapon Training (Chain)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Mental Rage",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Frenzy"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Minor Psychic Power",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Nerves Of Steel",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Technical Knock",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Int 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Two-Weapon Wielder (Ballistic)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Two-Weapon Wielder (Melee)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Demolition",
+    "cost": 200,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Security",
+    "cost": 200,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Pistol Training (Bolt)",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Pistol Training (Flame)",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Psychic Power",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Savant Warrant",
+    "name": "Swift Attack",
+    "cost": 300,
+    "type": "talent",
+    "prerequisites": [
+      "WS 35"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Awareness +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Awareness"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Blather",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Ciphers (Acolyte)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Dodge",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Inquiry",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Literacy +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Scholastic Lore (Heraldry)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Scholastic Lore (Legend)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Secret Tongue (Acolyte)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Tech-Use",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Trade (Copyist)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Trade (Soothsayer) +10",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [
+      "Trade (Soothsayer)"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Ambidextrous",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Ag 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Basic Weapon Training (Las)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Basic Weapon Training (Sp)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Blind Fighting",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Per 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Die Hard",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "WP 40"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Melee Weapon Training (Shock)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Minor Psychic Power",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": true
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Peer (Academics)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Fel 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Rapid Reaction",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Ag 40"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Unshakeable Faith",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Aspirant",
+    "name": "Sound Constitution",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Chem-Use",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Deceive",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Forbidden Lore (Psykers)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Performer (Musician)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Performer (Singer)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Performer (Storyteller)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Pilot (Civilian Craft)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Wrangling",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Basic Weapon Training (Primitive)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Leap Up",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Ag 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Light Sleeper",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Per 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Minor Psychic Power",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": true
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Paranoia",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Peer (The Insane)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [
+      "Fel 30"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Rapid Reload",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Sleight Of Hand",
+    "cost": 200,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Neonate",
+    "name": "Psy Rating 2",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [
+      "Psy Rating 1"
+    ],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Awareness",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Common Lore (Imperial Creed)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Common Lore (Imperium)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Drive (Ground Vehicle)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Forbidden Lore (Warp)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Scholastic Lore (Occult)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Swim",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Trade (Soothsayer)",
+    "cost": 100,
+    "type": "advance",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Chem Geld",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Flagellant",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Hatred (Daemons)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Meditation",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Minor Psychic Power",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Pistol Training (Las)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Pistol Training (Primitive)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Pistol Training (Sp)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Quick Draw",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Unremarkable",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Thrown Weapon Training (Primitive)",
+    "cost": 100,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  },
+  {
+    "career": "Imperial Psyker",
+    "rank": "Sanctionite",
+    "name": "Sound Constitution",
+    "cost": 200,
+    "type": "talent",
+    "prerequisites": [],
+    "repeatable": false
+  }
+]

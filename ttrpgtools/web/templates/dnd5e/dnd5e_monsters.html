@@ -1,0 +1,31 @@
+{% extends "dnd5e/dnd5e_base.html" %}
+{% block title %}Monsters{% endblock %}
+{% block page_script %}<script src="{{ url_for('static', filename='dnd5e/dnd5e_monsters.js') }}" defer></script>{% endblock %}
+{% block page %}
+<div class="columns">
+  <section class="panel">
+    <div class="panel-header"><h1>Import a stat block</h1></div>
+    <ol class="hint">
+      <li>Open the monster on D&amp;D Beyond.</li>
+      <li>Select the stat block from the name to the last action and copy it.</li>
+      <li>Paste below. Check the preview, then save.</li>
+    </ol>
+    <textarea class="paste" id="paste" placeholder="Paste the stat block text here" aria-label="Stat block text"></textarea>
+    <div class="row">
+      <button class="button" type="button" id="save" disabled>Save to bestiary</button>
+      <span class="hint" id="parse-status">Nothing pasted yet.</span>
+    </div>
+    <div id="preview"></div>
+  </section>
+  <div>
+    <section class="panel">
+      <div class="panel-header"><h2>Bestiary</h2></div>
+      <div id="picker"></div>
+    </section>
+    <section class="panel">
+      <div class="panel-header"><h2>Imported and hand-made</h2></div>
+      <div id="custom"></div>
+    </section>
+  </div>
+</div>
+{% endblock %}

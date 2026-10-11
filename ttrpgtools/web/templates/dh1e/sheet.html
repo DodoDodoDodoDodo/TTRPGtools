@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+{% block title %}{{ character.name }}{% endblock %}
+{% block content %}
+  <div class="panel sheet-header">
+    <div>
+      <h1>{{ character.name }}</h1>
+      <p class="subtitle">{{ character.career.name }}{% if character.homeworld %} &middot; {{ character.homeworld }}{% endif %}</p>
+      <p class="rank-path">
+        {% if character.career_path %}
+          {% for rank in character.career_path %}{{ rank }}{% if not loop.last %} &rarr; {% endif %}{% endfor %}
+        {% else %}
+          Unranked
+        {% endif %}
+      </p>
+    </div>
+    <div class="xp-block">
+      <div><span class="label">XP Total</span><span class="value">{{ character.xp_total }}</span></div>
+      <div><span class="label">XP Spent</span><span class="value">{{ character.xp_spent }}</span></div>
+      <div><span class="label">XP Available</span><span class="value highlight">{{ character.xp_available }}</span></div>
+    </div>
+    <div class="xp-block">
+      <div><span class="label">Fatigue Threshold</span><span class="value">{{ character.fatigue_threshold }}</span></div>
+      <div><span class="label">Movement (H/F/C/R)</span><span class="value">{{ character.movement.half }}/{{ character.movement.full }}/{{ character.movement.charge }}/{{ character.movement.run }}</span></div>
+      <div><span class="label">Wounds</span><span class="value">{{ character.wounds.current if character.wounds else 0 }}/{{ character.effective_wounds_max }}</span></div>
+    </div>
+  </div>
+
+  {% if error %}
+    <div class="panel error-banner">{{ error }}</div>
+  {% endif %}
+
+  {% if available_next_ranks %}
+  <div class="panel rank-advance-panel">
+    <div class="panel-header"><h2>Advance Rank</h2></div>
+    <p class="hint">Eligible for the next rank on {{ character.career.name }}'s career path{% if available_next_ranks | length > 1 %} &mdash; choose a branch{% endif %}.</p>
+    <form method="post" action="{{ url_for('dh1e.advance_rank', character_id=character_id) }}" class="form-grid">
+      <label>Next Rank
+        <select name="rank_name">
+          {% for rank in available_next_ranks %}
+          <option value="{{ rank }}">{{ rank }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <button type="submit" class="button">Advance</button>
+    </form>
+  </div>
+  {% endif %}
+
+  <div class="panel">
+    <div class="panel-header"><h2>Vitals</h2></div>
+    <form method="post" action="{{ url_for('dh1e.update_character', character_id=character_id) }}" class="form-grid">
+      <label>XP Total <input type="number" name="xp_total" value="{{ character.xp_total }}" min="0"></label>
+      <label>Home World <input type="text" name="homeworld" value="{{ character.homeworld or '' }}"></label>
+      <label>Insanity Points <input type="number" name="insanity_points" value="{{ character.insanity_points }}" min="0"></label>
+      <label>Corruption Points <input type="number" name="corruption_points" value="{{ character.corruption_points }}" min="0"></label>
+      <label>Wounds (current) <input type="number" name="wounds_current" value="{{ character.wounds.current if character.wounds else 0 }}" min="0"></label>
+      <label>Wounds (base max) <span class="hint">chargen roll; total is {{ character.effective_wounds_max }} incl. Sound Constitution</span>
+        <input type="number" name="wounds_max" value="{{ character.wounds.max if character.wounds else 0 }}" min="0">
+      </label>
+      <label>Fate Points (current) <input type="number" name="fate_current" value="{{ character.fate_points.current if character.fate_points else 0 }}" min="0"></label>
+      <label>Fate Points (max) <input type="number" name="fate_max" value="{{ character.fate_points.max if character.fate_points else 0 }}" min="0"></label>
+      <label class="wide">Divination <input type="text" name="divination" value="{{ character.divination or '' }}"></label>
+      <label class="wide">Equipment <span class="hint">one item per line</span>
+        <textarea name="equipment" rows="5">{{ character.equipment | join("\n") }}</textarea>
+      </label>
+      <fieldset class="characteristics-fieldset">
+        <legend>Armour</legend>
+        <div class="characteristics-grid">
+          {% for row in armour_rows %}
+          <div class="characteristic-cell">
+            <label>{{ row.label }}
+              <input type="text" name="armour_{{ row.key }}_item" value="{{ row.item }}" placeholder="item">
+            </label>
+            <label>AP
+              <input type="number" name="armour_{{ row.key }}_ap" value="{{ row.ap }}" min="0" max="99">
+            </label>
+          </div>
+          {% endfor %}
+        </div>
+      </fieldset>
+      <button type="submit" class="button">Save Vitals</button>
+    </form>
+  </div>
+
+  <div class="panel">
+    <div class="panel-header"><h2>Characteristics</h2></div>
+    <form method="post" action="{{ url_for('dh1e.update_character', character_id=character_id) }}" class="characteristics-grid">
+      {% for row in characteristic_rows %}
+      <div class="characteristic-cell">
+        <label>{{ row.name }}{% if row.effective %} <span class="hint">(current: {{ row.effective }})</span>{% endif %}
+          <input type="number" name="char_{{ row.name }}" value="{{ row.value }}" min="0" max="99">
+        </label>
+        {% if row.next_tier %}
+        <button type="submit" formaction="{{ url_for('dh1e.buy_characteristic', character_id=character_id) }}"
+                name="characteristic" value="{{ row.name }}" class="mini-button"
+                {% if not row.affordable %}disabled{% endif %}>
+          +5 ({{ row.next_tier }}, {{ row.next_cost }} XP)
+        </button>
+        {% else %}
+        <span class="hint">maxed / unavailable</span>
+        {% endif %}
+      </div>
+      {% endfor %}
+      <button type="submit" class="button">Save Characteristics</button>
+    </form>
+  </div>
+
+  <div class="panel">
+    <div class="panel-header"><h2>Advance History</h2></div>
+    {% if character.advance_history %}
+      <ol class="history-list">
+        {% for purchase in character.advance_history %}
+        <li>{{ purchase.name }} <span class="tag">{{ purchase.type }}</span> <span class="cost">{{ purchase.xp_cost }} XP</span></li>
+        {% endfor %}
+      </ol>
+      <form method="post" action="{{ url_for('dh1e.undo_purchase', character_id=character_id) }}">
+        <button type="submit" class="mini-button">Undo Last Purchase</button>
+      </form>
+    {% else %}
+      <p class="empty-state">No advances purchased yet.</p>
+    {% endif %}
+  </div>
+
+  <div class="panel">
+    <div class="panel-header"><h2>Available Advances &mdash; {{ character.career.name }}</h2></div>
+    {% for rank, entries in advances_by_rank %}
+    <details class="rank-group">
+      <summary>{{ rank }} <span class="hint">({{ entries | length }})</span></summary>
+      <table class="advance-table">
+        <thead><tr><th>Advance</th><th>Type</th><th>Cost</th><th>Prerequisites</th><th></th></tr></thead>
+        <tbody>
+          {% for entry in entries %}
+          <tr class="{{ 'blocked' if entry.missing_prerequisites or not entry.affordable else '' }}">
+            <td>{{ entry.advance.name }}</td>
+            <td>{{ entry.advance.type }}</td>
+            <td>{{ entry.advance.cost }}</td>
+            <td>
+              {% if entry.missing_prerequisites %}
+                <span class="missing">missing: {{ entry.missing_prerequisites | join(", ") }}</span>
+              {% elif entry.advance.prerequisites %}
+                {{ entry.advance.prerequisites | join(", ") }}
+              {% else %}
+                &mdash;
+              {% endif %}
+            </td>
+            <td>
+              {% if not entry.psy_rating %}
+              <form method="post" action="{{ url_for('dh1e.buy_advance', character_id=character_id) }}" class="buy-form">
+                <input type="hidden" name="advance_name" value="{{ entry.advance.name }}">
+                {% if entry.advance.repeatable %}
+                <input type="text" name="choice" placeholder="which one?" class="choice-input">
+                {% endif %}
+                <button type="submit" class="mini-button" {% if entry.missing_prerequisites or not entry.affordable %}disabled{% endif %}>Buy</button>
+              </form>
+              {% endif %}
+            </td>
+          </tr>
+          {% if entry.psy_rating and not entry.missing_prerequisites and entry.affordable %}
+          <tr class="psy-rating-grant-row">
+            <td colspan="5">
+              <form method="post" action="{{ url_for('dh1e.buy_psy_rating', character_id=character_id) }}" class="psy-rating-form">
+                <input type="hidden" name="tier" value="{{ entry.psy_rating.tier }}">
+                <span class="hint">Psy Rating {{ entry.psy_rating.tier }} grants:</span>
+                {% if entry.psy_rating.grants_minor %}
+                <label>Minor Powers <span class="hint">(comma-separated, up to {{ entry.psy_rating.max_minor }})</span>
+                  <input type="text" name="minor_powers" class="choice-input-wide" placeholder="e.g. Healer, Precognition">
+                </label>
+                {% endif %}
+                {% if entry.psy_rating.grants_discipline %}
+                <label>Discipline Powers <span class="hint">(from a known Discipline, up to {{ entry.psy_rating.max_discipline }}{% if not entry.psy_rating.forces_new_discipline %}; leave blank if taking a new Discipline instead{% endif %})</span>
+                  <input type="text" name="discipline_powers" class="choice-input-wide" placeholder="e.g. Terrify, Dominate">
+                </label>
+                {% endif %}
+                <label>{{ "New Discipline (required)" if entry.psy_rating.forces_new_discipline else "New Discipline (optional alternative)" }}
+                  <input type="text" name="new_discipline" class="choice-input" placeholder="e.g. Telepathy">
+                </label>
+                <button type="submit" class="mini-button">Buy Psy Rating {{ entry.psy_rating.tier }}</button>
+              </form>
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </details>
+    {% endfor %}
+  </div>
+
+  <div class="panel danger-zone">
+    <form method="post" action="{{ url_for('dh1e.delete_character', character_id=character_id) }}"
+          onsubmit="return confirm('Delete {{ character.name }} permanently?');">
+      <button type="submit" class="mini-button danger">Delete Dossier</button>
+    </form>
+  </div>
+{% endblock %}

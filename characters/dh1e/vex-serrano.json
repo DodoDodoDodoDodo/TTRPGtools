@@ -1,0 +1,72 @@
+{
+  "name": "Vex Serrano",
+  "career": "Assassin",
+  "characteristics": {
+    "Weapon Skill": 38,
+    "Ballistic Skill": 40,
+    "Strength": 30,
+    "Toughness": 28,
+    "Agility": 44,
+    "Intelligence": 33,
+    "Perception": 36,
+    "Willpower": 30,
+    "Fellowship": 26
+  },
+  "xp_total": 3200,
+  "insanity_points": 0,
+  "corruption_points": 0,
+  "equipment": [],
+  "armour": {},
+  "career_path": [
+    "Sell-Steel",
+    "Shadesman",
+    "Nighthawk",
+    "Secluse"
+  ],
+  "known_disciplines": [],
+  "advance_history": [
+    {
+      "name": "Agility Simple",
+      "xp_cost": 100,
+      "type": "characteristic",
+      "order": 1,
+      "direct": false
+    },
+    {
+      "name": "Acrobatics",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 2,
+      "direct": false
+    },
+    {
+      "name": "Acrobatics +10",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 3,
+      "direct": false
+    },
+    {
+      "name": "Basic Weapon Training (Bolt)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 4,
+      "direct": false
+    },
+    {
+      "name": "Basic Weapon Training (Las)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 5,
+      "direct": false
+    },
+    {
+      "name": "Basic Weapon Training (Primitive)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 6,
+      "direct": false
+    }
+  ],
+  "homeworld": "Feral World"
+}

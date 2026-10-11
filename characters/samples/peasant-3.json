@@ -1,0 +1,115 @@
+{
+ "system": "dcc",
+ "name": "Peasant 3",
+ "owner": "player",
+ "created": "2026-09-16",
+ "abilities": {
+  "strength": 7,
+  "agility": 13,
+  "stamina": 6,
+  "personality": 11,
+  "intelligence": 11,
+  "luck": 13
+ },
+ "luck_current": 13,
+ "birth_augur": {
+  "roll": 19,
+  "augur": "Survived a Spider Bite",
+  "applies_to": "Saving Throws vs. Poison",
+  "modifier": 1
+ },
+ "occupation": {
+  "roll": [
+   84,
+   84
+  ],
+  "occupation": "Scribe",
+  "weapon": "Dart",
+  "trade_goods": "Parchment (10 sheets)",
+  "notes": "",
+  "rolled": 84
+ },
+ "alignment": "lawful",
+ "level": 5,
+ "class": "wizard",
+ "xp": 400,
+ "hp_max": 12,
+ "hp_current": 12,
+ "coins": {
+  "cp": 27,
+  "sp": 0,
+  "gp": 0
+ },
+ "weapons": [
+  "Dart"
+ ],
+ "armor": null,
+ "shield": false,
+ "equipment": [
+  "Chain, 10’",
+  "Parchment (10 sheets)"
+ ],
+ "spells": [
+  "Chill Touch",
+  "Invoke Patron",
+  "Magic Shield",
+  "Wizard Staff",
+  "Curse of Moirae",
+  "Make Potion",
+  "Sword Magic",
+  "Warp & Weft"
+ ],
+ "patron": null,
+ "languages": [
+  "Common"
+ ],
+ "notes": "",
+ "disapproval": 1,
+ "history": [
+  {
+   "event": "0-level",
+   "hp_roll": 4,
+   "copper": 27
+  },
+  {
+   "event": "level",
+   "level": 1,
+   "class": "wizard",
+   "hp_roll": 4,
+   "hp_gained": 3
+  },
+  {
+   "event": "level",
+   "level": 2,
+   "class": "wizard",
+   "hp_roll": 2,
+   "hp_gained": 1
+  },
+  {
+   "event": "level",
+   "level": 3,
+   "class": "wizard",
+   "hp_roll": 3,
+   "hp_gained": 2
+  },
+  {
+   "event": "level",
+   "level": 4,
+   "class": "wizard",
+   "hp_roll": 2,
+   "hp_gained": 1
+  },
+  {
+   "event": "level",
+   "level": 5,
+   "class": "wizard",
+   "hp_roll": 3,
+   "hp_gained": 2
+  }
+ ],
+ "tax_debt_cp": 2422,
+ "inventory_in_table": true,
+ "luck_rule": true,
+ "interest_cp": 73416,
+ "library_loan_cp": 0
+}

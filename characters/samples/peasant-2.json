@@ -1,0 +1,71 @@
+{
+ "system": "dcc",
+ "name": "Peasant 2",
+ "owner": "player",
+ "created": "2026-09-16",
+ "abilities": {
+  "strength": 11,
+  "agility": 12,
+  "stamina": 11,
+  "personality": 8,
+  "intelligence": 7,
+  "luck": 14
+ },
+ "luck_current": 14,
+ "birth_augur": {
+  "roll": 19,
+  "augur": "Survived a Spider Bite",
+  "applies_to": "Saving Throws vs. Poison",
+  "modifier": 1
+ },
+ "occupation": {
+  "roll": [
+   37,
+   38
+  ],
+  "occupation": "Elven Sage",
+  "weapon": "Dagger",
+  "trade_goods": "Parchment, Quill",
+  "notes": "",
+  "rolled": 37
+ },
+ "alignment": "lawful",
+ "level": 0,
+ "class": null,
+ "xp": 0,
+ "hp_max": 2,
+ "hp_current": 2,
+ "coins": {
+  "cp": 40,
+  "sp": 0,
+  "gp": 0
+ },
+ "weapons": [
+  "Dagger"
+ ],
+ "armor": null,
+ "shield": false,
+ "equipment": [
+  "Chalk, 1 piece",
+  "Parchment, Quill"
+ ],
+ "spells": [],
+ "patron": null,
+ "languages": [
+  "Common"
+ ],
+ "notes": "",
+ "disapproval": 1,
+ "history": [
+  {
+   "event": "0-level",
+   "hp_roll": 2,
+   "copper": 40
+  }
+ ],
+ "tax_debt_cp": 2458,
+ "inventory_in_table": true,
+ "luck_rule": true,
+ "interest_cp": 85394,
+ "library_loan_cp": 0
+}

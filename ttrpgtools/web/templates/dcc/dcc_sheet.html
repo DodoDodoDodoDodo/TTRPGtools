@@ -1,0 +1,397 @@
+{% extends "dcc/dcc_base.html" %}
+{% block title %}{{ c.name }} (DCC){% endblock %}
+{% block head %}<script src="{{ asset('dcc_market.js') }}" defer></script>{% endblock %}
+{% block content %}
+  <div class="panel sheet-header">
+    <div>
+      <h1>{{ c.name }}</h1>
+      <p class="subtitle">
+        {% if c.class %}Level {{ c.level }} {{ c.class }}{% if v.title %}, {{ v.title }}{% endif %}{% else %}0-level{% endif %}
+        &middot; {{ c.occupation.occupation }} &middot; {{ c.alignment }}{% if v.race %} &middot; {{ v.race }}{% endif %}
+      </p>
+      <p class="rank-path">Birth augur &mdash; {{ v.augur_effect }}</p>
+    </div>
+    <div class="xp-block">
+      <div><span class="label">HP</span><span class="value highlight">{{ c.hp_current }}/{{ c.hp_max }}</span></div>
+      <div><span class="label">AC</span><span class="value">{{ v.ac }}</span></div>
+      <div><span class="label">XP</span><span class="value">{{ c.xp }}{% if v.next_level_xp is not none %}<span class="hint">/{{ v.next_level_xp }}</span>{% endif %}</span></div>
+      <div><span class="label">Luck</span><span class="value">{{ c.luck_current }}</span></div>
+    </div>
+    <div class="button-row no-print">
+      <button type="button" class="mini-button" onclick="window.print()">Print</button>
+      <a class="mini-button" href="{{ url_for('dcc.folio', character_id=character_id) }}" target="_blank">Folio (A5)</a>
+      <a class="mini-button" href="{{ url_for('dcc.folio', character_id=character_id, print=1) }}" target="_blank">Folio print (A4 duplex)</a>
+      {% for l in layouts %}<a class="mini-button" href="{{ url_for('dcc.pdf', character_id=character_id, layout=l) }}" target="_blank">Sheet PDF{% if layouts | length > 1 %}: {{ l }}{% endif %}</a>{% endfor %}
+      <a class="mini-button" href="{{ url_for('dcc.download', character_id=character_id) }}">JSON</a>
+      <a class="mini-button" href="{{ url_for('dcc.index') }}">All DCC</a>
+    </div>
+  </div>
+
+  {% if error %}<div class="panel error-banner">{{ error }}</div>{% endif %}
+
+  <div class="panel">
+    <div class="panel-header"><h2>Abilities</h2></div>
+    <div class="stat-grid">
+      {% for a in abilities %}
+      <div class="stat-box {% if v.ability_damage[a] %}damaged{% endif %}"><span class="label">{{ labels[a] }}</span><span class="value">{{ v.effective[a] }}</span><span class="mod">{{ v.mods_text[a] }}{% if v.ability_damage[a] %} <span class="hint">({{ c.abilities[a] }} −{{ v.ability_damage[a] }})</span>{% endif %}</span></div>
+      {% endfor %}
+    </div>
+    {% if v.ability_damage.values() | sum %}<p class="hint">Temporary ability loss shown in brackets heals 1 point per day ("New day" below). Every modifier on this sheet already uses the reduced score.</p>{% endif %}
+  </div>
+
+  <div class="panel play-panel no-print">
+    <div class="panel-header"><h2>In Play</h2><span class="hint">quick actions during a session</span></div>
+    <div class="play-row">
+      <form method="post" action="{{ url_for('dcc.play', character_id=character_id) }}" class="inline-form"><input type="hidden" name="action" value="hp"><span>HP {{ c.hp_current }}/{{ c.hp_max }}</span><button name="delta" value="-1" class="mini-button">−1</button><button name="delta" value="-5" class="mini-button">−5</button><button name="delta" value="1" class="mini-button">+1</button><button name="delta" value="5" class="mini-button">+5</button></form>
+      <form method="post" action="{{ url_for('dcc.play', character_id=character_id) }}" class="inline-form"><input type="hidden" name="action" value="burn_luck"><span>Luck {{ c.luck_current }}</span><input type="number" name="points" min="1" max="{{ c.luck_current }}" value="1" class="choice-input"><button type="submit" class="mini-button">Burn</button>
+        {% if c.class == 'thief' %}<span class="hint">+{{ v.luck_die }} per point</span>{% elif c.class == 'halfling' %}<span class="hint">+2 per point, may aid allies</span>{% else %}<span class="hint">+1 per point</span>{% endif %}</form>
+      <form method="post" action="{{ url_for('dcc.play', character_id=character_id) }}" class="inline-form"><input type="hidden" name="action" value="recover_luck"><input type="number" name="points" min="1" placeholder="pts" class="choice-input"><button type="submit" class="mini-button">Regain Luck</button><span class="hint">recovers {{ v.class_extras.luck_recovery if c.class else "only by the judge's grace" }}</span></form>
+      {% if c.class in ('wizard', 'elf') %}
+      <form method="post" action="{{ url_for('dcc.play', character_id=character_id) }}" class="inline-form"><input type="hidden" name="action" value="spellburn"><span>Spellburn</span>
+        <label>Str <input type="number" name="strength" min="0" value="0" class="choice-input"></label><label>Agi <input type="number" name="agility" min="0" value="0" class="choice-input"></label><label>Sta <input type="number" name="stamina" min="0" value="0" class="choice-input"></label>
+        <button type="submit" class="mini-button">Burn for +1 each</button></form>
+      {% endif %}
+      {% if c.class == 'cleric' %}
+      <form method="post" action="{{ url_for('dcc.play', character_id=character_id) }}" class="inline-form"><input type="hidden" name="action" value="failed_check"><span>Disapproval 1-{{ c.disapproval }}</span><button type="submit" class="mini-button">Failed a spell check</button></form>
+      {% endif %}
+      <form method="post" action="{{ url_for('dcc.play', character_id=character_id) }}" class="inline-form"><input type="hidden" name="action" value="new_day"><button type="submit" class="mini-button">New day</button><span class="hint">heals 1 ability point{% if c.class in ('thief', 'halfling') %}, regains {{ c.level }} Luck{% endif %}{% if c.class == 'cleric' %}, resets disapproval{% endif %}</span></form>
+    </div>
+  </div>
+
+  <div class="panel luck-panel">
+    <div class="panel-header"><h2>Luck &amp; Birth Augur</h2></div>
+    <div class="two-col">
+      <dl class="kv">
+        <dt>Birth augur</dt><dd><b>{{ v.augur_effect }}</b></dd>
+        {% if moon_rule %}<dt>Moon</dt><dd>{{ moon_rule.text }}</dd>{% endif %}
+        <dt>Why</dt><dd>{% if not c.birth_augur.roll %}<span class="hint">The birth augur was sold. Another can be had where it went.</span>{% elif c.birth_augur.origin %}<span class="hint">Not the augur of birth: {{ c.birth_augur.origin }}. It came with its own modifier ({{ '%+d' % c.birth_augur.modifier }}), whatever this character's Luck. The Rolls table below already includes it where it applies.</span>{% else %}<span class="hint">d30 roll {{ c.birth_augur.roll }} gave "{{ c.birth_augur.augur }}", which ties the Luck modifier at birth ({{ '%+d' % c.birth_augur.modifier }}, from Luck {{ c.abilities.luck }}) to {{ c.birth_augur.applies_to | replace('*', '') | lower }}. Burning or regaining Luck later never changes it. The Rolls table below already includes it where it applies.</span>{% endif %}</dd>
+      </dl>
+      <dl class="kv">
+        <dt>Luck now</dt><dd><b>{{ c.luck_current }}</b> <span class="hint">started {{ c.abilities.luck }}</span></dd>
+        <dt>Luck check</dt><dd>roll {{ c.luck_current }} or less on d20</dd>
+        {% if v.luck_die %}<dt>Luck die</dt><dd>{{ v.luck_die }} per point burned <span class="hint">thief, recovers over time</span></dd>{% endif %}
+        {% if c.class == 'halfling' %}<dt>Good luck charm</dt><dd>burns Luck two for one and can spend it for allies</dd>{% endif %}
+      </dl>
+    </div>
+  </div>
+
+  <div class="panel action-panel">
+    <div class="panel-header"><h2>Action Dice</h2><span class="hint">what you roll each round</span></div>
+    <div class="two-col">
+      <div class="dice-row">
+        {% for d in v.action.dice %}<div class="die-box"><span class="label">{{ loop.index }}{{ 'st' if loop.index == 1 else ('nd' if loop.index == 2 else 'rd') }} action</span><span class="value">{{ d }}</span></div>{% endfor %}
+      </div>
+      <ul class="plain-list">{% for line in v.action.lines %}<li>{{ line }}</li>{% endfor %}</ul>
+    </div>
+    <p class="dice-chain">Dice chain: {% for d in v.action.chain %}<span class="{{ 'current' if d in v.action.dice else '' }}">{{ d }}</span>{% endfor %}</p>
+    {% if v.prose['Action dice'] %}<p class="hint">{{ c.class | capitalize }}: {{ v.prose['Action dice'] }}</p>{% endif %}
+  </div>
+
+  <div class="panel">
+    <div class="panel-header"><h2>Rolls</h2><span class="hint">every modifier that applies, including the birth augur where it counts</span></div>
+    <table class="advance-table rolls">
+      <thead><tr><th>Roll</th><th>Total</th><th>Components</th><th></th></tr></thead>
+      <tbody>
+        {% for r in v.rolls %}
+        <tr><td>{{ r.label }}</td><td class="band">{{ r.total }}</td>
+          <td>{% for name, val in r.parts %}<span class="part">{{ name }} <b>{{ val }}</b></span>{% endfor %}</td>
+          <td class="hint">{{ r.note }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="two-col">
+    <div class="panel">
+      <div class="panel-header"><h2>Combat</h2></div>
+      <dl class="kv">
+        <dt>Attack</dt><dd>{{ v.attack }}{% if v.deed_die %} <span class="hint">deed die, rolled each attack, adds to hit and damage</span>{% endif %}</dd>
+        <dt>Initiative</dt><dd>{{ v.initiative }}</dd>
+        <dt>Action dice</dt><dd>{{ v.action_dice }}</dd>
+        <dt>Crit</dt><dd>{{ v.crit_die }} on table {{ v.crit_table }}{% if v.threat_range %} <span class="hint">threat {{ v.threat_range }}</span>{% endif %}</dd>
+        <dt>Fumble die</dt><dd>{{ v.fumble_die }}</dd>
+        <dt>Speed</dt><dd>{{ v.speed }}'</dd>
+        <dt>Check penalty</dt><dd>{{ v.check_penalty }}</dd>
+        {% if v.luck_die %}<dt>Luck die</dt><dd>{{ v.luck_die }}</dd>{% endif %}
+        {% if v.sneak_hide %}<dt>Sneak &amp; hide</dt><dd>{{ v.sneak_hide }}</dd>{% endif %}
+      </dl>
+      <table class="advance-table">
+        <thead><tr><th>Weapon</th><th>Damage</th><th>Melee</th><th>Missile</th><th>Range</th></tr></thead>
+        <tbody>
+          {% for w in v.weapons %}
+          <tr><td>{{ w.name }}{% if w.two_handed %} <span class="tag">2h, d16 init</span>{% endif %}{% if not w.trained %} <span class="missing">untrained: -1d</span>{% endif %}{% if w.iron %} <span class="missing">iron</span>{% endif %}{% if w.ammo is not none %} <span class="{{ 'hint' if w.ammo else 'missing' }}">{{ w.ammo }} {{ w.ammo_kind | lower }}</span>{% endif %}</td><td>{{ w.damage }}{% if w.backstab_damage %} <span class="hint">backstab {{ w.backstab_damage }}</span>{% endif %}</td><td>{{ w.melee_bonus }}</td><td>{{ w.missile_bonus if w.range else "—" }}</td><td>{{ w.range or "—" }}</td></tr>
+          {% else %}
+          <tr><td colspan="5" class="empty-state">No weapons.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="panel">
+      <div class="panel-header"><h2>Saves</h2></div>
+      <div class="stat-grid three">
+        <div class="stat-box"><span class="label">Reflex</span><span class="value">{{ v.saves_text.reflex }}</span></div>
+        <div class="stat-box"><span class="label">Fortitude</span><span class="value">{{ v.saves_text.fortitude }}</span></div>
+        <div class="stat-box"><span class="label">Willpower</span><span class="value">{{ v.saves_text.willpower }}</span></div>
+      </div>
+      <div class="panel-header"><h2>Occupation</h2></div>
+      <dl class="kv">
+        <dt>Occupation</dt><dd>{{ c.occupation.occupation }}</dd>
+        <dt>Trade goods</dt><dd>{{ c.occupation.trade_goods or "—" }}</dd>
+        <dt>Wearing</dt><dd>{{ c.armor or "no armor" }}{% if c.shield %} + shield{% endif %} <span class="hint">AC {{ v.ac }}, check {{ v.check_penalty }}, fumble {{ v.fumble_die }}</span></dd>
+        <dt>Languages</dt><dd>{{ c.languages | join(", ") }} <span class="hint">({{ v.languages_allowed }} allowed)</span></dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="panel inventory-panel">
+    <div class="panel-header"><h2>Inventory</h2>
+      <form method="post" action="{{ url_for('dcc.inventory', character_id=character_id) }}" class="inline-form coins-form no-print"><input type="hidden" name="action" value="coins">
+        <label>gp <input type="number" name="coin_gp" min="0" value="{{ c.coins.gp }}" class="choice-input"></label>
+        <label>sp <input type="number" name="coin_sp" min="0" value="{{ c.coins.sp }}" class="choice-input"></label>
+        <label>cp <input type="number" name="coin_cp" min="0" value="{{ c.coins.cp }}" class="choice-input"></label>
+        <button type="submit" class="mini-button">Set coins</button><span class="hint">= {{ v.coins_cp }} cp</span></form>
+      <span class="print-only">{{ c.coins.gp }} gp, {{ c.coins.sp }} sp, {{ c.coins.cp }} cp</span>
+    </div>
+    <table class="advance-table inventory">
+      <thead><tr><th>Item</th><th>Kind</th><th>Qty</th><th>Detail</th><th>Worth</th><th>Equipped</th><th class="no-print"></th></tr></thead>
+      <tbody>
+        {% for i in v.inventory %}
+        {% set idx = loop.index0 %}
+        <tr class="{{ 'equipped' if i.equipped else '' }}">
+          <td>{{ i.name }}{% if i.notes %} <span class="hint">{{ i.notes }}</span>{% endif %}</td>
+          <td class="tag">{{ i.kind }}</td>
+          <td>
+            {% if i.kind in ('ammo', 'gear', 'trade', 'other') %}
+            <form method="post" action="{{ url_for('dcc.inventory', character_id=character_id) }}" class="inline-form no-print"><input type="hidden" name="action" value="qty"><input type="hidden" name="index" value="{{ idx }}"><button name="delta" value="-1" class="mini-button">−</button><span>{{ i.qty }}</span><button name="delta" value="1" class="mini-button">+</button></form>
+            <span class="print-only">{{ i.qty }}</span>
+            {% else %}{{ i.qty }}{% endif %}
+          </td>
+          <td class="hint">{% if i.row %}{% if i.kind == 'weapon' %}{{ i.row.damage }}{% if i.row.range %}, {{ i.row.range }}{% endif %}{% if i.row.two_handed %}, two-handed{% endif %}{% else %}AC +{{ i.row.ac }}, check {{ i.row.check_penalty }}{% if i.row.speed_penalty %}, speed {{ i.row.speed_penalty }}'{% endif %}{% endif %}{% endif %}</td>
+          <td>{{ i.cost or '—' }}</td>
+          <td>
+            {% if i.kind in ('weapon', 'armor', 'shield') %}
+            <form method="post" action="{{ url_for('dcc.inventory', character_id=character_id) }}" class="inline-form no-print"><input type="hidden" name="action" value="equip"><input type="hidden" name="index" value="{{ idx }}"><input type="hidden" name="state" value="{{ 'off' if i.equipped else 'on' }}"><button type="submit" class="mini-button {{ 'active' if i.equipped else '' }}">{{ 'wielding' if i.kind == 'weapon' and i.equipped else 'wearing' if i.equipped else 'carried' }}</button></form>
+            <span class="print-only">{{ 'yes' if i.equipped else '' }}</span>
+            {% endif %}
+          </td>
+          <td class="no-print"><form method="post" action="{{ url_for('dcc.inventory', character_id=character_id) }}" class="inline-form" onsubmit="return confirm('Remove {{ i.name }}?')"><input type="hidden" name="action" value="remove"><input type="hidden" name="index" value="{{ idx }}"><button type="submit" class="mini-button danger">×</button></form></td>
+        </tr>
+        {% else %}
+        <tr><td colspan="7" class="empty-state">Nothing carried.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <div class="two-col no-print">
+      <div><h3>Buy in town</h3><div data-market="{{ character_id }}"></div></div>
+      <form method="post" action="{{ url_for('dcc.inventory', character_id=character_id) }}" class="form-grid compact"><input type="hidden" name="action" value="add_custom">
+        <label class="wide">Anything else <input type="text" name="name" placeholder="Jar of honey, Mithril (1 oz.), a map…"></label>
+        <label>Kind <select name="kind">{% for k in item_kinds %}<option value="{{ k }}">{{ k }}</option>{% endfor %}</select></label>
+        <label>Qty <input type="number" name="qty" min="1" value="1"></label>
+        <label>Cost <input type="text" name="cost" placeholder="3 sp"></label>
+        <label>Pay for it <input type="checkbox" name="buy"></label>
+        <label class="wide">Notes <input type="text" name="notes"></label>
+        <button type="submit" class="button">Add</button>
+      </form>
+    </div>
+  </div>
+
+  {% if v.thief_skills %}
+  <div class="panel">
+    <div class="panel-header"><h2>{% if c.class == 'halfling' %}Stealth{% else %}Thief Skills ({{ c.alignment }}){% endif %}</h2><span class="hint">d20 + bonus vs DC; burning Luck adds {% if c.class == 'thief' %}{{ v.luck_die }} per point{% else %}+2 per point{% endif %}</span></div>
+    <table class="advance-table">
+      <thead><tr><th>Skill</th><th>Bonus</th><th>Components</th></tr></thead>
+      <tbody>{% for s in v.thief_skills %}<tr><td>{{ s.skill }}</td><td class="band">{{ s.value }}</td><td>{% for name, val in s.parts %}<span class="part">{{ name }} <b>{{ val }}</b></span>{% endfor %}</td></tr>{% endfor %}</tbody>
+    </table>
+  </div>
+  {% endif %}
+
+  {% if v.spellcasting.caster %}
+  <div class="panel">
+    <div class="panel-header"><h2>Spells</h2>
+      <span class="hint">spell check {{ '+%d' % v.spellcasting.check_bonus if v.spellcasting.check_bonus >= 0 else v.spellcasting.check_bonus }} &middot; max level {{ v.spellcasting.max_level }}
+        {% if v.spellcasting.kind == 'wizard' %}&middot; {{ c.spells | length }}/{{ v.spellcasting.total }} known{% else %}&middot; per level {% for l, n in v.spellcasting.per_level.items() if n %}L{{ l }}:{{ n }} {% endfor %}{% endif %}
+        {% if c.class == 'cleric' %}&middot; disapproval range 1-{{ c.disapproval }}{% endif %}</span>
+    </div>
+    {% for s in v.spells %}
+    <details class="rank-group spell">
+      <summary>{{ s.name }} <span class="tag">L{{ s.level }}{% if s.patron %} &middot; {{ s.patron }}{% endif %}{% if s.free %} &middot; free{% endif %}{% if s.lucky %} &middot; Luck {{ '%+d' % c.first_level_luck_mod }}{% endif %}</span> <span class="hint">{{ s.range }} &middot; {{ s.duration }} &middot; {{ s.casting_time }}{% if s.save %} &middot; save {{ s.save }}{% endif %}</span>
+        {% if c.class in ('wizard', 'elf') %}<span class="mercurial-tag">{% if s.mercurial %}mercurial {{ s.mercurial_roll }}: {{ s.mercurial.text.split('.')[0] }}{% else %}mercurial not rolled{% endif %}</span>{% endif %}</summary>
+      {% if s.mercurial %}<p class="mercurial"><b>Mercurial magic ({{ s.mercurial_roll }}).</b> {{ s.mercurial.text }}</p>{% endif %}
+      <p>{{ s.general }}</p>
+      {% if s.manifestation %}<p><b>Manifestation.</b> {{ s.manifestation }}</p>{% endif %}
+      {% if s.corruption %}<p><b>Corruption.</b> {{ s.corruption }}</p>{% endif %}
+      {% if s.misfire %}<p><b>Misfire.</b> {{ s.misfire }}</p>{% endif %}
+      <table class="advance-table"><tbody>{% for r in s.results %}<tr><td class="band">{{ r.band }}</td><td>{{ r.text }}</td></tr>{% endfor %}</tbody></table>
+    </details>
+    {% else %}
+    <p class="empty-state">No spells chosen yet.</p>
+    {% endfor %}
+    {% if c.class in ('wizard', 'elf') and v.spells %}
+    <details class="rank-group no-print">
+      <summary>Mercurial magic per spell <span class="hint">roll d% {{ '%+d' % (v.mods.luck * 10) }} (Luck {{ v.mods_text.luck }} x 10) when a spell is learned, then pick the result here</span></summary>
+      <form method="post" action="{{ url_for('dcc.spell_detail', character_id=character_id) }}" class="mercurial-form">
+        {% for s in v.spells %}
+        <label>{{ s.name }}
+          <select name="mercurial_{{ s.name }}">
+            <option value="">not rolled</option>
+            {% for row in mercurial_table %}<option value="{{ row.roll.split('-')[0] if row.roll != '00' else 100 }}" {% if s.mercurial and s.mercurial.roll == row.roll %}selected{% endif %}>{{ row.roll }} {{ row.text.split('.')[0] }}</option>{% endfor %}
+          </select>
+        </label>
+        {% endfor %}
+        <button type="submit" class="mini-button">Save mercurial results</button>
+      </form>
+    </details>
+    {% endif %}
+    <details class="rank-group no-print" {% if error %}open{% endif %}>
+      <summary>Choose spells <span class="hint">tick to learn, untick to forget, then save</span></summary>
+      <form method="post" action="{{ url_for('dcc.spells', character_id=character_id) }}" id="spell-form"
+            data-total="{{ v.spellcasting.total if v.spellcasting.kind == 'wizard' else '' }}">
+        {% for lvl in range(1, v.spellcasting.max_level + 1) %}
+        <h3 class="spell-level">Level {{ lvl }}{% if v.spellcasting.kind == 'cleric' %} <span class="hint">{{ v.spellcasting.per_level[lvl] }} allowed</span>{% endif %}</h3>
+        <div class="spell-picker">
+          {% for s in spell_options if s.level == lvl %}
+          <label><input type="checkbox" name="spell" value="{{ s.name }}" data-level="{{ lvl }}" {% if s.name in c.spells %}checked{% endif %}> {{ s.name }}{% if s.patron %} <span class="tag">{{ s.patron }}</span>{% endif %}</label>
+          {% endfor %}
+        </div>
+        {% endfor %}
+        <p class="hint" id="spell-count"></p>
+        <button type="submit" class="mini-button" id="spell-save">Save spells</button>
+      </form>
+    </details>
+    <script>
+      (function () {
+        var form = document.getElementById('spell-form'); if (!form) return;
+        var total = parseInt(form.dataset.total || '0', 10);
+        var out = document.getElementById('spell-count'), save = document.getElementById('spell-save');
+        function update() {
+          var n = form.querySelectorAll('input[name=spell]:checked').length;
+          out.textContent = total ? (n + ' of ' + total + ' chosen') : (n + ' chosen');
+          var over = total && n > total;
+          save.disabled = !!over;
+          out.textContent += over ? ' (too many, untick ' + (n - total) + ')' : '';
+        }
+        form.addEventListener('change', update); update();
+      })();
+    </script>
+  </div>
+  {% endif %}
+
+  {% if c.class %}
+  {% set x = v.class_extras %}
+  <div class="panel">
+    <div class="panel-header"><h2>{{ c.class | capitalize }} Rules in Play</h2></div>
+    <dl class="kv">
+      {% if x.lucky_weapon %}<dt>Lucky weapon</dt><dd>{% if x.lucky_weapon.chosen %}<b>{{ x.lucky_weapon.chosen }}</b> at {{ '%+d' % x.lucky_weapon.modifier }} to attack{% else %}<span class="missing">not chosen, pick one in Edit</span>{% endif %} <span class="hint">{{ x.lucky_weapon.rule }}</span></dd>{% endif %}
+      {% if x.shield_bash %}<dt>Shield bash</dt><dd>{{ x.shield_bash }}</dd>{% endif %}
+      {% if x.lucky_spell %}<dt>Lucky spell</dt><dd>{% if x.lucky_spell.chosen %}<b>{{ x.lucky_spell.chosen }}</b> at {{ '%+d' % x.lucky_spell.modifier }} to spell checks{% else %}<span class="missing">not chosen, pick one in Edit</span>{% endif %} <span class="hint">{{ x.lucky_spell.rule }}</span></dd>{% endif %}
+      {% if x.free_spells %}<dt>Always known</dt><dd>{{ x.free_spells | join(", ") }} <span class="hint">do not count against spells known</span></dd>{% endif %}
+      {% if x.disapproval %}<dt>Deity</dt><dd>{{ x.deity or "—" }}</dd><dt>Disapproval</dt><dd>natural 1 to <b>{{ x.disapproval.range }}</b> <span class="hint">{{ x.disapproval.rule }}</span></dd>{% endif %}
+      {% if x.spellburn %}<dt>Spellburn</dt><dd>{{ x.spellburn }}</dd>{% endif %}
+      {% if x.corruptions is defined %}<dt>Corruption</dt><dd>{% for line in x.corruptions %}{{ line }}{% if not loop.last %}; {% endif %}{% else %}none yet <span class="hint">(record results from the corruption tables in Edit)</span>{% endfor %}</dd>{% endif %}
+      {% if x.luck_die %}<dt>Luck die</dt><dd><b>{{ x.luck_die.die }}</b> <span class="hint">{{ x.luck_die.rule }}</span></dd>{% endif %}
+      {% if x.good_luck_charm %}<dt>Good luck charm</dt><dd>{{ x.good_luck_charm }}</dd><dt>Two-weapon fighting</dt><dd>{{ x.two_weapon_rule }}</dd><dt>Stealth</dt><dd>{{ x.stealth }}</dd><dt>Small size</dt><dd>{{ x.small }}</dd>{% endif %}
+      {% if x.heightened_senses %}<dt>Heightened senses</dt><dd>{{ x.heightened_senses }}</dd><dt>Immunities</dt><dd>{{ x.immunities }}</dd><dt>Iron</dt><dd>{{ x.iron }}{% if x.iron_items %} <span class="missing">Carrying iron: {{ x.iron_items | join(", ") }}</span>{% endif %}</dd>{% endif %}
+      {% if x.sword_and_board %}<dt>Sword and board</dt><dd>{{ x.sword_and_board }}</dd><dt>Underground</dt><dd>{{ x.underground }}</dd>{% endif %}
+      {% if x.backstab %}<dt>Backstab</dt><dd>{{ x.backstab }}</dd><dt>Thieves' cant</dt><dd>{{ x.thieves_cant }}</dd>{% endif %}
+      <dt>Weapon training</dt><dd>{% if x.trained_weapons is none %}all weapons{% else %}{{ x.trained_weapons | sort | join(", ") }}{% endif %}{% if x.untrained_wielded %} <span class="missing">untrained in hand: {{ x.untrained_wielded | join(", ") }} (-1d to attack)</span>{% endif %}</dd>
+    </dl>
+    {% if x.lay_on_hands and x.turn_unholy %}
+    <details class="rank-group"><summary>Lay on hands (dice of healing by spell check and alignment)</summary>
+      <table class="advance-table"><thead><tr><th>Check</th><th>Same alignment</th><th>Adjacent</th><th>Opposed</th></tr></thead>
+      <tbody>{% for r in x.lay_on_hands %}<tr><td class="band">{{ r.check }}</td><td>{{ r.same_alignment }}</td><td>{{ r.adjacent }}</td><td>{{ r.opposed }}</td></tr>{% endfor %}</tbody></table></details>
+    <details class="rank-group"><summary>Turn unholy (by creature HD)</summary>
+      <table class="advance-table"><thead><tr><th>Check</th><th>Range</th><th>Smite</th>{% for hd in x.turn_unholy[0].by_hd %}<th>HD {{ hd }}</th>{% endfor %}</tr></thead>
+      <tbody>{% for r in x.turn_unholy %}<tr><td class="band">{{ r.check }}</td><td>{{ r.range }}</td><td>{{ r.holy_smite }}</td>{% for hd, val in r.by_hd.items() %}<td>{{ val }}</td>{% endfor %}</tr>{% endfor %}</tbody></table></details>
+    {% endif %}
+    {% for title, rows in x.tables.items() if rows %}
+    <details class="rank-group"><summary>{{ title }} table</summary>
+      <table class="advance-table"><tbody>{% for r in rows %}<tr><td class="band">{{ r.roll }}</td><td>{{ r.text }}</td></tr>{% endfor %}</tbody></table></details>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if v.prose %}
+  <div class="panel">
+    <div class="panel-header"><h2>{{ c.class | capitalize }} Abilities</h2></div>
+    {% for name, text in v.prose.items() %}
+    <details class="rank-group"><summary>{{ name }}</summary><p>{{ text }}</p></details>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if deeds %}
+  <div class="panel">
+    <div class="panel-header"><h2>Mighty Deeds of Arms</h2></div>
+    {% for kind, rows in deeds.items() %}
+    <details class="rank-group"><summary>{{ kind }}</summary>
+      <table class="advance-table"><tbody>{% for r in rows %}<tr><td class="band">{{ r.roll }}</td><td>{{ r.text }}</td></tr>{% endfor %}</tbody></table>
+    </details>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="panel">
+    <div class="panel-header"><h2>Crit Table {{ v.crit_table }}</h2></div>
+    <details class="rank-group"><summary>{{ crit_table | length }} results</summary>
+      <table class="advance-table"><tbody>{% for r in crit_table %}<tr><td class="band">{{ r.roll }}</td><td>{{ r.text }}</td></tr>{% endfor %}</tbody></table>
+    </details>
+  </div>
+
+  <div class="panel no-print">
+    <div class="panel-header"><h2>{% if c.level == 0 %}Choose a Class{% else %}Level Up{% endif %}</h2></div>
+    {% if v.can_level %}
+    <form method="post" action="{{ url_for('dcc.level', character_id=character_id) }}" class="form-grid">
+      {% if c.level == 0 %}
+      <label>Class <select name="class">{% for k in v.class_choices %}<option value="{{ k }}">{{ k }} (d{{ hit_die[k] }} hp)</option>{% endfor %}</select></label>
+      {% else %}
+      <label>Class <input type="text" value="{{ c.class }} (d{{ v.hit_die }})" disabled></label>
+      {% endif %}
+      <label>HP roll <span class="hint">leave empty to roll</span><input type="number" name="hp_roll" min="1" max="12"></label>
+      <button type="submit" class="button">{% if c.level == 0 %}Become level 1{% else %}Advance to level {{ c.level + 1 }}{% endif %}</button>
+    </form>
+    {% elif c.level >= 10 %}<p class="hint">Maximum level.</p>
+    {% else %}<p class="hint">Needs {{ v.next_level_xp }} XP for level {{ c.level + 1 }}. Set XP below.</p>{% endif %}
+  </div>
+
+  <div class="panel no-print">
+    <div class="panel-header"><h2>Edit</h2></div>
+    <form method="post" action="{{ url_for('dcc.update', character_id=character_id) }}" class="form-grid">
+      <label>Name <input type="text" name="name" value="{{ c.name }}"></label>
+      <label>Alignment <select name="alignment">{% for a in alignments %}<option value="{{ a }}" {% if c.alignment == a %}selected{% endif %}>{{ a }}</option>{% endfor %}</select></label>
+      <label>HP current <input type="number" name="hp_current" value="{{ c.hp_current }}"></label>
+      <label>HP max <input type="number" name="hp_max" value="{{ c.hp_max }}"></label>
+      <label>Luck current <input type="number" name="luck_current" value="{{ c.luck_current }}"></label>
+      <label>XP <input type="number" name="xp" value="{{ c.xp }}"></label>
+      {% if c.class == 'cleric' %}<label>Disapproval range <input type="number" name="disapproval" min="1" value="{{ c.disapproval }}"></label>{% endif %}
+      <fieldset class="characteristics-fieldset"><legend>Abilities (natural score / temporary loss)</legend>
+        <div class="characteristics-grid">
+          {% for a in abilities %}<div class="characteristic-cell"><label>{{ labels[a] }} <input type="number" name="ability_{{ a }}" value="{{ c.abilities[a] }}"></label><label>loss <input type="number" name="damage_{{ a }}" min="0" value="{{ v.ability_damage[a] }}"></label></div>{% endfor %}
+        </div>
+      </fieldset>
+      {% if c.class in ('wizard', 'elf') %}<label class="wide">Corruption <span class="hint">one result per line, from the corruption tables</span><textarea name="corruptions" rows="2">{{ (c.corruptions or []) | join("\n") }}</textarea></label>{% endif %}
+      <label>Languages <span class="hint">comma separated</span><input type="text" name="languages" value="{{ c.languages | join(', ') }}"></label>
+      {% if c.class in ('wizard', 'elf') %}<label>Patron <input type="text" name="patron" value="{{ c.patron or '' }}"></label>{% endif %}
+      {% if c.class == 'cleric' %}<label>Deity <input type="text" name="deity" value="{{ c.deity or '' }}"></label>{% endif %}
+      {% if c.class in ('warrior', 'dwarf') %}<label>Lucky weapon <select name="lucky_weapon"><option value="">—</option>{% for w in weapon_options %}<option value="{{ w.name }}" {% if c.lucky_weapon == w.name %}selected{% endif %}>{{ w.name }}</option>{% endfor %}</select></label>{% endif %}
+      {% if c.class == 'elf' %}<label>Lucky spell <select name="lucky_spell"><option value="">—</option>{% for s in c.spells %}<option value="{{ s }}" {% if c.lucky_spell == s %}selected{% endif %}>{{ s }}</option>{% endfor %}</select></label>{% endif %}
+      <label class="wide">Notes <textarea name="notes" rows="4">{{ c.notes }}</textarea></label>
+      <fieldset class="characteristics-fieldset"><legend>Campaign (folio page 5)</legend>
+        <div class="form-grid compact">
+          <label>Campaign name <input type="text" name="campaign_name" value="{{ (c.campaign or {}).get('name', '') }}"></label>
+          <label>Religion <input type="text" name="campaign_religion" value="{{ (c.campaign or {}).get('religion', '') }}"></label>
+          <label class="wide">In my home I own <textarea name="campaign_home" rows="3">{{ (c.campaign or {}).get('home', '') }}</textarea></label>
+          <label class="wide">Relations, one per line ("Name: how we stand") <textarea name="campaign_relations" rows="4">{{ ((c.campaign or {}).get('relations', [])) | join("\n") }}</textarea></label>
+          <label class="wide">Goals, one per line, start with [x] when done <textarea name="campaign_goals" rows="4">{% for g in (c.campaign or {}).get('goals', []) %}{{ '[x] ' if g.done else '' }}{{ g.text }}
+{% endfor %}</textarea></label>
+        </div>
+      </fieldset>
+      <button type="submit" class="button">Save</button>
+    </form>
+  </div>
+
+  <div class="panel danger-zone no-print">
+    <form method="post" action="{{ url_for('dcc.delete', character_id=character_id) }}" onsubmit="return confirm('Delete {{ c.name }}?')">
+      <button type="submit" class="mini-button danger">Delete character</button>
+    </form>
+  </div>
+{% endblock %}

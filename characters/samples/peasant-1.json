@@ -1,0 +1,93 @@
+{
+ "system": "dcc",
+ "name": "Peasant 1",
+ "owner": "player",
+ "created": "2026-09-16",
+ "abilities": {
+  "strength": 9,
+  "agility": 11,
+  "stamina": 8,
+  "personality": 7,
+  "intelligence": 12,
+  "luck": 13
+ },
+ "luck_current": 13,
+ "birth_augur": {
+  "roll": 5,
+  "augur": "Conceived on Horseback",
+  "applies_to": "Mounted Attack Rolls",
+  "modifier": 1
+ },
+ "occupation": {
+  "roll": [
+   89,
+   90
+  ],
+  "occupation": "Squire",
+  "weapon": "Longsword",
+  "trade_goods": "Steel helmet",
+  "notes": "",
+  "rolled": 90
+ },
+ "alignment": "lawful",
+ "level": 3,
+ "class": "warrior",
+ "xp": 111,
+ "hp_max": 24,
+ "hp_current": 24,
+ "coins": {
+  "cp": 37,
+  "sp": 0,
+  "gp": 0
+ },
+ "weapons": [
+  "Longsword"
+ ],
+ "armor": null,
+ "shield": false,
+ "equipment": [
+  "Chain, 10’",
+  "Steel helmet",
+  "Hammer, small"
+ ],
+ "spells": [],
+ "patron": null,
+ "languages": [
+  "Common"
+ ],
+ "notes": "",
+ "disapproval": 1,
+ "history": [
+  {
+   "event": "0-level",
+   "hp_roll": 1,
+   "copper": 37
+  },
+  {
+   "event": "level",
+   "level": 1,
+   "class": "warrior",
+   "hp_roll": 12,
+   "hp_gained": 11
+  },
+  {
+   "event": "level",
+   "level": 2,
+   "class": "warrior",
+   "hp_roll": 9,
+   "hp_gained": 8
+  },
+  {
+   "event": "level",
+   "level": 3,
+   "class": "warrior",
+   "hp_roll": 5,
+   "hp_gained": 4
+  }
+ ],
+ "tax_debt_cp": 2473,
+ "inventory_in_table": true,
+ "luck_rule": true,
+ "interest_cp": 85394,
+ "library_loan_cp": 0
+}

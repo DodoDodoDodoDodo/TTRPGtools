@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Dossier Register{% endblock %}
+{% block content %}
+  <div class="panel">
+    <div class="panel-header">
+      <h1>Registered Characters</h1>
+      <a class="button" href="{{ url_for('dh1e.new_character') }}">+ New Character</a>
+    </div>
+    {% if characters %}
+      <table class="dossier-table">
+        <thead>
+          <tr><th>Name</th><th>Career</th><th>Rank</th><th>XP Total</th><th>XP Available</th></tr>
+        </thead>
+        <tbody>
+          {% for c in characters %}
+          <tr onclick="window.location='{{ url_for('dh1e.character_sheet', character_id=c.id) }}'">
+            <td class="dossier-name">{{ c.name }}</td>
+            <td>{{ c.career }}</td>
+            <td>{{ c.rank or "—" }}</td>
+            <td>{{ c.xp_total }}</td>
+            <td>{{ c.xp_available }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p class="empty-state">No characters on record. The Administratum awaits your first dossier.</p>
+    {% endif %}
+  </div>
+{% endblock %}

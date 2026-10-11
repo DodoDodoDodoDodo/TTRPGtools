@@ -1,0 +1,9 @@
+{% extends "dcc/dcc_base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head %}
+<script src="{{ asset('dcc_market.js') }}" defer></script>
+<script src="{{ asset('dcc_builder.js') }}" defer></script>
+{% endblock %}
+{% block content %}
+<div class="builder" id="builder" data-character="{{ character_id or '' }}" data-start="{{ start }}"></div>
+{% endblock %}

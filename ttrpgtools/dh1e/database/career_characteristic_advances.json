@@ -1,0 +1,578 @@
+[
+  {
+    "career": "Adept",
+    "characteristic": "Weapon Skill",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Adept",
+    "characteristic": "Ballistic Skill",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Adept",
+    "characteristic": "Strength",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Adept",
+    "characteristic": "Toughness",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Adept",
+    "characteristic": "Agility",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Adept",
+    "characteristic": "Intelligence",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 500
+  },
+  {
+    "career": "Adept",
+    "characteristic": "Perception",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Adept",
+    "characteristic": "Willpower",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Adept",
+    "characteristic": "Fellowship",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Arbitrator",
+    "characteristic": "Weapon Skill",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Arbitrator",
+    "characteristic": "Ballistic Skill",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Arbitrator",
+    "characteristic": "Strength",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Arbitrator",
+    "characteristic": "Toughness",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 500
+  },
+  {
+    "career": "Arbitrator",
+    "characteristic": "Agility",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Arbitrator",
+    "characteristic": "Intelligence",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Arbitrator",
+    "characteristic": "Perception",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Arbitrator",
+    "characteristic": "Willpower",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Arbitrator",
+    "characteristic": "Fellowship",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Assassin",
+    "characteristic": "Weapon Skill",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Assassin",
+    "characteristic": "Ballistic Skill",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Assassin",
+    "characteristic": "Strength",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Assassin",
+    "characteristic": "Toughness",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Assassin",
+    "characteristic": "Agility",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 500
+  },
+  {
+    "career": "Assassin",
+    "characteristic": "Intelligence",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Assassin",
+    "characteristic": "Perception",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Assassin",
+    "characteristic": "Willpower",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Assassin",
+    "characteristic": "Fellowship",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Cleric",
+    "characteristic": "Weapon Skill",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Cleric",
+    "characteristic": "Ballistic Skill",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Cleric",
+    "characteristic": "Strength",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Cleric",
+    "characteristic": "Toughness",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Cleric",
+    "characteristic": "Agility",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Cleric",
+    "characteristic": "Intelligence",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Cleric",
+    "characteristic": "Perception",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Cleric",
+    "characteristic": "Willpower",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Cleric",
+    "characteristic": "Fellowship",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Guardsman",
+    "characteristic": "Weapon Skill",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Guardsman",
+    "characteristic": "Ballistic Skill",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Guardsman",
+    "characteristic": "Strength",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 500
+  },
+  {
+    "career": "Guardsman",
+    "characteristic": "Toughness",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Guardsman",
+    "characteristic": "Agility",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Guardsman",
+    "characteristic": "Intelligence",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Guardsman",
+    "characteristic": "Perception",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Guardsman",
+    "characteristic": "Willpower",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Guardsman",
+    "characteristic": "Fellowship",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Imperial Psyker",
+    "characteristic": "Weapon Skill",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Imperial Psyker",
+    "characteristic": "Ballistic Skill",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Imperial Psyker",
+    "characteristic": "Strength",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Imperial Psyker",
+    "characteristic": "Toughness",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Imperial Psyker",
+    "characteristic": "Agility",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Imperial Psyker",
+    "characteristic": "Intelligence",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Imperial Psyker",
+    "characteristic": "Perception",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Imperial Psyker",
+    "characteristic": "Willpower",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Imperial Psyker",
+    "characteristic": "Fellowship",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Scum",
+    "characteristic": "Weapon Skill",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Scum",
+    "characteristic": "Ballistic Skill",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Scum",
+    "characteristic": "Strength",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Scum",
+    "characteristic": "Toughness",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Scum",
+    "characteristic": "Agility",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 500
+  },
+  {
+    "career": "Scum",
+    "characteristic": "Intelligence",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Scum",
+    "characteristic": "Perception",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Scum",
+    "characteristic": "Willpower",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Scum",
+    "characteristic": "Fellowship",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Tech-Priest",
+    "characteristic": "Weapon Skill",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Tech-Priest",
+    "characteristic": "Ballistic Skill",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Tech-Priest",
+    "characteristic": "Strength",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Tech-Priest",
+    "characteristic": "Toughness",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Tech-Priest",
+    "characteristic": "Agility",
+    "simple": 500,
+    "intermediate": 750,
+    "trained": 1000,
+    "expert": 2500
+  },
+  {
+    "career": "Tech-Priest",
+    "characteristic": "Intelligence",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Tech-Priest",
+    "characteristic": "Perception",
+    "simple": 250,
+    "intermediate": 500,
+    "trained": 750,
+    "expert": 1000
+  },
+  {
+    "career": "Tech-Priest",
+    "characteristic": "Willpower",
+    "simple": 100,
+    "intermediate": 250,
+    "trained": 500,
+    "expert": 750
+  },
+  {
+    "career": "Tech-Priest",
+    "characteristic": "Fellowship",
+    "simple": "N/A",
+    "intermediate": "N/A",
+    "trained": "N/A",
+    "expert": "N/A"
+  }
+]

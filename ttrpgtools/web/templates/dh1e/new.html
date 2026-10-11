@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}New Dossier{% endblock %}
+{% block content %}
+  <div class="panel">
+    <div class="panel-header"><h1>Open a New Dossier</h1></div>
+    <form method="post" class="form-grid">
+      <label>Name
+        <input type="text" name="name" required>
+      </label>
+      <label>Career
+        <select name="career" required>
+          {% for career in careers %}
+          <option value="{{ career.name }}">{{ career.name }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>Home World
+        <input type="text" name="homeworld" placeholder="Hive World, Feral World...">
+      </label>
+      <label>Starting XP
+        <input type="number" name="xp_total" value="0" min="0">
+      </label>
+
+      <fieldset class="characteristics-fieldset">
+        <legend>Characteristics</legend>
+        <div class="characteristics-grid">
+          {% for name in characteristic_names %}
+          <label>{{ name }}
+            <input type="number" name="char_{{ name }}" value="0" min="0" max="99">
+          </label>
+          {% endfor %}
+        </div>
+      </fieldset>
+
+      <button type="submit" class="button">Open Dossier</button>
+    </form>
+  </div>
+{% endblock %}

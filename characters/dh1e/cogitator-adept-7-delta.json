@@ -1,0 +1,85 @@
+{
+  "name": "Cogitator-Adept 7-Delta",
+  "career": "Tech-Priest",
+  "characteristics": {
+    "Weapon Skill": 30,
+    "Ballistic Skill": 34,
+    "Strength": 33,
+    "Toughness": 40,
+    "Agility": 28,
+    "Intelligence": 40,
+    "Perception": 32,
+    "Willpower": 36,
+    "Fellowship": 20
+  },
+  "xp_total": 8000,
+  "insanity_points": 0,
+  "corruption_points": 0,
+  "equipment": [],
+  "armour": {},
+  "career_path": [
+    "Technographer",
+    "Mech-Wright",
+    "Electro-Priest",
+    "Engineer",
+    "Tech-Priest",
+    "Mech-Deacon"
+  ],
+  "advance_history": [
+    {
+      "name": "Toughness Simple",
+      "xp_cost": 100,
+      "type": "characteristic",
+      "order": 1
+    },
+    {
+      "name": "Autosanguine",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 2
+    },
+    {
+      "name": "Basic Weapon Training (Flame)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 3
+    },
+    {
+      "name": "Basic Weapon Training (Primitive)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 4
+    },
+    {
+      "name": "Basic Weapon Training (Sp)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 5
+    },
+    {
+      "name": "Binary Chatter",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 6
+    },
+    {
+      "name": "Chem-Use",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 7
+    },
+    {
+      "name": "Cleanse And Purify",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 8
+    },
+    {
+      "name": "Combat Master",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 9
+    }
+  ],
+  "homeworld": "Forge World"
+}

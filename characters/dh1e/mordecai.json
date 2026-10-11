@@ -1,0 +1,85 @@
+{
+  "name": "Mordecai",
+  "career": "Imperial Psyker",
+  "characteristics": {
+    "Weapon Skill": 28,
+    "Ballistic Skill": 30,
+    "Strength": 27,
+    "Toughness": 32,
+    "Agility": 33,
+    "Intelligence": 42,
+    "Perception": 38,
+    "Willpower": 45,
+    "Fellowship": 25
+  },
+  "xp_total": 5600,
+  "insanity_points": 0,
+  "corruption_points": 0,
+  "equipment": [],
+  "armour": {},
+  "career_path": [
+    "Sanctionite",
+    "Neonate",
+    "Aspirant",
+    "Savant Militant",
+    "Savant Warrant"
+  ],
+  "advance_history": [
+    {
+      "name": "Willpower Simple",
+      "xp_cost": 100,
+      "type": "characteristic",
+      "order": 1
+    },
+    {
+      "name": "Ambidextrous",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 2
+    },
+    {
+      "name": "Armour Of Contempt",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 3
+    },
+    {
+      "name": "Awareness",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 4
+    },
+    {
+      "name": "Awareness +10",
+      "xp_cost": 100,
+      "type": "advance",
+      "order": 5
+    },
+    {
+      "name": "Basic Weapon Training (Bolt)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 6
+    },
+    {
+      "name": "Basic Weapon Training (Las)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 7
+    },
+    {
+      "name": "Basic Weapon Training (Primitive)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 8
+    },
+    {
+      "name": "Basic Weapon Training (Sp)",
+      "xp_cost": 100,
+      "type": "talent",
+      "order": 9
+    }
+  ],
+  "homeworld": "Hive World",
+  "divination": "Mutation without, corruption within."
+}
