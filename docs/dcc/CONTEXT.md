@@ -1,6 +1,6 @@
 # West marches economy
 
-The closed economy of the west marches town: coin and goods are conserved, villagers and traders produce, buy and sell, and prices come out of what is on the shelves and who makes what. the owner wants swings, lags and rare long shortages to emerge from that, never to be scripted.
+The closed economy of the west marches town: coin and goods are conserved, villagers and traders produce, buy and sell, and prices come out of what is on the shelves and who makes what. Dodo wants swings, lags and rare long shortages to emerge from that, never to be scripted.
 
 ## Language
 

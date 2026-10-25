@@ -16,7 +16,7 @@ Web layer: `ttrpgtools/web/` holds the front door (`app.py`), shared `base.html`
 pip install -r requirements.txt
 python -m ttrpgtools.web          # dev server
 python -m pytest tests -q
-docker compose -f your-compose-file.yml up -d --build sheet   # deploy
+docker compose -f /home/dodo/stacks/core/ttrpgtools-compose.yml up -d --build sheet   # deploy
 ```
 
 ## Rulebooks and private content

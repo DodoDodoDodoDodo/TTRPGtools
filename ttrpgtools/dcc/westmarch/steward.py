@@ -26,7 +26,7 @@ from ttrpgtools import dcc
 from . import economy, fields, lives, places, town
 
 ID = "hedwig-d"
-GOODS = ["Barley, a sack", "Ale, a jug", "Eggs, a dozen", "Smoked eel", "Stinky cheese", "Coal, a sack", "Rations, per day", "Scrap metal", "Tanned hide"]
+GOODS = ["Barley, a sack", "Ale, a jug", "Eggs, a dozen", "Smoked eel", "Coal, a sack", "Rations, per day", "Scrap metal", "Tanned hide"]
 PRODUCERS = {"detlef": "hens and eggs", "xaver": "ale", "jutta": "smoked eel", "reinhild": "barley", "hartmut": "scrap", "ivo": "hides"}
 BASELINE = ([{"sell": g, "above": 10.0, "for_days": 21, "keep": 0, "per_night": 3} for g in GOODS]
             + [{"buy": g, "below": 0.05, "for_days": 28, "up_to": 10, "per_night": 2, "keep_gp": 100} for g in GOODS]
@@ -34,7 +34,7 @@ BASELINE = ([{"sell": g, "above": 10.0, "for_days": 21, "keep": 0, "per_night": 
             + [{"aid": pid, "gp": 5, "when_purse_below_gp": 3, "for_days": 14, "every_days": 30} for pid in PRODUCERS])
 LIMITS = {"cellar": 40, "orders": 40, "per_night": 10, "up_to": 60, "notebook": 2000, "note": 140, "history": 156, "done": 40}
 NOTE_EVERY = 90   # she writes to the village notebook (the town note) at most this often
-# Her attention is a token budget (the owner 10-10: about the tokens per in-game week of the runs before): one point is the tokens of one average call (the host
+# Her attention is a token budget (Dodo 10-10: about the tokens per in-game week of the runs before): one point is the tokens of one average call (the host
 # measures each call and charges it in points), and points come back at 3.14 a year, the calls a year of the three runs of 10-09 and 10-10 (181 calls,
 # lookups included, in 57.7 years). Up to ATTENTION_CAP can be saved for a crisis; with less than one point nothing wakes her, not even her own date.
 ATTENTION_CAP, ATTENTION_PER_YEAR = 12.0, 3.14
@@ -411,6 +411,8 @@ def due(state: dict, day: int) -> str | None:
         return None   # she is dead: nobody looks (until 10-11 she went on looking for seven years after her death)
     b = book(state)
     since, nxt = day - int(b["checked"]), b.get("next")
+    if cfg.get("daily"):
+        return "the daily look" if since >= 1 else None   # every night, once; her own date and her attention do not hold it back
     if not nxt:
         return "the usual interval has passed" if since >= int(cfg.get("every", 30)) else None
     if float(b.get("attention", ATTENTION_CAP)) < 1:
@@ -427,7 +429,7 @@ def due(state: dict, day: int) -> str | None:
 
 def buyers_of(state: dict, good: str) -> list[str]:
     """The places a producer can sell a good to: those that keep a shelf of it, and the shop that buys anything (for a pittance); shut or open. When the one
-    place that buys barley and eggs shut, the whole chain stopped for years, and she could not see why (the owner 10-10: she must know)."""
+    place that buys barley and eggs shut, the whole chain stopped for years, and she could not see why (Dodo 10-10: she must know)."""
     out = []
     for shop in state["shops"].values():
         if "caravan" in shop.get("kinds", []):
@@ -439,7 +441,7 @@ def buyers_of(state: dict, good: str) -> list[str]:
     return out
 
 
-TEACHINGS_FILE = dcc.REPO_DIR / "data" / "steward" / "teachings.md"   # live copy: the owner and Claude edit it, no deploy needed
+TEACHINGS_FILE = dcc.REPO_DIR / "data" / "steward" / "teachings.md"   # live copy: Dodo and Claude edit it, no deploy needed
 
 
 def teachings() -> str:
@@ -488,7 +490,9 @@ def report(state: dict, day: int, why: str = "") -> dict:
             "my_flags": b["flags"], "my_notebook": [{"id": n["id"], "day": n["day"], "pin": n["pin"], **({"forgotten_on_day": n["until"]} if n.get("until") else {}), "text": n["text"]} for n in b["notes"]],
             "notebook_room": {"characters_left": NOTE_LIMITS["chars"] - sum(len(n["text"]) for n in b["notes"]), "entries_left": NOTE_LIMITS["entries"] - len(b["notes"]),
                               "pins_left": NOTE_LIMITS["pins"] - sum(n["pin"] for n in b["notes"]), "dropped_for_lack_of_room_last_time": b.get("lost_for_room", [])},
-            "check_ins": {"woken_because": why or "(not said)", "attention_left": round(float(b.get("attention", ATTENTION_CAP)), 1),
+            "check_ins": {**({"daily": "you are asked every night now: on a quiet night keep the same orders, add no note, and answer briefly; "
+                                       "your next_checkin is not needed"} if (places.STEWARD or {}).get("daily") else {}),
+                          "woken_because": why or "(not said)", "attention_left": round(float(b.get("attention", ATTENTION_CAP)), 1),
                           "attention_rules": f"a look costs attention in proportion to what you read and write: a plain look about 1 point, each look_up round about as much again. "
                                              f"Attention comes back at about {ATTENTION_PER_YEAR} points a year and you can save up to {int(ATTENTION_CAP)}. With less than 1 point nothing wakes you, "
                                              "not even your own date, until enough has come back; save some for a crisis",
@@ -643,7 +647,7 @@ def run_claude(request: dict, model: str = "sonnet") -> dict:
     (on the host, not in the town container)."""
     import tempfile
     from pathlib import Path
-    here = Path(tempfile.gettempdir()) / "hedwig-cwd"   # an empty directory outside your home directory: no CLAUDE.md or project memory reaches her
+    here = Path(tempfile.gettempdir()) / "hedwig-cwd"   # an empty directory outside /home/dodo: no CLAUDE.md or project memory reaches her
     here.mkdir(exist_ok=True)
     out = subprocess.run(["claude", "-p", "--tools", "", "--no-session-persistence", "--model", model, "--system-prompt", request["system"], request["prompt"]],
                          capture_output=True, text=True, timeout=300, cwd=here)

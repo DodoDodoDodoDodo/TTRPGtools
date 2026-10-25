@@ -58,8 +58,8 @@ dcc_explain.HOUSE_NOTES.extend([
              "that moon's enemies, one die worse (-1d) against the kind it is weak against. Pale Moon: better against the dead and "
              "the patient, worse against the wet and the hidden. Red Lantern: better against the hungry, worse against the dead and "
              "the patient. Drowned Moon: better against the wet and the hidden, worse against the hungry."},
-    {"title": "This campaign: who makes what", "words": ["produce", "producer", "scrap", "scrap metal", "caravan", "brewer", "hen keeper", "cheesemaker", "digger", "factor"],
-     "body": "A few villagers make the basic goods and sell them to the shops: Zeno Zwiebel cheese, Detlef of the Ford eggs and hens, "
+    {"title": "This campaign: who makes what", "words": ["produce", "producer", "scrap", "scrap metal", "caravan", "brewer", "hen keeper", "digger", "factor"],
+     "body": "A few villagers make the basic goods and sell them to the shops: Detlef of the Ford eggs and hens, "
              "Xaver Haberkorn ale and barley, Hedwig Nebelung lamp oil and candles, Reinhild Sevenbrothers rations and barley, and the "
              "dwarf Hartmut Bachmeier scrap metal, which only the smith buys and melts down for his work. A shop buys a thing only "
              "up to twice the quantity it usually keeps, and only what its till can pay. Once a month a caravan comes; Vessa the "

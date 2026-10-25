@@ -5,7 +5,7 @@ coin in sevens. The pages show the result (a doubled price, a thing that is "not
 Only the admin sees which clause a character has. A character who sells their augur has no clause until they carry
 another one; then it is the clause of that augur and their moon.
 
-The list is the owner's choice from two rounds of ideas (2026-10-05/06). Each clause is one word here; what it does is
+The list is Dodo's choice from two rounds of ideas (2026-10-05/06). Each clause is one word here; what it does is
 decided by the small functions below, which ``town.py`` asks at the few places where it matters.
 """
 

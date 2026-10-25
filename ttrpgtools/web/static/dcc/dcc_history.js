@@ -16,7 +16,7 @@
   const COLORS = ["#0072B2", "#D55E00", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#222222", "#B8A800"];
   const DASHES = ["", "8 4", "2 3", "10 3 2 3"];
   const HATCHES = ["solid", "diag", "dots", "cross", "horiz", "back"];
-  const STAPLES = ["Barley, a sack", "Ale, a jug", "Eggs, a dozen", "Hen", "Smoked eel", "Stinky cheese", "Coal, a sack", "Rations, per day", "Scrap metal", "Tanned hide"];
+  const STAPLES = ["Barley, a sack", "Ale, a jug", "Eggs, a dozen", "Hen", "Hens, the whole flock", "Humans, living", "Halflings, living", "Dwarves, living", "Elves, living", "Smoked eel", "Coal, a sack", "Rations, per day", "Scrap metal", "Tanned hide"];
   const W = 1000, PAD = { l: 62, r: 150, t: 12, b: 26 };
   let data = null, visible = new Set(), hover = null, mode = "price", filter = "", range = { since: null, until: null }, cursor = null, note = "";
 
@@ -194,7 +194,7 @@
       "Producers answer a high price with more goods a few days later, so the amount follows the price with a delay.")];
     if (mode === "rel") out.push(h("p", { class: "hint" }, "Each price as a multiple of the good's usual price (1 = the usual): goods of every price can be compared."));
     out.push(panel(mode === "rel" ? "PRICE as a multiple of the usual price (log scale above 0.1; free is the bold 0.0)" : "PRICE of one piece: what a customer pays, in copper (log scale; free is the bold 0.0, below it a shop paying you, down to -10 cp)", mode === "rel" ? "rel" : "price", 330, 0, mode === "rel" ? "x" : "cp"));
-    out.push(panel("AMOUNT FOR SALE: pieces on the shelves of all shops (log scale above 1; none is the bold 0.0)", "stock", 270, 0, "n"));
+    out.push(panel("AMOUNT FOR SALE: pieces on the shelves of all shops; the census lines (the whole flock, the living kinds) count what lives, not what is sold (log scale above 1; none is the bold 0.0)", "stock", 270, 0, "n"));
     out.push(strip());
     out.push(visits());
     return out;

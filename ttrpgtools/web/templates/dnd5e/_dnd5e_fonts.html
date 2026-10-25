@@ -1,0 +1,8 @@
+{#- DDB's fonts from the private content folder, for the 5e pages outside the character app. -#}
+{%- set ddb = url_for('dnd5e_builder.shell') ~ 'ddb' -%}
+  <style>
+    @font-face{font-family:"Roboto";src:url("{{ ddb }}/fonts/roboto/roboto-latin-400-normal.woff2");font-weight:400}
+    @font-face{font-family:"Roboto";src:url("{{ ddb }}/fonts/roboto/roboto-latin-700-normal.woff2");font-weight:700}
+    @font-face{font-family:"Mrs Eaves";src:url("{{ ddb }}/fonts/MrsEavesOT-BoldItalic.otf");font-weight:700;font-style:italic}
+    @font-face{font-family:"Nodesto Caps";src:url("{{ ddb }}/fonts/phb/Nodesto Caps Condensed.woff2")}
+  </style>

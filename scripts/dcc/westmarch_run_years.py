@@ -32,7 +32,7 @@ with town.town() as s:
 last = {last}
 for day in range(first, last + 1):
     town.today = lambda on=real() + timedelta(days=day - start): on
-    daily._work(use_model=False)
+    daily._work(use_model={quota} > 0, quota={quota})
     with town.town() as s:
         why = steward.due(s, day)
     if why:
@@ -50,8 +50,11 @@ def main() -> None:
     ap.add_argument("years", type=float, nargs="?", default=None, help="how long; leave out to run until the STOP file appears")
     ap.add_argument("--container", default="sheet")
     ap.add_argument("--model", default="sonnet")
+    ap.add_argument("--model-per-night", type=int, default=3, help="traders played by the local model each night, in turn (0: none; production plays them all)")
     ap.add_argument("--budget", type=int, default=100000, help="most check-ins in this run (a safety catch; her attention is the real limit)")
     args = ap.parse_args()
+    if checkin.in_container(args.container, "from ttrpgtools.dcc.westmarch import places\nprint(bool((places.STEWARD or {}).get('daily')))").strip().endswith("True"):
+        sys.exit("places.STEWARD['daily'] is on: she would be asked on every simulated night. Turn it off before fast-forwarding.")
     root = Path(__file__).resolve().parents[2]
     here = root / "data" / "steward"
     log, stop, pause = here / "run-years.log", here / "STOP", here / "PAUSE"
@@ -77,7 +80,7 @@ def main() -> None:
             say(f"resumed at day {now}")
             paused = False
         target = now + CHUNK_NIGHTS if end is None else min(end, now + CHUNK_NIGHTS)
-        out = checkin.in_container(args.container, RUN.format(last=target)).splitlines()[-1]
+        out = checkin.in_container(args.container, RUN.format(last=target, quota=args.model_per_night)).splitlines()[-1]
         if out.startswith("DONE"):
             now = target
             if now >= next_year:

@@ -1,4 +1,4 @@
-/* DCC pages. Palette sampled from the Moebius basic-land cards in a folder of card art (2026-10-04):
+/* DCC pages. Palette sampled from the Moebius basic-land cards in u/takahe/TTRPG_STUFF (2026-10-04):
    flat pastel fields, cream paper, charcoal line, and per land one saturated word color with one rule color.
    <html data-land="forest|island|mountain|plains|swamp|wastes"> picks the land. */
 @font-face { font-family: "Alegreya"; font-weight: 400; font-display: swap; src: url("fonts/alegreya-latin-400-normal.woff2") format("woff2"); }
@@ -321,7 +321,7 @@ details.rank-group { border-top: 1px solid var(--gold-soft); padding: .15rem 0; 
 
 @media print { .masthead, .no-print { display: none; } html, body { background: #fff; } body::before { display: none; } .print-only { display: inline; } .panel { box-shadow: none; } }
 
-/* Paper. Two material sets the owner chose (Quickshare, 2026-10-05), baked into tiles by scripts/dcc_texture.py.
+/* Paper. Two material sets Dodo chose (Quickshare, 2026-10-05), baked into tiles by scripts/dcc_texture.py.
    A tile lies over a flat color with "hard-light": its mid-grey leaves the color exactly as it is, the relief
    darkens and lightens around it. Tiles scroll with what they lie on.
      sheet (Paper002, fine recycled paper)   the land color is one sheet; every panel and the masthead is a piece
@@ -345,7 +345,7 @@ html { background-image: var(--sheet); background-size: 512px; background-blend-
 [data-paper="c3"] { background-image: var(--card-3) !important; } [data-paper="c4"] { background-image: var(--card-4) !important; }
 @media print { html, [data-paper] { background-image: none !important; } }
 
-/* The header follows the reader, so Guide, What is this? and Music stay in reach (the owner, 2026-10-05).
+/* The header follows the reader, so Guide, What is this? and Music stay in reach (Dodo, 2026-10-05).
    --masthead-h is its height right now, set by dcc_assist.js. On a narrow screen the header wraps to several lines
    and would eat the screen: there it stays at the top of the page and only the three buttons follow, bottom right. */
 .masthead { position: sticky; top: 0; z-index: 800; }
@@ -361,7 +361,7 @@ html { scroll-padding-top: calc(var(--masthead-h, 4rem) + .6rem); }
   body { padding-bottom: 8rem; }
 }
 
-/* TRIAL (the owner, 2026-10-05: "I want to see what that looks like. might revert it afterwards"): every corner has the
+/* TRIAL (Dodo, 2026-10-05: "I want to see what that looks like. might revert it afterwards"): every corner has the
    radius of a Magic card, 3 mm, whatever the size of the box. Small things turn into pills. The header bar keeps its
    square corners: it runs off both edges of the window. Delete this block and the old corners are back. */
 :root { --corner: 3mm; }

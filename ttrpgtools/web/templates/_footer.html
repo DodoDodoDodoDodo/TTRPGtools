@@ -1,0 +1,30 @@
+{# Site footer on every TTRPG page, in the place of DDB's legal footer: a small note on the rest of
+   dodo-dodo; the whole band links to the "Server cost" / pitch-in section on the home page. #}
+<style>
+  .dodo-footer { display: block; margin-top: 3rem; background: #1b1f22; color: #c9ced2; text-decoration: none;
+    font: 14px/1.5 Roboto, Helvetica, sans-serif; border-top: 3px solid #c53131; position: relative; z-index: 5; }
+  /* the pages' own a:hover colours (DDB's, the site's) must not reach the footer: its text stays light */
+  html body a.dodo-footer, html body a.dodo-footer:link, html body a.dodo-footer:visited, html body a.dodo-footer:hover, html body a.dodo-footer:active { color: #c9ced2; text-decoration: none; }
+  html body a.dodo-footer:hover { background: #2c3338; color: #e4e8eb; }
+  html body a.dodo-footer:hover .dodo-footer-small { color: #a9b2b8; }
+  .dodo-footer-inner { max-width: 1100px; margin: 0 auto; padding: 1.6rem 16px 2.2rem; display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; align-items: center; }
+  .dodo-footer-brand { font-family: "Mrs Eaves", Georgia, serif; font-size: 1.6rem; color: #fff; white-space: nowrap; }
+  .dodo-footer-text { flex: 1 1 22rem; }
+  html body .dodo-footer-text strong { color: #fff; }
+  .dodo-footer-cta { display: inline-block; border: 1px solid #d4a017; color: #d4a017; padding: .45rem .9rem; border-radius: 3px;
+    font-family: "Roboto Condensed", Roboto, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; white-space: nowrap; }
+  .dodo-footer:hover .dodo-footer-cta { background: #d4a017; color: #1b1f22; }
+  .dodo-footer-small { flex-basis: 100%; font-size: 12px; color: #8a949a; }
+  @media print { .dodo-footer { display: none; } }
+</style>
+<a class="dodo-footer no-print" href="/#contrib" aria-label="dodo-dodo: pitch in for the server">
+  <div class="dodo-footer-inner">
+    <div class="dodo-footer-brand">dodo-dodo</div>
+    <div class="dodo-footer-text">
+      This table runs on the same little server as <strong>Bird-Tube</strong> (films and series), <strong>Subscriptions</strong> (your YouTube channels),
+      <strong>Books</strong> (audiobooks and ebooks), <strong>Recipes</strong> and <strong>Files</strong>. This runs locally at home.
+    </div>
+    <span class="dodo-footer-cta">Pitch in &middot; get dodo-dodo premium</span>
+    <div class="dodo-footer-small">{% if '/dnd5e' in request.path %}Dodo Beyond is a private table tool, not D&amp;D Beyond.{% else %}Private table tools for friends of dodo-dodo.{% endif %}</div>
+  </div>
+</a>

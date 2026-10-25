@@ -954,7 +954,7 @@ def rest(character: dict, bed_rest: bool = False, prefer: str | None = None, hp:
     """A night's rest (p. 94): 1 hit point and 1 point of lost ability score, 2
     each with a day of bed rest; thieves and halflings regain Luck; a cleric's
     disapproval range resets. ``hp`` and ``ability`` override the two amounts
-    (the campaign's inns set their own). the owner's ruling 2026-10-04: a day with
+    (the campaign's inns set their own). Dodo's ruling 2026-10-04: a day with
     spellburn heals like any other."""
     points = 2 if bed_rest else 1
     before = int(character["hp_current"])

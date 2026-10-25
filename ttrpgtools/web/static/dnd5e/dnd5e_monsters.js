@@ -60,6 +60,9 @@ async function loadCustom() {
     : h("p", { class: "empty-state" }, "Nothing imported yet."));
 }
 
-const picker = monsterPicker({ onPick: (row) => showMonster(row.id), pickLabel: "View" });
+const picker = monsterPicker({ onPick: (row) => showMonster(row.id), pickLabel: "View", single: true });
 document.getElementById("picker").append(picker);
 loadCustom();
+
+// #<monster id> (the hub's Continue card) opens that stat block
+if (location.hash.length > 1) showMonster(decodeURIComponent(location.hash.slice(1)));

@@ -274,6 +274,9 @@ def claim(person_id: int, user: str | None, alignment: str, moon: str, state: di
         with db:
             db.execute("UPDATE people SET claimed_by = ?, character_id = ?, debt_cp = 0, household_id = NULL, updated = ? WHERE id = ?",
                        (user or "local", character_id, datetime.now().isoformat(timespec="seconds"), row["id"]))
+            if state is not None and state.get("household_mode"):   # the last adult of a house who is taken over leaves its purse to nobody: the house is dissolved (households.py)
+                from . import households
+                households.dissolve_if_empty(db, state, row["household_id"])
         return character_id
     finally:
         db.close()

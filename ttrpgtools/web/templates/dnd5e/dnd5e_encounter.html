@@ -2,7 +2,7 @@
 {% block title %}Encounter{% endblock %}
 {% block page_script %}
 <script>document.documentElement.dataset.encounter = {{ encounter_id|tojson }};</script>
-<script src="{{ url_for('static', filename='dnd5e/dnd5e_encounter.js') }}" defer></script>
+<script src="{{ static_v('dnd5e/dnd5e_encounter.js') }}" defer></script>
 {% endblock %}
 {% block page %}
 <section class="panel">

@@ -389,9 +389,11 @@
     </form>
   </div>
 
+{% if may_delete(c.owner if c.owner is defined else none) %}
   <div class="panel danger-zone no-print">
     <form method="post" action="{{ url_for('dcc.delete', character_id=character_id) }}" onsubmit="return confirm('Delete {{ c.name }}?')">
       <button type="submit" class="mini-button danger">Delete character</button>
     </form>
   </div>
+{% endif %}
 {% endblock %}

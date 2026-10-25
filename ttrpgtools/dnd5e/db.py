@@ -53,6 +53,28 @@ CREATE TABLE IF NOT EXISTS combats (
     data         TEXT NOT NULL,      -- live state
     undo         TEXT NOT NULL DEFAULT '[]'
 );
+
+CREATE TABLE IF NOT EXISTS campaigns (
+    id       TEXT PRIMARY KEY,
+    name     TEXT NOT NULL,
+    dm       TEXT,                   -- the login that started it
+    created  TEXT NOT NULL,
+    data     TEXT NOT NULL           -- description and later settings
+);
+
+-- which builder characters (characters/dnd5e/<id>.json) play in which campaign; one character may be in several
+CREATE TABLE IF NOT EXISTS campaign_members (
+    campaign_id  TEXT NOT NULL REFERENCES campaigns(id) ON DELETE CASCADE,
+    character_id TEXT NOT NULL,
+    added_by     TEXT,
+    joined       TEXT NOT NULL,
+    PRIMARY KEY (campaign_id, character_id)
+);
+
+CREATE TABLE IF NOT EXISTS explain_log (   -- rules helper questions that got an answer, for the free hourly one
+    user TEXT NOT NULL,
+    ts   TEXT NOT NULL
+);
 """
 
 

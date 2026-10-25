@@ -1,4 +1,4 @@
-"""Start a new book of the village: year 0 (the owner 10-11).
+"""Start a new book of the village: year 0 (Dodo 10-11).
 
     docker exec -w /app -e PYTHONPATH=/app sheet python scripts/dcc/new_year_zero.py <tag>
 

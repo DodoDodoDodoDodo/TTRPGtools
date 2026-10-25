@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import json
+
 from flask import Blueprint, abort, redirect, render_template, request, url_for
 
 from .models import (
@@ -23,6 +25,7 @@ from .storage import (
     new_character_id,
     save_character,
 )
+from ttrpgtools.permissions import require_delete
 
 bp = Blueprint("dh1e", __name__)
 
@@ -320,5 +323,6 @@ def undo_purchase(character_id):
 @bp.post("/TTRPG/dh1e/<character_id>/delete")
 def delete_character(character_id):
     _load_or_404(character_id)
+    require_delete(json.loads(character_path(character_id).read_text()).get("owner"))
     character_path(character_id).unlink()
     return redirect(url_for("dh1e.character_list"))

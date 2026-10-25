@@ -1,0 +1,55 @@
+/* The 5e hub in D&D Beyond's look: dark top bar, light page, big art tiles with a shaded caption. */
+:root { --ddb-red: #c53131; --ink: #12181c; --page: #f2f0ee; }
+* { box-sizing: border-box; }
+body.hub { margin: 0; background: var(--page); color: var(--ink); font: 400 15px/1.4 Roboto, "Helvetica Neue", Arial, sans-serif; }
+
+.hub-bar { display: flex; align-items: center; gap: 22px; padding: 8px 22px; background: #1b1f22; color: #eee; flex-wrap: wrap; }
+.hub-bar a { color: #ddd; text-decoration: none; }
+.hub-logo { display: inline-flex; flex-direction: column; align-items: center; line-height: 1; width: 132px; }
+.hub-logo-top { font: italic 700 19px "Mrs Eaves", serif; color: #e40712; margin-bottom: -5px; }
+.hub-logo-bottom { font: 30px "Nodesto Caps", serif; color: #fff; text-transform: uppercase; letter-spacing: .04em; }
+.hub-nav { display: flex; gap: 18px; flex-wrap: wrap; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }
+.hub-nav a:hover, .hub-back:hover { color: #fff; }
+.hub-grow { flex: 1; }
+
+.hub-main { max-width: 1240px; margin: 0 auto; padding: 28px 22px 48px; }
+.hub-title { font: 700 30px/1.2 Roboto, sans-serif; margin: 0 0 18px; }
+.hub-title span { font-weight: 400; font-size: 16px; color: #5c6670; margin-left: 10px; }
+
+.hub-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+/* DDB's own box frame (saving-throws, outline only) over the art; the art's corners follow the frame's notches */
+.hub-tile { position: relative; height: 320px; }
+.hub-tile-link { position: absolute; inset: 0; display: block; color: #fff; text-decoration: none; }
+.hub-tile-inner { position: absolute; inset: 6px 7px; overflow: hidden; background: #1b1f22;
+  clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px); }
+.hub-tile-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+.hub-tile:hover .hub-tile-art { transform: scale(1.04); }
+.hub-tile-frame { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2; }
+.hub-tile-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.82) 100%); }
+.hub-tile-text { position: absolute; z-index: 3; left: 24px; right: 24px; bottom: 22px; display: flex; flex-direction: column; gap: 4px; }
+.hub-tile-title { font: 700 28px/1 "Roboto Condensed", Roboto, sans-serif; text-transform: uppercase; letter-spacing: .03em; }
+.hub-tile-title::after { content: ""; display: block; width: 44px; height: 3px; background: var(--ddb-red); margin-top: 8px; }
+.hub-tile-sub { font-size: 14px; color: #e3e3e3; max-width: 30em; }
+/* art with a black or white background sits on a dark field instead of filling the tile */
+.hub-tile--equipment .hub-tile-art, .hub-tile--monster .hub-tile-art { object-fit: contain; padding: 18px 18px 90px; }
+.hub-tile--monster .hub-tile-inner { background: radial-gradient(circle at 50% 35%, #f4ede4 0, #cfc3b4 45%, #3a2f2a 100%); }
+.hub-tile--equipment .hub-tile-inner { background: #050505; }
+
+/* the player's most recent one, a small card in the tile's top right corner */
+/* the player's most recent one: a small card in DDB's hit-points frame, top right */
+.hub-recent { position: absolute; z-index: 4; top: 16px; right: 16px; width: min(58%, 240px); min-height: 66px; padding: 10px 16px 10px 18px;
+  color: var(--ink); text-decoration: none; display: flex; flex-direction: column; justify-content: center; filter: drop-shadow(0 2px 4px rgba(0,0,0,.45)); }
+.hub-recent-frame { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
+.hub-recent:hover .hub-recent-name { text-decoration: underline; }
+.hub-recent[hidden] { display: none; }
+.hub-recent-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--ddb-red); }
+.hub-recent-name { font-weight: 700; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hub-recent-detail { font-size: 12px; color: #5c6670; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+@media (max-width: 1000px) { .hub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+  .hub-grid { grid-template-columns: 1fr; }
+  .hub-tile { height: 240px; }
+  .hub-nav { display: none; }
+  .hub-main { padding: 18px 16px 32px; }
+}

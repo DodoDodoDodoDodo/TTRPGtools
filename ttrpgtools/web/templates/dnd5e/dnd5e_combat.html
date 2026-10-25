@@ -5,7 +5,7 @@
   document.documentElement.dataset.combat = {{ combat_id|tojson }};
   window.CONDITIONS = {{ conditions|tojson }};
 </script>
-<script src="{{ url_for('static', filename='dnd5e/dnd5e_combat.js') }}" defer></script>
+<script src="{{ static_v('dnd5e/dnd5e_combat.js') }}" defer></script>
 {% endblock %}
 {% block page %}
 <div class="turnbar">

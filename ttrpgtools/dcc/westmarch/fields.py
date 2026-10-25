@@ -2,18 +2,18 @@
 
 Fields. A hundred small plots, one per person of the village at the start; they are owned, inherited (widow or widower, else the village's common
 pool) and sold. A plot is sown, ripens in ``grow`` nights, is harvested, and rests ``rest`` nights before it can be sown again. Sowing takes seed: one
-sack of barley for every ``per_seed`` plots, and the seed is barley the farmer owns (the owner 10-10): kept back from a harvest, or bought off a shelf. One
+sack of barley for every ``per_seed`` plots, and the seed is barley the farmer owns (Dodo 10-10): kept back from a harvest, or bought off a shelf. One
 person keeps at most ``work`` plots under barley at once. The yield of a plot is ``yield`` sacks times the light of the last ``light_nights`` nights before the
 harvest, and the light is the moons': ``light()`` is written down here and nowhere the villagers or the herb woman can read. Who tills: the trader
 bots with ``tills`` (the barley farmer, the farmhand) till the plots of theirs that are ready, keep seed back from each harvest, buy a plot when
 their hands are idle and no common plot is free, and sell one when they are broke; the villagers whose trade is farming till their own plots, keep
 their seed, buy more seed off the shelf with their own coin when short, and bring the rest of the harvest to the shelves for nothing, like PRODUCE.
-A farmer whose own plots do not fill their hands works plots of the village's common pool for nothing (the owner 10-10); the harvest is the worker's.
+A farmer whose own plots do not fill their hands works plots of the village's common pool for nothing (Dodo 10-10); the harvest is the worker's.
 Everyone else lets their plot lie fallow. Every owner names their own price, "I'd sell it if you gave me so much right now", and that price includes
-whatever grows on the plot (the owner 10-10): ``ask_cp``.
+whatever grows on the plot (Dodo 10-10): ``ask_cp``.
 
-Ponds. The eel farmer has ``ponds``; each gives ``per`` eels every ``days`` nights, into her store of fresh eels, and each smoked eel takes one fresh
-eel besides the coal. On a night the Drowned Moon is bright and the other two are not (``fat_night``), a pond's catch is ``fat`` times as large.
+Ponds. The eel farmer has ``ponds``; each gives ``per`` eels every ``days`` nights, smoked the same night for one sack of coal whatever the catch.
+On a night the Drowned Moon is bright and the other two are not (``fat_night``), a pond's catch is ``fat`` times as large.
 Nobody is told.
 """
 
@@ -323,6 +323,17 @@ def _buy_seed(state: dict, name: str, day: int, bot: dict | None = None) -> bool
         return True
     db = registry.connect()
     try:
+        if state.get("household_mode"):   # the coin is the household's: the copper on a villager's sheet is no money (10-11: seed bought with it made coin from nothing)
+            from . import households
+            hid = households.of(db, name)
+            households.reconcile(state, db)
+            if hid is None or households.purses(state).get(str(hid), 0) < price:
+                return False   # only what they can afford
+            with db:
+                households.debit(state, db, hid, price)
+            line["qty"] = int(line["qty"]) - 1
+            shop["till"] = int(shop.get("till", 0)) + price
+            return True
         row = db.execute("SELECT id, sheet FROM people WHERE name = ? AND status = 'alive' AND claimed_by IS NULL AND sheet IS NOT NULL", (name,)).fetchone()
         if row is None:
             return False
@@ -462,8 +473,22 @@ def mine_for_prompt(state: dict, bot: dict, spec: dict, day: int) -> dict | None
 
 
 # ---------------------------------------------------------------- the eel ponds
+def pond_catch(mean: float, start: int, rng: random.Random) -> int:
+    """One pond's catch (Dodo 10-12): ``start`` plus a decaying count, ``start`` likeliest, then one more, then two, each step less likely; the
+    count's mean is ``mean``. An ordinary night starts at nothing, a fat night at ``FIELDS["fat"]``."""
+    q = max(0.0, mean) / (1 + max(0.0, mean))
+    k = 0
+    while rng.random() < q:
+        k += 1
+    return start + k
+
+
 def ponds_tonight(bot: dict, spec: dict, day: int) -> int:
-    """The eel farmer's ponds: each that is due gives its eels (five times as many on a fat night) into her store of fresh eels. Returns the eels caught."""
+    """The eel farmer's ponds. Each due pond gives a catch (``pond_catch``: ``per`` eels on average times the moon's run of her trade, from 0 up;
+    on a fat night from ``fat`` up), and the night's whole
+    catch is smoked at once, fresh, for one sack of coal however many eels it is (Dodo 10-12: smoke many at once). Without a sack of coal the catch
+    spoils. Returns the smoked eels."""
+    from . import daily
     cfg = config()
     rule = spec.get("ponds")
     if not cfg or not rule:
@@ -472,20 +497,19 @@ def ponds_tonight(bot: dict, spec: dict, day: int) -> int:
     caught = 0
     for n, when in enumerate(due):
         if day >= when:
-            caught += rule["per"] * (cfg["fat"] if fat_night(day) else 1)
+            caught += pond_catch(rule["per"] * daily.rhythm(spec, day), cfg["fat"] if fat_night(day) else 0, random.Random(f"{day}/pond/{n}"))
             due[n] = day + rule["days"]
-    bot["eels"] = int(bot.get("eels", 0)) + caught
+    caught += int(bot.pop("eels", 0))   # fresh eels the old store still held (before 10-12) go into tonight's smoking
+    if caught <= 0:
+        return 0
+    coal = next((i for i in bot["inventory"] if i["name"].startswith("Coal") and int(i.get("qty", 1)) > 0), None)
+    if coal is None:
+        bot["eels_spoiled"] = int(bot.get("eels_spoiled", 0)) + caught
+        return 0
+    coal["qty"] = int(coal.get("qty", 1)) - 1
+    bot["inventory"] = [i for i in bot["inventory"] if int(i.get("qty", 1)) > 0]
+    dcc.add_item(bot, EEL, "trade", caught, "2 sp")
     return caught
-
-
-def take_eels(bot: dict, spec: dict, count: int) -> int:
-    """How many of ``count`` smoked eels the fresh eels in store allow; they are taken."""
-    if not config() or not spec.get("ponds"):
-        return count
-    have = int(bot.get("eels", 0))
-    used = min(count, have)
-    bot["eels"] = have - used
-    return used
 
 
 # ---------------------------------------------------------------- what the herb woman and the admin see

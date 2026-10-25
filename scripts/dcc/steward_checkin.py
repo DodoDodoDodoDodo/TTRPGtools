@@ -30,7 +30,7 @@ def in_container(name: str, code: str) -> str:
 
 def ask_claude(request: dict, model: str) -> tuple[dict, dict]:
     """One call: her answer, and what it used ({"tokens": all tokens read and written, "usd": the bill})."""
-    # Run from an empty directory outside your home directory: claude reads CLAUDE.md and project memory from the working directory upwards, and she must see neither.
+    # Run from an empty directory outside /home/dodo: claude reads CLAUDE.md and project memory from the working directory upwards, and she must see neither.
     here = Path(tempfile.gettempdir()) / "hedwig-cwd"
     here.mkdir(exist_ok=True)
     out = subprocess.run(["claude", "-p", "--output-format", "json", "--tools", "", "--no-session-persistence", "--model", model, "--system-prompt", request["system"], request["prompt"]],

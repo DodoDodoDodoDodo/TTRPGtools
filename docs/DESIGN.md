@@ -1,16 +1,16 @@
 # Design: multi-system character builder (DH1e, D&D 5e 2014, DCC)
 
-Status: draft v14, 2026-09-17. Written by Claude after a prior-art survey and a read of the current repo, revised after the owner's reviews (repo stays public with a partial private split, all 5e books available, D&D Beyond feel is the target, private table use, Fight Club 5 compendium XML chosen as the primary 5e data source, 5etools secondary).
+Status: draft v14, 2026-09-17. Written by Claude after a prior-art survey and a read of the current repo, revised after Dodo's reviews (repo stays public with a partial private split, all 5e books available, D&D Beyond feel is the target, private table use, Fight Club 5 compendium XML chosen as the primary 5e data source, 5etools secondary).
 
 ## 1. Goal
 
-One self-hosted web app that builds characters, fills the sheet from the build, and exports the sheet. Three rule systems: Dark Heresy 1st edition (exists, partial), D&D 5e 2014 rules (every 2014-era WotC book the owner owns, no 2024 content), Dungeon Crawl Classics (core rulebook). No dice rolling, no VTT, no combat tracker.
+One self-hosted web app that builds characters, fills the sheet from the build, and exports the sheet. Three rule systems: Dark Heresy 1st edition (exists, partial), D&D 5e 2014 rules (every 2014-era WotC book Dodo owns, no 2024 content), Dungeon Crawl Classics (core rulebook). No dice rolling, no VTT, no combat tracker.
 
 Audience: one table, the three systems it plays. Players build and maintain their own characters. The comparison point is D&D Beyond: guided choices with the rules text one click away, a live computed sheet, printable output. The aim is that feel without the subscription, plus things D&D Beyond lacks: full offline export, an XP and prerequisite audit, and homebrew that costs nothing to add.
 
 ## 2. Where the repo stands
 
-Deployed as the `sheet` container behind Tinyauth at your-domain/TTRPG. Flask, server-rendered, JSON files as storage. 21 tests pass.
+Deployed as the `sheet` container behind Tinyauth at home.dodo-dodo.de/TTRPG. Flask, server-rendered, JSON files as storage. 21 tests pass.
 
 DH1e today:
 
@@ -22,13 +22,13 @@ DH1e today:
 - No skill list, no creation wizard (characteristics are typed in), no export beyond the JSON file.
 - Test coverage stops at parsers and purchase rules. Nothing covers the DH1e web layer.
 
-DCC today (built 2026-09-17, live at your-domain/TTRPG/dcc/ behind Tinyauth):
+DCC today (built 2026-09-17, live at home.dodo-dodo.de/TTRPG/dcc/ behind Tinyauth):
 
 - `ttrpgtools/dcc.py`: content access, rules (ability modifiers, AC, saves, speed, deed dice, thief skills with governing abilities, spell allowance and max level from class table and casting ability, race-locked classes, XP gating, titles), funnel generation, JSON storage under `characters/dcc/`.
 - `ttrpgtools/web/dcc_routes.py` (blueprint under `/TTRPG/dcc`): list, funnel generator (batch, seedable, tick survivors to keep), manual entry of table-rolled characters, sheet with abilities, combat block, saves, gear, thief skills, spells with full result bands, class ability prose, Mighty Deeds, the character's crit table, level-up, spell picker, edit form, JSON download, print CSS, delete.
 - `tests/test_dcc.py`: 10 tests on a synthetic content fixture plus one web flow test on the real pack. 31 tests pass overall.
 - The container mounts `content/` read-only, so the pack is rebuilt on the host without an image rebuild.
-- Second-order rules on the sheet (added 2026-09-17 at the owner's request): a Rolls panel breaks every roll into its components (class, ability, birth augur where its "lucky roll" applies, doubled for crits and fumbles, lucky weapon, luck die); mercurial magic is recorded per known spell from a d% the player rolls (with the Luck x10 modifier shown) and its text sits on the spell; a "Rules in Play" panel per class carries the warrior's and dwarf's lucky weapon fixed at level 1, the elf's lucky spell and free patron bond and invoke patron, the cleric's deity, disapproval range with the 1d4-per-point rule and the lay on hands and turn unholy matrices, the thief's luck die, the halfling's luck charm, and the reference tables (spellburn, corruption, misfire, disapproval, fumbles). This is the DCC instance of the effects engine idea in section 4.3; the DH1e and 5e versions should follow the same shape: a roll list with named parts.
+- Second-order rules on the sheet (added 2026-09-17 at Dodo's request): a Rolls panel breaks every roll into its components (class, ability, birth augur where its "lucky roll" applies, doubled for crits and fumbles, lucky weapon, luck die); mercurial magic is recorded per known spell from a d% the player rolls (with the Luck x10 modifier shown) and its text sits on the spell; a "Rules in Play" panel per class carries the warrior's and dwarf's lucky weapon fixed at level 1, the elf's lucky spell and free patron bond and invoke patron, the cleric's deity, disapproval range with the 1d4-per-point rule and the lay on hands and turn unholy matrices, the thief's luck die, the halfling's luck charm, and the reference tables (spellburn, corruption, misfire, disapproval, fumbles). This is the DCC instance of the effects engine idea in section 4.3; the DH1e and 5e versions should follow the same shape: a roll list with named parts.
 - Third-order rules and play state (2026-09-17, later the same night): temporary ability loss (spellburn, poison, disapproval illness) is tracked per ability and every modifier on the sheet uses the reduced score; an In Play panel offers HP steps, Luck burn with the class's rate, Luck regain (thieves and halflings by level per night), spellburn for casters, the cleric's failed-check counter, and "New day" (heals one ability point, regains Luck, resets disapproval); the armour check penalty is applied to wizard and elf spell checks; the hit-point birth augur is added automatically on level-up; the two-weapon line for the character's Agility and backstab damage on thief weapons show in Rolls; corruption results are kept as a list. The augur line reads as a sentence ("Charmed House: -1 to armor class, fixed for life").
 - Inventory (same night): items are structured (name, kind, quantity, cost, equipped, notes), migrated once from the old free-text fields which stay in sync for the printed sheet. A catalog picker covers weapons, armour, shield, ammunition, gear and mounts (tables 3-1 to 3-5, ammunition and mounts extracted for this) with an optional purchase that deducts coins and makes change; equip toggles drive AC, check penalty, fumble die and the weapons table; countables have quantity buttons; custom items take any kind and price.
 - Class audit (2026-09-17, last pass): weapon training per class is parsed from the class prose (0-level: occupation weapon only; warriors all; clerics per deity) and untrained weapons in hand get the -1d note on the attack rolls and in the weapons table; bows, crossbows and slings show their ammunition count from the inventory and warn at zero; halflings get the stealth rows (table bonus plus Agility), the two-weapon line at minimum Agility 16 with the natural-16 crit and double-1 fumble, and the small size and luck charm text; elves get the +4 secret doors row, immunities, and an iron warning that flags iron weapons and armour carried; dwarves get the shield bash row (1d14 plus deed die, 1d3) when a shield is worn and the underground detection bonus; thieves get the backstab attack row with auto-crit and the trap augur on their trap skills. The prose extractor now accepts hyphenated headings ("Two-weapon Fighting").
@@ -37,7 +37,7 @@ DCC today (built 2026-09-17, live at your-domain/TTRPG/dcc/ behind Tinyauth):
 Two facts that shape everything below:
 
 1. `core_all.txt` (1.5 MB, the full core rulebook text) and the parsed `database/*.json` are committed to a public GitHub repo. FFG/GW content has no open license. The DH1e Steam Workshop generator was removed for exactly this. Section 7 handles it: repo stays public, the book-derived bulk goes private and becomes rebuildable from an owned PDF.
-2. The `characters/` folder mixes the owner's and a friend's characters with no owner field, while Tinyauth already forwards `Remote-User`. Multi-user is cheap now and expensive later.
+2. The `characters/` folder mixes Dodo's and a friend's characters with no owner field, while Tinyauth already forwards `Remote-User`. Multi-user is cheap now and expensive later.
 
 ## 3. Prior art survey (2026-09-16)
 
@@ -99,7 +99,7 @@ Confirmed malleus features, which are the spec for section 5.1:
 
 Open-source DH1e landscape: thin. Foundry systems are all 2e. `tobast/darkheresy_character_gen` (C++, GPL-3) and `justricky21/dark-heresy-1e-tools` (MIT, small) are the only licensed 1e code. Memetix's Excel builder has the widest data coverage but is a spreadsheet. The sup/tg dhroller tool has the closest feature set to malleus (Inquisitor's Handbook homeworlds, divinations, multi-format export) but no source. Our own repo already has more structured DH1e data than any of these.
 
-Conclusion: nothing to fork for any of the three. Data comes from 5e-bits (5e) and from the owner's own books (DCC, DH1e). Engine patterns come from Orcpub (choice tree, private packs), foundryvtt-dcc (DCC schema), and our existing DH1e models.
+Conclusion: nothing to fork for any of the three. Data comes from 5e-bits (5e) and from Dodo's own books (DCC, DH1e). Engine patterns come from Orcpub (choice tree, private packs), foundryvtt-dcc (DCC schema), and our existing DH1e models.
 
 ## 4. Architecture
 
@@ -151,7 +151,7 @@ The DH1e `advance_history` already works this way. Generalise: a character is an
 ```json
 {
   "system": "dnd5e",
-  "owner": "player",
+  "owner": "dodo",
   "name": "Tira",
   "content_packs": ["srd51", "phb"],
   "decisions": [
@@ -221,7 +221,7 @@ Three tiers, in order of build effort:
 
 1. JSON download of the character file (exists in effect).
 2. Print view: the sheet page itself with `@media print` CSS. Browser "save as PDF" covers most needs.
-3. Official-sheet fill, built 2026-09-17 in `ttrpgtools/sheetfill.py`. The official sheets turned out to be flat PDFs with no form fields, so the method is a text overlay: a layout JSON names the template (PDF or PNG) and gives each field a page, x, y, size, optional width (single-line text shrinks to fit) or a wrap box. `scripts/sheet_grid.py` draws a labelled coordinate grid over a template so positions can be read off a preview. Layouts live next to their templates in `content/<system>/private/sheets/` (the art is the publisher's), and every layout there appears as a "Sheet PDF" button on the sheet page. First calibrated layout: the Goodman standard sheet page 1, `dcc-standard.json`, about 100 fields including abilities, saves, weapons, thief skills, common activities, notes. the owner's own sheet, PDF or PNG, becomes another layout file with no code change; the grid script and one render-and-look pass calibrate it.
+3. Official-sheet fill, built 2026-09-17 in `ttrpgtools/sheetfill.py`. The official sheets turned out to be flat PDFs with no form fields, so the method is a text overlay: a layout JSON names the template (PDF or PNG) and gives each field a page, x, y, size, optional width (single-line text shrinks to fit) or a wrap box. `scripts/sheet_grid.py` draws a labelled coordinate grid over a template so positions can be read off a preview. Layouts live next to their templates in `content/<system>/private/sheets/` (the art is the publisher's), and every layout there appears as a "Sheet PDF" button on the sheet page. First calibrated layout: the Goodman standard sheet page 1, `dcc-standard.json`, about 100 fields including abilities, saves, weapons, thief skills, common activities, notes. Dodo's own sheet, PDF or PNG, becomes another layout file with no code change; the grid script and one render-and-look pass calibrate it.
 
 ## 5. Per-system plans
 
@@ -252,8 +252,8 @@ Content:
 - Secondary: the 5etools converter, restricted to book prose for popovers and reference pages, structured starting equipment, and multiclass requirements, keyed by name so it overlays the compendium entries. Its `choose`/`count` idiom also fills the few choices the compendium leaves in prose (Expertise picks, skill choices on backgrounds).
 - Bundled: the 5e-bits SRD 5.1 pack, imported by `scripts/import_5ebits.py` from `src/2014/en/`, so a fresh clone has a playable 5e without any private pack.
 - Cross-check: entry counts per source between the compendium and 5etools must agree within a documented tolerance before a pack is accepted; the diff list is kept as a build artifact.
-- Requirement (the owner, 2026-09-16): serve all of 5e, every book. The data source is whichever file has the entry. Rule: the compendium is read first, 5etools fills every gap, and each build emits a coverage matrix (book by entry type by source) that is checked against the known counts per book. A book counts as served only when the matrix says so.
-- SRD 5.1 is the bundled pack so a fresh clone works. Everything else is private packs, one per book. the owner owns all 5e books; the PDFs live in the DnD_books share and the books library and are the ownership record. Order of validation: PHB, XGE, TCE, SCAG, MPMM, then the setting and adventure books. The converters are generic, so a new book is an allow-list entry plus a validation pass. The expensive part moves from transcription to rules coverage in the engine.
+- Requirement (Dodo, 2026-09-16): serve all of 5e, every book. The data source is whichever file has the entry. Rule: the compendium is read first, 5etools fills every gap, and each build emits a coverage matrix (book by entry type by source) that is checked against the known counts per book. A book counts as served only when the matrix says so.
+- SRD 5.1 is the bundled pack so a fresh clone works. Everything else is private packs, one per book. Dodo owns all 5e books; the PDFs live in the DnD_books share and the books library and are the ownership record. Order of validation: PHB, XGE, TCE, SCAG, MPMM, then the setting and adventure books. The converters are generic, so a new book is an allow-list entry plus a validation pass. The expensive part moves from transcription to rules coverage in the engine.
 - Data quirks are handled in the converter with a test each. Known so far: the compendium's "Multiclass <Class>" and "Starting <Class>" pseudo-features must not appear as features on the sheet; the spell `classes` field carries homebrew subclasses that the allow-list strips; 5etools' PHB Human lacks a structured ability block.
 
 Builder steps: race and subrace, class (subclass at the class's own level), background, ability scores (point buy, standard array, manual), proficiency choices, starting equipment or gold, spells (cantrips, known or prepared per class rules), level-up with hit points (average or entered), ASI or feat, subclass features, spell slots. Multiclassing in a second pass; the decision log supports it without schema change.
@@ -309,11 +309,11 @@ Export: print view, then PDF fill of the official folder sheet (`dccrpg_folderch
 
 ### 5.4 DCC character folio (built 2026-09-17)
 
-`ttrpgtools/dcc_folio.py` draws an 8-page A5 booklet per character with reportlab in a plain ruled style, served at `/TTRPG/dcc/<id>/folio` (sequential A5) and `?print=1` (imposed on landscape A4 for duplex: 8|1, 2|7, 6|3, 4|5). the owner's constraints: 8 pages maximum, class pages separate, stats on page 2 and class on page 3 so the open booklet shows them together.
+`ttrpgtools/dcc_folio.py` draws an 8-page A5 booklet per character with reportlab in a plain ruled style, served at `/TTRPG/dcc/<id>/folio` (sequential A5) and `?print=1` (imposed on landscape A4 for duplex: 8|1, 2|7, 6|3, 4|5). Dodo's constraints: 8 pages maximum, class pages separate, stats on page 2 and class on page 3 so the open booklet shows them together.
 
 Pages: 1 cover (name, class, level, title, occupation, alignment, portrait box, player, campaign, augur sentence); 2 stats (six ability boxes with current score and modifier, two action-die boxes holding the dice, HP with max, AC, init, speed, three saves, crit die and table with threat, fumble die, main and secondary weapon with to-hit, damage, range and ammo, primary equipment list with CP/SP/GP boxes at the foot); 3 class (level, XP with next threshold, Luck, action dice, class rolls with components, rules in play, thief skills or halfling stealth, titles by level, class abilities condensed to three sentences each); 4 the class's crit table and the fumble table in two columns, remaining inventory lines; 5 campaign (map box, "in my home I own", religion, relations to everyone in the valley, goals checklist with done marks); 6 to 8 for casters: spells with mercurial result, general text and all result bands, at the first of four density tiers at which every spell fits three pages (the tightest tier keeps one sentence per band); a caster with more spells than fits gets four extra pages. 6 to 8 for others: hirelings and adventure journal, class tables (Mighty Deeds, thief skills by level, halfling rules) with the dice chain, reference (weapons, armor, ammunition, mounts, attack modifiers) and last will.
 
-Campaign fields (name, home, religion, relations one per line, goals one per line with "[x]" for done) are edited on the web sheet. Pre-printed goal prompts wait for the owner's wording.
+Campaign fields (name, home, religion, relations one per line, goals one per line with "[x]" for done) are edited on the web sheet. Pre-printed goal prompts wait for Dodo's wording.
 
 ## 6. Shared UI
 
@@ -325,7 +325,7 @@ Target: the D&D Beyond feel, for all three systems. Concretely, the things that 
 - Long lists (spells, equipment) have instant search and filters (level, school, class, availability).
 - Dark theme by default.
 
-the owner's requirement: the same frames and borders as D&D Beyond, not an approximation. That means the actual sheet chrome (ability score frames, saving throw and skill boxes, the HP and AC shields, the section borders and dice art). Findings: those assets are WotC property and no open project ships them; the two MIT Foundry modules that mimic the layout (`jopeek/fvtt-dndbeyond-character-sheet`, `ElfFriend-DnD/foundryvtt-compactBeyond5eSheet`) use their own redrawn CSS and SVG. For private use at one table the plan is to take the real ones: the owner saves the D&D Beyond character sheet page and the builder pages (logged in, one character, Safari webarchive like the 5etools ones) and the SVG and CSS are extracted from the archive into `frontend/assets/ddb/`, gitignored like private packs. The 5etools webarchives in the share are not D&D Beyond pages and do not contain these assets.
+Dodo's requirement: the same frames and borders as D&D Beyond, not an approximation. That means the actual sheet chrome (ability score frames, saving throw and skill boxes, the HP and AC shields, the section borders and dice art). Findings: those assets are WotC property and no open project ships them; the two MIT Foundry modules that mimic the layout (`jopeek/fvtt-dndbeyond-character-sheet`, `ElfFriend-DnD/foundryvtt-compactBeyond5eSheet`) use their own redrawn CSS and SVG. For private use at one table the plan is to take the real ones: Dodo saves the D&D Beyond character sheet page and the builder pages (logged in, one character, Safari webarchive like the 5etools ones) and the SVG and CSS are extracted from the archive into `frontend/assets/ddb/`, gitignored like private packs. The 5etools webarchives in the share are not D&D Beyond pages and do not contain these assets.
 
 Each system gets its own sheet layout. 5e follows D&D Beyond exactly. DH1e and DCC reuse the same frame family with their own field layout, so the three feel like one app. The builder skeleton, popovers, search, and tabs are shared.
 
@@ -335,7 +335,7 @@ Pages: character list (all table characters, own first), new (system picker), bu
 
 ## 7. Legal hygiene, public repo with a private split
 
-Decision (the owner, 2026-09-16): the repo stays public. Roughly 60 percent of the book-derived material goes private, so a clone is not a copy of the book, but anyone with their own PDF can rebuild the full dataset with one command.
+Decision (Dodo, 2026-09-16): the repo stays public. Roughly 60 percent of the book-derived material goes private, so a clone is not a copy of the book, but anyone with their own PDF can rebuild the full dataset with one command.
 
 The split, by what a file is rather than by size:
 
@@ -344,30 +344,30 @@ The split, by what a file is rather than by size:
 
 By byte count that is about 2.5 MB private against roughly 1 MB public, which is above the 60 percent target and satisfies the intent.
 
-Git history still contains the full text. Decision (the owner): a `git filter-repo` purge of the raw text files happens right before the next big push to the public repo, not earlier. Until then nothing new is pushed. M0 ends with that purge and push.
+Git history still contains the full text. Decision (Dodo): a `git filter-repo` purge of the raw text files happens right before the next big push to the public repo, not earlier. Until then nothing new is pushed. M0 ends with that purge and push.
 
 Going forward: nothing under `content/*/private/` is ever committed regardless of visibility. Bundled packs carry their license file. The SRD 5.1 CC-BY attribution goes in the 5e pack and in the app footer. Private use at one table is the intended scope, and the repo says so in the README.
 
 ## 8. Roadmap
 
-Milestones in dependency order. Sizes are rough working-session counts for Claude with the owner reviewing.
+Milestones in dependency order. Sizes are rough working-session counts for Claude with Dodo reviewing.
 
 | # | Milestone | Depends on | Size |
 |---|---|---|---|
 | M0 | Public/private split with `build-pack` for DH1e, `owner` on characters, `systems/dh1e` move, decision-log migration, JSON API, history purge then push | none | 3 |
 | M1 | Effects engine, DH1e skills and homeworlds and starting packages as content, re-derived sheet | M0 | 4 |
 | M2 | Frontend shell (Svelte): list, builder skeleton, popovers, search; DH1e wizard, sheet, equipment, audit, print. Old templates removed | M1 | 6 |
-| M3 | 5e: compendium converter with source allow-list, PHB pack, 5etools overlay (prose, equipment, multiclass), srd51 bundled pack, 2014 guard, builder to level 20 single class, D&D Beyond sheet with extracted frames, print | M2, the owner's D&D Beyond webarchives | 7 |
+| M3 | 5e: compendium converter with source allow-list, PHB pack, 5etools overlay (prose, equipment, multiclass), srd51 bundled pack, 2014 guard, builder to level 20 single class, D&D Beyond sheet with extracted frames, print | M2, Dodo's D&D Beyond webarchives | 7 |
 | M4 | DCC: done 2026-09-17 as Jinja pages (funnel, classes to level 10, sheet, spells, print). Remaining: port to the client-side shell at M2, PDF fill at M5 | none | done |
-| M5 | PDF fill for the sheets the owner uploads, field maps tuned together | M2 to M4, the owner's PDFs | 3 |
+| M5 | PDF fill for the sheets Dodo uploads, field maps tuned together | M2 to M4, Dodo's PDFs | 3 |
 | M6 | 5e packs: XGE, TCE, SCAG, MPMM, setting books, all already inside the compendium, one allow-list entry and a validation pass each; DH1e Inquisitor's Handbook and the rest via the PDF pipeline | M3, M2 | under 1 per 5e book, 1 per DH1e book |
 | M7 | Multiclass, bug report with character snapshot (existing TODO), GM edit-all, cloning | M5 | 3 |
 
 M3 and M4 can run in parallel after M2. Book packs (M6) are the long tail. The first visible payoff for the table is M2, the first 5e character is M3.
 
-## 9. Questions for the owner
+## 9. Questions for Dodo
 
-Answered 2026-09-16: repo stays public with a partial private split, history purge right before the next big push; all 5e books are owned, English 2014 PHB located in the books library; the Fight Club 5 compendium XML is the primary 5e source with 5etools as overlay; D&D Beyond frames must be the real ones; private table use; PDF sheet filling later with the owner supplying the sheets.
+Answered 2026-09-16: repo stays public with a partial private split, history purge right before the next big push; all 5e books are owned, English 2014 PHB located in the books library; the Fight Club 5 compendium XML is the primary 5e source with 5etools as overlay; D&D Beyond frames must be the real ones; private table use; PDF sheet filling later with Dodo supplying the sheets.
 
 Still open:
 
@@ -383,4 +383,4 @@ Still open:
 
 Dice rolling, campaign notes, D&D 2024 rules in any form, DH2e, Rogue Trader and the other 40k lines, mobile app, accounts beyond Tinyauth, public hosting for anyone outside the table.
 
-Initiative and combat tracking, monsters and encounters left this list on 2026-09-29 at the owner's request (section 11).
+Initiative and combat tracking, monsters and encounters left this list on 2026-09-29 at Dodo's request (section 11).

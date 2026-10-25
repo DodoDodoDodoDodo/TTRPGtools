@@ -56,7 +56,8 @@ def fetch(reference: str, timeout: float = 15) -> dict:
             payload = json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         if exc.code in (401, 403):
-            raise DDBError("D&D Beyond refused: set the character's privacy to Public and retry.") from exc
+            raise DDBError("Your character is probably set to Private on D&D Beyond. There: Edit, then Home, scroll all "
+                           "the way down to Character Privacy and set it to Public. Then import again.") from exc
         if exc.code == 404:
             raise DDBError("D&D Beyond knows no character with that number.") from exc
         raise DDBError(f"D&D Beyond answered with HTTP {exc.code}.") from exc

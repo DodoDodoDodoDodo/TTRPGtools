@@ -426,7 +426,7 @@ def test_folio_renders_eight_pages_and_imposes(tmp_path, monkeypatch):
     content = dcc.load_content()
     for klass, occ_name in (("warrior", "Farmer"), ("wizard", "Scribe") if any(o["occupation"] == "Scribe" for o in content["occupations"]) else ("wizard", "Farmer"), ("thief", "Cutpurse")):
         occ = next(o for o in content["occupations"] if o["occupation"] == occ_name)
-        ch = dcc.new_character("Folio Test", {"strength": 13, "agility": 12, "stamina": 11, "personality": 10, "intelligence": 14, "luck": 12}, occ, content["luck_augurs"][22], 3, 25, "Rope", "lawful", "player", content)
+        ch = dcc.new_character("Folio Test", {"strength": 13, "agility": 12, "stamina": 11, "personality": 10, "intelligence": 14, "luck": 12}, occ, content["luck_augurs"][22], 3, 25, "Rope", "lawful", "dodo", content)
         dcc.level_up(ch, klass, 3, content)
         if klass == "wizard":
             dcc.set_spells(ch, [s["name"] for s in dcc.spell_list(content, "wizard", ch) if s["level"] == 1][:4], content)
@@ -818,7 +818,7 @@ def test_a_sold_item_is_gone_for_everyone(content):
         v = t.view(state, "someone")
         assert [(i["name"], i["qty"]) for i in v["shops"][0]["stock"]] == [("Club", 0), ("Torch", None), ("Arrows", 0), ("Bed for the night", None)]
         assert not v["judge"] and "log" not in v and "curve" not in v["shops"][0]
-        assert len(t.view(state, "admin")["log"]) == 6 and "series" in t.view(state, "admin")["shops"][0]["stock"][0]
+        assert len(t.view(state, "takahe")["log"]) == 6 and "series" in t.view(state, "takahe")["shops"][0]["stock"][0]
 
 
 @real
@@ -832,7 +832,7 @@ def test_town_over_the_web(tmp_path, monkeypatch):
                                             "services": [("Bunk", "1 sp")]}])
     monkeypatch.setattr(t, "today", lambda: places.EPOCH + timedelta(days=2))
     client = create_app().test_client()
-    judge, player, other = {"Remote-User": "admin"}, {"Remote-User": "wren"}, {"Remote-User": "ibis"}
+    judge, player, other = {"Remote-User": "takahe"}, {"Remote-User": "wren"}, {"Remote-User": "ibis"}
     rolls = {"name": "Odo", "alignment": "neutral", "occupation_roll": 1, "augur_roll": 5, "hp_roll": 2, "copper": 40, "equipment_roll": 3,
              "abilities": {a: 10 for a in dcc.ABILITIES}}
     cid = client.post("/TTRPG/dcc/api/character", json=rolls, headers=player).get_json()["id"]
@@ -1007,16 +1007,16 @@ def test_only_a_matching_trade_reads_the_curve(content, monkeypatch):
     from ttrpgtools.dcc.westmarch import places, town as t
     with t.town(write=True) as state:
         sid = t.save_shop(state, None, "Yard")
-        t.stock_item(state, sid, "Stinky cheese", "trade", "8 sp", 5)
+        t.stock_item(state, sid, "Smoked eel", "trade", "2 sp", 5)
         t.stock_item(state, sid, "Club", "weapon", "3 gp", 5)
-        farmer, scribe = make(content), make(content)
-        scribe["occupation"] = {"occupation": "Scribe"}
-        assert t.insight(farmer) == ["Stinky cheese"] and t.insight(scribe) == []
-        seen = {i["name"]: i for i in t.view(state, "wren", farmer)["shops"][0]["stock"]}
-        assert "series" in seen["Stinky cheese"] and "series" not in seen["Club"]
+        cook, scribe = make(content), make(content)
+        cook["occupation"], scribe["occupation"] = {"occupation": "Cook"}, {"occupation": "Scribe"}
+        assert t.insight(cook) == ["Smoked eel"] and t.insight(scribe) == []
+        seen = {i["name"]: i for i in t.view(state, "wren", cook)["shops"][0]["stock"]}
+        assert "series" in seen["Smoked eel"] and "series" not in seen["Club"]
         assert all("usual" not in i and "trend" not in i for i in seen.values())  # players see today's price and nothing else
         assert not any("series" in i for i in t.view(state, "wren", scribe)["shops"][0]["stock"])
-        assert t.view(state, "wren")["shops"][0]["mood"] is None and "usual" in t.view(state, "admin")["shops"][0]["stock"][0]
+        assert t.view(state, "wren")["shops"][0]["mood"] is None and "usual" in t.view(state, "takahe")["shops"][0]["stock"][0]
 
 
 @real
@@ -1025,10 +1025,10 @@ def test_registers_and_debt_counter(tmp_path, monkeypatch):
     from ttrpgtools.dcc.westmarch import registry
     monkeypatch.setattr(dcc, "CHARACTERS_DIR", tmp_path)
     client = create_app().test_client()
-    admin, player = {"Remote-User": "admin"}, {"Remote-User": "wren"}
+    admin, player = {"Remote-User": "takahe"}, {"Remote-User": "wren"}
     people = client.get("/TTRPG/dcc/api/registry/people", headers=player).get_json()
     assert len(people["rows"]) == 100 and not people["judge"] and {r["status"] for r in people["rows"]} == {"alive"}
-    assert sum(r["locked"] for r in people["rows"]) == 20 and sum(r["playable"] for r in people["rows"]) == 80  # keepers, mayor, traders, the herb woman, nine producers
+    assert sum(r["locked"] for r in people["rows"]) == 19 and sum(r["playable"] for r in people["rows"]) == 81  # keepers, mayor, traders, the herb woman, eight producers (the cheesemaker is a label now)
     marta = next(r for r in people["rows"] if r["name"] == "Marta Vogt")
     assert client.post("/TTRPG/dcc/api/registry/people", json={"id": marta["id"], "status": "dead"}, headers=player).status_code == 403
     assert "one of" in client.post("/TTRPG/dcc/api/registry/people", json={"id": marta["id"], "status": "bored"}, headers=admin).get_json()["error"]
@@ -1093,7 +1093,7 @@ def test_graveyard_and_notices(tmp_path, monkeypatch):
     from ttrpgtools.web.app import create_app
     monkeypatch.setattr(dcc, "CHARACTERS_DIR", tmp_path)
     client = create_app().test_client()
-    admin, player, other = {"Remote-User": "admin"}, {"Remote-User": "wren"}, {"Remote-User": "ibis"}
+    admin, player, other = {"Remote-User": "takahe"}, {"Remote-User": "wren"}, {"Remote-User": "ibis"}
     rolls = {"alignment": "neutral", "occupation_roll": 1, "augur_roll": 5, "hp_roll": 2, "copper": 40, "equipment_roll": 3,
              "abilities": {a: 10 for a in dcc.ABILITIES}}
     odo = client.post("/TTRPG/dcc/api/character", json={**rolls, "name": "Odo"}, headers=player).get_json()["id"]
@@ -1138,7 +1138,7 @@ def test_a_character_is_bound_to_one_moon(tmp_path, monkeypatch):
     from ttrpgtools.web.app import create_app
     monkeypatch.setattr(dcc, "CHARACTERS_DIR", tmp_path)
     client = create_app().test_client()
-    admin, player = {"Remote-User": "admin"}, {"Remote-User": "wren"}
+    admin, player = {"Remote-User": "takahe"}, {"Remote-User": "wren"}
     rolls = {"name": "Odo", "alignment": "neutral", "occupation_roll": 1, "augur_roll": 5, "hp_roll": 2, "copper": 40, "equipment_roll": 3,
              "abilities": {a: 10 for a in dcc.ABILITIES}}
     assert [set(m) for m in client.get("/TTRPG/dcc/api/content").get_json()["moons"]] == [{"id", "name", "blurb"}] * 3
@@ -1227,7 +1227,7 @@ def test_a_player_creates_a_character_by_taking_over_a_villager(tmp_path, monkey
     from ttrpgtools.dcc.westmarch import registry
     monkeypatch.setattr(dcc, "CHARACTERS_DIR", tmp_path)
     client = create_app().test_client()
-    admin, player, other = {"Remote-User": "admin"}, {"Remote-User": "wren"}, {"Remote-User": "ibis"}
+    admin, player, other = {"Remote-User": "takahe"}, {"Remote-User": "wren"}, {"Remote-User": "ibis"}
     assert client.get("/TTRPG/dcc/new").status_code == 302 and client.get("/TTRPG/dcc/new?roll=1").status_code == 200
     rows = client.get("/TTRPG/dcc/api/registry/people", headers=player).get_json()["rows"]
     free = next(r for r in rows if r["playable"])
@@ -1370,7 +1370,7 @@ def test_death_library_and_the_towns_debt(tmp_path, monkeypatch):
     monkeypatch.setattr(places, "TAX_DEBT", "10,000 gp"); monkeypatch.setattr(places, "MARKET", None)   # the reload brought back the file's own
     monkeypatch.setattr(places, "PLACES", library); monkeypatch.setattr(places, "BOTS", []); monkeypatch.setattr(places, "UPDATE_HOUR", 0)
     client = create_app().test_client()
-    admin, player = {"Remote-User": "admin"}, {"Remote-User": "wren"}
+    admin, player = {"Remote-User": "takahe"}, {"Remote-User": "wren"}
     rows = client.get("/TTRPG/dcc/api/registry/people", headers=player).get_json()["rows"]
     assert all(r["debt_cp"] == 1_000_000 for r in rows) and debts.town_total() == {"total_cp": 100_000_000, "characters": 0, "villagers": 100}
     free = [r for r in rows if r["playable"]]
@@ -1524,10 +1524,10 @@ def test_goods_are_made_from_material_and_nothing_appears(content, monkeypatch, 
         eggs["qty"] = 0
         assert daily.produce(state, 5) == {"pieces": 0, "wood_g": 0}
         # the admin's hand from outside is the only other source, and it is written down
-        t.add_material(state, sid, "metal", 2.5, "admin")
+        t.add_material(state, sid, "metal", 2.5, "takahe")
         assert shop["materials"]["metal"] == 2500 and "2,5 kg of Metal brought to Forge" in state["goods_log"][-1]["what"]
         with pytest.raises(t.TownError, match="holds only"):
-            t.add_material(state, sid, "metal", -3, "admin")
+            t.add_material(state, sid, "metal", -3, "takahe")
         seen = t.view(state, "nobody")["shops"][0]
         row = next(r for r in seen["stock"] if r["name"] == "Two-handed sword")
         assert (row["material"], row["weight"]) == ("Metal", "4,0 kg") and {"id": "metal", "name": "Metal", "amount": "2,5 kg"} in seen["materials"]
@@ -1586,13 +1586,13 @@ def test_only_the_admin_brings_material_from_outside():
         state["shops"][forge]["materials"] = {"metal": 3000}
         t.stock_item(state, forge, "Dagger", "weapon", "3 gp", 2)
     client = create_app().test_client()
-    admin, player = {"Remote-User": "admin"}, {"Remote-User": "wren"}
+    admin, player = {"Remote-User": "takahe"}, {"Remote-User": "wren"}
     judge = lambda body, who: client.post("/TTRPG/dcc/api/town/judge", json=body, headers=who)
     assert judge({"action": "material", "shop": forge, "material": "metal", "kg": "12,5"}, player).status_code == 403
     assert "kilograms" in judge({"action": "material", "shop": forge, "material": "metal", "kg": "lots"}, admin).get_json()["error"]
     seen = judge({"action": "material", "shop": forge, "material": "metal", "kg": "12,5"}, admin).get_json()
     assert seen["goods"]["census"]["metal"] == {"name": "Metal", "raw_g": 15_500, "things_g": 1000, "total_g": 16_500}
-    assert "12,5 kg of Metal brought to Forge" in seen["goods"]["log"][0]["what"] and seen["goods"]["log"][0]["by"] == "admin"
+    assert "12,5 kg of Metal brought to Forge" in seen["goods"]["log"][0]["what"] and seen["goods"]["log"][0]["by"] == "takahe"
     town = client.get("/TTRPG/dcc/api/town", headers=player).get_json()
     assert "goods" not in town and town["shops"][0]["materials"] == [{"id": "metal", "name": "Metal", "amount": "15,5 kg"}]
     assert town["shops"][0]["stock"][0]["weight"] == "0,5 kg"
@@ -1772,7 +1772,7 @@ def test_birth_augurs_change_hands_at_the_herb_woman(monkeypatch):
                                                             "Augur taken: " + plain["augur"] + " (+1)", "Augur taken: " + harvest["augur"] + " (-3)"]
     # the page data: what she holds and what a finished character carries
     client = create_app().test_client()
-    seen = client.get("/TTRPG/dcc/api/town", headers={"Remote-User": "admin"}).get_json()
+    seen = client.get("/TTRPG/dcc/api/town", headers={"Remote-User": "takahe"}).get_json()
     woman = next(x for x in seen["shops"] if x["id"] == "herb-woman")
     assert woman["augurs"] == [] and woman["augur_point_cp"] == 5_000
 
@@ -1820,7 +1820,7 @@ def test_made_things_carry_the_moon_of_their_day(content, monkeypatch):
         moon = t.fullest_moon(places.EPOCH)
         assert all(m["moon"] == moon and m["maker"] == "Plain Smith" and m["day"] == 1 for m in dagger["made"] + pack["made"])
         assert "mark" not in t.view(state, "nobody")["shops"][0]["stock"][0]            # the town table says nothing to a player
-        assert t.view(state, "admin")["shops"][0]["stock"][0]["mark"]["pieces"] == 2   # the admin sees which moon is next
+        assert t.view(state, "takahe")["shops"][0]["stock"][0]["mark"]["pieces"] == 2   # the admin sees which moon is next
         c = make(content)
         c["coins"] = {"gp": 50, "sp": 0, "cp": 0}
         t.buy(state, sid, "dagger", c)                                 # the marked pieces go first
@@ -2038,7 +2038,7 @@ def test_the_nameless_clause_hides_the_name_from_its_player(monkeypatch):
     from ttrpgtools.web.app import create_app
     from ttrpgtools.dcc.westmarch import clauses
     client = create_app().test_client()
-    admin, player = {"Remote-User": "admin"}, {"Remote-User": "wren"}
+    admin, player = {"Remote-User": "takahe"}, {"Remote-User": "wren"}
     rows = client.get("/TTRPG/dcc/api/registry/people", headers=player).get_json()["rows"]
     free = next(r for r in rows if r["playable"])
     cid = client.post("/TTRPG/dcc/api/registry/people", json={"action": "claim", "id": free["id"], "alignment": "lawful", "moon": "red"}, headers=player).get_json()["character"]
@@ -2100,6 +2100,7 @@ def test_producers_scrap_metal_notebooks_and_the_caravan(content, monkeypatch):
         assert work == {"made": 2, "broken": 4, "short": []} and scrap["qty"] == lumps - 4 and sword["qty"] == 2
         # the hen keeper's hens carry a moon and keep it on the shelf
         keeper = daily._record(state, henwife)
+        daily._bring(keeper, henwife, "Hen", "trade", "5 sp", 2, 9)   # hens come by hatching now (hens_breed), not from the trade; a hatched hen gets her moon the same way
         hens = [i for sh in state["shops"].values() for i in sh["stock"] if i["name"] == "Hen"] + [i for i in keeper["inventory"] if i["name"] == "Hen"]
         assert hens and all(i.get("mark") or i.get("made") for i in hens) and eggs["qty"] >= 1
         # one small note per trader: rewritten whole, never longer than fifty words, kept when a day brings none
@@ -2181,7 +2182,7 @@ def test_town_talk_is_rare_and_short(content, monkeypatch):
         state["log"] = []
         assert all(daily.talk(state, day) is None for day in range(701, 760))    # nothing sold: nothing said
         t.tell(state, 760, "Making day at Yard: 2 pieces made.")
-        assert len(state["news"]) == t.NEWS_LIMIT and t.view(state, "admin")["chronicle"][0]["text"].startswith("Making day")
+        assert len(state["news"]) == t.NEWS_LIMIT and t.view(state, "takahe")["chronicle"][0]["text"].startswith("Making day")
 
 
 def test_a_models_plan_is_carried_out_not_just_spoken(content, monkeypatch):
@@ -2216,6 +2217,8 @@ def test_a_models_plan_is_carried_out_not_just_spoken(content, monkeypatch):
 
 
 def test_the_villages_notepad_and_its_bandwagon(content, monkeypatch):
+    from ttrpgtools.dcc.westmarch import places as _pl
+    monkeypatch.setattr(_pl, "HENS", {**_pl.HENS, "breed": 0.0})   # this is about the caravan's hens: no chicks hatching meanwhile
     from ttrpgtools.dcc.westmarch import daily, places, town as t
     flat = {"period": 10, "amplitude": 0, "phase": 0}
     monkeypatch.setattr(t, "today", lambda: places.EPOCH)
@@ -2248,11 +2251,11 @@ def test_the_villages_notepad_and_its_bandwagon(content, monkeypatch):
         assert daily.model_caravan(needs, daily.board_text(state)) == [0] and "more chickens: Detlef" in seen["text"]
         daily.request_caravan(state, 5, [0])
         daily.caravan_arrives(state, 10)
-        assert hens["qty"] == 6 and state["shops"][store]["till"] == 10_000                                    # a full hen shelf gets no hens, wish or not (the owner 10-10)
+        assert hens["qty"] == 6 and state["shops"][store]["till"] == 10_000                                    # a full hen shelf gets no hens, wish or not (Dodo 10-10)
         hens["qty"] = 1
         state["caravan"] = {"wants": [{"what": "Hen", "kind": "trade", "wish": True}]}
         daily.caravan_arrives(state, 20)
-        assert hens["qty"] == 1 + places.CARAVAN["hens_max"] and state["shops"][store]["till"] == 10_000 - 2 * 75     # a short one: two at most, dear, paid from the till
+        assert hens["qty"] == 1 + places.CARAVAN["hens_max"] and state["shops"][store]["till"] == 10_000 - 2 * 50 * places.CARAVAN["hen_price"]     # a short one: two at most, twenty times dear, paid from the till
     assert "1. more chickens: Detlef" in t.TOWN_PATH.with_name("village_needs.txt").read_text()        # and it is a text file to read
 
 
@@ -2264,12 +2267,12 @@ def test_every_trader_has_a_short_description():
     try:
         from ttrpgtools.dcc.westmarch import daily
         notes = {b["id"]: daily.identity(b) for b in real.BOTS}
-        assert len(real.BOTS) == 14 and all(15 <= len(text.split()) <= 62 for text in notes.values()), {k: len(v.split()) for k, v in notes.items()}
+        assert len(real.BOTS) == 13 and all(15 <= len(text.split()) <= 62 for text in notes.values()), {k: len(v.split()) for k, v in notes.items()}
         assert all(5 <= len(b["seed"].split()) <= 50 and "RULE" in b["seed"] for b in real.BOTS)        # the starting note: a goal, something to track, a rule
         assert notes["hartmut"] == ("NAME Hartmut Bachmeier. RACE dwarf who left the mines. TRADE scrap digger. MAKES scrap metal. "
                                     "NEEDS lantern, hammer, rations. KEEPS one hammer, one lantern, three rations. LIKES old iron and silence. "
                                     "QUIRK buys nothing at the full Pale Moon. RHYTHM digs most at the new Drowned Moon. WRITES never writes more than four words.")
-        assert len({b["quirk"] for b in real.BOTS}) == 14 and daily.identity({"persona": "x"}) == "x"   # everyone has a quirk of their own; older specs still work
+        assert len({b["quirk"] for b in real.BOTS}) == 13 and daily.identity({"persona": "x"}) == "x"   # everyone has a quirk of their own; older specs still work
         state = {}
         bot = daily._record(state, real.BOTS[0])
         assert bot["note"] == real.BOTS[0]["seed"] and bot["seeded"]
@@ -2352,21 +2355,21 @@ def test_barley_is_grown_not_made_from_leather(content, monkeypatch):
     real = importlib.reload(places)
     real.MARKET = None   # reloading brings back the file's own switch
     try:
-        for name, kind in (("Barley, a sack", "trade"), ("Coal, a sack", "trade"), ("Stinky cheese", "trade"), ("Ale, a jug", "trade"),
+        for name, kind in (("Barley, a sack", "trade"), ("Coal, a sack", "trade"), ("Ale, a jug", "trade"),
                            ("Eggs, a dozen", "trade"), ("Hen", "trade"), ("Oil, 1 flask", "gear"), ("Candle", "gear"), ("Rations, per day", "gear")):
             assert materials.made_of(name, kind) is None, name                                             # "sack" in a name does not make it a leather good
-        assert all(materials.is_produce(n) for n in ("Barley, a sack", "Coal, a sack", "Stinky cheese", "Ale, a jug", "Eggs, a dozen", "Hen", "Rations, per day"))
+        assert all(materials.is_produce(n) for n in ("Barley, a sack", "Coal, a sack", "Ale, a jug", "Eggs, a dozen", "Hen", "Rations, per day"))
         assert materials.made_of("Sack, small", "gear") == ("leather", 250) and materials.made_of("Scrap metal", "trade") == ("metal", 1000)
         # and every producer's own wares really arrive: thirty days, nothing sold
         for spec in real.BOTS:
-            if spec["id"] not in ("zeno", "detlef", "xaver", "hedwig-n", "hartmut", "reinhild", "jutta", "ivo"):
+            if spec["id"] not in ("detlef", "xaver", "hedwig-n", "hartmut", "reinhild", "jutta", "ivo"):
                 continue
             bot = daily._record({"bots": {}}, spec)
             dcc.add_item(bot, "Barley, a sack", "trade", 30, "4 sp"); dcc.add_item(bot, "Coal, a sack", "trade", 30, "6 sp")   # the brewer and the smoker need their raw stuff
             for day in range(1, 61):
                 daily.arrive(bot, spec, day)
             held = {i["name"] for i in bot["inventory"]}
-            assert {b[0] for b in spec["brings"]} <= held, (spec["id"], held)
+            assert {b[0] for b in spec["brings"] if b[0] != "Hen"} <= held, (spec["id"], held)   # hens hatch (hens_breed), no trade makes them
     finally:
         places.PLACES, places.BOTS = [], []
 
@@ -2432,7 +2435,7 @@ def test_the_imported_goods_and_the_eel_farmer(content, monkeypatch):
     real.MARKET = None   # reloading brings back the file's own switch
     try:
         names = [g["name"] for g in real.TRADE_GOODS]
-        assert names == ["Stinky cheese", "Smoked eel", "Fabric, a bolt", "Eastern steel, an ingot"] and not any("placeholder" in n for n in names)
+        assert names == ["Smoked eel", "Fabric, a bolt", "Eastern steel, an ingot"] and not any("placeholder" in n for n in names)
         assert not any("placeholder" in b[0] for bot in real.BOTS for b in bot.get("brings", []))
         # nobody makes fabric or eastern steel: no trader brings them, and no workshop makes them
         brought = {b[0] for bot in real.BOTS for b in bot.get("brings", [])}
@@ -2504,24 +2507,23 @@ def test_the_brewer_needs_barley_and_the_smoker_coal(content):
             daily.arrive(bot, xaver, day)
         jugs = sum(int(i.get("qty", 1)) for i in bot["inventory"] if i["name"] == "Ale, a jug")
         assert jugs == 10 and not any(i["name"].startswith("Barley") for i in bot["inventory"]) and bot["batch"]["Ale, a jug"] == 0
-        jutta = daily._record({"bots": {}}, next(b for b in real.BOTS if b["id"] == "jutta"))
-        dcc.add_item(jutta, "Coal, a sack", "trade", 2, "6 sp")        # two sacks smoke eight strings
-        for day in range(1, 200):
-            daily.arrive(jutta, next(b for b in real.BOTS if b["id"] == "jutta"), day)
-        assert sum(int(i.get("qty", 1)) for i in jutta["inventory"] if i["name"] == "Smoked eel") == 8
     finally:
         places.PLACES, places.BOTS = [], []
 
 
 def test_production_runs_with_the_moons(content, monkeypatch):
+    import importlib as _il
+    from ttrpgtools.dcc.westmarch import places as _pl
+    monkeypatch.setattr(_pl, "FIELDS", {**_il.reload(_pl).FIELDS, "fat": 1})   # the rhythm alone: a fat night (100x a pond) would drown the comparison of moon phases
     import importlib
     from ttrpgtools.dcc.westmarch import daily, places, town as t
     real = importlib.reload(places)
     real.MARKET = None   # reloading brings back the file's own switch
+    real.FIELDS = {**real.FIELDS, "fat": 1}   # reloading brought back the fat nights too: the rhythm alone is measured
     try:
         jutta = next(b for b in real.BOTS if b["id"] == "jutta")
         assert jutta["moon"] == {"id": "red", "peak": "full", "swing": 0.9} and "RHYTHM eels run with the Red Lantern, most at full." in daily.identity(jutta)
-        flat = next(b for b in real.BOTS if b["id"] == "zeno")
+        flat = next(b for b in real.BOTS if b["id"] == "ivo")
         assert daily.rhythm(flat, 5) == 1.0 and daily.rhythm({"moon": {"id": "red", "peak": "full", "swing": 0.5}}, 1) <= 1.5
         # a smooth wave: new moon at 1 minus the swing, full moon at 1 plus it, never outside
         waves = [daily.rhythm(jutta, d) for d in range(1, 400)]
@@ -2541,7 +2543,7 @@ def test_production_runs_with_the_moons(content, monkeypatch):
             elif light < 0.15:
                 by_phase["new"] += eels; by_phase["n_new"] += 1
         full, new = by_phase["full"] / by_phase["n_full"], by_phase["new"] / by_phase["n_new"]
-        assert full > 1.0 and new < 0.35 and full > 4 * new, (full, new)
+        assert full > 1.0 and full > 4 * new, (full, new)   # the rhythm: full moon nights at least four times the new moon nights (the cap on new nights was fitted before the smokehouse kept a surplus)
         # the other moons have other periods: red 13 nights, pale a lunar month, drowned 61
         def peaks(moon):
             days = [d for d in range(1, 251) if t.moon_light(moon, d) > 0.9]
@@ -2919,7 +2921,7 @@ def test_a_dead_keeper_is_replaced_by_a_child_with_the_trade_or_nobody(monkeypat
     lives.monthly(state, 31)                                       # the first month: every townsperson holds the seat of their trade
     db = lives._db()
     seats = {r["seat"]: r for r in db.execute("SELECT * FROM people WHERE seat IS NOT NULL")}
-    assert len(seats) == 20 and "Brewer" in seats and "Herb woman" in seats                 # the nineteen trades and the herb woman
+    assert len(seats) == 19 and "Brewer" in seats and "Herb woman" in seats and "Cheesemaker" not in seats   # the eighteen trades and the herb woman
     # a child who took the parent's trade at eighteen and was not seated waits for the seat: when the brewer dies she has it
     brewer = seats["Brewer"]
     child = lambda name, job, born: db.execute("INSERT INTO people (name, occupation, status, notes, updated, locked, debt_cp, born_day, sex, race, mother_id, father_id, genes, sheet) "
@@ -2964,10 +2966,10 @@ def test_a_dead_keeper_is_replaced_by_a_child_with_the_trade_or_nobody(monkeypat
     bram = seats["Blacksmith (The Blacksmith)"]
     lives._die(db, state, db.execute("SELECT * FROM people WHERE id = ?", (bram["id"],)).fetchone(), 42, "old age")
     assert "Blacksmith (The Blacksmith)" in state["vacant"]
-    child("Rike Bramsdotter", "Blacksmith", 42 - 20 * 365)
+    child("Rike Testsdotter", "Blacksmith", 42 - 20 * 365)
     lives._fill_vacant(db, state, 42)
-    rike = db.execute("SELECT * FROM people WHERE name = 'Rike Bramsdotter'").fetchone()
-    assert rike["seat"] == "Blacksmith (The Blacksmith)" and state["shops"]["shop2"]["keeper"] == "Rike Bramsdotter" and "Blacksmith (The Blacksmith)" not in state["vacant"]
+    rike = db.execute("SELECT * FROM people WHERE name = 'Rike Testsdotter'").fetchone()
+    assert rike["seat"] == "Blacksmith (The Blacksmith)" and state["shops"]["shop2"]["keeper"] == "Rike Testsdotter" and "Blacksmith (The Blacksmith)" not in state["vacant"]
     # a child named "X the Younger 21" because X was taken keeps a shop; the dead X neither shuts it nor passes it on (both until 10-11)
     child("Volker Ingosson", "Child", 42 - 70 * 365)
     child("Volker Ingosson the Younger 21", "Child", 42 - 30 * 365)
@@ -3029,7 +3031,7 @@ def test_the_barley_fields_grow_by_the_moons_light_and_change_hands_for_coin(con
         assert fields.farm(state, bot, reinhild, 1 + cfg["grow"] + cfg["rest"]) == []                                          # her own seven are rested and ready, but her hands are full
         log = fields.book(state)["harvests"]
         assert len(log) == 7 and "sky_when_sown" in fields.summary(state, 80)["harvests_lately"][0] and "light" not in json.dumps(fields.summary(state, 80))   # moons shown, the formula not
-        # the land market (the owner 10-10): every owner names a price, the crop on the plot included; a common plot asks the usual price, unless somebody works it
+        # the land market (Dodo 10-10): every owner names a price, the crop on the plot included; a common plot asks the usual price, unless somebody works it
         import random as _random
         from ttrpgtools.dcc.westmarch import registry
         purses = lambda: sum(json.loads(r[0])["copper"] for r in registry.connect().execute("SELECT sheet FROM people WHERE sheet IS NOT NULL"))
@@ -3141,27 +3143,29 @@ def test_the_barley_fields_grow_by_the_moons_light_and_change_hands_for_coin(con
 
 
 def test_the_eel_ponds_and_the_fat_nights(content, monkeypatch):
-    import importlib
+    import importlib, random
     from ttrpgtools.dcc.westmarch import daily, fields, places
     cfg = dict(importlib.reload(places).FIELDS)
     monkeypatch.setattr(places, "FIELDS", cfg)
     monkeypatch.setattr(places, "MARKET", None)
-    jutta = next(b for b in places.BOTS if b["id"] == "jutta")
+    # one pond's catch: 0 likeliest, then 1, then 2 (mean ``per``); a fat night the same from 399 up (Dodo 10-12)
+    plain = [fields.pond_catch(1.0, 0, random.Random(n)) for n in range(4000)]
+    fat = [fields.pond_catch(1.0, cfg["fat"], random.Random(n)) for n in range(4000)]
+    assert plain.count(0) > plain.count(1) > plain.count(2) > plain.count(3) and 0.9 < sum(plain) / len(plain) < 1.1
+    assert min(fat) == cfg["fat"] == 399 and fat.count(399) > fat.count(400) > fat.count(401)
+    jutta = {**next(b for b in places.BOTS if b["id"] == "jutta"), "moon": None}
+    smoked = lambda bot: sum(int(i.get("qty", 1)) for i in bot["inventory"] if i["name"] == fields.EEL)
+    coal = lambda bot: sum(int(i.get("qty", 1)) for i in bot["inventory"] if i["name"].startswith("Coal"))
     bot = daily._record({"bots": {}}, jutta)
-    dcc.add_item(bot, "Coal, a sack", "trade", 50, "6 sp")                        # coal for two hundred eels: the ponds are the limit now
-    plain = next(d for d in range(1, 400) if not fields.fat_night(d) and not any(fields.fat_night(x) for x in range(d, d + 25)))
-    caught = sum(fields.ponds_tonight(bot, jutta, d) for d in range(plain, plain + jutta["ponds"]["days"]))
-    assert caught == jutta["ponds"]["count"] * jutta["ponds"]["per"]               # every pond once in its cycle
-    fat = next(d for d in range(1, 400) if fields.fat_night(d))
-    bot["ponds"] = [fat] * jutta["ponds"]["count"]
-    bot["eels"] = 0
-    assert fields.ponds_tonight(bot, jutta, fat) == jutta["ponds"]["count"] * jutta["ponds"]["per"] * cfg["fat"]      # five times the catch, and nobody says why
-    assert fields.take_eels(bot, jutta, 1000) == jutta["ponds"]["count"] * jutta["ponds"]["per"] * cfg["fat"] and bot["eels"] == 0
-    bot["eels"], bot["batch"] = 0, {}
-    for day in range(1000, 1200):                                                   # no fresh eels: no smoked eel, whatever the coal
-        bot["ponds"] = [10 ** 6] * jutta["ponds"]["count"]
-        daily.arrive(bot, jutta, day, {"rel": {"Smoked eel": 1.0, "Coal, a sack": 1.0}})
-    assert not any(i["name"] == "Smoked eel" for i in bot["inventory"]) and not any(e["name"] == "Smoked eel" for e in bot.get("pipeline", []))
+    dcc.add_item(bot, "Coal, a sack", "trade", 50, "6 sp")
+    night = next(d for d in range(1, 400) if fields.fat_night(d))
+    bot["ponds"] = [night] * jutta["ponds"]["count"]
+    got = fields.ponds_tonight(bot, jutta, night)
+    assert got >= jutta["ponds"]["count"] * cfg["fat"] and smoked(bot) == got and coal(bot) == 49        # six fat ponds, all smoked for one sack
+    bot["inventory"] = [i for i in bot["inventory"] if not i["name"].startswith("Coal")]
+    quiet = next(d for d in range(night + 30, night + 400) if fields.fat_night(d))
+    bot["ponds"], before = [quiet] * jutta["ponds"]["count"], smoked(bot)
+    assert fields.ponds_tonight(bot, jutta, quiet) == 0 and smoked(bot) == before and bot["eels_spoiled"] > 0   # no coal: the catch spoils
 
 
 @real
@@ -3380,7 +3384,7 @@ def test_the_steward_decides_when_to_look_again(content, monkeypatch):
         detlef["inventory"] = [i for i in detlef["inventory"] if i["name"] != "Hen"]
         assert "only 0 hens" in steward.due(state, 32)                                              # a condition wakes her early
         b["attention"] = 0.5
-        assert steward.due(state, 32) is None and steward.due(state, 44) is None                    # under one point nothing wakes her, her own date included (the owner 10-10)
+        assert steward.due(state, 32) is None and steward.due(state, 44) is None                    # under one point nothing wakes her, her own date included (Dodo 10-10)
         b["attention"] = 1.0
         assert "14 days" in steward.due(state, 44)                                                  # enough back: the date wakes her
         b["attention"] = 0.5
@@ -3644,11 +3648,11 @@ def test_the_history_keeps_every_goods_price_and_stock_and_the_caravans_top_need
         for day in range(1, 31):
             barley["drift"] = 1.0 if day < 15 else 20.0                 # a price that jumps on the 15th night
             barley["qty"] = 5 if day < 15 else 0
-            assert history.record(state, day) == 2
+            assert history.record(state, day) == 7   # two goods, the whole flock and the four kinds
         history.record(state, 30)                                         # recording a night twice replaces it
     assert history.span() == (1, 30)
     data = history.series(points=100)
-    assert data["step"] == 1 and len(data["days"]) == 30 and set(data["series"]) == {"Barley, a sack", "Chainmail"}
+    assert data["step"] == 1 and len(data["days"]) == 30 and set(data["series"]) == {"Barley, a sack", "Chainmail", "Hens, the whole flock", "Humans, living", "Halflings, living", "Dwarves, living", "Elves, living"}
     b = data["series"]["Barley, a sack"]
     assert b["price"][0] == 40 and b["price"][20] == 800 and b["stock"][0] == 5 and b["stock"][20] == 0 and b["usual"][0] == 10 and b["rel"][20] == 20.0
     assert data["series"]["Chainmail"]["kind"] == "armor"
@@ -3669,9 +3673,9 @@ def test_the_history_page_and_api_are_for_the_admin(content, monkeypatch):
             history.record(state, day)
     client = create_app().test_client()
     assert client.get("/TTRPG/dcc/api/history", headers={"Remote-User": "wren"}).status_code == 403
-    got = client.get("/TTRPG/dcc/api/history?since=3&points=100", headers={"Remote-User": "admin"}).get_json()
+    got = client.get("/TTRPG/dcc/api/history?since=3&points=100", headers={"Remote-User": "takahe"}).get_json()
     assert got["days"][0] == 3 and got["span"] == [1, 10] and "Barley, a sack" in got["series"] and got["real_day"] >= 1 and got["epoch"]
-    page = client.get("/TTRPG/dcc/history", headers={"Remote-User": "admin"})
+    page = client.get("/TTRPG/dcc/history", headers={"Remote-User": "takahe"})
     assert page.status_code == 200 and b"dcc_history.js" in page.data
 
 
@@ -3759,6 +3763,7 @@ def test_the_town_note_has_talk_and_requests_and_small_kinds_get_more_children()
 
 def test_hedwig_reads_the_old_orders_teachings_and_the_live_file_wins(monkeypatch, tmp_path):
     from ttrpgtools.dcc.westmarch import steward
+    monkeypatch.setenv("WESTMARCH_TEACHINGS", str(tmp_path / "missing.md"))        # the bundled seed alone (the live file is Dodo's to word)
     assert "Old Order" in steward.teachings() and not any(w in steward.teachings().lower() for w in ("light", "moon", "fat eel", "pale"))    # the bundled seed; the secret barley and eel rules are nowhere in it
     live = tmp_path / "t.md"; live.write_text("Look after the smith.", encoding="utf-8")
     monkeypatch.setenv("WESTMARCH_TEACHINGS", str(live))
@@ -3809,3 +3814,168 @@ def test_a_household_has_one_purse_and_nobody_has_a_private_one(monkeypatch):
     assert str(mine("Edgar S")) not in state["households"] and total() == state["money"]["households"]                              # nobody left: the coin goes back to the others
     assert state["households"][str(other)] >= 0
     db.close()
+
+
+def test_a_house_whose_last_adult_is_taken_over_gives_its_purse_back(monkeypatch):
+    from ttrpgtools.dcc.westmarch import households as hh, registry
+    db = registry.connect()
+    db.executescript(__import__("ttrpgtools.dcc.westmarch.lives", fromlist=["SCHEMA"]).SCHEMA)
+    state = {"money": {"households": 0}, "household_mode": True, "households": {}}
+    hid = hh.new(state, 500)
+    state["money"]["households"] = 500
+    with db:
+        db.execute("INSERT INTO people (name, occupation, status, notes, updated, locked, household_id, sheet, claimed_by) VALUES ('Lonely H', 'Farmer', 'alive', 'x', '2026-10-11', 0, ?, '{}', NULL)", (hid,))
+    total = sum(state["households"].values())
+    row = db.execute("SELECT * FROM people WHERE name = 'Lonely H'").fetchone()
+    with db:
+        db.execute("UPDATE people SET claimed_by = 'someone', household_id = NULL WHERE id = ?", (row["id"],))
+        hh.dissolve_if_empty(db, state, hid)
+    assert str(hid) not in state["households"] and sum(state["households"].values()) == total == state["money"]["households"]
+    db.close()
+
+
+def test_a_villager_buying_seed_pays_from_the_household_and_makes_no_coin(content):
+    from ttrpgtools.dcc.westmarch import fields, households as hh, money, registry, town as t
+    with t.town(write=True) as state:
+        db = registry.connect()
+        db.executescript(__import__("ttrpgtools.dcc.westmarch.lives", fromlist=["SCHEMA"]).SCHEMA)
+        hid = hh.new(state, 1000)
+        state["household_mode"], state["money"]["households"] = True, 1000
+        with db:
+            db.execute("INSERT INTO people (name, occupation, status, notes, updated, locked, household_id, sheet) VALUES ('Seedy F', 'Farmer', 'alive', 'x', '2026-10-11', 0, ?, '{\"copper\": 999999}')", (hid,))
+        sid = t.save_shop(state, None, "Seed shop")
+        t.stock_item(state, sid, fields.BARLEY, "trade", "4 sp", 5)
+        before = money.supply(state)["money_cp"]
+        assert fields._buy_seed(state, "Seedy F", 1)
+        assert money.supply(state)["money_cp"] == before and state["households"][str(hid)] < 1000   # the household paid; nothing was made
+        state["households"][str(hid)] = 0
+        state["money"]["households"] = sum(state["households"].values())
+        assert not fields._buy_seed(state, "Seedy F", 1)                                          # a poor house buys nothing, whatever the sheet says
+        db.close()
+
+
+def test_the_last_child_in_a_house_keeps_it_at_eighteen(monkeypatch):
+    import importlib, json as _json
+    from ttrpgtools.dcc.westmarch import households as hh, lives, places, registry
+    cfg = dict(importlib.reload(places).LIVES)
+    monkeypatch.setattr(places, "LIVES", cfg)
+    db = registry.connect()
+    db.executescript(lives.SCHEMA)
+    day = 50 * 365
+    state = {"money": {"households": 0}, "household_mode": True, "households": {}, "last_daily": day, "steward": {}}
+    lone, shared = hh.new(state, 300), hh.new(state, 500)
+    state["money"]["households"] = 800
+    genes = _json.dumps({"abilities": {a: 10 for a in ("strength", "agility", "stamina", "personality", "intelligence", "luck")}, "jobs": ["Farmer", "Farmer"]})
+    with db:
+        for name, hid in (("Orphan Lonesdotter", lone), ("Sib Sharedsson", shared), ("Sib Sharedsdotter", shared)):
+            db.execute("INSERT INTO people (name, occupation, status, notes, updated, locked, born_day, sex, race, mother_id, genes, household_id) "
+                       "VALUES (?, 'Child', 'alive', '', '2026-10-11', 0, ?, 'f', 'human', 1, ?, ?)", (name, day - (18 * 365 + 10 if "Orphan" in name or name.endswith("sson") else 5 * 365), genes, hid))
+    from ttrpgtools import dcc
+    import random
+    content = dcc.load_content() if dcc.content_available() else None
+    if content is None:
+        return
+    lives._come_of_age(db, state, day, cfg, content, random.Random(1))
+    mine = lambda n: db.execute("SELECT household_id FROM people WHERE name = ?", (n,)).fetchone()[0]
+    assert mine("Orphan Lonesdotter") == lone and state["households"][str(lone)] == 300      # alone in the house: it and its purse are hers
+    assert mine("Sib Sharedsson") != shared and mine("Sib Sharedsdotter") == shared         # a sister still at home: he leaves with nothing
+    db.close()
+
+
+def test_the_daily_setting_asks_her_every_night_once(monkeypatch):
+    from ttrpgtools.dcc.westmarch import places, steward
+    state = {"bots": {steward.ID: {"coins": {}, "inventory": []}}}
+    b = steward.book(state)
+    b["checked"], b["next"], b["attention"] = 100, {"day": 999, "in_days": 899, "or_when": []}, 0.0
+    monkeypatch.setattr(places, "LIVES", None)
+    monkeypatch.setattr(places, "STEWARD", {"every": 30, "daily": False})
+    assert steward.due(state, 101) is None                                   # off: her own date and her spent attention hold her back
+    monkeypatch.setattr(places, "STEWARD", {"every": 30, "daily": True})
+    assert steward.due(state, 101) == "the daily look" and steward.due(state, 100) is None   # on: every night, never twice in one
+
+
+def test_the_history_counts_the_whole_flock_not_only_the_hens_for_sale(content):
+    from ttrpgtools import dcc
+    from ttrpgtools.dcc.westmarch import history, town as t
+    with t.town(write=True) as state:
+        sid = t.save_shop(state, None, "Hen yard")
+        t.stock_item(state, sid, "Hen", "trade", "5 sp", 3)
+        state.setdefault("bots", {})["keeper"] = {"coins": {}, "inventory": [{"name": "Hen", "kind": "trade", "qty": 1}] * 7}
+        rows, _ = history.snapshot(state, 5)
+        flock = next(r for r in rows if r[1] == history.FLOCK)
+        assert flock[5] == 10 and flock[3] is None                            # three for sale and seven in a pack; no price
+        for_sale = next(r for r in rows if r[1] == "Hen")
+        assert for_sale[5] == 3
+
+
+def test_hens_breed_only_above_two_and_the_chick_goes_by_share_of_the_flock(monkeypatch):
+    from ttrpgtools.dcc.westmarch import daily, places
+    monkeypatch.setattr(places, "HENS", {**places.HENS, "breed": 10.0})          # sure to breed whenever it may
+    hen = {"name": "Hen", "kind": "trade", "qty": 1}
+    state = {"shops": {}, "bots": {"detlef": {"name": "Detlef", "inventory": [dict(hen), dict(hen)]}, "pip": {"name": "Pip", "inventory": []}}, "log": [], "news": []}
+    assert daily.hens_breed(state, 1, characters=False) is None                       # two hens: nothing (Dodo 10-12: only above two)
+    state["bots"]["detlef"]["inventory"].append(dict(hen))
+    got = [daily.hens_breed(state, d, characters=False) for d in range(2, 12)]
+    assert got.count("Detlef") >= 8                                                                   # mostly by share of the flock
+    from ttrpgtools.dcc.westmarch import daily as _d
+    import random as _r
+    keepers = [("bot", "detlef", 3), ("bot", "pip", 0)]
+    weights = [0.01 + k[2] / 3 for k in keepers]
+    assert weights == [1.01, 0.01]                                                                    # Pip, with none, has his small chance
+    monkeypatch.setattr(places, "HENS", {**places.HENS, "breed": 0.0})
+    assert daily.hens_breed(state, 50, characters=False) is None
+
+
+def test_every_villager_gets_a_kit_and_every_house_a_pantry_and_coin_only_moves(content):
+    import json as _json
+    from ttrpgtools.dcc.westmarch import households as hh, items, lives, registry
+    db = registry.connect()
+    db.executescript(lives.SCHEMA)
+    state = {"money": {"households": 0, "finanzamt": 100_000, "bank": 0}, "household_mode": True, "households": {}}
+    house = hh.new(state)
+    sheet = {"abilities": {a: 10 for a in ("strength", "agility", "stamina", "personality", "intelligence", "luck")}, "occupation": "Farmer",
+             "augur_roll": content["luck_augurs"][0]["roll"], "hp_roll": 2, "copper": 50, "equipment_roll": content["equipment"][0]["roll"], "luck_rule": True}
+    with db:
+        for name in ("Kit A", "Kit B"):
+            db.execute("INSERT INTO people (name, occupation, status, notes, updated, locked, household_id, sheet, genes) VALUES (?, 'Farmer', 'alive', 'x', '2026-10-12', 0, ?, ?, '{}')",
+                       (name, house, _json.dumps(sheet)))
+    before = state["money"]["finanzamt"] + state["money"]["households"]
+    with db:
+        done = hh.outfit(db, state, content)
+    assert done["villagers"] >= 2 and state["outfitted"] and hh.outfit(db, state, content) == {}                  # once only
+    assert state["money"]["finanzamt"] + state["money"]["households"] == before                                   # coin only moved
+    a = db.execute("SELECT id FROM people WHERE name = 'Kit A'").fetchone()[0]
+    assert items.load(hh.PERSON, str(a), db)                                                                       # her own things
+    pantry = items.load(hh.PANTRY, str(house), db)
+    assert any(i["name"] == "Barley, a sack" and i["qty"] >= 2 for i in pantry)                                    # a sack a head
+    db.close()
+
+
+def test_when_the_finanzamt_is_short_the_bank_mints_the_rest_of_the_five_gold(content):
+    import json as _json
+    from ttrpgtools.dcc.westmarch import households as hh, lives, registry
+    db = registry.connect()
+    db.executescript(lives.SCHEMA)
+    state = {"money": {"households": 0, "finanzamt": 100, "bank": 0}, "household_mode": True, "households": {}, "money_log": []}
+    house = hh.new(state)
+    with db:
+        db.execute("INSERT INTO people (name, occupation, status, notes, updated, locked, household_id, genes) VALUES ('Poor Q', 'Farmer', 'alive', 'x', '2026-10-12', 0, ?, '{}')", (house,))
+    n = db.execute("SELECT COUNT(*) FROM people WHERE status = 'alive' AND claimed_by IS NULL AND household_id IS NOT NULL").fetchone()[0]
+    with db:
+        hh.outfit(db, state, content)
+    assert state["money"]["finanzamt"] == 0 and state["money"]["households"] == hh.OUTFIT_CP * n            # five gold each, paid in full
+    minted = sum(e["cp"] for e in state["money_log"] if e["what"] == "bank issued new coin")
+    assert minted == hh.OUTFIT_CP * n - 100                                                                  # what the Finanzamt lacked was minted, and logged
+    db.close()
+
+
+def test_a_model_quota_plays_that_many_traders_a_night_in_turn(monkeypatch):
+    from ttrpgtools.dcc.westmarch import daily, places, town as t
+    asked = []
+    monkeypatch.setattr(daily, "model_plan", lambda state, bot, spec: asked.append(spec["id"]) or None)
+    monkeypatch.setattr(daily, "model_caravan_master", lambda state: None)
+    monkeypatch.setattr(daily, "model_caravan", lambda needs, board: None)
+    with t.town(write=True) as state:
+        state["last_daily"] = t.campaign_day() - 1
+    daily._work(use_model=True, quota=2)
+    assert len(asked) == min(2, len(places.BOTS))                                 # two a night, not all and not none

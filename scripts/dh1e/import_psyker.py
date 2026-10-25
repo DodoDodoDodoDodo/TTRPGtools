@@ -23,7 +23,7 @@ from ttrpgtools.dh1e.storage import character_path, new_character_id, save_chara
 
 def main() -> None:
     character = Character(
-        name="Sample Psyker",
+        name="Takahe's Psyker",
         career=get_career("Imperial Psyker"),
         # Base (unadvanced) values -- WS/S/Ag/Int/Per/Fel as given are within a
         # Void Born's 2d10+homeworld roll range and recorded as-is. BS 51, T 41,

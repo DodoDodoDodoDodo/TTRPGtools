@@ -31,6 +31,36 @@ def _db():
     return db
 
 
+FLOCK = "Hens, the whole flock"
+
+
+def flock(state: dict) -> int:
+    """Every hen in the village tonight: on the shelves, in the traders' packs (the hen keeper's flock, the herb woman's) and in the players' packs."""
+    from . import clauses, items
+    count = sum(int(line["qty"] or 0) for shop in state["shops"].values() if not shop.get("away") for line in shop["stock"] if clauses.is_hen(line["name"]))
+    count += sum(int(i.get("qty", 1)) for bot in state.get("bots", {}).values() for i in bot.get("inventory", []) if clauses.is_hen(i["name"]))
+    db = items.connect()
+    try:
+        count += sum(int(r[1] or 1) for r in db.execute("SELECT name, qty FROM items WHERE holder_type IN ('pc', 'household')") if clauses.is_hen(r[0]))   # and the pantries
+    finally:
+        db.close()
+    return count
+
+
+KINDS = {"human": "Humans, living", "halfling": "Halflings, living", "dwarf": "Dwarves, living", "elf": "Elves, living"}
+
+
+def kinds() -> dict:
+    """The living of each kind (played villagers included)."""
+    from . import registry
+    db = registry.connect()
+    try:
+        have = dict(db.execute("SELECT race, COUNT(*) FROM people WHERE status = 'alive' GROUP BY race").fetchall())
+    finally:
+        db.close()
+    return {label: int(have.get(race, 0)) for race, label in KINDS.items()}
+
+
 def snapshot(state: dict, day: int) -> tuple[list[tuple], tuple]:
     """(the rows of tonight's market, tonight's need row). One row per kind of thing on a shelf: the mean price of one piece over the shelves that
     list it (what a customer pays, free being 0 and a shop that pays you being negative), the pieces on all shelves, the usual pieces."""
@@ -52,6 +82,9 @@ def snapshot(state: dict, day: int) -> tuple[list[tuple], tuple]:
         mean_base = sum(bases) / len(bases)
         rows.append((day, name, lines[0][1]["kind"], round(mean_price, 2), round(mean_price / mean_base, 4) if mean_base else None,
                      sum(stock) if stock else None, sum(usual)))
+    rows.append((day, FLOCK, "census", None, None, flock(state), None))   # every hen alive, not only those for sale (Dodo 10-12)
+    for name, count in kinds().items():   # and the living of each kind (Dodo 10-12)
+        rows.append((day, name, "census", None, None, count, None))
     needs = daily.village_needs(state)[:5]
     asked = (state.get("caravan") or {})
     asked_now = [w["label"] for w in asked.get("wants", [])] if asked.get("asked_day") == day else []
@@ -114,7 +147,7 @@ def series(since: int | None = None, until: int | None = None, points: int = 700
                 "SELECT name, MIN(kind), ((day - ?) / ?) AS b, AVG(price), AVG(rel), AVG(stock), AVG(usual) FROM market_history WHERE day BETWEEN ? AND ? "
                 "GROUP BY name, b ORDER BY name, b", (since, step, since, until)):
             entry = out.setdefault(name, {"kind": kind, "price": [None] * len(days), "rel": [None] * len(days), "stock": [None] * len(days), "usual": [None] * len(days)})
-            entry["price"][bucket] = round(price, 2)
+            entry["price"][bucket] = None if price is None else round(price, 2)   # a census line (the whole flock) has no price
             entry["rel"][bucket] = None if rel is None else round(rel, 3)
             entry["stock"][bucket] = None if stock is None else round(stock, 1)
             entry["usual"][bucket] = None if usual is None else round(usual, 1)

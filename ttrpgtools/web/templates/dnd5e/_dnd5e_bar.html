@@ -1,0 +1,15 @@
+{#- The D&D Beyond-style top bar of every 5e page (hub, encounters, monsters, combat). -#}
+{%- set chars = url_for('dnd5e_builder.shell') -%}
+  <header class="hub-bar">
+    <a class="hub-logo" href="{{ url_for('dnd5e.index') }}" aria-label="Dodo Beyond"><span class="hub-logo-top">Dodo</span><span class="hub-logo-bottom">Beyond</span></a>
+    <nav class="hub-nav" aria-label="D&amp;D 5e">
+      <a href="{{ chars }}">Characters</a>
+      <a href="{{ url_for('dnd5e.encounters_page') }}">Encounters</a>
+      <a href="{{ chars }}#/campaigns">Campaigns</a>
+      <a href="{{ chars }}#/equipment">Equipment</a>
+      <a href="{{ url_for('dnd5e.monsters_page') }}">Monsters</a>
+      <a href="{{ chars }}#/rules">Other</a>
+    </nav>
+    <span class="hub-grow"></span>
+    <a class="hub-back" href="{{ url_for('hub') }}">&larr; Back to /TTRPG</a>
+  </header>

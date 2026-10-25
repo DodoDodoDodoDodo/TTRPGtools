@@ -129,6 +129,8 @@ def arrive(bot: dict, spec: dict, day: int, view: dict | None = None) -> None:
             lag_days = int((spec.get("lag") or {}).get(name, 0))
             if lag_days:   # a farmer counts what is already in the ground before sowing more
                 run *= max(0.0, 1 - economy.queued(bot, name) / ((lag_days + 2) * int(most[0] if most else 2)))
+        if name == fields.EEL and spec.get("ponds") and fields.config():
+            continue   # eels come from the ponds, smoked the night they are caught (fields.ponds_tonight)
         if rng.random() >= min(0.95, 0.5 * run) or (materials.made_of(name, kind) and not materials.is_raw(name)):
             continue   # nothing today; and nothing ever that would have to come out of a workshop (scrap metal is dug up, not made)
         held = sum(int(i.get("qty", 1)) for i in bot["inventory"] if i["name"] == name)
@@ -138,6 +140,7 @@ def arrive(bot: dict, spec: dict, day: int, view: dict | None = None) -> None:
         if lag and economy.queued(bot, name) >= (lag + 2) * int(most[0] if most else 2):
             continue   # the fields, the yard or the kettle are as full as they get
         if clauses.is_hen(name):
+            continue   # hens are not made by a trade: they breed (hens_breed), and a flock that has died out stays dead (Dodo 10-12)
             if lag:
                 economy.queue(bot, name, kind, cost, 1, day + lag)
             else:
@@ -158,10 +161,6 @@ def arrive(bot: dict, spec: dict, day: int, view: dict | None = None) -> None:
             bot["inventory"] = [i for i in bot["inventory"] if int(i.get("qty", 1)) > 0]
             count = min(count, batch.get(name, 0))
             batch[name] = batch.get(name, 0) - count
-            if count <= 0:
-                continue
-        if name == fields.EEL:
-            count = fields.take_eels(bot, spec, count)
             if count <= 0:
                 continue
         if lag:
@@ -496,7 +495,7 @@ def caravan_arrives(state: dict, day: int, master: dict | None = None) -> dict:
                     if hens_left is not None:
                         room = min(room, hens_left)
                     if line["name"] == want["what"] and town._listed(line) and room > 0:   # a wish may fill a shelf up to twice its usual quantity
-                        each = max(1, round(int(line["base_cp"]) * spec["goods_price"]))   # the caravan is dear
+                        each = max(1, round(int(line["base_cp"]) * (spec.get("hen_price", spec["goods_price"]) if hens_left is not None else spec["goods_price"])))   # the caravan is dear, a hen twenty times over (Dodo 10-12)
                         count = min(room, line["target"], int(shop.get("till", 0)) // each)
                         if count > 0:
                             shop["till"] = int(shop["till"]) - each * count
@@ -571,6 +570,17 @@ def hens_eat(state: dict, day: int, characters: bool = True) -> list[str]:
 
     for shop_id, shop in state["shops"].items():
         feed(shop, shop["stock"], shop["name"], True, shop_id)
+    if state.get("outfitted"):   # the households' pantries: their hens eat the pantry's barley (Dodo 10-12)
+        from . import households, items
+        db = items.connect()
+        try:
+            feeds = state.setdefault("pantry_feed", {})
+            for hid in list(households.pantry_hens(db)):
+                pantry = items.load(households.PANTRY, hid, db)
+                if feed(feeds.setdefault(hid, {}), pantry, households.house_name(db, hid), False, f"pantry/{hid}"):
+                    items.replace(households.PANTRY, hid, [i for i in pantry if int(i.get("qty", 1)) > 0], db)
+        finally:
+            db.close()
     for bot_id, bot in state.get("bots", {}).items():
         if feed(bot, bot["inventory"], bot.get("name", bot_id), False, bot_id):
             bot["inventory"][:] = [i for i in bot["inventory"] if int(i.get("qty", 1)) > 0]
@@ -589,6 +599,58 @@ def hens_eat(state: dict, day: int, characters: bool = True) -> list[str]:
     for line in told:
         town.tell(state, day, line)
     return told
+
+
+def hens_breed(state: dict, day: int, characters: bool = True) -> str | None:
+    """Hens breed, simply (Dodo 10-12): with two hens or fewer in the village nothing; above two each night one chick with a small chance that grows with
+    the logarithm of the flock (``places.HENS["breed"]`` times ln of it). The chick goes to a person (a trader or a character), each weighted 0.01 plus
+    their share of the flock; hens on a shop's shelf count to the flock but go to nobody. Returns who got it."""
+    import math
+    rate = float(places.HENS.get("breed", 0))
+    count = lambda lines: sum(int(l.get("qty", 1) or 0) for l in lines if clauses.is_hen(l["name"]) and not l.get("gone"))
+    keepers = [("bot", bot_id, count(bot.get("inventory", []))) for bot_id, bot in state.get("bots", {}).items()]
+    packs = {}
+    if characters:
+        for row in dcc.list_characters():
+            ch = dcc.load_character(row["id"])
+            if not ch.get("dead"):
+                packs[row["id"]] = ch
+                keepers.append(("pc", row["id"], count(dcc.ensure_inventory(ch))))
+    if state.get("outfitted"):   # every household is a keeper too, by its pantry
+        from . import households, items
+        db = items.connect()
+        try:
+            hens_at = households.pantry_hens(db)
+            keepers += [("household", hid, hens_at.get(str(hid), 0)) for (hid,) in db.execute("SELECT DISTINCT household_id FROM people WHERE status = 'alive' AND household_id IS NOT NULL")]
+        finally:
+            db.close()
+    flock = sum(n for _, _, n in keepers) + sum(count(shop["stock"]) for shop in state["shops"].values() if not shop.get("away"))
+    rng = random.Random(f"{day}/hens/breed")
+    if rate <= 0 or flock <= 2 or not keepers or rng.random() >= rate * math.log(flock):
+        return None
+    kind, who, _ = rng.choices(keepers, weights=[0.01 + k[2] / flock for k in keepers])[0]   # mostly by share of the flock, now and then anyone (Dodo 10-12)
+    if kind == "household":
+        from . import households, items
+        db = items.connect()
+        try:
+            pantry = items.load(households.PANTRY, str(who), db)
+            pantry.append({"name": "Hen", "kind": "trade", "qty": 1, "cost": "5 sp"})
+            items.replace(households.PANTRY, str(who), pantry, db)
+            name = households.house_name(db, str(who))
+        finally:
+            db.close()
+    elif kind == "bot":
+        spec = next((b for b in places.BOTS if b["id"] == who), {"id": who, "name": state["bots"][who].get("name", who)})
+        _bring(state["bots"][who], spec, "Hen", "trade", "5 sp", 1, day)
+        name = state["bots"][who].get("name", who)
+    else:
+        ch = packs[who]
+        dcc.add_item(ch, "Hen", "trade", 1, "5 sp")
+        dcc.sync_legacy_fields(ch)
+        dcc.save_character(ch, who)
+        name = ch["name"]
+    town.tell(state, day, f"A chick hatched in {name}'s yard.")
+    return name
 
 
 def model_caravan_master(state: dict) -> dict | None:
@@ -886,6 +948,7 @@ def run_day(state: dict, day: int, plans: dict | None = None, live: bool = True)
     fields.nightly(state, day)
     produce(state, day)
     hens_eat(state, day, characters=live)
+    hens_breed(state, day, characters=live)
     for shop_id, shop in state["shops"].items():
         if town.next_delivery(shop_id, shop, day) == 0:
             work = town.restock(state, shop_id, day)
@@ -957,8 +1020,9 @@ def due(state: dict) -> list[int]:
     return [today] if last is None else list(range(max(last + 1, today - CATCH_UP_DAYS + 1), today + 1))
 
 
-def _work(use_model: bool = True) -> list[int]:
-    """Bring the town up to today. The model is asked outside the file lock, on a copy, so nobody waits for it."""
+def _work(use_model: bool = True, quota: int | None = None) -> list[int]:
+    """Bring the town up to today. The model is asked outside the file lock, on a copy, so nobody waits for it. With ``quota`` only that many traders
+    a night are played by the model, in turn (fast-forwarding: Dodo 10-12, never none), the rest by the rule."""
     if not _running.acquire(blocking=False):
         return []
     try:
@@ -974,7 +1038,13 @@ def _work(use_model: bool = True) -> list[int]:
             for shop_id, shop in draft["shops"].items():
                 if town.next_delivery(shop_id, shop, days[-1]) == 0:
                     town.restock(draft, shop_id)
+            chosen = {b["id"] for b in places.BOTS}
+            if quota is not None and places.BOTS:
+                first = (days[-1] * quota) % len(places.BOTS)
+                chosen = {places.BOTS[(first + i) % len(places.BOTS)]["id"] for i in range(min(quota, len(places.BOTS)))}
             for spec in places.BOTS:  # today's morning on a copy, so the model sees the market the real run starts from
+                if spec["id"] not in chosen:
+                    continue
                 morning = copy.deepcopy(draft)
                 arrive(_record(morning, spec), spec, days[-1])
                 plan = model_plan(morning, _record(morning, spec), spec)

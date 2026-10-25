@@ -1,4 +1,4 @@
-"""One purse per household, and none per villager (the owner 10-11).
+"""One purse per household, and none per villager (Dodo 10-11).
 
 A household is a couple and their minor children, or one adult. Its purse lives in ``state["households"]`` ({"<id>": coin}); ``people.household_id`` says who belongs
 to which. A played villager has no household: the character's own coins are the purse. ``state["money"]["households"]`` stays the sum of all purses: the economy's
@@ -191,3 +191,78 @@ def migrate(db, state: dict) -> dict:
     state["money"]["households"] = sum(state[KEY].values())
     state["household_mode"] = True
     return {"households": len(groups), "people": len(people), "pool_cp": pool}
+
+
+# ---------------------------------------------------------------- what villagers own (Dodo 10-12: every villager is modelled with an inventory)
+PERSON, PANTRY = "person", "household"   # item holders: a villager's own pack (their kit), and a household's pantry (barley, hens, food)
+OUTFIT_CP, OUTFIT_BARLEY = 500, 1        # what each villager brings to the household when inventories begin: five gold (from the Finanzamt) and a sack
+
+
+def kit(content: dict, row) -> list[dict]:
+    """A villager's 0-level things, as a player taking them over would get them: weapon, trade good, item."""
+    import json
+    from . import registry
+    from ttrpgtools import dcc
+    if not row["sheet"]:
+        return []
+    ch = registry.build_character(content, row["name"], json.loads(row["sheet"]))
+    return [dict(i) for i in dcc.ensure_inventory(ch)]
+
+
+def settle(db, state: dict, row, content: dict) -> None:
+    """Give one villager their kit: their own things into their pack, a hen of it into the household's pantry (hens belong to the house)."""
+    from . import clauses, items
+    things = kit(content, row)
+    mine = [t for t in things if not clauses.is_hen(t["name"])]
+    hens = [t for t in things if clauses.is_hen(t["name"])]
+    items.replace(PERSON, str(row["id"]), items.load(PERSON, str(row["id"]), db) + mine, db)
+    if hens and row["household_id"] is not None:
+        items.replace(PANTRY, str(row["household_id"]), items.load(PANTRY, str(row["household_id"]), db) + hens, db)
+
+
+def outfit(db, state: dict, content: dict) -> dict:
+    """Once: every living villager nobody plays gets their kit, every household a sack of barley per member, and five gold per member moves from the
+    Finanzamt into the household purses (coin only moves)."""
+    from . import items
+    if state.get("outfitted"):
+        return {}
+    people = db.execute("SELECT * FROM people WHERE status = 'alive' AND claimed_by IS NULL AND household_id IS NOT NULL").fetchall()
+    for row in people:
+        settle(db, state, row, content)
+    members: dict = {}
+    for row in people:
+        members[row["household_id"]] = members.get(row["household_id"], 0) + 1
+    for hid, n in members.items():
+        pantry = items.load(PANTRY, str(hid), db)
+        pantry.append({"name": "Barley, a sack", "kind": "trade", "qty": OUTFIT_BARLEY * n, "cost": "4 sp"})
+        items.replace(PANTRY, str(hid), pantry, db)
+    each, short = OUTFIT_CP, OUTFIT_CP * len(people) - int(state["money"].get("finanzamt", 0))
+    if short > 0:   # the Finanzamt cannot pay it all: the bank mints the rest into the Finanzamt first (logged, like the delver's treasure)
+        from . import town
+        town.issue(state, short, "the households' start")
+        town.move(state, "bank", "finanzamt", short, who="the households' start")
+    reconcile(state, db)
+    box = purses(state)
+    for hid, n in members.items():
+        box[str(hid)] = box.get(str(hid), 0) + each * n
+    state["money"]["finanzamt"] = int(state["money"]["finanzamt"]) - each * len(people)
+    state["money"]["households"] = sum(box.values())
+    coin = each * len(people)
+    state["outfitted"] = True
+    return {"villagers": len(people), "households": len(members), "coin_cp": coin}
+
+
+def pantry_hens(db) -> dict:
+    """{household id: hens in its pantry}."""
+    from . import clauses
+    out: dict = {}
+    for r in db.execute("SELECT holder_id, name, qty FROM items WHERE holder_type = ?", (PANTRY,)):
+        if clauses.is_hen(r[1]):
+            out[r[0]] = out.get(r[0], 0) + int(r[2] or 1)
+    return out
+
+
+def house_name(db, hid) -> str:
+    """A household as the town speaks of it: by its eldest living member."""
+    row = db.execute("SELECT name FROM people WHERE household_id = ? AND status = 'alive' ORDER BY born_day LIMIT 1", (int(hid),)).fetchone()
+    return f"{row[0]}'s household" if row else f"household {hid}"

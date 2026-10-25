@@ -1,0 +1,30 @@
+{%- set build = 'dnd5e/builder/builder.js' -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dodo Beyond</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="{{ url_for('static', filename='dnd5e/builder/builder.css') }}?v={{ build_version }}">
+  <script>
+    window.DND5E = {
+      base: {{ url_for('dnd5e_builder.shell')|tojson }},
+      api: {{ (url_for('dnd5e_builder.shell') ~ 'api')|tojson }},
+      ddb: {{ (url_for('dnd5e_builder.shell') ~ 'ddb')|tojson }},
+      hub: {{ url_for('hub')|tojson }},
+      encounters: {{ url_for('dnd5e.encounters_page')|tojson }},
+      start: {{ url_for('dnd5e.index')|tojson }},
+      user: {{ (request.headers.get('Remote-User') or '')|tojson }},
+      admin: {{ (admin or false)|tojson }},
+      premium: {{ (premium if premium is defined else true)|tojson }}
+    };
+  </script>
+  <script type="module" src="{{ url_for('static', filename=build) }}?v={{ build_version }}"></script>
+</head>
+<body>
+  <div id="app"><p style="font:16px sans-serif;padding:2rem">Loading the character builder&hellip;</p></div>
+  <noscript>The character builder needs JavaScript.</noscript>
+{% include "_footer.html" %}
+</body>
+</html>

@@ -20,7 +20,6 @@ TOWNSFOLK = [
     ('Pip', 'Farmhand'),
     ('Vessa', 'Factor'),
     ('Hedwig Dornbusch', 'Herb woman'),
-    ('Zeno Zwiebel', 'Cheesemaker'),
     ('Detlef of the Ford', 'Hen keeper'),
     ('Xaver Haberkorn', 'Brewer'),
     ('Hedwig Nebelung', 'Oil presser'),
@@ -32,6 +31,7 @@ TOWNSFOLK = [
 ]
 
 VILLAGERS = [
+    ('Zeno Zwiebel', 'Cheesemaker'),
     ('Rosamund the Stammerer', 'Shaman'),
     ('Jorg Crookback', 'Herbalist'),
     ('Brunhild Kesselring', 'Gambler'),

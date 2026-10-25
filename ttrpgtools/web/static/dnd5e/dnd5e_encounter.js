@@ -89,7 +89,7 @@ function drawPlan() {
         h("td", {}, h("input", { type: "number", min: 1, max: 50, value: entry.count,
           "aria-label": "Count of " + m.name,
           onchange: (e) => { entry.count = Math.max(1, Math.min(50, Number(e.target.value) || 1)); save(); } })),
-        h("td", {}, h("button", { class: "c-name", type: "button", onclick: () => showMonster(entry.id) }, m.name)),
+        h("td", { class: "c-monster" }, monsterThumb(m), h("button", { class: "c-name", type: "button", onclick: () => showMonster(entry.id) }, m.name)),
         h("td", { class: "num" }, m.cr ?? "?"), h("td", { class: "num" }, m.hp ?? ""),
         h("td", { class: "num" }, m.ac ?? ""),
         h("td", { class: "num" }, ((m.xp || 0) * entry.count).toLocaleString("en")),
@@ -100,19 +100,44 @@ function drawPlan() {
       h("td", { class: "num" }, totalXp.toLocaleString("en")), h("td", {}))))));
 }
 
+// The party: a campaign's characters (builder characters, campaigns.py) with one checkbox each, plus the
+// characters imported on the party page. Picking a campaign puts all its characters in; the boxes take them out.
+const BUILDER_API = API.replace(/api$/, "") + "characters/api";
+let campaigns = [];
+let builderChars = {};   // character id -> summary from the builder's list
+
+function partyRow(id, label) {
+  return h("label", { class: "row" },
+    h("input", { type: "checkbox", checked: plan.pcs.includes(id), onchange: (e) => {
+      plan.pcs = e.target.checked ? [...plan.pcs, id] : plan.pcs.filter((x) => x !== id);
+      drawParty(); save();
+    } }), label);
+}
+
 function drawParty() {
   const target = document.getElementById("party");
-  if (!party.length) {
-    replace(target, h("p", { class: "empty-state" }, "No characters exist yet. Add them on the ",
-      h("a", { href: API.replace(/api$/, "") }, "party page"), "."));
-    return;
-  }
-  replace(target, party.map((pc) => h("label", { class: "row" },
-    h("input", { type: "checkbox", checked: plan.pcs.includes(pc.id), onchange: (e) => {
-      plan.pcs = e.target.checked ? [...plan.pcs, pc.id] : plan.pcs.filter((id) => id !== pc.id);
-      save();
-    } }),
-    `${pc.name}, ${pc.cls || "?"} ${pc.level}, HP ${pc.hp}, AC ${pc.ac}`)));
+  const campaign = campaigns.find((c) => c.id === plan.campaign);
+  const picker = h("label", { class: "party-campaign" }, "Party from campaign ",
+    h("select", { onchange: (e) => {
+      plan.campaign = e.target.value || null;
+      const chosen = campaigns.find((c) => c.id === plan.campaign);
+      if (chosen) plan.pcs = [...chosen.characters];
+      drawParty(); save();
+    } },
+      h("option", { value: "" }, campaigns.length ? "choose a campaign" : "no campaigns yet"),
+      campaigns.map((c) => h("option", { value: c.id, selected: c.id === plan.campaign }, `${c.name} (DM ${c.dm || "?"}, ${c.characters.length})`))));
+  const campaignRows = campaign ? campaign.characters.map((id) => {
+    const c = builderChars[id];
+    return partyRow(id, c ? `${c.name || "Unnamed"}, ${c.classes.join(" / ") || "no class"}, level ${c.level || 0}${c.owner ? ` (${c.owner})` : ""}` : `${id} (character not found)`);
+  }) : [];
+  replace(target,
+    picker,
+    campaign && !campaign.characters.length ? h("p", { class: "empty-state" }, "This campaign has no characters yet.") : null,
+    campaignRows.length ? h("div", { class: "party-list" }, campaignRows) : null,
+    h("p", { class: "hint" }, "Campaigns and their characters are managed on the ",
+      h("a", { href: API.replace(/api$/, "") + "characters/" }, "characters page"), "."),
+    party.length ? [h("h4", { class: "spell-level" }, "Other characters (imported from D&D Beyond before campaigns existed)"),
+      party.map((pc) => partyRow(pc.id, `${pc.name}, ${pc.cls || "?"} ${pc.level}, HP ${pc.hp}, AC ${pc.ac}`))] : null);
 }
 
 let saving = Promise.resolve();
@@ -130,6 +155,14 @@ async function load() {
   const [data, pcs] = await Promise.all([
     guard(() => api("GET", "/encounters/" + encounterId)), guard(() => api("GET", "/pcs"))]);
   if (!data || !pcs) return;
+  try {
+    const [list, chars] = await Promise.all([fetch(BUILDER_API + "/campaigns").then((r) => r.json()),
+                                             fetch(BUILDER_API + "/characters").then((r) => r.json())]);
+    campaigns = Array.isArray(list) ? list : [];
+    builderChars = Object.fromEntries((Array.isArray(chars) ? chars : []).map((c) => [c.id, c]));
+  } catch (e) {
+    campaigns = [];  // the builder is unreachable: the imported characters still work
+  }
   plan = data.encounter;
   known = data.monsters;
   party = pcs.pcs;
@@ -152,7 +185,7 @@ document.getElementById("run").addEventListener("click", async () => {
 const picker = monsterPicker({
   onShow: (row) => showMonster(row.id),
   onPick: (row, count) => {
-    known[row.id] = { id: row.id, name: row.name, cr: crText(row), xp: row.xp, hp: row.hp, ac: row.ac };
+    known[row.id] = { id: row.id, name: row.name, cr: crText(row), xp: row.xp, hp: row.hp, ac: row.ac, image: row.image };
     const existing = plan.monsters.find((m) => m.id === row.id);
     if (existing) existing.count = Math.min(50, existing.count + count);
     else plan.monsters.push({ id: row.id, count });

@@ -186,10 +186,12 @@
     {% endfor %}
   </div>
 
+{% if may_delete(character.owner if character.owner is defined else none) %}
   <div class="panel danger-zone">
     <form method="post" action="{{ url_for('dh1e.delete_character', character_id=character_id) }}"
           onsubmit="return confirm('Delete {{ character.name }} permanently?');">
       <button type="submit" class="mini-button danger">Delete Dossier</button>
     </form>
   </div>
+{% endif %}
 {% endblock %}

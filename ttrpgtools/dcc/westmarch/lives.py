@@ -250,7 +250,7 @@ def _child_name(db, father, sex: str, rng: random.Random) -> str:
         name = f"{rng.choice(GIVEN[sex])} {patronym}"
         if name not in taken:
             return name
-    for n in range(2, 1000):   # every given name taken: the second of the name is the Younger, then the Third, the Fourth (the owner 10-11; was "the Younger" and a random number)
+    for n in range(2, 1000):   # every given name taken: the second of the name is the Younger, then the Third, the Fourth (Dodo 10-11; was "the Younger" and a random number)
         numbered = f"{name} the {ORDINALS[n - 2] if n - 2 < len(ORDINALS) else f'{n}th'}"
         if numbered not in taken:
             return numbered
@@ -361,12 +361,16 @@ def _come_of_age(db, state: dict, day: int, cfg: dict, content: dict, rng: rando
         if sheet is None:
             continue
         if state.get("household_mode"):   # at eighteen a household of their own, with nothing in the purse (the sheet's copper is only a player's starting purse)
-            db.execute("UPDATE people SET household_id = ? WHERE id = ?", (households.new(state), r["id"]))
+            alone = not db.execute("SELECT 1 FROM people WHERE household_id = ? AND status = 'alive' AND id != ? LIMIT 1", (r["household_id"], r["id"])).fetchone()
+            if not alone or r["household_id"] is None:   # the last one left in the house keeps it and its purse (10-11: houses were left with nobody)
+                db.execute("UPDATE people SET household_id = ? WHERE id = ?", (households.new(state), r["id"]))
         else:
             spare = min(int(sheet["copper"]), int(state["money"].get("households", 0)))   # only what the households can afford
             state["money"]["households"] = int(state["money"].get("households", 0)) - spare
             sheet["copper"] = spare
         db.execute("UPDATE people SET occupation = ?, sheet = ?, updated = ? WHERE id = ?", (job, json.dumps(sheet), datetime.now().isoformat(timespec="seconds"), r["id"]))
+        if state.get("outfitted"):   # an adult now: their own things, as a player taking them over would get them
+            households.settle(db, state, db.execute("SELECT * FROM people WHERE id = ?", (r["id"],)).fetchone(), full)
         _event(db, day, "adult", r["name"], job)
         if job in [o["occupation"] for o in roles] and _holder(db, job) is None:   # the seat stood empty: here is the one who takes it
             row = db.execute("SELECT * FROM people WHERE id = ?", (r["id"],)).fetchone()
@@ -688,7 +692,7 @@ NEWCOMER_NAMES = ["Brandt", "Falkner", "Weber", "Kessler", "Imhof", "Lindner", "
 
 def spawn(state: dict, day: int, occupation: str, content: dict, rng: random.Random, sex: str | None = None) -> str | None:
     """A newcomer walks into the village: an adult (18 to 35) of the trade, of the kind its name says, single, with a 0-level character rolled for them and
-    the purse the households can spare. For a hand-made repopulation between runs (the owner 10-10: the trades that had died out). Returns the name, or None."""
+    the purse the households can spare. For a hand-made repopulation between runs (Dodo 10-10: the trades that had died out). Returns the name, or None."""
     cfg = config()
     full = {**content, "occupations": content["occupations"] + role_entries(content)}
     race = race_of(occupation)
@@ -713,6 +717,8 @@ def spawn(state: dict, day: int, occupation: str, content: dict, rng: random.Ran
                        "VALUES (?, ?, 'alive', 'came to the village', ?, 0, ?, 0, ?, ?, ?, ?, ?)",
                        (name, occupation, datetime.now().isoformat(timespec="seconds"), json.dumps(sheet), day - round(age * 365), sex, race,
                         json.dumps({"abilities": sheet["abilities"], "jobs": [occupation, occupation], "newcomer": True}), hid))
+            if state.get("outfitted"):
+                households.settle(db, state, db.execute("SELECT * FROM people WHERE name = ?", (name,)).fetchone(), full)
             _event(db, day, "arrived", name, "", occupation)
         return name
     finally:

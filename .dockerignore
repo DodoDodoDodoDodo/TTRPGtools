@@ -8,3 +8,5 @@ data/
 content/
 rulebooks/
 docs/
+frontend/*/node_modules
+ttrpgtools/web/static/dnd5e/builder

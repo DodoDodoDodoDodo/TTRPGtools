@@ -3,12 +3,16 @@
 from __future__ import annotations
 
 import mimetypes
+from pathlib import Path
 
 from flask import Flask, redirect, render_template, request, url_for
 
 from ttrpgtools.dh1e.storage import CHARACTERS_DIR
 
-mimetypes.add_type("image/webp", ".webp")  # the slim container image does not know it; a texture sent as octet-stream may be refused
+# the slim container image does not know these; a texture or font sent as octet-stream may be refused
+mimetypes.add_type("image/webp", ".webp")
+mimetypes.add_type("font/otf", ".otf")
+mimetypes.add_type("font/woff2", ".woff2")
 
 
 def create_app() -> Flask:
@@ -17,10 +21,21 @@ def create_app() -> Flask:
     # must generate links that match what Caddy will actually forward.
     app = Flask(__name__, static_url_path="/TTRPG/static")
     CHARACTERS_DIR.mkdir(exist_ok=True)
+
+    @app.template_global()
+    def static_v(filename: str) -> str:
+        """A static URL with ?v=<mtime>: Cloudflare caches static files, and an unversioned URL kept
+        serving the old dnd5e.css after a deploy (2026-10-22, the Characters banner showed unstyled)."""
+        path = Path(app.static_folder) / filename
+        version = int(path.stat().st_mtime) if path.exists() else 0
+        return url_for("static", filename=filename) + f"?v={version}"
+    from ttrpgtools.permissions import may_delete
+    app.add_template_global(may_delete)
     from ttrpgtools.dcc.routes import bp as dcc_bp
     from ttrpgtools.dh1e.routes import bp as dh1e_bp
+    from ttrpgtools.dnd5e.builder_routes import bp as dnd5e_builder_bp
     from ttrpgtools.dnd5e.routes import bp as dnd5e_bp
-    for bp in (dcc_bp, dh1e_bp, dnd5e_bp):
+    for bp in (dcc_bp, dh1e_bp, dnd5e_bp, dnd5e_builder_bp):
         app.register_blueprint(bp)
 
     @app.get("/")

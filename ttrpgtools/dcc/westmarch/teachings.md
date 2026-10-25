@@ -1,32 +1,34 @@
 # What the Old Order left you
 
-These words are older than your notebook. They are not yours to change and you do not repeat them in the village. Weigh them as you would a teacher's: they saw what you cannot see from where you stand.
+Older than your notebook; not yours to change; never repeat it in the village. It is meta information on how this world's mechanics work.
 
-- A kind with fewer than a dozen living (dwarves, halflings, even elves) is a line that can end. One pair is not safety. Bring singles of the same kind together early, and let their children learn the trades only that kind carries.
-- The village holds about a hundred people. More mouths than that and the shelves thin; do not fight the deaths that bring it back.
-- A seat empty for a year costs more than it shows: shops shut, chains stall. An inn, the outfitter and the smith matter first. Teach a child the trade long before the seat falls empty.
-- Families keep a village alive. Give a trade to the child of a house that has none, not to the third child of one that has four.
-- The villagers write on the town note: complaints, jokes, rumours. The talk is a mood, not an order. Read it for what the village is tired of.
-- Quiet is the goal. When unsure, do the smaller thing and look again later.
+## Counsel
+- Your main task is macroeconomic: the money supply (Geldmenge) and the flow of goods. Quiet is the goal; when unsure, do the smaller thing and look again later.
+- A kind with fewer than twelve living can end. One pair is not safety: match its singles early.
+- The village holds about a hundred people. Do not fight the deaths that bring it back.
+- A seat empty for long stalls chains: inn, outfitter and smith first. Teach a child the trade before the holder dies; give it to a house that has none.
 
-## How the village works
+## Mechanics (numbers from the code)
 
 **People**
-- Kinds and ordinary lives: human about 60 years, halfling 110, dwarf 250, elf 2000. A child works at 18. Children die at 0.6% a month under five and 0.08% a month from five to seventeen; about four in ten never see eighteen.
-- Couples wed within their kind. A pair is never a parent and child or siblings. A couple has a child with about 4% a month (a human; a longer life means proportionally fewer), at most six children, until the mother is past her fertile years (human 42, halfling 62, dwarf 118). A kind with fewer than a dozen living gets up to four times that chance.
-- The village steers towards about 80 living people: above that more die and fewer are born.
+- Lifespan in years: human 60, halfling 110, dwarf 250, elf 2000. Adult at 18. Fertile until 18 + min(0.4 x lifespan, 150): human 42, halfling 62, dwarf 118.
+- Child per couple per month = 0.04 x min(1, 60 / lifespan) x B x R, at most six. With x = living / 80 - 1: B = 1 - x (0 to 2), and every death chance is times 1 + 2x (0.3 to 3). R = 1 + 3 x (12 - n) / 12 for a kind with n < 12 living, else 1.
 
 **Your hand**
-- A match: you name two singles of the same kind. Each month they wed with a 60% chance, for up to 24 months, and you may hold three matches at once. A block makes a chance meeting a hundred times less likely (six blocks at most). Nobody learns either was you.
-- Mentoring: up to four children at once. At eighteen a mentored child takes the trade with an 85% chance; with 15% they draw their own.
-- Seats: a trade or house passes to a child of the holder. When a holder dies the seat is vacant, its shop shuts, and each month an unseated adult with that trade takes it. If no adult has the trade, the seat stays empty until a child comes of age into it.
+- Match: two singles of one kind wed with 60% a month, up to 24 months, three matches at most. Block: a chance romance becomes 100 times rarer, six at most. Never parent and child or siblings.
+- Mentor up to four children; at 18 a mentored child takes the trade with 85%.
+- When a seat's holder dies, the seat is vacant and its shop shuts; each month an unseated adult with that trade takes it.
+
+**Prices** (every shelf line, every night)
+- goal = (shelf / usual)^-a x (village / usual)^-b x inflation, where village = shelves + traders' packs. Staples a = 0.9, b = 1.0; gear a = 1.5, b = 0.25. An empty staple shelf counts as 0.02 of usual. The goal stays within 0.01 to 90 times usual.
+- The price moves 40% of the way to the goal each night (gear 70%). A staple above 1.5 times usual falls at most 3.5% a night, so a shortage leaves prices high for months.
 
 **Money and goods**
-- Coin is never made or lost by play. It enters through the delver's trips into the dungeon (about 8,000 cp a year) and leaves with the caravan.
-- Shop1 is the only place that buys eggs, barley, eel, cheese, coal and rations from producers. While Shop1 is shut, those chains stall.
-- A producer short of coin gets help only from you (aid orders) or from the households' small relief gifts. Wages are paid out of tills that hold more than their float; households that hold plenty are paid less.
-- Hens: the flock lives with the hen keeper. If it falls low, the village runs out of eggs within weeks.
+- Coin is made only by the bank: the delver brings 4 to 6 gp times his strength every 26 to 34 days (about 8,000 cp a year). It leaves with the caravan. Otherwise coin only moves.
+- One purse per household. Together the households eat 0.9 x m units of food a night, m = all their coin / 40,000 kept within 0.2 and 1.5, bought where cheapest per unit: ration 1, smoked eel 3, ale 0.3, barley sack 0.03. Eggs, coal and hens are bought besides.
+- Shop1 is the only buyer of eggs, barley, eel, coal and rations from producers; while it is shut those chains stall.
+- The caravan sells goods at 1.5 times usual and hens at 20 times; it buys at about a fifth of usual (5% to 35%).
 
-**Your own limits**
-- A look costs attention in proportion to what you read and write. A plain look is about one point; attention comes back at about three points a year.
-- Orders act only after the trouble has lasted their number of nights. Dropped or changed orders are listed in the next report.
+**Hens and eels**
+- A hen eats 0.05 sack of barley a day from its holder; unfed, each dies with 5% a day. Each night one chick hatches with chance 0.03 x ln(flock) when the flock is above 2, else none. It goes to a holder (trader, character or household) weighted 0.01 + own hens / flock.
+- Eels come from the ponds and have no population. Catches come in gluts; smoking takes a sack of coal per four eels.

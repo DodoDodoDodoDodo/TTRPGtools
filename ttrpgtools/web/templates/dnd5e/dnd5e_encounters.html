@@ -1,8 +1,8 @@
 {% extends "dnd5e/dnd5e_base.html" %}
 {% block title %}D&amp;D 5e Encounters{% endblock %}
-{% block page_script %}<script src="{{ url_for('static', filename='dnd5e/dnd5e_index.js') }}" defer></script>{% endblock %}
+{% block page_script %}<script src="{{ static_v('dnd5e/dnd5e_encounters.js') }}" defer></script>{% endblock %}
 {% block page %}
-<div class="columns">
+<div class="encounters-page">
   <div>
     <section class="panel">
       <div class="panel-header">
@@ -20,17 +20,5 @@
       <div id="combats"></div>
     </section>
   </div>
-  <section class="panel">
-    <div class="panel-header">
-      <h2>Party</h2>
-      <button class="mini-button" type="button" id="new-pc">Add by hand</button>
-    </div>
-    <form id="ddb-form" class="row">
-      <input class="grow" type="text" id="ddb-ref" placeholder="D&amp;D Beyond character URL or number" aria-label="D&amp;D Beyond character URL or number">
-      <button class="mini-button" type="submit">Import</button>
-    </form>
-    <p class="hint">The character must be set to Public on D&amp;D Beyond (Edit, Home, Character Privacy). Importing again refreshes HP and counters; values you entered here are kept.</p>
-    <div id="pcs"></div>
-  </section>
 </div>
 {% endblock %}

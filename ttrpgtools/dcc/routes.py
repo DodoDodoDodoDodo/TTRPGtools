@@ -11,6 +11,7 @@ from flask import Blueprint, Response, abort, redirect, render_template, request
 
 from ttrpgtools import dcc
 from ttrpgtools.dcc import explain as dcc_explain, folio as dcc_folio, sheetfill
+from ttrpgtools.permissions import require_delete
 from ttrpgtools.dcc.westmarch import (clauses as town_clauses, daily as town_daily, debts as town_debts, history as town_history, items as town_items, materials as town_materials, money as town_money, places as town_places,
                          registry as town_registry, town as dcc_town, voices as town_voices)
 
@@ -384,6 +385,7 @@ def download(character_id):
 def delete(character_id):
     path = dcc.character_path(character_id)
     if path.exists():
+        require_delete(json.loads(path.read_text()).get("owner"))
         path.unlink()
         town_items.CharacterPacks.forget(character_id)
     return redirect(url_for("dcc.index"))

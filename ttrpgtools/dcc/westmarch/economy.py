@@ -46,7 +46,7 @@ DEFAULT = {
     "till_float": 3000,                              # coppers a till keeps; of what it holds above that, ``wage_share`` goes to the households each night
     "wage_share": 0.03, "refill_share": 0.05,
     # The caravan's crew drinks and eats in the village while the wagons stand there (paid from the coin in the wagons), per night:
-    "crew_diet": {"Ale, a jug": 10, "Rations, per day": 8, "Eggs, a dozen": 2, "Stinky cheese": 2, "Smoked eel": 2},
+    "crew_diet": {"Ale, a jug": 10, "Rations, per day": 8, "Eggs, a dozen": 2, "Smoked eel": 2},
     # One delver goes into the dungeon and comes back about every ``every`` days with ``gp`` gold pieces of treasure: new coin, the bank's, spent
     # at once: ``inn`` of it at the inn, the rest by the households. Dungeon treasure is how coin enters the village; the caravan is how it leaves.
     # He also replaces what the dungeon took: with ``gear`` of his treasure he buys the dearest weapon, armor or shield the smith has that he can pay for.
@@ -57,7 +57,13 @@ DEFAULT = {
     "herb_cap": 20,
     "relief_floor": 500, "relief_gift": 300,         # a tradesman whose purse is below ``relief_floor`` coppers gets up to ``relief_gift`` a night from the households: neighbours look after their own
     "reserve": 3000, "family_share": 0.02,           # a trader's purse above ``reserve`` coppers feeds the family: this share of the excess goes to the households each night
-    "diet": {"Rations, per day": 3, "Ale, a jug": 5, "Eggs, a dozen": 1, "Stinky cheese": 1, "Smoked eel": 1, "Barley, a sack": 1, "Coal, a sack": 1, "Hen": 0.1},
+    "diet": {"Eggs, a dozen": 1, "Coal, a sack": 1, "Hen": 0.1},
+    # Food (Dodo 10-11): these substitute for each other at 1 : 3 : 10 : 100 (one smoked eel = three rations = ten jugs of ale = a hundred grains of barley).
+    # Measured in ration units: a ration is 1, an eel 3, a jug of ale 0.3, a sack of barley 0.03. A household needs ``food_need`` of them a night and fills it
+    # with whatever is cheapest per unit of food on the shelves (the price of a unit over its value).
+    "food": {"Rations, per day": 1.0, "Smoked eel": 3.0, "Ale, a jug": 0.3, "Barley, a sack": 0.03},   # eggs are not food here: the cook turns them into rations
+    "food_need": 3.0,
+    "food_max_units": 60,                            # most shelf units one household buys for food in one night (a sack of barley is worth very little)
     "diet_scale": 0.3,                               # the whole diet at once, to tune the village's appetite against what the producers can make
     "hh_ref": 40000,                                 # coppers the households hold when they eat their usual diet; they eat more with more coin, less with less
     "diet_elasticity": 0.6,                          # the village eats less of what is dear: units * price ** -elasticity
@@ -284,8 +290,9 @@ def refill(state: dict, cfg: dict) -> int:
 
 
 def eat(state: dict, day: int, cfg: dict) -> dict:
-    """The households eat: each staple of the diet, a few units a night, fewer when it is dear, bought from the cheapest shelf
-    that has it with the coin the households hold (never more). What is eaten is gone; the coin lands in the till. Returns what was eaten."""
+    """The households eat: the staples of the diet, a few units a night, fewer when they are dear, bought from the cheapest shelf that has them with the
+    coin the households hold (never more). Food fills a need in ration units and takes whatever is cheapest per unit of food value. What is eaten is gone;
+    the coin lands in the till. Returns what was eaten."""
     from . import town
     rng = random.Random(f"{day}/households")
     book = state.get("market") or {}
@@ -307,6 +314,23 @@ def eat(state: dict, day: int, cfg: dict) -> dict:
             state["shops"][shop_id]["till"] = int(state["shops"][shop_id]["till"]) + price
             state["money"]["households"] = int(state["money"]["households"]) - price
             eaten[good] = eaten.get(good, 0) + 1
+    need = means * cfg["diet_scale"] * cfg["food_need"]
+    for _ in range(int(cfg["food_max_units"])):
+        if need <= 1e-9:
+            break
+        offers = [(max(0, town.price_cp(shop, line, day)) / cfg["food"][line["name"]], shop_id, line) for shop_id, shop in state["shops"].items() if _local(shop)
+                  for line in shop["stock"] if line["name"] in cfg["food"] and line["qty"] and not line.get("gone") and line["kind"] != "service"]
+        if not offers:
+            break
+        _, shop_id, line = min(offers, key=lambda o: o[0])
+        price = max(0, town.price_cp(state["shops"][shop_id], line, day))
+        if price > int(state["money"].get("households", 0)):
+            break
+        line["qty"] = int(line["qty"]) - 1
+        state["shops"][shop_id]["till"] = int(state["shops"][shop_id]["till"]) + price
+        state["money"]["households"] = int(state["money"]["households"]) - price
+        need -= cfg["food"][line["name"]]
+        eaten[line["name"]] = eaten.get(line["name"], 0) + 1
     return eaten
 
 

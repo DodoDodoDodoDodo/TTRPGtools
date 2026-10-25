@@ -1,0 +1,68 @@
+/* The 5e pages outside the character app in D&D Beyond's look: light page, DDB's primary-box frame around every
+   panel, red outline buttons, condensed uppercase labels. Replaces what these pages used to take from the
+   Dark Heresy style.css. The variable names stay so dnd5e.css keeps working. */
+:root {
+  --bg: #f2f0ee;
+  --panel-bg: #fefefe;
+  --border: #d8d0c4;
+  --gold: #c53131;          /* DDB's red is the accent where the 40k look had gold */
+  --gold-bright: #12181c;   /* headings and names: DDB's near-black */
+  --blood: #c53131;
+  --blood-bright: #b11e1e;
+  --text: #12181c;
+  --text-dim: #5c6670;
+  --ddb-red: #c53131;
+}
+* { box-sizing: border-box; }
+body.ddb5e { margin: 0; background: var(--bg); color: var(--text); font: 400 15px/1.45 Roboto, "Helvetica Neue", Arial, sans-serif; }
+.ddb5e-main { max-width: 1280px; margin: 0 auto; padding: 24px 22px 48px; }
+.ddb5e a { color: var(--ddb-red); }
+.ddb5e h1, .ddb5e h2 { font: 700 20px/1.2 "Roboto Condensed", Roboto, sans-serif; text-transform: uppercase; letter-spacing: .04em; color: var(--text); margin: 0; }
+.ddb5e h1 { font-size: 24px; }
+.ddb5e h2 { border-bottom: 2px solid var(--ddb-red); padding-bottom: 4px; }
+.ddb5e h3, .ddb5e h4 { font-family: "Roboto Condensed", Roboto, sans-serif; }
+
+/* panels: DDB's primary-box frame, corners kept, edges stretched */
+.ddb5e .panel { border: 14px solid transparent; border-image: var(--ddb-frame) 22 fill / 14px stretch; padding: 6px 10px 10px; margin-bottom: 20px; background: none; }
+.ddb5e .panel-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 10px; }
+.ddb5e .panel-header h1, .ddb5e .panel-header h2 { border: none; padding: 0; }
+.ddb5e .button-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+/* buttons: DDB's outline style, filled red on hover; "danger" stays outline but quieter until hovered */
+.ddb5e .button, .ddb5e .mini-button { font: 700 12px/1 Roboto, sans-serif; text-transform: uppercase; letter-spacing: .06em; padding: 7px 12px;
+  background: #fff; color: var(--ddb-red); border: 1px solid var(--ddb-red); border-radius: 3px; cursor: pointer; text-decoration: none; }
+.ddb5e .button:hover, .ddb5e .mini-button:hover { background: var(--ddb-red); color: #fff; }
+.ddb5e .mini-button { font-size: 11px; padding: 5px 9px; }
+.ddb5e .mini-button:disabled { opacity: .4; cursor: not-allowed; background: #fff; color: var(--text-dim); border-color: var(--text-dim); }
+.ddb5e .mini-button.danger { color: var(--text-dim); border-color: var(--border); }
+.ddb5e .mini-button.danger:hover { background: var(--blood-bright); border-color: var(--blood-bright); color: #fff; }
+.ddb5e .mini-button.active { background: var(--ddb-red); color: #fff; }
+
+.ddb5e input[type="text"], .ddb5e input[type="search"], .ddb5e input[type="number"], .ddb5e select, .ddb5e textarea {
+  font: 14px Roboto, sans-serif; background: #fff; color: var(--text); border: 1px solid #c8c3b5; border-radius: 4px; padding: 6px 8px; }
+.ddb5e :focus-visible { outline: 2px solid var(--ddb-red); outline-offset: 1px; }
+.ddb5e .hint { color: var(--text-dim); font-size: 13px; font-style: normal; }
+.ddb5e .empty-state { color: var(--text-dim); font-style: italic; }
+.ddb5e .subtitle { color: var(--text-dim); margin: 2px 0 0; font-style: italic; }
+.ddb5e .kv { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; margin: 0 0 12px; font-size: 14px; }
+.ddb5e .kv dt { color: var(--text-dim); text-transform: uppercase; font-size: 11px; font-weight: 700; letter-spacing: .06em; align-self: baseline; }
+.ddb5e .kv dd { margin: 0; }
+
+/* tables: DDB's listing rows, dark header strip */
+.ddb5e .plan-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.ddb5e .plan-table th { text-align: left; font: 700 11px Roboto, sans-serif; text-transform: uppercase; letter-spacing: .06em; color: #eee; background: #1b1f22; padding: 7px 10px; }
+.ddb5e .plan-table td { padding: 7px 10px; border-bottom: 1px solid #eee; }
+.ddb5e .plan-table tr:hover td { background: #faf6f2; }
+.ddb5e .plan-table a.name { font-weight: 700; color: var(--text); text-decoration: none; }
+.ddb5e .plan-table a.name:hover { color: var(--ddb-red); text-decoration: underline; }
+
+/* dialogs and the stat block: DDB's monster block, parchment with red-brown rules and small-caps names */
+.ddb5e .sheet-dialog { background: #fdf9f1; color: var(--text); border: 0; border-top: 4px solid var(--ddb-red); border-radius: 4px; box-shadow: 0 12px 40px rgba(0,0,0,.35); max-width: 760px; width: 94vw; padding: 16px 22px; }
+.ddb5e .sheet-dialog::backdrop { background: rgba(10, 12, 14, .55); }
+.ddb5e .statblock { font-family: "Scaly Sans", Roboto, sans-serif; }
+.ddb5e .statblock h3 { font: 700 26px "Mrs Eaves Small Caps", "Mrs Eaves", Georgia, serif; color: #822000; margin: 0; letter-spacing: .02em; }
+.ddb5e .statblock h4 { font: 400 20px "Mrs Eaves Small Caps", "Mrs Eaves", Georgia, serif; color: #822000; border-bottom: 1px solid #822000; margin: 14px 0 6px; }
+.ddb5e .statblock .sb-line b, .ddb5e .statblock .sb-entry b { color: #822000; }
+.ddb5e .statblock .sb-abilities { border-top: 2px solid #9c2b1b; border-bottom: 2px solid #9c2b1b; }
+.ddb5e .hub-bar a { color: #ddd; }
+.ddb5e .hub-bar a:hover { color: #fff; }

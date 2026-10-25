@@ -1,16 +1,26 @@
-{% extends "base.html" %}
-{% block main_class %}wide{% endblock %}
-{% block brand %}<a class="masthead-title" href="{{ url_for('dnd5e.index') }}">D&amp;D 5E <span>&mdash; Encounters</span></a>{% endblock %}
-{% block head %}
-  <link rel="stylesheet" href="{{ url_for('static', filename='dnd5e/dnd5e.css') }}">
+{#- Base of the 5e pages outside the character app (encounters, encounter, combat, monsters): D&D Beyond's look,
+    nothing from the Dark Heresy base (Dodo 2026-10-25: one look per system). -#}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}D&amp;D 5e{% endblock %} :: Dodo Beyond</title>
+  <link rel="icon" href="data:,">
+  {% include "dnd5e/_dnd5e_fonts.html" %}
+  <link rel="stylesheet" href="{{ static_v('dnd5e/hub.css') }}">
+  <link rel="stylesheet" href="{{ static_v('dnd5e/ddb-base.css') }}">
+  <link rel="stylesheet" href="{{ static_v('dnd5e/dnd5e.css') }}">
+  <style>:root { --ddb-frame: url("{{ url_for('dnd5e_builder.shell') }}ddb/frame/primary-box"); }</style>
   <script>document.documentElement.dataset.api = {{ (url_for('dnd5e.index') ~ 'api')|tojson }};</script>
-  <script src="{{ url_for('static', filename='dnd5e/dnd5e.js') }}" defer></script>
+  <script src="{{ static_v('dnd5e/dnd5e.js') }}" defer></script>
   {% block page_script %}{% endblock %}
-{% endblock %}
-{% block content %}
-<nav class="dnd-nav" aria-label="D&amp;D 5e">
-  <a href="{{ url_for('dnd5e.index') }}">Encounters and party</a>
-  <a href="{{ url_for('dnd5e.monsters_page') }}">Monsters and import</a>
-</nav>
+</head>
+<body class="ddb5e">
+{% include "dnd5e/_dnd5e_bar.html" %}
+<main class="ddb5e-main">
 {% block page %}{% endblock %}
-{% endblock %}
+</main>
+{% include "_footer.html" %}
+</body>
+</html>

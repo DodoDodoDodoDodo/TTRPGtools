@@ -7,12 +7,16 @@ Pages are thin shells; they talk to the JSON API below. Errors come back as
 from __future__ import annotations
 
 import json
+import re
 import secrets
+import sqlite3
+import urllib.parse
 from datetime import datetime, timezone
+from pathlib import Path
 
-from flask import Blueprint, abort, g, jsonify, render_template, request
+from flask import Blueprint, abort, g, jsonify, redirect, render_template, request, send_file, url_for
 
-from ttrpgtools.dnd5e import bestiary, combat, db, ddb_character, difficulty, paste_import
+from ttrpgtools.dnd5e import bestiary, character, combat, db, ddb_character, difficulty, paste_import
 from ttrpgtools.dnd5e.statblock import derive, slugify
 
 bp = Blueprint("dnd5e", __name__, url_prefix="/TTRPG/dnd5e")
@@ -84,10 +88,69 @@ def _number(name: str) -> float | None:
         raise ApiError(f"{name} is not a number.") from exc
 
 
+# ------------------------------------------------------------------ monster pictures (private, from owned modules)
+@bp.get("/monster-art/<path:name>")
+def monster_art(name):
+    from .fantasygrounds_import import ART_DIR
+    path = (ART_DIR / name).resolve()
+    if ART_DIR.resolve() not in path.parents or not path.is_file():
+        abort(404)
+    response = send_file(path, conditional=True, max_age=300)
+    response.headers["Cache-Control"] = "public, max-age=300, must-revalidate"
+    return response
+
+
 # ------------------------------------------------------------------ pages
 @bp.get("/")
 def index():
-    return render_template("dnd5e/dnd5e_index.html")
+    return render_template("dnd5e/dnd5e_hub.html")
+
+
+@bp.get("/encounters")
+def encounters_page():
+    return render_template("dnd5e/dnd5e_encounters.html")
+
+
+@bp.get("/rules")
+def rules_page():
+    """"Other" lives in the character app (search over every rules text, the books)."""
+    return redirect(url_for("dnd5e_builder.shell") + "#/rules")
+
+
+ABS_DB = Path("/abs.db")
+DND_BOOKS_DIR = Path("/books/DnD_books")
+
+
+@bp.get("/api/books")
+def api_books():
+    """The D&D books we have: Audiobookshelf items (books.dodo-dodo.de) by Wizards RPG Team, and the PDFs on the
+    files share's DnD_books folder (files.dodo-dodo.de). Titles and links only."""
+    books = []
+    if ABS_DB.exists():
+        try:
+            abs_conn = sqlite3.connect(f"file:{ABS_DB}?mode=ro", uri=True, timeout=5)
+            # the PDF itself opens in the browser from the files share's /books (the same folder Audiobookshelf reads);
+            # Audiobookshelf's item page shows only title and cover until one presses Read (Dodo, 2026-10-25)
+            for item_id, title, path, ebook in abs_conn.execute(
+                    "SELECT li.id, li.title, li.path, b.ebookFile FROM libraryItems li JOIN books b ON b.id = li.mediaId "
+                    "WHERE li.path LIKE '%Wizards RPG Team%' ORDER BY li.title"):
+                filename = (json.loads(ebook or "{}").get("metadata") or {}).get("filename")
+                if not filename:
+                    continue
+                books.append({"title": title, "where": "files.dodo-dodo.de",
+                              "url": "https://files.dodo-dodo.de" + urllib.parse.quote(f"{path}/{filename}"),
+                              "shelf": f"https://books.dodo-dodo.de/audiobookshelf/item/{item_id}"})
+            abs_conn.close()
+        except sqlite3.Error:
+            pass
+    if DND_BOOKS_DIR.is_dir():
+        for path in sorted(DND_BOOKS_DIR.glob("*.pdf")):  # the top level; Other_RPGs and the odds and ends stay out
+            relative = path.relative_to(DND_BOOKS_DIR).as_posix()
+            title = re.sub(r"\s+", " ", re.sub(r"^\d{6,}-|[-_]+", " ", path.stem)).strip()
+            title = re.sub(r"(\w) s\b", r"\1's", title).removesuffix(".pdf")
+            books.append({"title": title, "where": "files.dodo-dodo.de",
+                          "url": "https://files.dodo-dodo.de/DnD_books/" + urllib.parse.quote(relative)})
+    return jsonify(books=books)
 
 
 @bp.get("/monsters")
@@ -115,7 +178,8 @@ def api_monsters():
     rows = bestiary.search(
         conn(), request.args.get("q", ""), _number("cr_min"), _number("cr_max"), request.args.get("type", ""),
         official_only=request.args.get("official") == "1", origin=request.args.get("origin", ""),
-        limit=min(200, int(request.args.get("limit") or 60)))
+        limit=min(200, int(request.args.get("limit") or 60)),
+        sizes=request.args.get("size", "").split(","), environment=request.args.get("environment", ""))
     total = conn().execute("SELECT COUNT(*) FROM monsters").fetchone()[0]
     return jsonify(monsters=rows, bestiary_size=total)
 
@@ -270,12 +334,31 @@ def _get_encounter(encounter_id: str) -> dict:
     return encounter
 
 
+def _builder_pc(char_id: str) -> dict | None:
+    """A builder character (characters/dnd5e/<id>.json, e.g. from a campaign) in the shape the rating and the
+    combat tracker read: level, first class, max HP, AC, best attack bonus, initiative, current HP."""
+    from .builder_routes import CHARACTERS_DIR
+    path = CHARACTERS_DIR / f"{char_id}.json"
+    if not re.fullmatch(r"[a-z0-9-]{1,80}", char_id) or not path.exists():
+        return None
+    char = json.loads(path.read_text())
+    sheet = character.derive(char)
+    attacks = [a.get("to_hit") for a in sheet.get("attacks") or [] if isinstance(a.get("to_hit"), int)]
+    return {"id": char_id, "name": char.get("name") or "Unnamed", "level": sheet.get("level") or 1,
+            "cls": ((char.get("classes") or [{}])[0].get("id") or "").lower(),
+            "hp": (sheet.get("hp") or {}).get("max"), "hp_current": (sheet.get("hp") or {}).get("current"),
+            "ac": (sheet.get("armor_class") or {}).get("value"), "init_mod": sheet.get("initiative"),
+            "attack_bonus": max(attacks) if attacks else None, "builder": True}
+
+
 def _resolve(plan: dict) -> tuple[list[dict], list[tuple[dict, int]], list[str]]:
-    """Plan ids -> PCs and (monster, count). Missing entries are reported, not fatal."""
+    """Plan ids -> PCs and (monster, count). A PC id is an imported PC (pcs table) or a builder character
+    (campaign members). Missing entries are reported, not fatal."""
     missing, pcs, monsters = [], [], []
     for pc_id in plan.get("pcs") or []:
         row = conn().execute("SELECT id, data FROM pcs WHERE id = ?", (pc_id,)).fetchone()
-        (pcs.append(db.row_data(row)) if row else missing.append(f"character {pc_id}"))
+        pc = db.row_data(row) if row else _builder_pc(pc_id)
+        (pcs.append(pc) if pc else missing.append(f"character {pc_id}"))
     for entry in plan.get("monsters") or []:
         monster = bestiary.get_monster(conn(), entry.get("id"))
         count = max(1, min(50, int(entry.get("count") or 1)))
@@ -322,7 +405,7 @@ def api_encounter_create():
 def api_encounter(encounter_id):
     plan = _get_encounter(encounter_id)
     pcs, monsters, _missing = _resolve(plan)
-    names = {m["id"]: {k: m.get(k) for k in ("id", "name", "cr", "xp", "hp", "ac", "source", "type", "size")}
+    names = {m["id"]: {k: m.get(k) for k in ("id", "name", "cr", "xp", "hp", "ac", "source", "type", "size", "image")}
              for m, _count in monsters}
     return jsonify(encounter=plan, monsters=names, rating=_rating(plan))
 
@@ -331,7 +414,7 @@ def api_encounter(encounter_id):
 def api_encounter_update(encounter_id):
     plan = _get_encounter(encounter_id)
     body = _body()
-    for field in ("name", "pcs", "monsters", "notes", "resources"):
+    for field in ("name", "pcs", "monsters", "notes", "resources", "campaign"):
         if field in body:
             plan[field] = body[field]
     plan["name"] = str(plan.get("name") or "").strip()[:80] or "Encounter"

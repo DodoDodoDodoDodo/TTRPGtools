@@ -1,0 +1,44 @@
+{#- The 5e start page in D&D Beyond's look: six big art tiles, each with the player's most recent thing of that kind. -#}
+{%- set ddb = url_for('dnd5e_builder.shell') ~ 'ddb' -%}
+{%- set chars = url_for('dnd5e_builder.shell') -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dodo Beyond</title>
+  <link rel="icon" href="data:,">
+  {% include "dnd5e/_dnd5e_fonts.html" %}
+  <link rel="stylesheet" href="{{ static_v('dnd5e/hub.css') }}">
+  <script>window.DND5E_HUB = {api: {{ (chars ~ 'api')|tojson }}, user: {{ (request.headers.get('Remote-User') or '')|tojson }}};</script>
+  <script src="{{ static_v('dnd5e/hub.js') }}" defer></script>
+</head>
+<body class="hub">
+{% include "dnd5e/_dnd5e_bar.html" %}
+
+  <main class="hub-main">
+    <h1 class="hub-title">D&amp;D 5e <span>2014 rules, for our table</span></h1>
+    <div class="hub-grid">
+      {%- for key, title, text, href, art, pos in [
+        ("character", "Characters", "Build, import and play your characters.", chars, ddb ~ "/img/class-art/fighter/img4-639074603438426056.jpeg", "center 20%"),
+        ("encounter", "Encounters", "Plan fights with a difficulty rating, then run them in the tracker.", url_for('dnd5e.encounters_page'), ddb ~ "/img/class-art/wizard/img4-639076341145564095.jpeg", "center 25%"),
+        ("campaign", "Campaigns", "Start a campaign, gather the party, see who plays what.", chars ~ "#/campaigns", ddb ~ "/img/class-art/paladin/img2-639068729481081925.png", "center 40%"),
+        ("equipment", "Equipment", "Weapons, armour, gear and magic items from every 2014 book.", chars ~ "#/equipment", ddb ~ "/img/magic-items/2400706-atlas-of-endless-horizons.jpg", "center 45%"),
+        ("monster", "Monsters", "Search the bestiary with D&amp;D Beyond's filters, stat blocks and pictures.", url_for('dnd5e.monsters_page'), url_for('dnd5e.index') ~ "monster-art/5etools/bestiary/MM/Beholder.webp", "center 35%"),
+        ("other", "Other", "Search the rules and open the books.", chars ~ "#/rules", ddb ~ "/img/class-art/bard/img4-639068861150743765.jpeg", "center 30%"),
+      ] %}
+      <section class="hub-tile hub-tile--{{ key }}">
+        <a class="hub-tile-link" href="{{ href }}" aria-label="{{ title }}">
+          <span class="hub-tile-inner"><img class="hub-tile-art" src="{{ art }}" alt="" style="object-position: {{ pos }}" loading="lazy">
+          <span class="hub-tile-shade"></span></span>
+          <img class="hub-tile-frame" src="{{ chars }}ddb/frame/saving-throws?outline=1" alt="" aria-hidden="true">
+          <span class="hub-tile-text"><span class="hub-tile-title">{{ title }}</span><span class="hub-tile-sub">{{ text|safe }}</span></span>
+        </a>
+        <a class="hub-recent" data-recent="{{ key }}" hidden href="#"><img class="hub-recent-frame" src="{{ chars }}ddb/frame/hit-points" alt="" aria-hidden="true"><span class="hub-recent-label">Continue</span><span class="hub-recent-name"></span><span class="hub-recent-detail"></span></a>
+      </section>
+      {%- endfor %}
+    </div>
+  </main>
+{% include "_footer.html" %}
+</body>
+</html>

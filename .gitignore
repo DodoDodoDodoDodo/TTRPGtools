@@ -8,4 +8,14 @@ content/dcc/music/
 rulebooks/*/*.txt
 !rulebooks/*/PUT_RULEBOOK_TEXT_HERE.txt
 .DS_Store
-characters/dcc/*.json
+frontend/*/node_modules/
+ttrpgtools/web/static/dnd5e/builder/
+ddb_DIY/
+
+# character snapshots (revert to a day) and deleted characters: player data, never in the public repo
+characters/*/.history/
+characters/*/.trash/
+# player characters of every game: never in the public repo (Dodo, 2026-10-25: DCC too)
+characters/dcc/
+characters/dnd5e/
+characters/dh1e/

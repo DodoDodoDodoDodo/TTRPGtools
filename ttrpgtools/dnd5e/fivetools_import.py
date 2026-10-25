@@ -19,7 +19,10 @@ import sys
 from typing import Any
 
 from . import db
+from pathlib import Path
+
 from .bestiary import _unique_id, save_monster
+from .fivetools_copy import Library
 from .statblock import derive, first_int, slugify
 
 SIZES = {"T": "Tiny", "S": "Small", "M": "Medium", "L": "Large", "H": "Huge", "G": "Gargantuan", "V": "Varies"}
@@ -306,16 +309,21 @@ def import_file(path: str, conn: sqlite3.Connection, only_source: str | None = N
     for source in stats["sources"]:
         conn.execute("DELETE FROM monsters WHERE origin = 'book' AND source = ?", (source,))
     taken = {r["id"] for r in conn.execute("SELECT id FROM monsters")}
+    library = Library(Path(path).parent, {"XDMG", "XMM", "XPHB", "RHW"}) if (Path(path).parent / "index.json").exists() else None
     for raw in monsters:
         if "_copy" in raw:
-            stats["skipped"].append(raw.get("name", "?") + " (copy of another entry)")
-            continue
+            if library is None:
+                stats["skipped"].append(raw.get("name", "?") + " (copy of another entry)")
+                continue
+            raw = library.resolve(raw)
         source = names.get(raw.get("source"), raw.get("source") or "Unknown")
         monster = convert_monster(raw, source, groups)
         base = slugify(monster["name"])
         monster_id = _unique_id(base if base not in taken else slugify(f"{monster['name']}-{source}"), taken)
         save_monster(conn, monster, "book", monster_id)
         stats["imported"] += 1
+    if library is not None:
+        stats["skipped"].extend(library.unknown)
     return stats
 
 

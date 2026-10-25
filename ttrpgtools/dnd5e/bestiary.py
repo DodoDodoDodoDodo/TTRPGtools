@@ -213,7 +213,10 @@ def get_monster(conn: sqlite3.Connection, monster_id: str) -> dict | None:
 
 
 def search(conn: sqlite3.Connection, query: str = "", cr_min: float | None = None, cr_max: float | None = None,
-           monster_type: str = "", official_only: bool = False, origin: str = "", limit: int = 60) -> list[dict]:
+           monster_type: str = "", official_only: bool = False, origin: str = "", limit: int = 60,
+           sizes: Iterable[str] = (), environment: str = "") -> list[dict]:
+    """`monster_type` may list several types, comma separated (D&D Beyond's type row); a swarm counts as its
+    creatures' type, as on D&D Beyond."""
     where, args = ["1=1"], []
     for word in query.split():
         where.append("name LIKE ?")
@@ -224,9 +227,18 @@ def search(conn: sqlite3.Connection, query: str = "", cr_min: float | None = Non
     if cr_max is not None:
         where.append("cr <= ?")
         args.append(cr_max)
-    if monster_type:
-        where.append("type LIKE ?")
-        args.append(f"{monster_type}%")
+    types = [t.strip() for t in monster_type.split(",") if t.strip()]
+    if types:
+        where.append("(" + " OR ".join("type LIKE ? OR type LIKE ?" for _ in types) + ")")
+        for t in types:
+            args += [f"{t}%", f"swarm of % {t}%"]
+    sizes = [s for s in sizes if s]
+    if sizes:  # "Medium or Large" matches either
+        where.append("(" + " OR ".join("json_extract(data,'$.size') LIKE ?" for _ in sizes) + ")")
+        args += [f"%{s}%" for s in sizes]
+    if environment:
+        where.append("json_extract(data,'$.environment') LIKE ?")
+        args.append(f"%{environment}%")
     if official_only:
         where.append("(official = 1 OR origin != 'compendium')")
     if origin:
@@ -235,7 +247,8 @@ def search(conn: sqlite3.Connection, query: str = "", cr_min: float | None = Non
     rows = conn.execute(
         f"SELECT id, name, cr, type, source, origin, official, "
         f"json_extract(data,'$.cr') AS cr_text, json_extract(data,'$.hp') AS hp, "
-        f"json_extract(data,'$.ac') AS ac, json_extract(data,'$.xp') AS xp, json_extract(data,'$.size') AS size "
+        f"json_extract(data,'$.ac') AS ac, json_extract(data,'$.xp') AS xp, json_extract(data,'$.size') AS size, "
+        f"json_extract(data,'$.image') AS image "
         f"FROM monsters WHERE {' AND '.join(where)} "
         f"ORDER BY (name LIKE ?) DESC, origin != 'compendium' DESC, official DESC, name COLLATE NOCASE LIMIT ?",
         (*args, f"{query.strip()}%", limit),

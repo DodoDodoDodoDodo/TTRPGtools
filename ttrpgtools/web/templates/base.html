@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}Character Records{% endblock %} :: Adeptus Administratum</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ static_v('style.css') }}">
   {% block head %}{% endblock %}
 </head>
 <body>
@@ -17,5 +17,6 @@
   <main class="{% block main_class %}{% endblock %}">
     {% block content %}{% endblock %}
   </main>
+{% include "_footer.html" %}
 </body>
 </html>
