@@ -78,8 +78,9 @@ def _walk(entries, title: str, page, out: list) -> None:
 
 def build(fivetools: Path, index_path: Path = INDEX_PATH, builder_dir: Path = BUILDER_DIR) -> int:
     data = fivetools / "data"
-    index_path.unlink(missing_ok=True)
-    conn = sqlite3.connect(index_path)
+    tmp = index_path.with_suffix(".building")
+    tmp.unlink(missing_ok=True)
+    conn = sqlite3.connect(tmp)
     conn.execute("CREATE TABLE sources (id TEXT PRIMARY KEY, name TEXT, grp TEXT, published TEXT)")
     conn.execute("CREATE VIRTUAL TABLE passages USING fts5(source UNINDEXED, title, page UNINDEXED, body, tokenize='porter')")
     count = 0
@@ -115,9 +116,32 @@ def build(fivetools: Path, index_path: Path = INDEX_PATH, builder_dir: Path = BU
                     body = re.sub(r"\s+", " ", _plain(" ".join(_strings(f.get("entries", [])))))[:CHUNK_CHARS * 2]
                     conn.execute("INSERT INTO passages VALUES (?,?,?,?)", (source, f"{owner}: {f['name']}", f.get("page"), body))
                     count += 1
+    # monsters: one passage per stat block (AC, HP, speed, scores, traits, actions), so "what is the Tarrasque's AC" has an answer
+    for path in sorted((data / "bestiary").glob("bestiary-*.json")):
+        for m in json.loads(path.read_text()).get("monster", []):
+            source = known.get(str(m.get("source", "")).lower())
+            if source and not m.get("_copy"):
+                conn.execute("INSERT INTO passages VALUES (?,?,?,?)", (source, m["name"], m.get("page"), _statblock(m)[:CHUNK_CHARS * 3]))
+                count += 1
     conn.commit()
     conn.close()
+    tmp.replace(index_path)
     return count
+
+
+def _statblock(m: dict) -> str:
+    def named(key, label):
+        rows = [f"{e.get('name', '')}: {_plain(' '.join(_strings(e.get('entries', []))))}" for e in m.get(key) or [] if isinstance(e, dict)]
+        return f" {label}: " + " ".join(rows) if rows else ""
+    ac = ", ".join(str(a.get("ac", a.get("special", ""))) + (f" ({', '.join(map(str, a['from']))})" if a.get("from") else "") if isinstance(a, dict) else str(a) for a in m.get("ac") or [])
+    hp = m.get("hp") or {}
+    hp_text = (f"{hp.get('average', '')} ({hp.get('formula', '')})" if "average" in hp else str(hp.get("special", ""))) if isinstance(hp, dict) else str(hp)
+    kind = m.get("type"); kind = kind.get("type") if isinstance(kind, dict) else kind
+    speed = ", ".join(f"{k} {v if not isinstance(v, dict) else v.get('number', '')}" for k, v in (m.get("speed") or {}).items() if k != "canHover")
+    scores = " ".join(f"{k.upper()} {m.get(k, '')}" for k in ("str", "dex", "con", "int", "wis", "cha"))
+    return (f"{m['name']}. Size {', '.join(map(str, m.get('size') or []))} {kind}, CR {m.get('cr') if not isinstance(m.get('cr'), dict) else m['cr'].get('cr')}. "
+            f"Armor Class {ac}. Hit Points {hp_text}. Speed {speed}. {scores}."
+            + named("trait", "Traits") + named("action", "Actions") + named("legendary", "Legendary actions") + named("reaction", "Reactions"))
 
 
 def _strings(entries) -> list[str]:

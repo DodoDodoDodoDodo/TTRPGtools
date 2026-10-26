@@ -7,6 +7,8 @@ A site hands over one ``Site``: its name, game, system prompt, a ``search(groups
   2. each term is widened to its close spellings in the site's vocabulary (fuzzy, tolerates OCR and typos)
   3. the site's search returns passages for the term groups
   4. the model answers from passages + page snapshot + thread, streamed as server-sent events (pass 2)
+  5. afterwards, in the background, the model rewrites its note to self for this site (what worked, what did not),
+     at most NOTE_MAX characters, read back into passes 1 and 2 (data/helper-notes/<site>.txt)
 
 What a page sends (static/helper.js): question, thread ([{q, a}] of this window), page_text (what the player sees),
 site_data (the site's own data for it), and for a clicked element: breadcrumb (ancestor chain), html, text, hint,
@@ -19,6 +21,7 @@ import json
 import os
 import re
 import sqlite3
+import threading
 import urllib.request
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -31,6 +34,8 @@ QUOTA_DB = Path(os.environ.get("HELPER_QUOTA_DB", Path(__file__).resolve().paren
 FREE_PER_HOUR = 1      # answered questions without premium (Dodo, 2026-10-25)
 PREMIUM_PER_DAY = 100
 THREAD_TURNS = 6
+NOTES_DIR = QUOTA_DB.parent / "helper-notes"
+NOTE_MAX = 600
 PASSAGE_BUDGET = 6000
 STOPWORDS = set("the and for with that this from have has not are was you your their they them its but can may any all one two "
                 "per each when then than into out roll rolls rolled die dice level levels character characters class value "
@@ -44,6 +49,10 @@ REWRITE = ("You are the search step of a rules helper for {game}. From the quest
            "distinctive book words over common ones, the name of the class, spell or item when one is involved. The search "
            "is exact and also fuzzy (small spelling differences and OCR errors are tolerated), so spelling variants are "
            "wasted but synonyms the book might use are welcome. Reply with the terms separated by commas and nothing else.")
+NOTE_PROMPT = ("You keep a note to yourself for answering {game} questions on this site, at most {max} characters. It is "
+               "read before every question. Keep what helps: book words and section names that find the rule, terms that "
+               "found nothing, mistakes to avoid. Given the current note and what just happened, reply with the new note "
+               "only, or with the current note unchanged when nothing was learned. No preamble.")
 
 
 class Vocab:
@@ -135,14 +144,39 @@ def keywords(*texts: str, limit: int = 14) -> list[str]:
     return seen[:limit]
 
 
+def note(site: Site) -> str:
+    try:
+        return (NOTES_DIR / f"{site.name}.txt").read_text()[:NOTE_MAX].strip()
+    except OSError:
+        return ""
+
+
+def update_note(site: Site, question: str, terms: list[str], found: list[dict], answer: str) -> None:
+    """Pass 3, after the answer: the model rewrites its note to self for this site. Runs in a thread; failures are dropped."""
+    current = note(site)
+    user = (f"Current note:\n{current or '(empty)'}\n\nQuestion: {question[:300]}\nSearch terms you chose: {', '.join(terms)}\n"
+            f"Passages found: {'; '.join(f['title'] for f in found[:6]) or 'none'}\nYour answer: {answer[:700]}")
+    try:
+        new = "".join(stream_model([{"role": "system", "content": NOTE_PROMPT.format(game=site.game, max=NOTE_MAX)},
+                                    {"role": "user", "content": user}], max_tokens=220)).strip()
+        new = re.sub(r"^(current|new) note:\s*", "", new, flags=re.I)[:NOTE_MAX]  # the model likes to echo the label
+        if new and new != current:
+            NOTES_DIR.mkdir(parents=True, exist_ok=True)
+            (NOTES_DIR / f"{site.name}.txt").write_text(new)
+    except (OSError, ValueError, KeyError):
+        pass
+
+
 def search_terms(site: Site, d: dict, thread: list[dict], question: str) -> list[str]:
     """Pass 1: the model names the rule in book words; the question's own words follow as a safety net."""
     screen = " ".join(filter(None, [d.get("hint"), d.get("text"), str(d.get("site_data") or "")[:400], str(d.get("page_text") or "")[:400]]))
     history = "\n".join(f"Q: {t.get('q', '')[:200]}\nA: {t.get('a', '')[:300]}" for t in thread[-2:])
     user = f"Conversation so far:\n{history}\n\n" if history else ""
     user += f"On screen: {screen[:900]}\n\nQuestion: {question[:500]}"
+    memo = note(site)
+    system = REWRITE.format(game=site.game) + (f"\nYour note to self from earlier questions: {memo}" if memo else "")
     try:
-        raw = "".join(stream_model([{"role": "system", "content": REWRITE.format(game=site.game)}, {"role": "user", "content": user}], max_tokens=60))
+        raw = "".join(stream_model([{"role": "system", "content": system}, {"role": "user", "content": user}], max_tokens=60))
         terms = [t.strip().lower() for t in re.sub(r"[^\w ,'-]", " ", raw).split(",") if 2 < len(t.strip()) < 40]
     except (OSError, ValueError, KeyError):
         terms = []
@@ -217,18 +251,23 @@ def respond(site: Site, d: dict):
     question = str(d.get("question") or "").strip() or (site.default_question if clicked else "")
     terms = search_terms(site, d, thread, question)
     found = site.search(expand(terms, site.vocab), d)
-    messages = [{"role": "system", "content": site.system + COMMON}]
+    memo = note(site)
+    messages = [{"role": "system", "content": site.system + COMMON + (f" Your note to self from earlier questions: {memo}" if memo else "")}]
     for t in thread:
         messages += [{"role": "user", "content": str(t.get("q", ""))[:600]}, {"role": "assistant", "content": str(t.get("a", ""))[:800]}]
     messages.append({"role": "user", "content": user_prompt(d, found, question)})
+    answer = []
     try:
         for piece in stream_model(messages):
+            answer.append(piece)
             yield event({"text": piece})
     except TimeoutError:  # the model answers one request at a time; another service holds it
         yield event({"error": "Model currently busy, check back in a minute."})
     except (OSError, ValueError, KeyError):
         yield event({"error": "Model currently unavailable."})
     yield event({"done": True, "terms": terms, "passages": [{"cite": f["cite"], "title": f["title"], "text": f["body"][:600]} for f in found[:4]]})
+    if answer:
+        threading.Thread(target=update_note, args=(site, question, terms, found, "".join(answer)), daemon=True).start()
 
 
 PORTAL_URL = os.environ.get("PORTAL_URL", "http://portal:8888")
