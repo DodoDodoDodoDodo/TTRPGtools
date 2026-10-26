@@ -27,6 +27,7 @@ from datetime import timedelta
 from pathlib import Path
 
 from ttrpgtools import dcc
+from ttrpgtools import helper
 from ttrpgtools.dcc import explain as dcc_explain
 from . import clauses, economy, fields, lives, materials, places, registry, steward, town
 
@@ -311,8 +312,8 @@ MODEL_TIMEOUT = 150   # seconds for one answer: the small model on the CPU is sl
 
 def ask_model(messages: list[dict], max_tokens: int = 300, temperature: float = 0.7) -> dict | None:
     """One JSON answer from the first local model that gives one; None otherwise."""
-    body = json.dumps({"model": dcc_explain.MODEL, "messages": messages, "max_tokens": max_tokens, "temperature": temperature}).encode()
-    for host in dcc_explain.HOSTS:
+    body = json.dumps({"model": helper.MODEL, "messages": messages, "max_tokens": max_tokens, "temperature": temperature}).encode()
+    for host in helper.HOSTS:
         try:
             req = urllib.request.Request(f"http://{host}/v1/chat/completions", data=body, headers={"Content-Type": "application/json"})
             with urllib.request.urlopen(req, timeout=MODEL_TIMEOUT) as resp:

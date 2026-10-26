@@ -2,9 +2,8 @@
 
 The index holds the 5etools book and adventure text (2014 era only) cut into sections, and every rules entry of
 the builder data (spells, items, feats, races, backgrounds, class options and features, conditions), each tagged
-with its book and the group the page offers as checkboxes: rules, adventures, other. A question finds the best
-passages in the chosen books and the model answers from those alone, citing book and page. The model is DCC's
-(``dcc.explain``: the first llama.cpp server that answers); when none answers, the feature is simply unavailable.
+with its book and the group the page offers as checkboxes: rules, adventures, other. The harness (``ttrpgtools.helper``)
+asks the model for search terms, widens them to close spellings, and answers from the passages found here.
 
     python -m ttrpgtools.dnd5e.explain build /path/to/5etools-src     # on the host; writes content/dnd5e/private/explain.sqlite
 """
@@ -18,7 +17,7 @@ import sqlite3
 import sys
 from pathlib import Path
 
-from ttrpgtools.dcc.explain import _event, _model_stream, keywords
+from ttrpgtools.helper import Site, Vocab, fts_vocab
 
 INDEX_PATH = Path(__file__).resolve().parents[2] / "content" / "dnd5e" / "private" / "explain.sqlite"
 BUILDER_DIR = Path(__file__).resolve().parents[2] / "content" / "dnd5e" / "private" / "builder"
@@ -28,11 +27,11 @@ RULES_GROUPS = {"core", "supplement", "setting", "screen"}
 CHUNK_CHARS = 1400
 PASSAGE_BUDGET = 6000
 SYSTEM = ("You answer questions about Dungeons & Dragons 5th edition (2014 rules) for players and DMs at one table. "
-          "Use only the passages you are given. Answer in at most 130 words, plain sentences, no headings. "
+          "Use only the passages you are given. "
+          "The page text and site data are the character or monster the player is looking at right now; questions like 'what actions can my character do?' are about that one and are answered from its values. "
+          "Answer in at most 130 words, plain sentences, no headings. "
           "Name the source of each rule in brackets, like (PHB p. 195). If the passages do not answer the question, "
           "say so plainly instead of guessing.")
-EXPLAIN = ("Explain this to a player: what it does, when it matters at the table, and the common mistakes. "
-           "Use the entry text and the passages.")
 
 
 def _plain(text: str) -> str:
@@ -141,82 +140,51 @@ def sources(index_path: Path = INDEX_PATH) -> list[dict]:
         conn.close()
 
 
-def search(question: str, allowed: list[str], limit: int = 6, index_path: Path = INDEX_PATH) -> list[dict]:
-    terms = keywords(question, limit=14)
-    if not terms or not allowed or not index_path.exists():
+def search(groups: list[list[str]], d: dict | None = None, limit: int = 6, index_path: Path = INDEX_PATH) -> list[dict]:
+    """Passages for the harness's term groups in the books the page chose (d["sources"]). Every term brings its own best
+    passages (so a common word cannot crowd out a rare one; close spellings bring a few), then the passage holding the most
+    rarity-weighted terms wins: a term in the title counts double, a title that IS the term triple, a spelling variant half."""
+    allowed = [str(x) for x in (d or {}).get("sources") or [] if isinstance(x, str)][:200]
+    if not groups or not allowed or not index_path.exists():
         return []
+    norm = SITE.vocab.normalize
     conn = sqlite3.connect(f"file:{index_path}?mode=ro", uri=True)
     marks = ",".join("?" * len(allowed))
     sql = (f"SELECT p.rowid, p.source, s.name, p.title, p.page, p.body, bm25(passages, 0, 3, 0, 1) FROM passages p "
-           f"JOIN sources s ON s.id = p.source WHERE passages MATCH ? AND p.source IN ({marks}) ORDER BY 7 LIMIT 40")
-    # every word brings its own best passages, so a common word (shield: 925 passages) cannot crowd out a rare one
+           f"JOIN sources s ON s.id = p.source WHERE passages MATCH ? AND p.source IN ({marks}) AND length(p.body) > 40 ORDER BY 7 LIMIT ?")
     pool: dict[int, tuple] = {}
-    weight: dict[str, float] = {}
+    terms: list[tuple[str, list[str], float]] = []  # (stem of the term, stems of its variants, rarity weight)
     try:
         total = conn.execute("SELECT count(*) FROM passages").fetchone()[0] or 1
-        for term in terms:
-            # rare words say more about the question than common ones ("grapple" over "while", "holding")
-            df = conn.execute("SELECT count(*) FROM passages WHERE passages MATCH ?", (f'"{term}"',)).fetchone()[0]
-            weight[term[:5]] = math.log((total + 1) / (df + 1))
-            for row in conn.execute(sql, (f'"{term}"', *allowed)):
+        for g in groups:
+            main = '"' + g[0].replace('"', "") + '"'
+            df = conn.execute("SELECT count(*) FROM passages WHERE passages MATCH ?", (main,)).fetchone()[0]
+            terms.append((norm(g[0]), [norm(v) for v in g[1:]], math.log((total + 1) / (df + 1))))
+            for row in conn.execute(sql, (main, *allowed, 40)):
                 pool.setdefault(row[0], row)
+            for v in g[1:]:
+                for row in conn.execute(sql, ('"' + v.replace('"', "") + '"', *allowed, 8)):
+                    pool.setdefault(row[0], row)
     except sqlite3.OperationalError:
         return []
     finally:
         conn.close()
-    # the passage holding the most (rarity-weighted) question words wins; the text score breaks ties
     def rank(row):
-        title, text = row[3].lower(), f"{row[3]} {row[5]}".lower()
-        # a word in the section's title (Grappling, Cover, Casting in Armor) counts twice
-        return (-sum(w * (2 if st in title else 1) for st, w in weight.items() if st in text), row[6])
-    rows = [r[1:6] for r in sorted(pool.values(), key=rank)]
-    found, used = [], 0
-    for source, book, title, page, body in rows:
-        if used + len(body) > PASSAGE_BUDGET or len(found) >= limit:
-            break
-        found.append({"source": source, "book": book, "title": title, "page": page, "body": body})
-        used += len(body)
-    return found
+        title, body = row[3].lower(), row[5].lower()
+        score = 0.0
+        for stem, variants, w in terms:
+            if stem in title or stem in body:
+                score += w * (3 if any(norm(part.strip()) == stem for part in title.split(":")) else 2 if stem in title else 1)
+            elif any(v in title or v in body for v in variants):
+                score += w * 0.5
+        return (-score, row[6])
+    rows = sorted(pool.values(), key=rank)[:limit]
+    return [{"cite": f"{source}{' p. ' + str(page) if page else ''}", "title": title, "body": body, "book": book}
+            for _, source, book, title, page, body, _ in rows]
 
 
-def _cite(f: dict) -> str:
-    return f"{f['source']}{' p. ' + str(f['page']) if f['page'] else ''}"
-
-
-REWRITE = ("Turn the player's question into search terms for the D&D 5e (2014) rulebooks: the words a book's index "
-           "would use for the rule they mean (for example grappling, cover, opportunity attack, attunement). "
-           "Reply with 3 to 8 terms separated by commas and nothing else.")
-
-
-def search_terms(question: str) -> str:
-    """First model pass: what the question is about, in rulebook words ("grapple while holding a shield" ->
-    "grappling, free hand, shield, Athletics"). Falls back to the question itself when no model answers."""
-    try:
-        terms = "".join(_model_stream([{"role": "system", "content": REWRITE}, {"role": "user", "content": question[:600]}]))
-    except (OSError, ValueError, KeyError):
-        return ""
-    return re.sub(r"[^\w ,'-]", " ", terms)[:300]
-
-
-def answer(question: str, allowed: list[str], entry: dict | None = None):
-    """Server-sent events: {'text': piece}..., then {'done': true, 'passages': [...]}; {'error': ...} when no model answers.
-    `entry` ({name, text}) is the thing an "Explain this" button was pressed on."""
-    # two passes for a question (Dodo, 2026-10-25): the model names the rule in book words, the index finds it
-    terms = search_terms(question) if question and not entry else ""
-    found = search(" ".join(filter(None, [terms, question, (entry or {}).get("name", "")])), allowed)
-    context = "\n\n".join(f"[{_cite(f)}: {f['title']}] {f['body']}" for f in found) or "none found"
-    if entry:
-        user = f"{EXPLAIN}\n\nEntry: {entry.get('name', '')}\n{str(entry.get('text', ''))[:2500]}\n\nPassages:\n{context}"
-    else:
-        user = f"Question: {question[:600]}\n\nPassages:\n{context}"
-    try:
-        for piece in _model_stream([{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]):
-            yield _event({"text": piece})
-    except TimeoutError:  # the model answers one request at a time; dentinf or another page holds it
-        yield _event({"error": "Model currently busy, check back in a minute."})
-    except (OSError, ValueError, KeyError):
-        yield _event({"error": "Model currently unavailable."})
-    yield _event({"done": True, "passages": [{"cite": _cite(f), "book": f["book"], "title": f["title"], "text": f["body"][:600]} for f in found[:4]]})
+SITE = Site("dnd5e", "Dungeons & Dragons 5th edition (2014 rules)", SYSTEM, search, fts_vocab(INDEX_PATH, "passages"),
+            "Explain this to a player: what it does, when it matters at the table, and the common mistakes.")
 
 
 if __name__ == "__main__":

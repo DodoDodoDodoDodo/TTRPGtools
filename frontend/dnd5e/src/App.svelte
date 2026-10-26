@@ -28,6 +28,8 @@
   $effect(() => {
     document.documentElement.classList.toggle("has-premium-line", onPhone && !zoomedSheet);
   });
+  // the rules helper widget (static/helper.js) puts its button here once the bar exists
+  function mountHelper(node) { if (window.DODO_HELPER?.mount && !node.childElementCount) window.DODO_HELPER.mount(node); }
   const STATUS = { saving: "Saving…", saved: "Saved", error: "Not saved", conflict: "Changed elsewhere", locked: "Read only, not saved", idle: "" };
 </script>
 
@@ -52,6 +54,7 @@
     <span class="save-status status-{current.status}" title={current.error || ""}>{STATUS[current.status]}</span>
   {/if}
   <span class="grow"></span>
+  <span id="rules-helper-slot" use:mountHelper></span>
   <DesignToggle />
   {#if route.id}<a class="topbar-encounters" href={window.DND5E.encounters}>Encounters</a>{/if}
   <a href={window.DND5E.hub}>&larr; <span class="topbar-long">Back to /</span>TTRPG</a>

@@ -1,5 +1,8 @@
 {#- The D&D Beyond-style top bar of every 5e page (hub, encounters, monsters, combat). -#}
 {%- set chars = url_for('dnd5e_builder.shell') -%}
+  <link rel="stylesheet" href="{{ static_v('helper.css') }}">
+  <script>window.DODO_HELPER = {site: 'dnd5e', api: {{ (chars ~ 'api')|tojson }}};</script>
+  <script src="{{ static_v('helper.js') }}" defer></script>
   <header class="hub-bar">
     <a class="hub-logo" href="{{ url_for('dnd5e.index') }}" aria-label="Dodo Beyond"><span class="hub-logo-top">Dodo</span><span class="hub-logo-bottom">Beyond</span></a>
     <nav class="hub-nav" aria-label="D&amp;D 5e">

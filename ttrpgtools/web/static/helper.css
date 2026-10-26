@@ -1,0 +1,47 @@
+/* The page helper's button and window, shared by every site. Colours and fonts come from these variables so
+   each site keeps its own look (defaults: the 5e / D&D Beyond look; DCC overrides them in dcc.css). */
+:root { --helper-accent: #c53131; --helper-bg: #fff; --helper-ink: #12181c; --helper-dim: #5c6670; --helper-soft: #faf6f2; --helper-line: #c8c3b5;
+        --helper-font: Roboto, "Helvetica Neue", Arial, sans-serif; --helper-caps: "Roboto Condensed", Roboto, sans-serif; --helper-radius: 4px; }
+.rh-button { font: 700 12px/1 var(--helper-font); text-transform: uppercase; letter-spacing: .06em; padding: 7px 12px; background: var(--helper-bg); color: var(--helper-accent); border: 1px solid var(--helper-accent); border-radius: 3px; cursor: pointer; }
+.rh-button:hover, .rh-button[aria-pressed="true"] { background: var(--helper-accent); color: var(--helper-bg); }
+.rh-window { position: fixed; right: 16px; bottom: 16px; z-index: 900; width: min(440px, calc(100vw - 32px)); max-height: min(70vh, 640px); overflow: auto;
+  background: var(--helper-bg); color: var(--helper-ink); border: 1px solid var(--helper-line); border-top: 4px solid var(--helper-accent); border-radius: var(--helper-radius); box-shadow: 0 12px 40px rgba(0,0,0,.35); padding: 12px 14px; font: 14px/1.45 var(--helper-font); }
+.rh-window[hidden] { display: none; }
+.rh-head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; }
+.rh-head strong { font: 700 16px var(--helper-caps); text-transform: uppercase; }
+.rh-sub { font-size: 11px; color: var(--helper-dim); flex: 1; }
+.rh-close { background: none; border: 0; font-size: 20px; line-height: 1; cursor: pointer; color: var(--helper-dim); }
+.rh-form { display: flex; gap: 6px; flex-wrap: wrap; }
+.rh-form input { flex: 1 1 200px; font: 14px var(--helper-font); padding: 7px 9px; border: 1px solid var(--helper-line); border-radius: var(--helper-radius); min-width: 0; color: var(--helper-ink); background: var(--helper-bg); }
+.rh-ask, .rh-mode { font: 700 12px var(--helper-font); text-transform: uppercase; letter-spacing: .06em; padding: 7px 14px; border-radius: var(--helper-radius); cursor: pointer; }
+.rh-ask { background: var(--helper-accent); color: var(--helper-bg); border: 0; }
+.rh-ask:disabled { opacity: .5; cursor: default; }
+.rh-mode { background: var(--helper-bg); color: var(--helper-accent); border: 1px solid var(--helper-accent); }
+.rh-mode[aria-pressed="true"] { background: var(--helper-accent); color: var(--helper-bg); }
+.rh-answer:not(:empty) { margin-top: 10px; padding: 8px 10px; background: var(--helper-soft); border-left: 4px solid var(--helper-accent); border-radius: var(--helper-radius); }
+.rh-answer p { margin: 0 0 6px; white-space: pre-wrap; }
+.rh-q { font-weight: 700; margin-top: 10px !important; }
+.rh-q::before { content: "Q  "; color: var(--helper-accent); }
+.rh-a { padding-left: 10px; border-left: 2px solid var(--helper-line); }
+.rh-chip { margin-top: 8px; font-size: 12px; color: var(--helper-dim); display: flex; gap: 6px; align-items: center; }
+.rh-chip button { background: none; border: 1px solid var(--helper-line); border-radius: 50%; width: 18px; height: 18px; line-height: 1; cursor: pointer; color: var(--helper-dim); padding: 0; }
+.rh-chip[hidden] { display: none; }
+.rh-new { font: 600 11px var(--helper-font); background: none; border: 1px solid var(--helper-line); border-radius: var(--helper-radius); color: var(--helper-dim); cursor: pointer; padding: 2px 6px; }
+.rh-dim { color: var(--helper-dim); font-size: 12px; }
+.rh-error { color: #b11e1e; }
+.rh-sources summary, .rh-picker summary { cursor: pointer; font-size: 12px; color: var(--helper-dim); }
+.rh-picker { margin-top: 8px; }
+.rh-picker[hidden] { display: none; }
+.rh-group { border: 0; padding: 4px 0; margin: 0; }
+.rh-group legend { font-weight: 700; font-size: 13px; padding: 0; }
+.rh-books { display: grid; grid-template-columns: 1fr 1fr; gap: 1px 10px; font-size: 12px; margin-top: 2px; }
+.rh-books label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* click-to-explain mode: cursor, the marked element, the banner (DCC's class names, its CSS styles them too) */
+body.explain-mode, body.explain-mode * { cursor: help !important; }
+.explain-target { outline: 2px dashed var(--helper-accent) !important; outline-offset: 2px; }
+.explain-banner { position: fixed; z-index: 899; left: 50%; bottom: 1rem; transform: translateX(-50%); background: var(--helper-ink); color: var(--helper-bg); padding: .55rem 1rem; border-radius: var(--helper-radius); font: 600 12px var(--helper-caps); text-transform: uppercase; letter-spacing: .08em; }
+/* 5e headers stay put while the page scrolls (Dodo, 2026-10-26) */
+.hub-bar, .topbar { position: sticky; top: 0; z-index: 30; }
+@media (max-width: 640px) { .rh-button { padding: 6px 8px; font-size: 11px; } .rh-window { right: 8px; bottom: 8px; } }
+.rh-hot { box-shadow: 0 0 0 3px var(--helper-accent); animation: rh-pulse 1s ease-in-out 3; }
+@keyframes rh-pulse { 50% { box-shadow: 0 0 0 6px color-mix(in srgb, var(--helper-accent) 40%, transparent); } }

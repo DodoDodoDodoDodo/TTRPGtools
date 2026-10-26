@@ -388,3 +388,9 @@ html { scroll-padding-top: calc(var(--masthead-h, 4rem) + .6rem); }
 .hist-visits { border-collapse: collapse; font-size: .88rem; width: 100%; background: var(--paper-light); }
 .hist-visits th, .hist-visits td { text-align: left; padding: .2rem .5rem; border-bottom: 1px solid var(--gold-soft); vertical-align: top; }
 .hist-visits td.num { text-align: right; white-space: nowrap; }
+
+/* the shared page helper (static/helper.css) in this page's paper look */
+:root { --helper-accent: var(--blue); --helper-bg: var(--m-paper); --helper-ink: var(--m-ink-deep); --helper-dim: var(--ink-soft); --helper-soft: color-mix(in srgb, var(--m-sand) 35%, var(--m-paper));
+        --helper-line: var(--m-ink-deep); --helper-font: inherit; --helper-caps: var(--caps); --helper-radius: var(--corner); }
+.rh-window { box-shadow: 5px 5px 0 var(--word); border-top-width: 1.5px; }
+.assist-bar .rh-button { border: 1px solid var(--m-ink-deep); }

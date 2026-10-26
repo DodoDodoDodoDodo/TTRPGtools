@@ -15,7 +15,6 @@
   import { route } from "./router.svelte.js";
   import { api } from "./api.js";
   import FeatChoices from "../builder/FeatChoices.svelte";
-  import AskBox from "./AskBox.svelte";
   import NoncanonToggle from "./NoncanonToggle.svelte";
   import { canonFilter } from "./noncanon.svelte.js";
   import { ddb } from "./ddb.svelte.js";
@@ -1006,7 +1005,7 @@
     {:else}
       <p>Nothing to show.</p>
     {/if}
-    {#if explainEntry}{#key pane.kind + pane.ref}<AskBox entry={explainEntry} />{/key}{/if}
+    {#if explainEntry && window.DODO_HELPER?.explain}<div class="ask-box ask-box--entry"><button type="button" class="ct-button character-button ddbc-button character-button-small" onclick={() => window.DODO_HELPER.explain(explainEntry)}><span class="ct-button__content">Explain this</span></button></div>{/if}
 {/snippet}
 
 {#if pane.open}

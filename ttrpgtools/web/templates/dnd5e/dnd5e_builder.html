@@ -20,6 +20,9 @@
       premium: {{ (premium if premium is defined else true)|tojson }}
     };
   </script>
+  <link rel="stylesheet" href="{{ static_v('helper.css') }}">
+  <script>window.DODO_HELPER = {site: 'dnd5e', api: {{ (url_for('dnd5e_builder.shell') ~ 'api')|tojson }}, header: "#rules-helper-slot"};</script>
+  <script src="{{ static_v('helper.js') }}" defer></script>
   <script type="module" src="{{ url_for('static', filename=build) }}?v={{ build_version }}"></script>
 </head>
 <body>

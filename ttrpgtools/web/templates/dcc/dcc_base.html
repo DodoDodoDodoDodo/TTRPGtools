@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}Characters{% endblock %} :: Dungeon Crawl Classics</title>
   <link rel="stylesheet" href="{{ asset('dcc.css') }}">
+  <link rel="stylesheet" href="{{ static_v('helper.css') }}">
+  <script>window.DODO_HELPER = {site: 'dcc', api: {{ (url_for('dcc.index') ~ 'api')|tojson }}, header: '.assist-bar', title: 'What is this?',
+    placeholder: 'Ask about a rule, e.g. what does Luck do?', extra: () => (typeof DCC !== 'undefined' && DCC.context ? JSON.stringify(DCC.context()) : '')};</script>
+  <script src="{{ static_v('helper.js') }}" defer></script>
   <script src="{{ asset('dcc_assist.js') }}" defer></script>
   {% block head %}{% endblock %}
 </head>
@@ -19,7 +23,6 @@
     </nav>
     <div class="assist-bar no-print">
       <button type="button" id="assist-guide" title="Walk through this page step by step">Guide</button>
-      <button type="button" id="assist-explain" aria-pressed="false" title="Click this, then anything on the page">What is this?</button>
       <button type="button" id="assist-music" aria-pressed="false" title="Background music">Music</button>
     </div>
   </header>

@@ -23,6 +23,7 @@ from ttrpgtools.dnd5e import bestiary, campaigns, content as book_list, db
 from ttrpgtools.dnd5e import character as ch
 from ttrpgtools.dnd5e import ddb_character
 from ttrpgtools.dnd5e import explain
+from ttrpgtools import helper
 from ttrpgtools.dnd5e.ddb_import import import_ddb
 from ttrpgtools.permissions import may_delete
 
@@ -544,41 +545,13 @@ def explain_question():
     user = _owner()
     if not user:
         raise ApiError("Log in to ask the rules helper.", 401)
-    question = str(body.get("question") or "").strip()
-    entry = body.get("entry") if isinstance(body.get("entry"), dict) else None
-    allowed = [str(x) for x in body.get("sources") or [] if isinstance(x, str)][:200]
-    if not question and not entry:
+    if not (body.get("question") or body.get("entry") or body.get("html") or body.get("breadcrumb")):
         raise ApiError("Ask a question first.")
-    premium = _premium_of(user)
-    conn = db.connect()
-    try:
-        now = datetime.now(timezone.utc).timestamp()
-        def asked_since(seconds):
-            since = datetime.fromtimestamp(now - seconds, timezone.utc).isoformat(timespec="seconds")
-            return conn.execute("SELECT count(*) FROM explain_log WHERE user = ? AND ts > ?", (user, since)).fetchone()[0]
-        last_hour, last_day = asked_since(3600), asked_since(86400)
-    finally:
-        conn.close()
-    if not premium and last_hour >= FREE_QUESTIONS_PER_HOUR:
-        raise ApiError("One question an hour is free; more is a dodo-dodo Premium feature (up to 100 a day). "
-                       "Pitch in for the server on home.dodo-dodo.de.", 403, pitch_in="/#contrib")
-    if premium and last_day >= PREMIUM_QUESTIONS_PER_DAY:
-        raise ApiError(f"That was {PREMIUM_QUESTIONS_PER_DAY} questions in a day, the premium limit. The helper is yours again tomorrow.", 429)
-
-    def stream():
-        answered = False
-        for event in explain.answer(question, allowed, entry):
-            answered = answered or event.startswith('data: {"text"')
-            yield event
-        if answered:
-            log = db.connect()
-            try:
-                log.execute("INSERT INTO explain_log (user, ts) VALUES (?, ?)", (user, _now()))
-                log.commit()
-            finally:
-                log.close()
-
-    return Response(stream_with_context(stream()), mimetype="text/event-stream", headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
+    out = helper.serve(explain.SITE, user, _premium_of(user), body)
+    if isinstance(out, tuple):
+        raise ApiError(out[0], out[1], pitch_in="/#contrib" if out[1] == 403 else None)
+    stream = out
+    return Response(stream_with_context(stream), mimetype="text/event-stream", headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
 
 
 @bp.get("/api/users")

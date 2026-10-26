@@ -4,10 +4,7 @@
   import { content } from "../lib/content.svelte.js";
   import { show } from "../lib/pane.svelte.js";
   import { book } from "../lib/format.js";
-  import AskBox from "../lib/AskBox.svelte";
-  import SourcePicker from "../lib/SourcePicker.svelte";
   import { canonFilter } from "../lib/noncanon.svelte.js";
-  let chosen = $state([]);
 
   let query = $state("");
   let books = $state([]);
@@ -74,12 +71,7 @@
     <h1>Rules and books</h1>
     <p class="dim">Search every spell, item, feat, race, background, class feature, condition and monster, then open the books themselves.</p>
   </header>
-  <div class="ask-panel">
-    <h2 class="listing-subhead">Ask the rules helper</h2>
-    <p class="dim">A local model answers from the books you tick below and names its pages. One question an hour is free; up to 100 a day with dodo-dodo premium.</p>
-    <AskBox sources={chosen} />
-    <SourcePicker bind:selected={chosen} />
-  </div>
+  <p class="dim">Questions go to the <strong>Rules helper</strong> button in the top bar; it answers from the books you tick there.</p>
   <h2 class="listing-subhead">Search</h2>
   <div class="listing-filters">
     <label class="rules-search">Search <input type="search" placeholder="A name or a word from the text, e.g. grapple, darkvision, Counterspell" bind:value={query} /></label>

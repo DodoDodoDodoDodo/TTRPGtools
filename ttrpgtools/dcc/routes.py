@@ -9,7 +9,7 @@ from pathlib import Path
 
 from flask import Blueprint, Response, abort, redirect, render_template, request, send_from_directory, url_for
 
-from ttrpgtools import dcc
+from ttrpgtools import dcc, helper
 from ttrpgtools.dcc import explain as dcc_explain, folio as dcc_folio, sheetfill
 from ttrpgtools.permissions import require_delete
 from ttrpgtools.dcc.westmarch import (clauses as town_clauses, daily as town_daily, debts as town_debts, history as town_history, items as town_items, materials as town_materials, money as town_money, places as town_places,
@@ -967,9 +967,11 @@ def api_language():
 @bp.post("/api/explain")
 def api_explain():
     """Explain a clicked page element with the local model and the rulebook passages that match it."""
-    d = request.get_json(silent=True) or {}
-    return Response(dcc_explain.answer(d), mimetype="text/event-stream",
-                    headers={"Cache-Control": "no-store", "X-Accel-Buffering": "no"})
+    user = _owner() or ""
+    out = helper.serve(dcc_explain.SITE, user, helper.premium_of(user), request.get_json(silent=True) or {})
+    if isinstance(out, tuple):
+        return Response(json.dumps({"error": out[0]}), status=out[1], mimetype="application/json")
+    return Response(out, mimetype="text/event-stream", headers={"Cache-Control": "no-store", "X-Accel-Buffering": "no"})
 
 
 @bp.get("/music")

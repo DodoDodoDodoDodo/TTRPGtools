@@ -168,108 +168,8 @@ const DCC = (() => {
     },
   };
 
-  // ---------------------------------------------------------------- "What is this?"
-  const explain = {
-    on: false, marked: null, banner: null, pop: null, request: null,
-    ours: (el) => el.closest(".assist-bar, .explain-pop, .tour-card, .explain-banner"),
-    toggle(state) {
-      explain.on = state ?? !explain.on;
-      document.body.classList.toggle("explain-mode", explain.on);
-      document.getElementById("assist-explain").setAttribute("aria-pressed", explain.on);
-      explain.mark(null);
-      if (explain.on) {
-        tour.stop();
-        explain.banner = h("div", { class: "explain-banner" }, "Click anything on the page to have it explained. Esc leaves.");
-        document.body.append(explain.banner);
-      } else if (explain.banner) { explain.banner.remove(); explain.banner = null; }
-    },
-    mark(el) {
-      if (explain.marked) explain.marked.classList.remove("explain-target");
-      explain.marked = el;
-      if (el) el.classList.add("explain-target");
-    },
-    pick(target) {  // the smallest element that still says something
-      let el = target.nodeType === 1 ? target : target.parentElement;
-      while (el && el !== document.body && !(el.innerText || el.value || el.getAttribute("aria-label") || "").trim()) el = el.parentElement;
-      return !el || el === document.body || el.tagName === "MAIN" ? null : el;
-    },
-    describe(el) {
-      const hints = [];
-      for (let n = el; n && n !== document.body; n = n.parentElement) {
-        if (n.dataset.explain) hints.push(n.dataset.explain);
-        if (n.getAttribute("aria-label")) hints.push(n.getAttribute("aria-label"));
-      }
-      const label = el.closest("label") || (el.id && document.querySelector(`label[for="${CSS.escape(el.id)}"]`));
-      if (label) hints.push(label.innerText.trim().slice(0, 80));
-      const box = el.closest(".panel, section, .card, tr, li, fieldset") || el.parentElement;
-      const heading = (el.closest(".panel, section") || document).querySelector("h1, h2, h3");
-      if (heading) hints.push(heading.innerText.trim());
-      return { html: el.outerHTML.slice(0, 2200), text: (el.innerText || el.value || "").trim().slice(0, 300), hint: [...new Set(hints)].join("; "),
-               context: (box ? box.innerText : "").trim().slice(0, 1200), page: document.title,
-               character: DCC.context ? JSON.stringify(DCC.context()) : "" };
-    },
-    open(el) {
-      const about = explain.describe(el);
-      const answer = h("div", { class: "answer waiting" }), source = h("p", { class: "hint" }), book = h("div", {});
-      const input = h("input", { type: "text", placeholder: "Ask a follow-up question", "aria-label": "Follow-up question" });
-      const form = h("form", { onsubmit: (e) => { e.preventDefault(); if (input.value.trim()) ask(input.value.trim()); } }, input,
-                     h("button", { class: "mini-button", type: "submit" }, "Ask"));
-      if (explain.pop) explain.pop.remove();
-      explain.pop = h("div", { class: "explain-pop", role: "dialog", "aria-label": "Explanation" },
-        h("div", { class: "row" }, h("h3", { style: "flex:1" }, (about.text || about.hint).slice(0, 48) || "This field"),
-          h("button", { class: "mini-button", type: "button", onclick: () => explain.close() }, "Close")),
-        answer, source, book, form);
-      document.body.append(explain.pop);
-      const r = el.getBoundingClientRect(), p = explain.pop.getBoundingClientRect();
-      explain.pop.style.left = clamp(r.left, 12, innerWidth - p.width - 12) + "px";
-      explain.pop.style.top = (r.bottom + 10 + 220 < innerHeight ? r.bottom + 10 : Math.max(12, r.top - 10 - Math.max(p.height, 220))) + "px";
+  // "What is this?" moved to the shared helper (static/helper.js, 2026-10-26); the Guide and Music stay here.
 
-      async function ask(question) {
-        if (explain.request) explain.request.abort();
-        explain.request = new AbortController();
-        answer.textContent = ""; source.textContent = ""; book.replaceChildren(); answer.classList.add("waiting");
-        try {
-          const resp = await fetch(root + "api/explain", { method: "POST", headers: { "Content-Type": "application/json" },
-                                                           body: JSON.stringify({ ...about, question }), signal: explain.request.signal });
-          const reader = resp.body.getReader(), decoder = new TextDecoder();
-          let buffer = "";
-          for (;;) {
-            const { value, done } = await reader.read();
-            if (done) break;
-            buffer += decoder.decode(value, { stream: true });
-            const events = buffer.split("\n\n"); buffer = events.pop();
-            for (const event of events) {
-              if (!event.startsWith("data:")) continue;
-              const data = JSON.parse(event.slice(5));
-              if (data.text) answer.textContent += data.text;
-              if (data.error) answer.textContent = data.error;
-              if (data.done && data.pages.length) source.textContent = "Rulebook pages searched: " + data.pages.join(", ");
-              if (data.done) book.replaceChildren(...(data.passages || []).map((p) => h("details", {},
-                h("summary", {}, p.page ? `What the book says (p. ${p.page})` : (p.title || "Note")), h("p", { class: "hint" }, p.text))));
-            }
-          }
-        } catch (err) {
-          if (err.name !== "AbortError") answer.textContent = "No explanation came back: " + err.message;
-        }
-        answer.classList.remove("waiting");
-      }
-      ask("");
-    },
-    close() {
-      if (explain.request) explain.request.abort();
-      if (explain.pop) explain.pop.remove();
-      explain.pop = null; explain.mark(null);
-    },
-  };
-  document.addEventListener("mousemove", (e) => { if (explain.on && !explain.ours(e.target)) explain.mark(explain.pick(e.target)); });
-  document.addEventListener("click", (e) => {
-    if (!explain.on || explain.ours(e.target)) return;
-    e.preventDefault(); e.stopPropagation();
-    const el = explain.pick(e.target);
-    explain.toggle(false);
-    if (el) { explain.mark(el); explain.open(el); }
-  }, true);
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") { if (explain.on) explain.toggle(false); else explain.close(); } });
 
   // ---------------------------------------------------------------- music
   const music = {
@@ -307,7 +207,6 @@ const DCC = (() => {
     },
   };
 
-  document.getElementById("assist-explain").addEventListener("click", () => explain.toggle());
   music.button.addEventListener("click", () => music.toggle());
   document.getElementById("assist-guide").addEventListener("click", () => {
     store.set("dcc-guide-off", false);
@@ -350,5 +249,5 @@ const DCC = (() => {
     new ResizeObserver(() => document.documentElement.style.setProperty("--masthead-h", masthead.offsetHeight + "px")).observe(masthead);
   }
 
-  return { root, h, api, gp, store, tour, explain, roman, romanText, romanize, guide: null, context: null };
+  return { root, h, api, gp, store, tour, roman, romanText, romanize, guide: null, context: null };
 })();

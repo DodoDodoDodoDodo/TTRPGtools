@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}Character Records{% endblock %} :: Adeptus Administratum</title>
   <link rel="stylesheet" href="{{ static_v('style.css') }}">
+  <link rel="stylesheet" href="{{ static_v('helper.css') }}">
+  <script>window.DODO_HELPER = {site: 'dh1e', api: '/TTRPG/dh1e/api', header: '.masthead-nav', title: 'Rules helper',
+    placeholder: 'Ask about a rule, e.g. how do Fate Points work?'};</script>
+  <script src="{{ static_v('helper.js') }}" defer></script>
   {% block head %}{% endblock %}
 </head>
 <body>

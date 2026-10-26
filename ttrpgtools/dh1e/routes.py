@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 
-from flask import Blueprint, abort, redirect, render_template, request, url_for
+from flask import Blueprint, Response, abort, redirect, render_template, request, url_for
 
 from .models import (
     CAREERS,
@@ -25,6 +25,8 @@ from .storage import (
     new_character_id,
     save_character,
 )
+from ttrpgtools import helper
+from ttrpgtools.dh1e import explain as dh1e_explain
 from ttrpgtools.permissions import require_delete
 
 bp = Blueprint("dh1e", __name__)
@@ -326,3 +328,13 @@ def delete_character(character_id):
     require_delete(json.loads(character_path(character_id).read_text()).get("owner"))
     character_path(character_id).unlink()
     return redirect(url_for("dh1e.character_list"))
+
+
+@bp.post("/TTRPG/dh1e/api/explain")
+def api_explain():
+    """The page helper (static/helper.js): a question or a clicked element, answered from the core rulebook text."""
+    user = request.headers.get("Remote-User") or ""
+    out = helper.serve(dh1e_explain.SITE, user, helper.premium_of(user), request.get_json(silent=True) or {})
+    if isinstance(out, tuple):
+        return Response(json.dumps({"error": out[0]}), status=out[1], mimetype="application/json")
+    return Response(out, mimetype="text/event-stream", headers={"Cache-Control": "no-store", "X-Accel-Buffering": "no"})
