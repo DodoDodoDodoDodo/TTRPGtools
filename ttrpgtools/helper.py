@@ -194,7 +194,8 @@ def expand(terms: list[str], vocab: Vocab | None) -> list[list[str]]:
         if key in seen:
             continue
         seen.add(key)
-        groups.append([t] + (vocab.close(t) if vocab and " " not in t else []))
+        # a phrase ("request film") rarely occurs verbatim: its words ride along as variants (half weight in ranking)
+        groups.append([t] + (vocab.close(t) if vocab and " " not in t else [w for w in t.split() if len(w) > 3 and w not in STOPWORDS]))
     return groups
 
 
